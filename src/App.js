@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 
-// eslint-disable-next-line no-unused-vars
 const misha = {
   name: 'Misha',
   age: 37,
@@ -10,7 +9,6 @@ const misha = {
   partnerName: 'Natasha',
 };
 
-// eslint-disable-next-line no-unused-vars
 const olya = {
   name: 'Olya',
   sex: 'f',
@@ -18,7 +16,6 @@ const olya = {
   partnerName: 'Maksym',
 };
 
-// eslint-disable-next-line no-unused-vars
 const alex = {
   name: 'Alex',
   age: 25,
