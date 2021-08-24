@@ -1,0 +1,15 @@
+.Person {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 200px;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #7e7e7e;
+  border-radius: 8px;
+
+  &__age {
+    color: rgb(91, 91, 204);
+    font-weight: bold;
+  }
+}

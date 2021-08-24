@@ -1,17 +1,11 @@
-// style go here
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
 
-  &__name {
-    margin-top: 8px;
-  }
-
-  &__age {
-    color: #00f;
-    font-weight: bold;
-  }
+.App {
+  display: flex;
+  gap: 50px;
 }
