@@ -13,33 +13,25 @@ export function Person({ name, age, sex, isMarried, partnerName}) {
         I am {age}
       </p>
     )}
-    {isMarried 
-      && sex === 'f' 
-      && (
-      <p className="Person__partner">
-        My husband&apos;s name is {partnerName}
-      </p>
-    )}
-    {isMarried 
-      && sex === 'm' 
-      && (
-        <p className="Person__partner">
-          My wife&apos;s name is {partnerName}
-        </p>
-    )}
-    { isMarried || (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    )}    
+    <p>
+    {isMarried
+      ? `My ${sex === 'm' ? "wife's" : "husband's"} name is ${partnerName}`
+      : `I am not married`
+    }
+    </p>      
     </section>
   )
+};
+
+Person.defaultProps = {
+  age: null,
+  partnerName: null,
 };
 
 Person.propsTypes  = {
   name: PropsTypes.string.isRequired,
   age: PropsTypes.number,
   sex: PropsTypes.oneOf(['m', 'f']).isRequired, 
-  isMarried: PropsTypes.bool, 
+  isMarried: PropsTypes.bool.isRequired, 
   partnerName: PropsTypes.string,
 };
