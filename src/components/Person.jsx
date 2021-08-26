@@ -18,3 +18,20 @@ export function Person(props) {
     </section>
   );
 }
+
+Person.propTypes = {
+  person = {
+    name: PropTypes.string.isRequired,
+    sex: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    isMarried: PropTypes.bool.isRequired,
+    partner: PropTypes.string,
+  }
+}
+
+Person.defaultProps = {
+  person = {
+    age: undefined,
+    partner: undefined,
+  }
+}
