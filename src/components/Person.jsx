@@ -3,6 +3,10 @@ import PropsTypes from 'prop-types'
 import './Person.scss';
 
 export function Person({ name, age, sex, isMarried, partnerName}) {
+  const partner = sex === 'm' ? 'wife' : 'husband';
+  const messageMarried = isMarried
+    ? `My ${partner}'s name is ${partnerName}`
+    : 'I am not married';
   return (
     <section className="Person">    
       <h2 className='Person__name'>
@@ -14,10 +18,9 @@ export function Person({ name, age, sex, isMarried, partnerName}) {
       </p>
     )}
     <p>
-    {isMarried
-      ? `My ${sex === 'm' ? "wife's" : "husband's"} name is ${partnerName}`
-      : `I am not married`
-    }
+    <p className="Person__partner">
+      {messageMarried}
+    </p>
     </p>      
     </section>
   )
