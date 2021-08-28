@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Person from './Person';
+import { Person } from './components/Person';
 
 const App = () => (
   <div className="App">
