@@ -31,8 +31,8 @@ export const Person = ({
           ? `My ${partner}'s name is ${partnerName}`
           : 'I am not married'
         }
-
       </p>
+
     </section>
   );
 };
