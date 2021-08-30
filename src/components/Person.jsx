@@ -9,7 +9,7 @@ function Person({
   isMarried,
   partnerName,
 }) {
-  const partner = sex === 'm' ? 'wife' : 'hasband'
+  const partner = sex === 'm' ? 'wife' : 'husband'
   return (
     <section className="Person">
       <h2 className="Person__name">
@@ -21,9 +21,7 @@ function Person({
         </p>
       )}
       {isMarried
-        ? (
-          <p className="Person__partner">My {partner}'s name is {partnerName}</p>
-        )
+        ? <p className="Person__partner">My {partner}'s name is {partnerName}</p>
         : <p className="Person__partner">I am not married</p>
       }
     </section>
