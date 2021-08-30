@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({ props }) => {
+export const Person = ({ person }) => {
   const {
     name,
     age,
     sex,
     isMarried,
     partnerName,
-  } = props;
+  } = person;
 
   return (
     <section className="Person">
@@ -42,16 +42,13 @@ export const Person = ({ props }) => {
   );
 };
 
-Person.defaultProps = {
-  age: 0,
-  partnerName: null,
-};
-
 Person.propTypes = {
-  props: PropTypes.shape.isRequired,
-  name: PropTypes.string.isRequired,
-  sex: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  partnerName: PropTypes.string,
-  isMarried: PropTypes.bool.isRequired,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    sex: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    partnerName: PropTypes.string,
+    isMarried: PropTypes.bool.isRequired,
+  }).isRequired,
+
 };
