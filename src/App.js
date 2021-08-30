@@ -27,17 +27,11 @@ const alex = {
 
 const App = () => (
   <>
-    <Person
-      {...misha}
-    />
+    <Person {...misha} />
 
-    <Person
-      {...olya}
-    />
+    <Person {...olya} />
 
-    <Person
-      {...alex}
-    />
+    <Person {...alex} />
   </>
 );
 
