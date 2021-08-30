@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = (props) => {
+export const Person = ({ props }) => {
   const {
     name,
     age,
@@ -48,6 +48,7 @@ Person.defaultProps = {
 };
 
 Person.propTypes = {
+  props: PropTypes.shape.isRequired,
   name: PropTypes.string.isRequired,
   sex: PropTypes.string.isRequired,
   age: PropTypes.number,
