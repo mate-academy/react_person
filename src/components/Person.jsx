@@ -1,36 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = props => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {props.name}
-    </h2>
-    <p className="Person__age">
-      {
-        props.age
-          ? `I am ${props.age}`
-          : ''
-      }
+export const Person = (props) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = props;
 
-    </p>
-    <p className="Person__partner">
-      {
-        props.isMarried
-          ? `My
-            ${
-              props.sex === 'f'
-                ? 'husband'
-                : 'wife'
-            }'s name is
-          ${props.partnerName}`
-          : 'Not married'
-      }
-    </p>
-  </section>
-);
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        My name is
+        {' '}
+        {name}
+      </h2>
+      <p className="Person__age">
+        {
+          age
+            ? `I am ${age}`
+            : ''
+        }
+
+      </p>
+      <p className="Person__partner">
+        {
+          isMarried
+            ? `My
+              ${
+                sex === 'f'
+                  ? 'husband'
+                  : 'wife'
+              }'s name is
+            ${partnerName}`
+            : 'Not married'
+        }
+      </p>
+    </section>
+  );
+};
 
 Person.defaultProps = {
   age: 0,
