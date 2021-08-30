@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+export const Person = (props) => {
+  const { name, age, sex, isMarried, partnerName } = props;
+
   const partner = sex === 'f' ? 'husband\'s' : 'wife\'s';
   const message = isMarried
     ? `My ${partner} name is ${partnerName}`
