@@ -19,7 +19,13 @@ export const Person = props => (
     <p className="Person__partner">
       {
         props.isMarried
-          ? `My wife's name is ${props.partnerName}`
+          ? `My
+            ${
+              props.sex === 'f'
+                ? 'husband'
+                : 'wife'
+            }'s name is
+          ${props.partnerName}`
           : 'Not married'
       }
     </p>
@@ -33,6 +39,7 @@ Person.defaultProps = {
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
+  sex: PropTypes.string.isRequired,
   age: PropTypes.number,
   partnerName: PropTypes.string,
   isMarried: PropTypes.bool.isRequired,
