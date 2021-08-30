@@ -22,13 +22,11 @@ export const Person = (props) => {
         {`My name is ${name}`}
       </h2>
 
-      {age
-        && (
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        )
-      }
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
         {isMarried
