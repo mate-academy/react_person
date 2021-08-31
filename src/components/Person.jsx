@@ -1,33 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Person(props) {
-  let partner = '';
-
-  if (props.sex === 'm') {
-    partner = 'wife\'s';
-  } else {
-    partner = 'husband\'s';
-  }
+export function Person({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) {
+  const partner = sex === 'm'
+    ? ('wife\'s')
+    : ('husband\'s');
 
   return (
     <section className="Person">
       <h2 className="Person__name">
         My name is&nbsp;
-        {props.name}
+        {name}
       </h2>
-      {props.age
-        ? (
-          <p className="Person__age">
-            I am&nbsp;
-            {props.age}
-          </p>
-        )
-        : null
-      }
+      {age && (
+        <p className="Person__age">
+          I am&nbsp;
+          {age}
+        </p>
+      )}
       <p className="Person__partner">
-        {props.isMarried
-          ? (`My ${partner} name is ${props.partnerName}`)
+        {isMarried
+          ? (`My ${partner} name is ${partnerName}`)
           : (`I am not married`)
         }
       </p>
@@ -47,5 +46,3 @@ Person.defaultProps = {
   age: null,
   partnerName: null,
 };
-
-export default Person;
