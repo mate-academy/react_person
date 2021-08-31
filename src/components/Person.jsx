@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Person(props) {
   const { name, age, sex, isMarried, partnerName } = props;
-  const partnerSex = sex === 'f' ? "husband's" : "wife's";
+  const partnerSex = sex === 'f' ? 'husband' : 'wife';
 
   return (
     <section className="Person">
@@ -21,7 +21,7 @@ function Person(props) {
       )}
       <p className="Person__partner">
         {isMarried
-          ? `My ${partnerSex} name is ${partnerName}`
+          ? `My ${partnerSex}'s name is ${partnerName}`
           : 'I am not married'}
       </p>
     </section>
