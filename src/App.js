@@ -26,11 +26,11 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person person={misha} />
+    <Person {...misha} />
 
-    <Person person={olya} />
+    <Person {...olya} />
 
-    <Person person={alex} />
+    <Person {...alex} />
   </div>
 );
 
