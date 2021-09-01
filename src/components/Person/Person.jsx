@@ -2,7 +2,9 @@ import React from 'react';
 import './Person.scss';
 import PropTypes from 'prop-types';
 
-export default function Person({ age, name, sex, isMarried, partnerName }) {
+export default function Person(props) {
+  const { age, name, sex, isMarried, partnerName } = props;
+
   return (
     <section className="Person">
       {name
@@ -21,16 +23,14 @@ export default function Person({ age, name, sex, isMarried, partnerName }) {
           {age}
         </p>
       )}
-      {isMarried
-      && (
-        <p className="Person__partner">
+      {
+        <p className="Person_ _partner">
           {' '}
           {isMarried ? (
             `My ${sex === 'f' ? 'husband' : 'wife'}'s name is ${partnerName}`
-          )
-            : 'I am not married'}
+          ) : 'I am not married'}
         </p>
-      )}
+       }
     </section>
   );
 }
