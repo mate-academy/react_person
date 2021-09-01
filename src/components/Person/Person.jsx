@@ -5,6 +5,11 @@ import './Person.scss';
 
 export const Person = (props) => {
   const person = { ...props.person };
+
+  if (!props.person.name) {
+    return '';
+  }
+
   const marriedContent = (person.sex === 'm') ? (
     `My wife's name is ${person.partnerName}`
   ) : (
@@ -26,7 +31,8 @@ export const Person = (props) => {
         : ''
       }
       <p className="Person__partner">
-        {person.isMarried ? marriedContent : 'I am not married'}
+
+        {(person.isMarried) ? (marriedContent) : ('I am not married')}
       </p>
     </section>
   );
