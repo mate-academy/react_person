@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+export const Person = (props) => {
+  const { person } = props;
+
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   const partner = sex === 'm'
     ? 'wife'
     : 'husband';
@@ -35,14 +39,18 @@ export const Person = ({
 };
 
 Person.defaultProps = {
-  age: null,
-  partnerName: null,
+  person: {
+    age: null,
+    partnerName: null,
+  },
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool.isRequired,
-  age: PropTypes.number,
-  partnerName: PropTypes.string,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    age: PropTypes.number,
+    partnerName: PropTypes.string,
+  }),
 };
