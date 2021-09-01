@@ -1,6 +1,8 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 
+import './Person.scss';
+
 export const Person = (props) => {
   const person = { ...props.person };
   const marriedContent = (person.sex === 'm') ? (
