@@ -5,7 +5,7 @@ function Person({ name, sex, age, isMarried, partnerName }) {
   return (
     <>
       <h2>
-        {'My name is'}
+        {'My name is '}
         {name}
       </h2>
 
