@@ -18,7 +18,6 @@ export function Person(props) {
           </p>
         )}
         <p className="Person__partner">
-          {' '}
           { isMarried
             ? `My  ${sex === 'f'
               ? `husband's`
