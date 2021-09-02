@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { InfoAboutPerson } from './components/InfoAboutPerson';
+import { Person } from './components/Person';
 
 const misha = {
   name: 'Misha',
@@ -26,9 +26,9 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <InfoAboutPerson person={misha} />
-    <InfoAboutPerson person={olya} />
-    <InfoAboutPerson person={alex} />
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
   </div>
 );
 
