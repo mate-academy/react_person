@@ -9,8 +9,7 @@ export function Person(props) {
     <div className="App">
       <section className="Person">
         <h2 className="Person__name">
-          {'My name is '}
-          {name}
+          {`My name is ${name}`}
         </h2>
         {age && (
           <p className="Person__age">
@@ -19,9 +18,7 @@ export function Person(props) {
         )}
         <p className="Person__partner">
           { isMarried
-            ? `My  ${sex === 'f'
-              ? `husband's`
-              : `wife's`} name is ${partnerName}`
+            ? `My ${sex === 'f' ? 'husband' : 'wife'}'s name is ${partnerName}`
             : 'I am not married' }
         </p>
       </section>
