@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App, misha, olya, alex } from './App';
+import { App } from './App';
 
 ReactDOM.render(
-  <>
-    <App person={misha} />
-    <App person={olya} />
-    <App person={alex} />
-  </>,
+  <App />,
   document.getElementById('root'),
 );
