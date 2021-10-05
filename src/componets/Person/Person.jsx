@@ -9,14 +9,12 @@ export function Person({ name, age, sex, isMarried, partnerName }) {
         {' '}
         {name}
       </h2>
-      {age ? (
+      {age && (
         <p className="Person__age">
           I am
           {' '}
           {age}
         </p>
-      ) : (
-        null
       )}
       <p className="Person__partner">
         {isMarried ? (
