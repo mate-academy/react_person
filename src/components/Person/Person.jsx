@@ -26,7 +26,7 @@ export const Person = props => {
       )}
 
       <p className='Person__partner'>
-        {isMarried ? (
+        {isMarried && partnerName ? (
           `My ${partnerSex} name is ${partnerName}`
         ) : (
           'I am not married'
