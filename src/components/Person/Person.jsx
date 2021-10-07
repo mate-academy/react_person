@@ -32,5 +32,5 @@ Person.propTypes = {
 
 Person.defaultProps = {
   partnerName: '',
-  age: 0,
+  age: undefined,
 };
