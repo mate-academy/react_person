@@ -13,13 +13,19 @@ export const Person = ({
     <h2 className="Person__name">
       {`My name is ${name}`}
     </h2>
-    {age !== 0 ? (
+    {/* {age !== 0 ? (
       <p className="Person__age">
         {`I am ${age}`}
       </p>
     ) : (
       null
+    )} */}
+    {age && (
+      <p className="Person__age">
+        {`I am ${age}`}
+      </p>
     )}
+
     {isMarried ? (
       <p className="Person__partner">
         {'My '}
@@ -38,14 +44,14 @@ export const Person = ({
 );
 
 Person.defaultProps = {
-  age: 0,
+  age: null,
   isMarried: false,
   partnerName: '',
 };
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
-  age: PropTypes.number,
+  age: PropTypes.number || null,
   sex: PropTypes.oneOf(['m', 'f']).isRequired,
   isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
