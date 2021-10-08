@@ -23,7 +23,7 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => (
 );
 
 Person.defaultProps = {
-  age: undefined,
+  age: null,
   isMarried: false,
   partnerName: '',
 };
