@@ -16,10 +16,11 @@ function Person(props) {
       <h1 className="Person__name">
         {`My name is ${name}`}
       </h1>
-
+      {age && (
       <p className="Person__age">
-        {age ? `I am ${age}` : null}
+        {`I am ${age}`}
       </p>
+      )}
 
       <p className="Person__partner">
         {isMarried
@@ -31,7 +32,7 @@ function Person(props) {
 }
 
 Person.defaultProps = {
-  age: 0,
+  age: null,
   partnerName: '',
 };
 
