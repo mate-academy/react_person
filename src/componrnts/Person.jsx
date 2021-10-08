@@ -10,9 +10,6 @@ function Person({
   partnerName,
 }) {
   let strIfMarried = 'I am not married';
-  let myAge = '';
-
-  {(age) && myAge = `I am ${age}`};
 
   if (isMarried) {
     strIfMarried
@@ -24,7 +21,7 @@ function Person({
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">{myAge}</p>
+      { age && <p className="Person__age">{`I am ${age}`}</p>}
       <p className="Person__partner">{strIfMarried}</p>
     </section>
   );
