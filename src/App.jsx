@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.scss';
 import PropTypes from 'prop-types';
+
+import './App.scss';
 
 const misha = {
   name: 'Misha',
