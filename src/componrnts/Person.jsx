@@ -12,9 +12,7 @@ function Person({
   let strIfMarried = 'I am not married';
   let myAge = '';
 
-  if (age) {
-    myAge = `I am ${age}`;
-  }
+  {(age) && myAge = `I am ${age}`};
 
   if (isMarried) {
     strIfMarried
