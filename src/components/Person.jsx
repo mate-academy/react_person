@@ -8,9 +8,11 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => (
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      <p className="Person__age">
-        {age && `I am ${age}`}
-      </p>
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
       <p className="Person__partner">
         {isMarried
           ? (sex === 'f' && `My husband's name is ${partnerName}`)
@@ -23,7 +25,7 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => (
 
 Person.defaultProps = {
   age: null,
-  partnerName: null,
+  partnerName: '',
 };
 
 Person.propTypes = {
