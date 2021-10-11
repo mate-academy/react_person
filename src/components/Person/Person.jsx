@@ -28,3 +28,9 @@ Person.propTypes = {
   isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
 };
+
+Person.defaultProps = {
+  age: undefined,
+  isMarried: false,
+  partnerName: '',
+};
