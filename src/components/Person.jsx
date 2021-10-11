@@ -14,14 +14,18 @@ function Person({
         {`My name is ${name}`}
       </h2>
 
-      <p className="Person__age">{age && `I am ${age}`}</p>
+      {age > 0 && (
+        <p className="Person__age">{`I am ${age}`}</p>
+      )}
 
       {isMarried ? (
         <p className="Person__partner">
-          {sex === 'm'
-            ? `My wife's name is ${partnerName}`
-            : `My husband's name is ${partnerName}`
-          }
+          My
+          {' '}
+          {sex === 'm' ? `wife's` : `husband's`}
+          {' '}
+          name is
+          {partnerName}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
@@ -31,7 +35,7 @@ function Person({
 }
 
 Person.defaultProps = {
-  age: '',
+  age: 0,
   partnerName: '',
 };
 
