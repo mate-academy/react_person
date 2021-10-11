@@ -27,21 +27,21 @@ const alex = {
 const App = () => (
   <div className="App">
     <section className="Person">
-     <Person 
+      <Person
        {...misha}
-     />
+       />
     </section>
 
     <section className="Person">
-     <Person 
+      <Person
      {...olya}
-     />
+      />
     </section>
 
     <section className="Person">
-    <Person 
+      <Person
      {...alex}
-     />
+      />
     </section>
   </div>
 );
