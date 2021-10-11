@@ -18,7 +18,7 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => (
     </>
 )
 
-Person.defaultTypes = {
+Person.defaultProps = {
   name: null,
   age: 0,
   sex: null,
