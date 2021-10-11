@@ -1,28 +1,31 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const Person = ({ name, age, sex, isMarried, partnerName }) => (
+
+
+const Person = ({ name, age, sex, isMarried, partnerName }) => {
+  
+  let partner = sex === 'm' ? `wife's` : `husband's`;
+
+  return (
     <>
     <section className="Person">
       <h2 className="Person__name">My name is {name}</h2>
-      {age && (
+      {/* age && не работает так как возвращается дефолтное 0 true*/}
+      {age ? (
         <p className="Person__age">I am {age}</p>
-      )}
-      {(isMarried && sex === 'm') && (
-        <p className="Person__partner">My wife&apos;s name is {partnerName}</p>
-      )}
-      {(isMarried && sex === 'f') && (
-        <p className="Person__partner">My husband&apos;s name is {partnerName}</p>
+      ) : null}
+      {isMarried ? (
+        <p className="Person__partner">My {partner} name is {partnerName}</p>
+      ) : (
+        <p className="Person__partner">I am not married</p>
       )}
     </section>
     </>
-)
+  )}
 
 Person.defaultProps = {
-  name: null,
   age: 0,
-  sex: null,
-  isMarried: false,
   partnerName: null,
 }
 
