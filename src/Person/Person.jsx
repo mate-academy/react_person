@@ -43,3 +43,7 @@ Person.propTypes = {
   isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
 }
+
+Person.defaultProps = {
+  partnerName: null,
+};
