@@ -29,6 +29,7 @@ const App = () => (
   <div className="App">
     {users.map(({ name, age, isMarried, partnerName, sex }) => (
       <Person
+        key={name}
         name={name}
         age={age}
         isMarried={isMarried}
