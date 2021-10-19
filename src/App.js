@@ -27,15 +27,8 @@ const users = [
 
 const App = () => (
   <div className="App">
-    {users.map(({ name, age, isMarried, partnerName, sex }) => (
-      <Person
-        key={name}
-        name={name}
-        age={age}
-        isMarried={isMarried}
-        partnerName={partnerName}
-        sex={sex}
-      />
+    {users.map(({ ...user}) => (
+      <Person {...user}/>
     ))}
   </div>
 );
