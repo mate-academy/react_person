@@ -21,7 +21,7 @@ export const Person = ({
           {age
             ? `I am ${age}`
             : `My age is a private variable :)`
-        }
+          }
         </p>
 
         {!isMarried
@@ -31,7 +31,7 @@ export const Person = ({
               {`My ${partnerNarrative}'s name is ${partnerName}`}
             </p>
           )
-      }
+        }
       </section>
     </>
   );
