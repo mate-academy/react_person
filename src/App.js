@@ -29,7 +29,7 @@ const users = [
 const App = () => (
   <div className="App">
     {users.map(person => (
-      <Person {...person} />
+      <Person key={person.name} {...person} />
     ))}
   </div>
 );
