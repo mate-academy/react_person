@@ -18,13 +18,13 @@ export const Person = ({
         </h2>
       )}
 
-      {age > 0 ? (
+      {age > 0 && (
         <p className="Person__age">
           I am
           {' '}
           {age}
         </p>
-      ) : null}
+      )}
 
       {partnerName && (
         <p className="Person__partner">
@@ -37,9 +37,9 @@ export const Person = ({
         </p>
       )}
 
-      {married === false ? (
+      {!married && (
         <p className="Person__partner">I am not married</p>
-      ) : null}
+      )}
     </section>
   </>
 );
