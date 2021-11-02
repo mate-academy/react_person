@@ -50,7 +50,7 @@ Person.defaultProps = {
   name: 'Rodion Raskilnikov',
   sex: 'm',
   isMarried: false,
-  age: 23,
+  age: undefined,
   partnerName: 'Sonya Marmeladova',
 };
 
