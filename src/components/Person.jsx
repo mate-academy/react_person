@@ -9,7 +9,7 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => (
       </h2>
 
       <p className="Person__age">
-        {age ? `I am ${age}` : ''}
+        {age ? `I am ${age}` : null}
       </p>
 
       <p className="Person__partner">
@@ -24,8 +24,8 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => (
 );
 
 Person.defaultProps = {
-  age: '',
-  partnerName: 'I am not married',
+  age: null,
+  partnerName: null,
 };
 
 Person.propTypes = {
