@@ -19,7 +19,7 @@ export const Person = ({
       <p className="Person__age">
         { age
           ? `I am ${age}`
-          : null }
+          : age }
       </p>
       <p className="Person__partner">
         { isMarried
@@ -31,9 +31,9 @@ export const Person = ({
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired.isRequired,
+  name: PropTypes.string.isRequired,
   age: PropTypes.number,
-  sex: PropTypes.string.isRequired.isRequired,
+  sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
   partnerName: PropTypes.string,
 };
