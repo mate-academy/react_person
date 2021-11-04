@@ -10,7 +10,8 @@ export const Person = ({
 }) => {
   const partner = sex === 'm' ? 'wife' : 'husband';
 
-  const hasPartner = isMarried ? `My ${partner}'s name is ${partnerName}`
+  const hasPartner = isMarried
+    ? `My ${partner}'s name is ${partnerName}`
     : 'I am not married';
 
   return (
@@ -35,8 +36,13 @@ export const Person = ({
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
+  age: PropTypes.number,
   sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string.isRequired,
+  partnerName: PropTypes.string,
+};
+
+Person.defaultProps = {
+  age: null,
+  partnerName: '',
 };
