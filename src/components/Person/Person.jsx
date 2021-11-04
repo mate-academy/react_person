@@ -3,14 +3,14 @@ import './Person.scss';
 import PropTypes from 'prop-types';
 
 const Person = ({ name, sex, isMarried, partnerName, age }) => {
-  let merried = '';
+  let married = '';
 
   if (isMarried && sex === 'm') {
-    merried = `My wife's name is ${partnerName}`;
+    married = `My wife's name is ${partnerName}`;
   }
 
   if (isMarried && sex === 'f') {
-    merried = `My husband's name is ${partnerName}`;
+    married = `My husband's name is ${partnerName}`;
   }
 
   return (
@@ -27,7 +27,7 @@ const Person = ({ name, sex, isMarried, partnerName, age }) => {
           {age}
         </p>
       )}
-      <p className="Person__partner">{merried || 'Im not merried'}</p>
+      <p className="Person__partner">{married || 'Im not merried'}</p>
     </section>
   );
 };
