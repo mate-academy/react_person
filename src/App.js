@@ -7,6 +7,7 @@ const App = () => (
   <div className="App">
     {persons.map(paragraph => (
       <Person
+        key={paragraph.name}
         {...paragraph}
       />
     ))}
