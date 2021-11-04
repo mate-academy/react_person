@@ -34,7 +34,7 @@ export const Person = ({
 Person.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number,
-  sex: PropTypes.symbol,
+  sex: PropTypes.string,
   isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
 };

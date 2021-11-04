@@ -6,7 +6,9 @@ import './App.scss';
 const App = () => (
   <div className="App">
     {persons.map(paragraph => (
-      <Person {...paragraph} />
+      <Person
+        {...paragraph}
+      />
     ))}
   </div>
 );
