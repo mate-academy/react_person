@@ -26,7 +26,7 @@ const people = [
 
 const App = () => (
   <div className="App">
-    {people.map(item => (<Person {...item} />))}
+    {people.map(person => (<Person {...person} />))}
   </div>
 );
 
