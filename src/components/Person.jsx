@@ -39,8 +39,5 @@ Person.propTypes = {
   age: PropTypes.number,
   sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-  ]),
+  partnerName: PropTypes.string,
 };
