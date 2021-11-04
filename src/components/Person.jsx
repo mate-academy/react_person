@@ -24,7 +24,7 @@ function Person({
         {
         isMarried
           ? `My ${partner}'s name is ${partnerName}`
-          : null
+          : 'I am not married'
         }
       </p>
     </section>
