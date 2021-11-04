@@ -21,9 +21,9 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => {
       )}
 
       <p className="Person__partner">
-        {isMarried || 'I am not married'}
-
-        {isMarried && marriedSentence}
+        {isMarried
+          ? marriedSentence
+          : 'I am not married'}
       </p>
     </section>
   );
