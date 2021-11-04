@@ -9,13 +9,12 @@ export const Person = (props) => {
       <h2 className="Person__name">{`My name is ${props.name}`}</h2>
       {props.age && <p className="Person__age">{`I am ${props.age}`}</p>}
       {props.isMarried
-        && (
+        ? (
           <p className="Person__partner">
             {`My ${partner}'s name is ${props.partnerName}`}
           </p>
-        )}
-      {!props.isMarried
-        && <p className="Person__partner">I am not married</p>}
+        )
+        : <p className="Person__partner">I am not married</p>}
     </section>
   );
 };
