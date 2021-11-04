@@ -34,7 +34,7 @@ export function Person({
 
 Person.defaultProps = {
   age: null,
-  partnerName: 'in sectret',
+  partnerName: 'in secret',
 };
 
 Person.propTypes = {
