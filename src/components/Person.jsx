@@ -18,7 +18,7 @@ export const Person = ({
         {`My name is ${name}`}
       </h2>
       <p className="Person__age">
-        {age ? `I am ${age}` : null}
+        {age && `I am ${age}`}
       </p>
       <p className="Person__partner">
         {
