@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Person.css';
 
 export function Person({ name, age, partnerName, isMarried, sex }) {
-  const parnten = sex === 'f' ? 'husband' : 'wife';
+  const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
     <section className="Person">
@@ -18,7 +18,7 @@ export function Person({ name, age, partnerName, isMarried, sex }) {
       </p>
       <p className="Person__partner">
         {isMarried
-          ? (`My ${parnten}'s name is ${partnerName}`)
+          ? (`My ${partner}'s name is ${partnerName}`)
           : ('I am not married') }
       </p>
     </section>
