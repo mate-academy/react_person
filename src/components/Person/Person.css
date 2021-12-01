@@ -1,0 +1,20 @@
+:root {
+  --blue-color: #00f;
+}
+
+.Person {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.Person__name {
+  margin-top: 8px;
+}
+
+.Person__age {
+  color: var(--blue-color);
+  font-weight: bold;
+}
