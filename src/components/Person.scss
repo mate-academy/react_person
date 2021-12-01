@@ -1,0 +1,53 @@
+$color-blue: #1f35c9;
+$color-green: #61d28c;
+$color-red: #e35e2c;
+$color-pink: #f1deed;
+$color-white: #fff;
+
+.Person {
+  padding: 40px 40px 54px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+  &__content {
+    max-width: 150px;
+  }
+
+  &:nth-child(1) {
+    background-color: $color-blue;
+    color: $color-green;
+  }
+
+  &:nth-child(2) {
+    background-color: $color-green;
+    color: $color-blue;
+  }
+
+  &:nth-child(3) {
+    background-color: $color-red;
+    color: $color-pink;
+  }
+
+  &__name {
+    margin: 0 0 20px;
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+  }
+
+  &__age {
+    margin: 0 0 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__partner {
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-white;
+    opacity: 0.8;
+  }
+}
