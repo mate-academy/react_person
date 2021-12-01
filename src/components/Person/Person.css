@@ -1,3 +1,7 @@
+:root {
+  --blue-color: #00f;
+}
+
 .Person {
   width: fit-content;
   margin-bottom: 16px;
@@ -11,6 +15,6 @@
 }
 
 .Person__age {
-  color: #00f;
+  color: var(--blue-color);
   font-weight: bold;
 }

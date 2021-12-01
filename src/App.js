@@ -4,6 +4,7 @@ import './App.scss';
 import { Person } from './components/Person/Person';
 
 const misha = {
+  id: 1,
   name: 'Misha',
   age: 37,
   sex: 'm',
@@ -12,6 +13,7 @@ const misha = {
 };
 
 const olya = {
+  id: 2,
   name: 'Olya',
   sex: 'f',
   isMarried: true,
@@ -19,6 +21,7 @@ const olya = {
 };
 
 const alex = {
+  id: 3,
   name: 'Alex',
   age: 25,
   sex: 'm',
@@ -31,6 +34,7 @@ const App = () => (
   <div className="App">
     {people.map(person => (
       <Person
+        key={person.id}
         name={person.name}
         age={person.age}
         partnerName={person.partnerName}
