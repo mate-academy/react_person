@@ -37,8 +37,8 @@ const App = () => (
         key={person.id}
         name={person.name}
         age={person.age}
-        partnerName={person.partnerName}
         isMarried={person.isMarried}
+        partnerName={person.partnerName}
         sex={person.sex}
       />
     ))}
