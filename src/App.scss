@@ -1,13 +1,38 @@
-// style go here
+$c-lite: #DED9C4;
+$c-hard: #D0CAB2;
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+
+    background-color: $c-lite;
+  }
+}
+
 .Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
+  width: 300px;
+  padding: 16px;
   border: 1px solid #000;
   border-radius: 8px;
+  text-align: center;
 
-  &__name {
-    margin-top: 8px;
+  &__married {
+    padding: 16px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    text-align: center;
   }
 
   &__age {
