@@ -25,11 +25,11 @@ const alex = {
   isMarried: false,
 };
 
+const people = [misha, olya, alex];
+
 const App = () => (
   <div className="App">
-    <Person {...misha} />
-    <Person {...olya} />
-    <Person {...alex} />
+    {people.map(person => <Person key={Math.random()} {...person} />)}
   </div>
 );
 
