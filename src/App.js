@@ -24,27 +24,19 @@ const alex = {
   isMarried: false,
 };
 
+const people = [misha, olya, alex];
+
 const App = () => (
   <>
-    <Person
-      name={misha.name}
-      age={misha.age}
-      partner={misha.partnerName}
-      sex={misha.sex}
-      isMarried={misha.isMarried}
-    />
-    <Person
-      name={olya.name}
-      partner={olya.partnerName}
-      sex={olya.sex}
-      isMarried={olya.isMarried}
-    />
-    <Person
-      name={alex.name}
-      age={alex.age}
-      sex={alex.sex}
-      isMarried={alex.isMarried}
-    />
+    {people.map(person => (
+      <Person
+        name={person.name}
+        age={person.age}
+        sex={person.sex}
+        isMarried={person.isMarried}
+        partner={person.partnerName}
+      />
+    ))}
   </>
 );
 
