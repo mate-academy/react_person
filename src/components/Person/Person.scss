@@ -1,0 +1,50 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  width: 270px;
+  height: 300px;
+  margin-right: 20px;
+  padding: 15px;
+
+  color: #a5bea573;
+  border-radius: 10px;
+  border: 2px solid #a5bea573;
+
+  transition-property: transform;
+  transition-duration: 0.5s;
+
+  .hover-hide {
+    margin: 10px 0 0;
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    color: white;
+    text-shadow: 1px 1px 1px #768676;
+    background-position: center;
+    border: 2px solid #dfdfdf73;
+
+    .person__name-prewiew {
+      display: none;
+    }
+
+    .hover-hide {
+      display: block;
+    }
+  }
+
+  &:nth-of-type(1):hover {
+    background-image: url(https://image.freepik.com/free-photo/pleasant-looking-serious-man-stands-in-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg);
+  }
+
+  &:nth-of-type(2):hover {
+    background-image: url(https://image.freepik.com/free-photo/indoor-shot-of-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-at-university_273609-1270.jpg);
+  }
+
+  &:nth-of-type(3):hover {
+    background-image: url(https://image.freepik.com/free-photo/attractive-mixed-race-male-with-positive-smile-shows-white-teeth-keeps-hands-on-stomach-being-in-high-spirit-wears-white-shirt-rejoices-positive-moments-in-life-people-and-emotions-concept_273609-15527.jpg);
+  }
+}
