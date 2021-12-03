@@ -18,9 +18,10 @@ export const Person = ({
         {name}
       </h2>
       <p className="person__age hover-hide">
-        {age && (
-          `I am ${age}`
-        )}
+        {age
+          ? `I am ${age}`
+          : 'age is hidden'
+        }
       </p>
       <p className="person__partner hover-hide">
         {isMarried
