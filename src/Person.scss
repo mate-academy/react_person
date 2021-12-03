@@ -1,0 +1,27 @@
+.person {
+  margin: 10px auto;
+  padding: 20px;
+
+  min-width: 300px;
+  min-height: 140px;
+  max-width: 500px;
+  
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  background: linear-gradient(to left, #457fca, #5691c8);
+  
+  color: white;
+  transition: transform 0.3s;
+  
+  &__age {
+    color: #ccc;
+  }
+
+  &__partner {
+    color: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
