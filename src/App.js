@@ -25,11 +25,19 @@ const alex = {
   isMarried: false,
 };
 
+const people = [misha, olya, alex];
+
 const App = () => (
   <div className="App App__wrapper">
-    <Person {...misha} />
-    <Person {...olya} />
-    <Person {...alex} />
+    {people.map(person => (
+      <Person
+        name={person.name}
+        age={person.age}
+        sex={person.sex}
+        isMarried={person.isMarried}
+        partnerName={person.partnerName}
+      />
+    ))}
   </div>
 );
 
