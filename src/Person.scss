@@ -7,22 +7,21 @@
   max-width: 500px;
   
   border-radius: 5px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
   background: linear-gradient(to left, #457fca, #5691c8);
   
   color: white;
   transition: transform 0.3s;
   
-  &:hover {
-    transform: scale(1.05);
-  }
-
-
   &__age {
     color: #ccc;
   }
 
   &__partner {
     color: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
