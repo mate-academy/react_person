@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Person.scss'
+import './Person.scss';
 
 export const Person = (props) => {
   const { name, age, sex, isMarried, partnerName } = props;
@@ -9,12 +9,12 @@ export const Person = (props) => {
   return (
     <section className="person">
       <h2 className="person__name">
-        My name is {name}
+        {`My name is ${name}`}
       </h2>
 
       {age && (
         <p className="person__age">
-          I am {age}
+          {`I am ${age}`}
         </p>
       )}
 
