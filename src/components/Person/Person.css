@@ -1,0 +1,17 @@
+.Person {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #555;
+}
+
+.Person__name {
+  margin-top: 8px;
+}
+
+.Person__age {
+  color: #00f;
+  font-weight: bold;
+}
