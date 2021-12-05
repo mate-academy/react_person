@@ -10,7 +10,7 @@ export const Person = (props) => {
     partnerName = null,
   } = props;
 
-  const partner = sex === 'f' ? 'husband\'s' : 'wife\'s';
+  const partner = sex === 'f' ? `husband's` : `wife's`;
   const message = isMarried
     ? `My ${partner} name is ${partnerName}`
     : 'I am not married';
