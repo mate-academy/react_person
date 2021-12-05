@@ -11,11 +11,10 @@
 
   transition: transform 0.2s;
 
-  &:hover,
-  &__name:hover {
+  &:hover {
     transform: scale(103%);
-    color: #800505;
   }
+ 
   
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
