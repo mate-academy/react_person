@@ -23,16 +23,32 @@ const alex = {
   isMarried: false,
 };
 
-const obj = misha;
-
 const App = () => (
-  <Person
-    name={obj.name}
-    age={obj.age}
-    sex={obj.sex}
-    isMarried={obj.isMarried}
-    partnerName={obj.partnerName}
-  />
+  <>
+    <Person
+      name={misha.name}
+      age={misha.age}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
+
+    <Person
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
+    />
+
+    <Person
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
+  </>
 );
 
 export default App;
