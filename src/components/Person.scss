@@ -1,0 +1,30 @@
+$color-salvia: #66d3c1;
+$color-grey: #8a8aa8;
+$color-ligtGrey: #a7c7f1;
+
+.Person {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px 40px 54px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid $color-salvia;
+  border-radius: 8px;
+
+  &__name {
+    color: $color-salvia;
+    margin-bottom: 24px;
+  }
+
+  &__age {
+    color: $color-ligtGrey;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: auto;
+  }
+
+  &__partner {
+    color: $color-grey;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
