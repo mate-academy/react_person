@@ -1,0 +1,26 @@
+.person {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 8px;
+
+  &__name {
+    margin-top: 8px;
+  }
+
+  transition: transform 0.2s;
+
+  &:hover,
+  &__name:hover {
+    transform: scale(103%);
+    color: #800505;
+  }
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  &__age {
+    color: #830545;
+    font-weight: bold;
+  }
+}
