@@ -1,17 +1,47 @@
-// style go here
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+body {
+  font-family: sans-serif;
 
-  &__name {
-    margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: linear-gradient(to left, #0090bc, #00117a);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.person {
+  margin: 15px auto;
+
+  width: 400px;
+  padding: 16px;
+  border: 5px solid #002f54;
+  background: linear-gradient(to right, #283e51, #00265a);
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.55s;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    width: 420px;
+    border-radius: 10px;
+    border: 0;
+    background: linear-gradient(to right, #5380a7, #003c8d);
+    box-shadow: 20px 4px 52px 14px rgba(34, 60, 80, 0.4);
+  }
+
+  &__partner {
+    padding: 16px;
+    background: linear-gradient(to right, #406181, #004f5a);
+    border: 4px solid #002f54;
+    border-radius: 13px;
+    text-align: center;
   }
 
   &__age {
-    color: #00f;
+    color: #00f7ff;
     font-weight: bold;
   }
 }
