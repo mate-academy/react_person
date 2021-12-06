@@ -21,7 +21,7 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => (
 );
 
 Person.prototype = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   age: PropTypes.number,
   sex: PropTypes.string,
   isMarried: PropTypes.bool,
@@ -29,6 +29,8 @@ Person.prototype = {
 };
 
 Person.defaultProps = {
-  name: 'User',
   age: null,
+  sex: null,
+  isMarried: null,
+  partnerName: null,
 };
