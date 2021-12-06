@@ -1,7 +1,13 @@
 import React from 'react';
 import './Person.scss';
 
-export function Person({ name, age, sex, isMarried, partnerName }) {
+export function Person({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) {
   const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
