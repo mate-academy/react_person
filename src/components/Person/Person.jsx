@@ -5,6 +5,7 @@ import './Person.scss';
 
 export const Person = (props) => {
   const { name, age, sex, isMarried, partnerName } = props;
+  const whoIswho = sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="person">
@@ -18,21 +19,15 @@ export const Person = (props) => {
         </p>
       )}
 
-      {isMarried ? (
-        <p className="person__partner">
-          {sex === 'm'
-            ? `My wife's name is ${partnerName}`
-            : `My husband's name is ${partnerName}`
-          }
-        </p>
-      ) : (
-        <p className="person__partner">
-          I am not married
-        </p>
-      )}
+      <p className="person__partner">
+        {isMarried
+          ? `My ${whoIswho}'s name is ${partnerName}`
+          : 'I am not married'
+        }
+      </p>
     </section>
-  )
-}
+  );
+};
 
 Person.defaultProps = {
   name: 'Ihor',
@@ -43,9 +38,9 @@ Person.defaultProps = {
 };
 
 Person.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
   sex: PropTypes.string,
   isMarried: PropTypes.bool,
-  partnerName: PropTypes.string,
+  partnerName: PropTypes.string.isRequired,
 };

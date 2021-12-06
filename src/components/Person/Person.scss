@@ -14,13 +14,16 @@
   flex-basis: (100% / 3);
   color: #fff;
   background-color: rgb(77, 113, 212);
+
   &__name {
     margin-bottom: 20px;
   }
+
   &__age {
     font-size: 20px;
     margin-bottom: 10px;
   }
+
   &__partner {
     font-size: 24px;
   }
