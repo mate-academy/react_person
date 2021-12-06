@@ -9,9 +9,11 @@ const Person = ({ name, age, sex, isMarried, partnerName }) => {
       <h2 className="person__name">
         {`My name is ${name}`}
       </h2>
-      <p className="person__age">
-        {age ? `I am ${age}` : null}
-      </p>
+      {age && (
+        <p className="person__age">
+          {`I am ${age}`}
+        </p>
+      )}
       <p className="person__partner">
         { isMarried
           ? `My ${partner} is ${partnerName}`
