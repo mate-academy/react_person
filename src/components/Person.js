@@ -12,9 +12,13 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => {
         {' '}
         {name}
       </h2>
-      <p className="Person__age">
-        {age && `I am ${age}`}
-      </p>
+      {age
+        && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )
+      }
       {(sex && isMarried)
         ? (
           <p className="Person__partner">
