@@ -1,17 +1,28 @@
-// style go here
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
-  &__name {
-    margin-top: 8px;
-  }
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
 
-  &__age {
-    color: #00f;
-    font-weight: bold;
-  }
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
