@@ -6,8 +6,7 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => (
   <section className="Person">
     <div className="Person__content">
       <h2 className="Person__name">
-        {'My name is '}
-        {name}
+        {`My name is ${name}`}
       </h2>
 
       <p className="Person__age">
