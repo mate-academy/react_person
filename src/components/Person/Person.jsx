@@ -30,7 +30,6 @@ export const Person = (props) => {
 };
 
 Person.defaultProps = {
-  name: 'Person',
   age: null,
   partnerName: null,
 };
