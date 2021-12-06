@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Person.scss';
 
 export function Person({
@@ -32,3 +33,17 @@ export function Person({
     </>
   );
 }
+
+Person.defaultProps = {
+  age: null,
+  partnerName: null,
+  isMarried: false,
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
+};

@@ -2,6 +2,7 @@ import React from 'react';
 import { Person } from './components/Person';
 
 const misha = {
+  id: 1,
   name: 'Misha',
   age: 37,
   sex: 'm',
@@ -10,6 +11,7 @@ const misha = {
 };
 
 const olya = {
+  id: 2,
   name: 'Olya',
   sex: 'f',
   isMarried: true,
@@ -17,6 +19,7 @@ const olya = {
 };
 
 const alex = {
+  id: 3,
   name: 'Alex',
   age: 25,
   sex: 'm',
@@ -27,8 +30,9 @@ const people = [misha, olya, alex];
 
 const App = () => (
   <div className="App">
-    {people.map(({ name, age, sex, isMarried, partnerName }) => (
+    {people.map(({ id, name, age, sex, isMarried, partnerName }) => (
       <Person
+        key={id}
         name={name}
         age={age}
         sex={sex}
