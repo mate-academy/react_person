@@ -4,42 +4,46 @@ import PropTypes from 'prop-types';
 export const Person = (props) => {
   const {
     name,
-    age = null,
+    age,
     sex,
-    isMarried = false,
-    partnerName = null,
+    isMarried,
+    partnerName,
   } = props;
 
   const partner = sex === 'f' ? `husband's` : `wife's`;
-  const message = isMarried
+  const maritalStatus = isMarried
     ? `My ${partner} name is ${partnerName}`
     : 'I am not married';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {'My name is '}
-        {name}
+        {`My name is ${name}`}
       </h2>
 
       {age && (
         <p className="Person__age">
-          {'I am '}
-          {age}
+          {`I am ${age}`}
         </p>
       )}
 
       <p className="Person__partner">
-        {message}
+        {maritalStatus}
       </p>
     </section>
   );
 };
 
+Person.defaultProps = {
+  age: null,
+  isMarried: false,
+  partnerName: null,
+};
+
 Person.propTypes = {
   name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
+  age: PropTypes.number,
   sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
 };
