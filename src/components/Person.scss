@@ -1,0 +1,32 @@
+.person {
+  height: 250px;
+  padding: 40px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 24px -3px  rgba(0, 0, 0, 0.29),
+      0 0 26px -3px  rgba(0, 0, 0, 0.21);
+  }
+
+  &__name {
+    margin-bottom: 25px;
+  }
+
+  &__age {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: rgb(103, 14, 14);
+  }
+
+  &__partner {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: rgb(31, 0, 30);
+  }
+}

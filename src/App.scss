@@ -1,17 +1,39 @@
-// style go here
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:ital,wght@1,200&display=swap");
 
-  &__name {
-    margin-top: 8px;
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+}
+
+html {
+  font-family: "Fuzzy Bubbles", "Poppins", sans-serif;
+}
+
+.app {
+  height: 100vh;
+  background-color: rgba(152, 109, 129, 0.61);
+  
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    padding: 40px 20px 20px;
   }
 
-  &__age {
-    color: #00f;
-    font-weight: bold;
+  &__container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 40px 40px;
+    height: 600px;
+    display: grid;
+    align-items: center;
+    overflow-y: scroll;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
   }
 }
