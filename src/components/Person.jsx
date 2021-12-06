@@ -3,7 +3,7 @@ import './Person.scss';
 
 import PropTypes from 'prop-types';
 
-export const Person = ({ name, age, sex, partnerName }) => {
+export const Person = ({ name, age, sex, partnerName, isMarried }) => {
   const wifeOrHusband = sex === 'f' ? 'husband' : 'wife';
 
   return (
@@ -17,7 +17,7 @@ export const Person = ({ name, age, sex, partnerName }) => {
         </p>
       )}
       <p className="person__partner">
-        {partnerName
+        {isMarried
           ? `My ${wifeOrHusband}'s name is ${partnerName}`
           : 'I am not married'}
       </p>
@@ -28,11 +28,13 @@ export const Person = ({ name, age, sex, partnerName }) => {
 Person.defaultProps = {
   age: null,
   partnerName: null,
+  isMarried: false,
 };
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number,
   sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
 };
