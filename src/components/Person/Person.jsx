@@ -10,24 +10,30 @@ export const Person = ({
   isMarried,
   partnerName,
 }) => {
-  const personSex = sex === 'm' ? 'wife' : 'husband';
+  const personsSpouse = sex === 'm' ? 'wife' : 'husband';
   const hasPartner = isMarried
-    ? `My ${personSex}'s name is ${partnerName}`
+    ? `My ${personsSpouse}'s name is ${partnerName}`
     : 'I am not married';
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">{`I am ${age}`}</p>
-      <p className="Person__partner">{hasPartner}</p>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      <p className="Person__age">
+        {`I am ${age || 'unknown age'}`}
+      </p>
+      <p className="Person__partner">
+        {hasPartner || 'unknown partner'}
+      </p>
     </section>
   );
 };
 
 Person.defaultProps = {
-  age: 'unknown age',
-  isMarried: 'Unknown data',
-  partnerName: 'unknown partner',
+  age: 0,
+  isMarried: false,
+  partnerName: '',
 };
 
 Person.propTypes = {
