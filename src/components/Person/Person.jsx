@@ -13,7 +13,7 @@ export function Person({ name, age, partnerName, isMarried, sex }) {
         <h2 className="Person__name">{`My name is ${name}`}</h2>
 
         {age ? (
-          <p className="Person__age">{age && `I am ${age}`}</p>
+          <p className="Person__age">{`I am ${age}`}</p>
         )
           : null
         }
