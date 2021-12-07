@@ -1,8 +1,17 @@
 import React from 'react';
 import './Person.scss';
 
-function Person({ name, age, sex, isMarried, partnerName }) {
-  const partner = sex === 'm' ? 'wife' : 'husband';
+export const Person = ({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) => {
+  const personsSpouse = sex === 'm' ? 'wife' : 'husband';
+  const partnerInfo = isMarried
+    ? `My ${personsSpouse}'s name is ${partnerName}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -10,17 +19,13 @@ function Person({ name, age, sex, isMarried, partnerName }) {
         {`My name is ${name}`}
       </h2>
       {age && (
-        <p className="Person__age">{`I am ${age}`}</p>
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
       )}
       <p className="Person__partner">
-        {isMarried ? (
-          `My ${partner}'s name is ${partnerName}`
-        ) : (
-          'I am not married'
-        )}
+        {partnerInfo}
       </p>
     </section>
   );
-}
-
-export default Person;
+};
