@@ -11,11 +11,7 @@ export function Person({ name, age, partnerName, isMarried, sex }) {
     <div className="App">
       <section className="Person">
         <h2 className="Person__name">{`My name is ${name}`}</h2>
-        <p className="Person__age">
-          {age
-            ? `I am ${age}`
-            : null}
-        </p>
+        <p className="Person__age">{age && `I am ${age}`}</p>
         <p className="Person__partner">
           {isMarried
             ? `My ${partner}'s name is ${partnerName}`
@@ -29,6 +25,9 @@ export function Person({ name, age, partnerName, isMarried, sex }) {
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
+  partnerName: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
   sex: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  age: PropTypes.number,
 };
