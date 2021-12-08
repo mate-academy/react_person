@@ -8,39 +8,33 @@ export const Person = ({
   sex,
   isMarried,
   partnerName,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {name}
-    </h2>
+}) => {
+  const partner = sex === 'm' ? 'wife' : 'husband';
+  const marriageCondition = isMarried
+    ? `My ${partner}'s name is ${partnerName}`
+    : 'I am not married';
 
-    {sex === 'm' && (
-      <p className="Person__age">
-        I am
-        {' '}
-        {age}
-      </p>
-    )}
+  return (
+    <>
+      <section className="Person">
+        <h2 className="Person__name">
+          {`My name is ${name}`}
+        </h2>
 
-    {isMarried
-      ? (
+        {age && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )}
+
         <p className="Person__partner">
-          {sex === 'm'
-            ? `My wife's name is ${partnerName}`
-            : `My husband's name is ${partnerName}`
-          }
+          {marriageCondition}
         </p>
-      )
-      : (
-        <p className="Person__partner">
-          I am not married
-        </p>
-      )
-    }
-  </section>
-);
+
+      </section>
+    </>
+  );
+};
 
 Person.defaultProps = {
   age: null,
