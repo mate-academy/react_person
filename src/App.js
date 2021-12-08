@@ -30,6 +30,7 @@ const App = () => (
   <div className="App">
     {people.map(person => (
       <Person
+        key={person.id}
         name={person.name}
         age={person.age}
         sex={person.sex}
