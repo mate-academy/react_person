@@ -48,3 +48,5 @@ Person.propTypes = {
   isMarried: PropTypes.bool.isRequired,
   partnerName: PropTypes.string,
 };
+
+// test comment for solve commit problems
