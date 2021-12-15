@@ -1,5 +1,5 @@
 import React from 'react';
-import { Person } from './components/Person';
+import { Person } from './components/Person/Person';
 
 const misha = {
   name: 'Misha',
