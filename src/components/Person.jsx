@@ -2,33 +2,35 @@ import React from 'react';
 import './Person.scss';
 import PropTypes from 'prop-types';
 
-const Person = ({ name, age, partner, sex, isMarried }) => (
-  <div className="person">
-    <h2 className="person__name">
-      {`My name is ${name}`}
-    </h2>
+const Person = ({ name, age, partner, sex, isMarried }) => {
+  function getSecondHalf() {
+    let secondHalf = "husband's";
 
-    {age && (
-      <p className="person__age">
-        {`I am ${age}`}
-      </p>
-    )}
+    return (sex === 'm')
+      ? (secondHalf = "wife's")
+      : secondHalf;
+  }
 
-    {isMarried && (
-      (sex === 'm')
-        ? (
-          <p className="person__partner">
-            {`My wife's name is ${partner}`}
-          </p>
-        )
-        : (
-          <p className="person__partner">
-            {`My husband's name is ${partner}`}
-          </p>
-        )
-    )}
-  </div>
-);
+  return (
+    <div className="person">
+      <h2 className="person__name">
+        {`My name is ${name}`}
+      </h2>
+
+      {age && (
+        <p className="person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+
+      {isMarried && (
+        <p className="person__partner">
+          {`My ${getSecondHalf()} name is ${partner}`}
+        </p>
+      )}
+    </div>
+  );
+};
 
 Person.defaultProps = {
   name: '',
