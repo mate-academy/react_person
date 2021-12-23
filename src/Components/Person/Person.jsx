@@ -20,14 +20,13 @@ function Person({
         {' '}
         {name}
       </h2>
-      {age ? (
+      {age && (
         <p className="Person__age">
           I am
           {' '}
           {age}
         </p>
-      ) : ''
-      }
+      )}
       <p className="Person__partner">
         {isMarried
           ? `My ${marriedString} name is ${partnerName}`
