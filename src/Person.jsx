@@ -2,29 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-function SecondPart({ data, partner }) {
-  return (
-    data ? (
-      <p className="Person__partner">
-        My husband&apos;s name is
-        {partner}
-      </p>
-    ) : (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    )
-  );
-}
-
-export const Person = ({
+export function Person({
   name,
   sex,
   age,
   isMarried,
   partnerName,
-}) => (
-  <>
+}) {
+  const marryStatus = sex === 'f' ? `husband's` : `wife's`;
+
+  return (
     <div className="App">
       <section className="Person">
         <h2 className="Person__name">
@@ -40,26 +27,20 @@ export const Person = ({
           </p>
         )}
 
-        {sex === 'm' && isMarried === true ? (
-          <p className="Person__partner">
-            My wife&apos;s name is
-            {partnerName}
-          </p>
-        )
-          : (
-            <SecondPart
-              data={sex === 'f' && isMarried === true}
-              partner={partnerName}
-            />
-          )}
+        <p className="Person__partner">
+          {isMarried
+            ? `My ${marryStatus} name is
+          ${partnerName}`
+            : `I am not married`}
+        </p>
 
       </section>
     </div>
-  </>
-);
+  );
+}
 
 Person.defaultProps = {
-  partnerName: 'Do you?',
+  partnerName: 'What is the name of your partner?',
 };
 
 Person.propTypes = {
