@@ -1,6 +1,8 @@
 import React from 'react';
 import './Person.scss';
 
+const partnerChooser = sex => sex === 'm' ? 'wife' : 'husband';
+
 export const Person = ({
   name,
   age,
@@ -16,7 +18,7 @@ export const Person = ({
       )}
       <p className="Person__partner">
         {isMarried
-          ? `My ${sex === 'm' ? 'wife' : 'husband'}'s name is ${partnerName}`
+          ? `My ${partnerChooser(sex)}'s name is ${partnerName}`
           : 'I am not married'
         }
       </p>
