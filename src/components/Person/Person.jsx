@@ -20,8 +20,14 @@ export const Person = ({
     </p>
 
     <p className="Person__partner">
-      {partnerName ? (
+      {partnerName && sex === 'm' ? (
         `My wife's name is ${partnerName}`
+      ) : (
+        ''
+      )}
+
+      {partnerName && sex === 'f' ? (
+        `My husband's name is ${partnerName}`
       ) : (
         'I am not married'
       )}
