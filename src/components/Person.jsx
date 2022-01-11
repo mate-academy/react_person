@@ -5,9 +5,9 @@ const partnerSex = sex => (sex === 'm' ? 'wife' : 'husband');
 
 function Person({
   name = '',
-  age = '',
+  age = null,
   sex = '',
-  isMarried = '',
+  isMarried = false,
   partnerName = '',
 }) {
   return (
