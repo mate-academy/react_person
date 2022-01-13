@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Person.scss';
+
 export function Person({
   name,
   age,
