@@ -2,7 +2,11 @@ import React from 'react';
 import './Person.scss';
 import PropTypes from 'prop-types';
 
-const partnerSex = sex => (sex === 'm' ? 'wife' : 'husband');
+const partnerSex = sex => (
+  sex === 'm'
+    ? 'wife'
+    : 'husband'
+);
 
 export const Person = ({
   name,
