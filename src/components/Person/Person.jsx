@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-export const Person = ({ name, age, partnerName, isMarried, sex }) => (
+export const Person = ({
+  name,
+  age,
+  partnerName,
+  isMarried,
+  sex,
+}) => (
   <section className="Person">
     <h2 className="Person__name">
       {`My name is ${name}`}
