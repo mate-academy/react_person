@@ -28,12 +28,12 @@ const App = () => (
     <section className="Person">
       <h2 className="Person__name">My name is Misha</h2>
       <p className="Person__age">I am 37</p>
-      <p className="Person__partner">My wife&apos;s name is Natasha</p>
+      <p className="Person__partner">My partner&apos;s name is Natasha</p>
     </section>
 
     <section className="Person">
       <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">My husband&apos;s name is Maksym</p>
+      <p className="Person__partner">My partner&apos;s name is Maksym</p>
     </section>
 
     <section className="Person">
