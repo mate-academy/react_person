@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import { Person } from './Component/Person';
 
 const misha = {
   name: 'Misha',
@@ -41,6 +41,10 @@ const App = () => (
       <p className="Person__age">I am 25</p>
       <p className="Person__partner">I am not married</p>
     </section>
+
+    <Person {...misha} />
+    <Person {...olya} />
+    <Person {...alex} />
   </div>
 );
 
