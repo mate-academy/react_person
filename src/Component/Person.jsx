@@ -9,7 +9,7 @@ export function Person({
   sex,
   isMarried,
 }) {
-  const partner = role => (sex === 'm' ? 'wife' : 'husband');
+  const partner = () => (sex === 'm' ? 'wife' : 'husband');
 
   return (
     <section className="Person">
