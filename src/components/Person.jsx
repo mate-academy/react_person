@@ -1,6 +1,7 @@
-/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
+
+const partnerGender = sex => (sex === 'm' ? `wife's` : `husband's`);
 
 export const Person = ({ name, age, partnerName, sex, isMarried }) => (
   <div className="App">
@@ -9,7 +10,7 @@ export const Person = ({ name, age, partnerName, sex, isMarried }) => (
       <p className="Person__age">{age ? `I am ${age}` : ''}</p>
       <p className="Person__partner">
         {isMarried
-          ? `${`My ${sex === 'm' ? `wife's` : `husband's`} name is ${partnerName}`}`
+          ? `${`My ${partnerGender(sex)} name is ${partnerName}`}`
           : 'I am not married'}
       </p>
     </section>
