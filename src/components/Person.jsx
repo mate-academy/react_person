@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import './Person.scss';
 
-export function Person(
-  { name,
-    age,
-    sex,
-    isMarried,
-    partnerName },
-) {
+export function Person({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) {
   return (
     <section className="Person">
       {name && (
