@@ -20,17 +20,12 @@ export const Person = ({
       </p>
     )}
 
-    {isMarried && (
-      <p className="Person__partner">
-        {`My partner is ${partnerName}`}
-      </p>
-    )}
-
-    {!isMarried && (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    )}
+    <p className="Person__partner">
+      {isMarried
+        ? `My partner is ${partnerName}`
+        : 'I am not married'
+        }
+    </p>
   </section>
 );
 
