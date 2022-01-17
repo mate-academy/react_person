@@ -23,7 +23,7 @@ export const Person = ({
 
 Person.defaultProps = {
   name: '',
-  age: undefined,
+  age: null,
   sex: '',
   isMarried: false,
   partnerName: '',
