@@ -24,7 +24,7 @@ export const Person = ({
     <h2 className="Person__name">{`My name is ${name}`}</h2>
 
     <p className="Person__age">
-      {`I am ${age}` || ''}
+      {age ? `I am ${age}` : ''}
     </p>
 
     <p className="Person__partner">
@@ -34,10 +34,10 @@ export const Person = ({
 );
 
 Person.defaultProps = {
-  name: undefined,
-  age: undefined,
-  sex: undefined,
-  partnerName: undefined,
+  name: '',
+  age: '',
+  sex: '',
+  partnerName: '',
 };
 
 Person.propTypes = {
