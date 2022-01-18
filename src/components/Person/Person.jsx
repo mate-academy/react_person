@@ -2,8 +2,7 @@ import React from 'react';
 import './Person.scss';
 import PropTypes from 'prop-types';
 
-export function Person({ person }) {
-  const { name, age, sex, isMarried, partnerName } = person;
+export function Person({ name, age, sex, isMarried, partnerName }) {
   const partnerType = sex === `m` ? `wife's` : `husband's`;
   const partner = isMarried
     ? `My ${partnerType} name is ${partnerName}`
@@ -12,7 +11,7 @@ export function Person({ person }) {
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">{age && `I am ${age}`}</p>
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
       <p className="Person__partner">{partner}</p>
     </section>
   );
