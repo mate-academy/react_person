@@ -26,29 +26,9 @@ const alex = {
 
 const App = () => (
   <>
-    <Person
-      name={misha.name}
-      age={misha.age}
-      sex={misha.sex}
-      isMarried={misha.isMarried}
-      partner={misha.partnerName}
-    />
-
-    <Person
-      name={olya.name}
-      age={olya.age}
-      sex={olya.sex}
-      isMarried={olya.isMarried}
-      partner={olya.partnerName}
-    />
-
-    <Person
-      name={alex.name}
-      age={alex.age}
-      sex={alex.sex}
-      isMarried={alex.isMarried}
-      partner={alex.partnerName}
-    />
+    <Person {...misha} />
+    <Person {...olya} />
+    <Person {...alex} />
   </>
 );
 
