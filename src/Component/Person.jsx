@@ -29,7 +29,6 @@ export function Person({
           : ('I am not married')
         }
       </p>
-
     </section>
   );
 }
