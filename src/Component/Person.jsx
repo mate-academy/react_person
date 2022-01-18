@@ -15,23 +15,21 @@ export function Person({
         {`My name is ${name}`}
       </h2>
 
-      {age ? (
+      {age && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
-      ) : (
-        null
       )}
 
-      {isMarried ? (
-        <p className="Person__partner">
-          {`My ${(sex === 'm' ? 'wife' : 'husband')}'s name is ${partnerName}`}
-        </p>
-      ) : (
-        <p className="Person__partner">
-          I am not married
-        </p>
-      )}
+      <p className="Person__partner">
+        {isMarried
+          ? (
+            `My ${(sex === 'm' ? 'wife' : 'husband')}'s name is ${partnerName}`
+          )
+          : ('I am not married')
+        }
+      </p>
+
     </section>
   );
 }
