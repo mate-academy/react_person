@@ -1,0 +1,23 @@
+.Person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+
+  width: 250px;
+  border: 2px solid black;
+  background-color: rgb(253, 244, 115);
+
+  &__name {
+    margin: 0;
+  }
+
+  &__age {
+    margin: 0;
+  }
+
+  &__partner {
+    margin: 0;
+  }
+}
