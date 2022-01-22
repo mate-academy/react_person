@@ -27,7 +27,13 @@ const alex = {
 const App = () => (
   <div className="App">
     {[misha, olya, alex]
-      .map(person => (<Person key={person.name} person={person} />))}
+      .map(person => (
+        <Person
+          key={person.name}
+          isMarried={person.isMarried}
+          person={person}
+        />
+      ))}
   </div>
 );
 
