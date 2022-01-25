@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyPartner = ({ person }) => {
+export const MyPartner = ({ person }) => {
   const partnerSex = person.sex === 'f' ? 'husband' : 'wife';
 
   return (
@@ -9,5 +9,3 @@ const MyPartner = ({ person }) => {
     </p>
   );
 };
-
-export default MyPartner;
