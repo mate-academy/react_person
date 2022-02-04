@@ -14,6 +14,7 @@ const MarriedStatus = ({ isMarried, sex, partnerName }) => {
         {sex === 'm' ? "wife's" : "husband's"}
         {' '}
         name is
+        {' '}
         {partnerName}
       </p>
     </section>
