@@ -7,9 +7,9 @@ const Persone = ({ name, age, sex, isMarried, partnerName }) => (
     <h2 className="person__name">{`My name is ${name}`}</h2>
     {age && (<p className="person__age">{`I am ${age}`}</p>)}
     <p className="person__partner">
-      {isMarried ? `
-      My ${sex === 'm' ? "wife's" : "husband's"} name is ${partnerName}
-      ` : 'I am not married'}
+      {isMarried
+        ? `My ${sex === 'm' ? "wife's" : "husband's"} name is ${partnerName}`
+        : 'I am not married'}
     </p>
   </section>
 );
