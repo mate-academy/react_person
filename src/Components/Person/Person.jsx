@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Person.scss';
 
-const Person = ({
+export const Person = ({
   name,
   age,
   sex,
@@ -30,5 +30,3 @@ const Person = ({
     )}
   </section>
 );
-
-export default Person;

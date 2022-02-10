@@ -1,5 +1,5 @@
 import React from 'react';
-import Person from './Person';
+import { Person } from './Components/Person';
 
 const misha = {
   name: 'Misha',
@@ -23,7 +23,7 @@ const alex = {
   isMarried: false,
 };
 
-const App = () => (
+export const App = () => (
   <div className="App">
     <Person
       {...misha}
@@ -38,5 +38,3 @@ const App = () => (
     />
   </div>
 );
-
-export default App;
