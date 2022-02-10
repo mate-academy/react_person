@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import './Person.scss';
 
 function Person({ name, age, sex, isMarried, partnerName }) {
+  const spouse = sex === 'f' ? 'husband' : 'wife';
+
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
@@ -13,7 +15,7 @@ function Person({ name, age, sex, isMarried, partnerName }) {
       <p className="Person__partner">
         {
           (isMarried && (
-            `My ${sex === 'f' ? 'husband' : 'wife'}'s name is ${partnerName}`
+            `My ${spouse}'s name is ${partnerName}`
           )) || `I am not married`
         }
       </p>
