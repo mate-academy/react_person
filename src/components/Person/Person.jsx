@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Person.scss';
+
 function Person({ name, age, sex, isMarried, partnerName }) {
   return (
     <section className="Person">
