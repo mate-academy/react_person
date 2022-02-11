@@ -15,9 +15,10 @@ export function Person({ name, age, sex, isMarried, partnerName }) {
       }
 
       <p className="Person__partner">
-        {isMarried
-          ? `My ${spouse}'s name is ${partnerName}`
-          : `I am not married`
+        {
+          isMarried
+            ? `My ${spouse}'s name is ${partnerName}`
+            : `I am not married`
         }
       </p>
     </section>
