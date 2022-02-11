@@ -10,14 +10,19 @@ const Person = ({ name, age, sex, partnerName, isMarried }) => ((
         {' '}
         {name}
       </h2>
-      <p className="Person__age">
-        {age && (`I am ${age}`)}
-      </p>
+      {age && (
+        <p className="Person__age">
+          I am
+          {' '}
+          {age}
+        </p>
+      )
+      }
       <p className="Person__partner">
         {!isMarried ? 'I am not married'
           : `My
-        ${isMarried && ((sex === 'm' && 'wife')
-            || (sex === 'f' && 'husband'))}'s name is
+        ${(sex === 'm' && 'wife')
+            || (sex === 'f' && 'husband')}'s name is
         ${partnerName}`
         }
       </p>
