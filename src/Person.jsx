@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // props = { user: ....}
 export const Person = ({ user }) => {
   const { name, sex, age, isMarried, partnerName } = user;
-  const partnerSex = sex === 'f' ? 'wife' : 'husband';
+  const partnerSex = sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="Person">
