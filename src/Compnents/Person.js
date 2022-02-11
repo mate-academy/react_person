@@ -2,13 +2,9 @@ import React from 'react';
 import './Person.scss';
 
 const Person = (props) => {
-  let partnerType = 'wife&apos;s';
-
-  if (props.person.sex === 'm') {
-    partnerType = 'wife\'s';
-  } else {
-    partnerType = 'husband\'s';
-  }
+  const partnerType = props.person.sex === 'm'
+    ? 'wife\'s'
+    : 'husband\'s';
 
   return (
     <>
