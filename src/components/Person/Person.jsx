@@ -3,20 +3,15 @@ import './Person.scss';
 
 export const Person = ({ person }) => {
   let parthnerPhrase = `wife's`;
-  let marriedTag = (
-    <p className="Person__partner">I am not married</p>
-  );
+  let marriedPhrase = 'I am not married';
 
   if (person.sex === 'f') {
     parthnerPhrase = `husband's`;
   }
 
   if (person.isMarried) {
-    marriedTag = (
-      <p className="Person__partner">
-        {`My ${parthnerPhrase} name is ${person.partnerName}`}
-      </p>
-    );
+    marriedPhrase
+      = `My ${parthnerPhrase} name is ${person.partnerName}`;
   }
 
   return (
@@ -25,7 +20,7 @@ export const Person = ({ person }) => {
       {person.age && (
         <p className="Person__age">{`I am ${person.age}`}</p>
       )}
-      {marriedTag}
+      <p className="Person__partner">{marriedPhrase}</p>
     </section>
   );
 };
