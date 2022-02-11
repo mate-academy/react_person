@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 
 import './Person.scss';
@@ -11,27 +12,19 @@ export function Person({
 }) {
   let spouse;
 
-  if (sex === 'm') {
-    spouse = 'wife';
-  } else if (sex === 'f') {
-    spouse = 'husband';
-  }
+  sex === 'm'
+    ? spouse = 'wife'
+    : spouse = 'husband';
 
   let married;
 
-  if (isMarried === true) {
-    married = `My ${spouse}'s name is ${partnerName}`;
-  } else if (isMarried === false) {
-    married = 'I am not married';
-  }
+  isMarried
+    ? married = `My ${spouse}'s name is ${partnerName}`
+    : married = 'I am not married';
 
   let personAge;
 
-  if (age === undefined) {
-    personAge = 'Age is hidden';
-  } else if (age) {
-    personAge = `I am ${age}`;
-  }
+  age === undefined ? personAge = '' : personAge = `I am ${age}`;
 
   return (
     <section className="Person">
