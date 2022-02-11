@@ -2,36 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Person = ({ name, age, partherName, sex, isMarried }) => {
-  let pathner;
-  let personPartner;
-  let personAge;
-
-  if (age === undefined) {
-    personAge = 'Age is hidden';
-  } else {
-    personAge = `I am a ${age}`;
-  }
-
-  if (isMarried === true && sex === 'm') {
-    pathner = 'wife';
-  } else if (isMarried === true && sex === 'f') {
-    pathner = 'husband';
-  }
-
-  if (isMarried === true) {
-    personPartner = `My ${pathner}'s name is ${partherName}`;
-  } else if (isMarried === false) {
-    personPartner = 'I am not married';
-  }
+  const married = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
       <p className="Person__age">
-        {`${personAge}`}
+        {age
+          ? `I am a ${age}`
+          : 'Age is hidden'
+        }
       </p>
       <p className="Person__partner">
-        {`${personPartner}`}
+        { isMarried
+          ? `My ${married}'s name is ${partherName}`
+          : 'I am not married'
+        }
       </p>
     </section>
   );
