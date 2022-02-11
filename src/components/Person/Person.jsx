@@ -11,12 +11,21 @@ function infoAboutPartner(sex, partnerName) {
 }
 
 function Person({ name, age, sex, isMarried, partnerName }) {
+  const info = infoAboutPartner(sex, partnerName);
+
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
-      {(age !== 0) && (<p className="Person__age">{`I am ${age}`}</p>)}
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
       <p className="Person__partner">
-        {isMarried ? infoAboutPartner(sex, partnerName) : 'I am not married'}
+        {isMarried
+          ? info
+          : 'I am not married'
+        }
       </p>
     </section>
   );
@@ -24,10 +33,10 @@ function Person({ name, age, sex, isMarried, partnerName }) {
 
 Person.defaultProps = {
   name: 'Person',
-  age: 0,
+  age: undefined,
   sex: 'm',
   isMarried: false,
-  partnerName: null,
+  partnerName: undefined,
 };
 
 Person.propTypes = {
