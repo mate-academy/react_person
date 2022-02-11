@@ -1,5 +1,6 @@
 import React from 'react';
 import './Person.scss';
+import PropTypes from 'prop-types';
 
 export const Person = ({
   name,
@@ -20,9 +21,25 @@ export const Person = ({
     <p className="Person__partner">
       {isMarried
         ? (
-          `My ${sex === 'f' ? 'wife' : 'husband'}&apos;s name is ${partnerName}`
+          `My ${sex === 'f' ? 'wife' : 'husband'}'s name is ${partnerName}`
         )
         : 'I am not married'}
     </p>
   </section>
 );
+
+Person.defaultProps = {
+  name: undefined,
+  age: undefined,
+  sex: undefined,
+  isMarried: undefined,
+  partnerName: undefined,
+};
+
+Person.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  sex: PropTypes.string,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
+};
