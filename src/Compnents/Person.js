@@ -13,9 +13,12 @@ const Person = (props) => {
           My name is
           {props.person.name}
         </h2>
-        <p className="Person__age">
-          {props.person.age ? `I am ${props.person.age}` : ''}
-        </p>
+        {props.person.age && (
+          <p className="Person__age">
+            {`I am ${props.person.age}`}
+          </p>
+        )
+        }
         <p className="Person__partner">
           {props.person.isMarried
             ? `My ${partnerType} name is ${props.person.partnerName}`
