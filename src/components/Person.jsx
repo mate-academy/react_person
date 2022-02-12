@@ -1,5 +1,6 @@
 import React from 'react';
 import './Person.scss';
+import PropTypes from 'prop-types';
 
 const Person = ({
   name,
@@ -41,5 +42,24 @@ const Person = ({
     })()}
   </section>
 );
+
+Person.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  sex: PropTypes.string,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
+};
+
+// how can I avoid declaring default props values
+// if I already prepared  default values inside the
+// component itself?
+Person.defaultProps = {
+  name: '',
+  age: 0,
+  sex: '',
+  isMarried: undefined,
+  partnerName: null,
+};
 
 export default Person;
