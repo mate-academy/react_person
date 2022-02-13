@@ -5,10 +5,15 @@ import React from 'react';
 import './Person.scss';
 
 const Person = ({ name, age, sex, isMarried, partnerName }) => {
+  const wife = `My wife's name is ${partnerName}`;
+  const husbant = `My husband's name is ${partnerName}`;
+  const mariedStatus = (sex === 'm')
+    ? wife
+    : husbant;
+
   const status = (!isMarried)
     ? 'I am not married'
-    : (sex === 'm') ? `My wife's name is ${partnerName}`
-      : `My husband's name is Maksym`;
+    : mariedStatus;
   const abbelingAge = !age || false;
 
   return (
