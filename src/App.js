@@ -2,7 +2,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import Person from './Person';
+import Person from './components/Person/Person';
 
 const misha = {
   name: 'Misha',
