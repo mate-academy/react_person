@@ -17,7 +17,7 @@ function Person({
         {`My name is ${name || 'noname'}`}
       </h2>
 
-      {age && (
+      {(age > 0) && (
         <p className="Person__age">{`I am ${age}`}</p>
       )}
 
