@@ -2,11 +2,9 @@
 import React from 'react';
 
 function DisplayPerson(person) {
-  const part = !person.isMarried
-    ? 'I am not married'
-    : person.sex === 'm'
-      ? `my wife's name is ${person.partnerName}`
-      : `My husband's name is ${person.partnerName}`;
+  const part = person.sex === 'm'
+    ? `my wife's name is ${person.partnerName}`
+    : `My husband's name is ${person.partnerName}`;
 
   return (
     <section className="Person">
@@ -15,13 +13,17 @@ function DisplayPerson(person) {
         {' '}
         {person.name}
       </h2>
-      <p className="Person__age">
-        I am
-        {' '}
-        {person.age}
-      </p>
+      {person.age ? (
+        <p className="Person__age">
+          I am
+          {' '}
+          {person.age}
+        </p>
+      )
+        : (' ')
+      }
       <p className="Person__partner">
-        {part}
+        {person.partnerName ? part : 'I am not married'}
       </p>
     </section>
   );
