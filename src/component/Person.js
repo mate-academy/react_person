@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-const Person = ({ name, age, sex, partnerName }) => {
+const Person = ({ name, age, sex, isMarried, partnerName }) => {
   let partner = 'My wife\'s name is ';
 
   if (sex === 'f') {
@@ -12,9 +12,9 @@ const Person = ({ name, age, sex, partnerName }) => {
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">{`I am ${age}`}</p>
+      {age ? <p className="Person__age">{`I am ${age}`}</p> : null}
       <p className="Person__partner">
-        {partnerName ? `${partner} ${partnerName}` : 'I am not married'}
+        {isMarried === true ? `${partner} ${partnerName}` : 'I am not married'}
       </p>
     </section>
   );
@@ -23,14 +23,16 @@ const Person = ({ name, age, sex, partnerName }) => {
 Person.propTypes = {
   name: PropTypes.string,
   age: PropTypes.number,
-  partnerName: PropTypes.string,
   sex: PropTypes.string,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
 };
 
 Person.defaultProps = {
   name: 'Name not found',
   age: 18,
   sex: 'Not specified',
+  isMarried: true,
   partnerName: 'Partner not found',
 };
 
