@@ -1,8 +1,8 @@
 import React from 'react';
 import './Person.scss';
 
-const Person = (props) => {
-  const partnerType = props.person.sex === 'm'
+const Person = ({ person }) => {
+  const partnerType = person.sex === 'm'
     ? 'wife\'s'
     : 'husband\'s';
 
@@ -11,17 +11,17 @@ const Person = (props) => {
       <section className="Person">
         <h2 className="Person__name">
           My name is
-          {props.person.name}
+          {person.name}
         </h2>
-        {props.person.age && (
+        {person.age && (
           <p className="Person__age">
-            {`I am ${props.person.age}`}
+            {`I am ${person.age}`}
           </p>
         )
         }
         <p className="Person__partner">
-          {props.person.isMarried
-            ? `My ${partnerType} name is ${props.person.partnerName}`
+          {person.isMarried
+            ? `My ${partnerType} name is ${person.partnerName}`
             : `I am not married`}
         </p>
       </section>
