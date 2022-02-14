@@ -30,6 +30,7 @@ const App = () => (
     <Person
       name={misha.name}
       age={misha.age}
+      sex={misha.sex}
       partner={misha.partnerName}
     />
 
@@ -41,6 +42,7 @@ const App = () => (
     <Person
       name={alex.name}
       age={alex.age}
+      sex={alex.sex}
       partner={alex.partnerName}
     />
   </div>

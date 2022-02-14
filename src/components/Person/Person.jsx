@@ -10,12 +10,16 @@ export function Person({ name, age, partner, sex }) {
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
       <p className="Person__age">
-        {age && `I am ${age}`}
+        {`I am ${age}`}
       </p>
       <p className="Person__partner">
-        {partner ? `${personPartner} ${partner}` : `I am not married`}
+        {partner
+          ? `${personPartner} ${partner}`
+          : `I am not married`}
       </p>
     </section>
   );
