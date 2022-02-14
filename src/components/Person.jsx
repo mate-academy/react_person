@@ -2,46 +2,35 @@ import React from 'react';
 import './Person.scss';
 import PropTypes from 'prop-types';
 
-const Person = ({
+function Person({
   name,
   age,
   sex,
   isMarried,
   partnerName,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${name || 'noname'}`}
-    </h2>
+}) {
+  const partner = (sex === 'f') ? 'husband' : 'wife';
 
-    {age ? (
-      <p className="Person__age">{`I am ${age}`}</p>
-    ) : (null)
-    }
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name || 'noname'}`}
+      </h2>
 
-    {(() => {
-      if (isMarried) {
-        if (partnerName) {
-          if (sex === 'm') {
-            return (<p>{`My wife's name is ${partnerName}`}</p>);
-          }
+      {age && (
+        <p className="Person__age">{`I am ${age}`}</p>
+      )}
 
-          if (sex === 'f') {
-            return (<p>{`My husband's name is ${partnerName}`}</p>);
-          }
+      <p>
+        {
+        isMarried
+          ? `My ${partner}'s name is ${partnerName}`
+          : `I am not married`
         }
-
-        return (<p>I am married, and my spouse&apos;s name is top secret</p>);
-      }
-
-      if (isMarried === false) {
-        return (<p>I am not married</p>);
-      }
-
-      return null;
-    })()}
-  </section>
-);
+      </p>
+    </section>
+  );
+}
 
 Person.propTypes = {
   name: PropTypes.string,
@@ -51,9 +40,6 @@ Person.propTypes = {
   partnerName: PropTypes.string,
 };
 
-// how can I avoid declaring default props values
-// if I already prepared  default values inside the
-// component itself?
 Person.defaultProps = {
   name: '',
   age: 0,
