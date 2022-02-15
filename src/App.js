@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import { Person } from './Person';
 
 const misha = {
   name: 'Misha',
@@ -8,14 +8,12 @@ const misha = {
   isMarried: true,
   partnerName: 'Natasha',
 };
-
 const olya = {
   name: 'Olya',
   sex: 'f',
   isMarried: true,
   partnerName: 'Maksym',
 };
-
 const alex = {
   name: 'Alex',
   age: 25,
@@ -25,22 +23,23 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">My wife&apos;s name is Natasha</p>
-    </section>
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
 
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">My husband&apos;s name is Maksym</p>
-    </section>
+    {/* <Person
+      name="Olya"
+      sex="f"
+      isMarried
+      partnerName="Maksym"
+    />
 
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person
+      name="Alex"
+      age={25}
+      sex="m"
+      isMarried={false}
+    /> */}
   </div>
 );
 
