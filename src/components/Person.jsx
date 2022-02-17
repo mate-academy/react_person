@@ -8,31 +8,41 @@ const Person = ({
   partnerName,
   sex,
   isMarried,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${name}`}
-    </h2>
+}) => {
+  const maried = () => {
+    if (!isMarried) {
+      return 'I am not married';
+    }
 
-    {age && (
-      <p className="Person__age">
-        {`I am ${age}`}
-      </p>
-    )}
+    switch (sex) {
+      case 'm':
+        return `My wife's name is ${partnerName}`;
+      case 'f':
+        return `My husband's name is ${partnerName}`;
+      default:
+        return '';
+    }
+  };
 
-    {isMarried ? (
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+
       <p className="Person__partner">
-        My
-        {` ${sex === 'm' ? 'wife' : 'husband'}'s `}
-        name is
-        {` ${partnerName}`}
+        {maried()}
       </p>
-    ) : (
-      <p className="Person__partner">I am not married</p>
-    )}
 
-  </section>
-);
+    </section>
+  );
+};
 
 Person.defaultProps = {
   name: 'no name',
