@@ -9,56 +9,40 @@ const Person = ({
   sex,
   isMarried,
   partnerName,
-}) => {
-  if (isMarried === true) {
-    return (
-      <section className="Person">
-        <h2 className="Person__name">
-          My name is
-          {' '}
-          {name}
-        </h2>
-        {age > 0 && (
-          <p className="Person__age">
-            I am
-            {' '}
-            {age}
-          </p>
-        )}
-        <p className="Person__partner">
-          {sex === 'm'
-            ? `My wife's name is ${partnerName}`
-            : `My husband's name is ${partnerName}`}
-        </p>
-      </section>
-    );
-  }
+}) => (
+  <section className="Person">
+    <h2 className="Person__name">
+      My name is
+      {' '}
+      {name}
+    </h2>
+    {age && (
+    <p className="Person__age">
+      I am
+      {' '}
+      {age}
+    </p>
+    )}
+    {isMarried ? (
+      <p>
+        {sex === 'm'
+          ? `My wife's name is ${partnerName}`
+          : `My husband's name is ${partnerName}`}
+      </p>
+    ) : (
+      <p>I am not married</p>
+    )
 
-  return (
-    <section className="Person">
-      <h2 className="Person__name">
-        My name is
-        {' '}
-        {name}
-      </h2>
-      {age > 0 && (
-        <p className="Person__age">
-          I am
-          {' '}
-          {age}
-        </p>
-      )}
-      <p className="Person__partner">I am not married</p>
-    </section>
-  );
-};
+    }
+  </section>
+);
 
 Person.defaultProps = {
-  name: '',
-  age: 0,
-  sex: '',
+  name: null,
+  age: null,
+  sex: null,
   isMarried: false,
-  partnerName: '',
+  partnerName: null,
 };
 
 Person.propTypes = {
