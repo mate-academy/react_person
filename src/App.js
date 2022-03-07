@@ -27,15 +27,27 @@ const alex = {
 const App = () => (
   <div className="App">
     <Person
-      {...misha}
+      name={misha.name}
+      age={misha.age}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
     />
 
     <Person
-      {...olya}
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
     />
 
     <Person
-      {...alex}
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
     />
   </div>
 );

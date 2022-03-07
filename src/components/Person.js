@@ -15,7 +15,7 @@ export function Person({
         {`My name is ${name}`}
       </h2>
       <p className="Person__age">
-        {age >= 0 ? (
+        {age > 0 ? (
           `I am ${age}`
         ) : (
           `Person won't give its age`
