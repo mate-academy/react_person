@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 class Partner {
   constructor(name, spouseSex) {
-    this.noun = spouseSex === 'm' ? 'wife' : 'husband';
+    this.noun = spouseSex === 'm'
+      ? 'wife'
+      : 'husband';
     this.name = name;
   }
 
@@ -21,7 +23,8 @@ export function Person({ name, sex, age, isMarried, partnerName }) {
       {age && (
         <p className="Person__age">{`I am ${age}`}</p>)}
       <p className="Person__partner">
-        {isMarried ? `My ${partner.toPossesiveCase()} name is ${partner.name}`
+        {isMarried
+          ? `My ${partner.toPossesiveCase()} name is ${partner.name}`
           : `I am not married`}
       </p>
     </section>
