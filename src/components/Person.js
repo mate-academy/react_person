@@ -1,8 +1,7 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
 import './Person.scss';
 
-export const Person = ({ person }) => (
+export const Person = (person = []) => (
   <section className="Person">
     <h2 className="Person__name">
       My name is&nbsp;
@@ -17,12 +16,12 @@ export const Person = ({ person }) => (
     {person.isMarried ? (
       <p className="Person__partner">
         My &nbsp;
-        {person.sex === 'f' ? 'wife' : 'husbend'}
+        {person.sex === 'f' ? 'husband' : 'wife'}
         &apos;s name is&nbsp;
         {person.partnerName}
       </p>
     ) : (
-      'I am not merried'
+      'I am not maried'
     )
     }
   </section>
@@ -30,16 +29,7 @@ export const Person = ({ person }) => (
 
 Person.defaultProps = {
   name: '',
-  age: 0,
   sex: '',
   isMarried: false,
   partnerName: '',
-};
-
-Person.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number,
-  sex: PropTypes.string,
-  isMarried: PropTypes.bool,
-  partnerName: PropTypes.string,
 };
