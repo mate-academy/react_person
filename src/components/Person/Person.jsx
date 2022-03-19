@@ -33,7 +33,7 @@ export const Person = ({
       {`My name is ${name}`}
     </h2>
 
-    {age && age >= 0 && (
+    {age >= 0 && (
       <p className="Person__age">
         {`I am ${age}`}
       </p>
