@@ -3,13 +3,8 @@ import PropTypes from 'prop-types';
 
 import './Person.scss';
 
-export function Person({
-  name,
-  sex,
-  age,
-  isMarried,
-  partnerName,
-}) {
+export function Person({ person }) {
+  const { name, sex, age, isMarried, partnerName } = person;
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
@@ -31,14 +26,17 @@ export function Person({
 }
 
 Person.defaultProps = {
+  name: 'undefined',
+  sex: null,
   age: null,
+  isMarried: false,
   partnerName: null,
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  sex: PropTypes.oneOf('m', 'f').isRequired,
+  name: PropTypes.string,
+  sex: PropTypes.oneOf(['m', 'f', null]),
   age: PropTypes.number,
-  isMarried: PropTypes.bool.isRequired,
+  isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
 };
