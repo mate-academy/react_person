@@ -23,16 +23,10 @@ export function Person({
     ? married = `My ${spouse}'s name is ${partnerName}`
     : married = `I'm not married`;
 
-  let personAge;
-
-  age === undefined
-    ? personAge = ''
-    : personAge = `I'm ${age}`;
-
   return (
     <section className="person">
       <h2 className="person__name">{`My name is ${name}`}</h2>
-      <p className="person__age">{`${personAge}`}</p>
+      <p className="person__age">{`${age}`}</p>
       <p className="person__partner">
         {`${married}`}
       </p>
@@ -41,6 +35,7 @@ export function Person({
 }
 
 Person.defaultProps = {
+  age: '',
   isMarried: false,
   partnerName: null,
 };
