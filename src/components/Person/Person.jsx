@@ -41,7 +41,6 @@ export function Person({
 }
 
 Person.defaultProps = {
-  age: '',
   isMarried: false,
   partnerName: null,
 };
