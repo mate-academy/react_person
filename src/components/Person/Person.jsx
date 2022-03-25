@@ -4,13 +4,9 @@ import PropTypes from 'prop-types';
 
 import './Person.scss';
 
-export function Person({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) {
+export const Person = ({ person }) => {
+  const { name, sex, age, isMarried, partnerName } = person;
+
   let spouse;
 
   sex === 'm'
@@ -38,7 +34,7 @@ export function Person({
       </p>
     </section>
   );
-}
+};
 
 Person.defaultProps = {
   age: '',
