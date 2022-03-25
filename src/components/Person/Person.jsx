@@ -26,7 +26,13 @@ export function Person({
   return (
     <section className="person">
       <h2 className="person__name">{`My name is ${name}`}</h2>
-      <p className="person__age">{`${age}`}</p>
+      <p className="person__age">
+        {age
+          ? (`I am ${age}`)
+          : ('Age is not specified')
+        }
+      </p>
+
       <p className="person__partner">
         {`${married}`}
       </p>
