@@ -52,8 +52,8 @@ describe('Page', () => {
 
   it(`should have second person with name ${olya.name}`, () => {
     cy.getByDataCy('person')
-        .selectElement('name', 1)
-        .should('contain', olya.name);
+      .selectElement('name', 1)
+      .should('contain', olya.name);
   });
 
   it(`should have second person without age`, () => {
