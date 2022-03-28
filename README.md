@@ -10,3 +10,10 @@ Create a `Person` component and use it instead of repeating markup in the `App`
 
 ***Extra task (optional):***
 Add props validation using `PropTypes` library and `defaultProps`
+
+## REQUIREMENTS:
+- Each person section should contain data-cy="person" attribute
+- Name of each person should contain data-cy="name" attribute
+- Age of each person should contain data-cy="age" attribute
+- Partner of each person should contain data-cy="partner" attribute
+
