@@ -23,7 +23,7 @@ const alex = {
 };
 
 describe('Page', () => {
-  it('should be visitable', () => {
+  before(() => {
     cy.visit('/');
   });
 
@@ -32,63 +32,63 @@ describe('Page', () => {
       .should('have.length', '3');
   });
 
-  it(`first person name should be ${misha.name}`, () => {
+  it(`should have first person with name ${misha.name}`, () => {
     cy.getByDataCy('person')
       .selectElement('name', 0)
       .should('contain', misha.name);
   });
 
-  it(`first person's age should be ${misha.age}`, () => {
+  it(`should have first person with age ${misha.age}`, () => {
     cy.getByDataCy('person')
-    .selectElement('age', 0)
-    .should('contain', misha.age);
+      .selectElement('age', 0)
+      .should('contain', misha.age);
   });
 
-  it(`first person's partner should be ${misha.partnerName}`, () => {
+  it(`should have first person whith partner name ${misha.partnerName}`, () => {
     cy.getByDataCy('person')
-    .selectElement('partner', 0)
-    .should('contain', misha.partnerName);
+      .selectElement('partner', 0)
+      .should('contain', misha.partnerName);
   });
 
-  it(`first person's partner should be ${misha.partnerName}`, () => {
+  it(`should have second person with name ${olya.name}`, () => {
     cy.getByDataCy('person')
-    .selectElement('partner', 0)
-    .should('contain', misha.partnerName);
+        .selectElement('name', 1)
+        .should('contain', olya.name);
   });
 
-  it(`second person's name should be ${olya.name}`, () => {
+  it(`should have second person without age`, () => {
     cy.getByDataCy('person')
-      .selectElement('name', 1)
-      .should('contain', olya.name);
+      .selectElement('age', 1)
+      .should('not.exist');
   });
 
-  it(`second person should not have age`, () => {
+  it(`should have second person whith partner name ${olya.partnerName}`, () => {
     cy.getByDataCy('person')
-    .selectElement('age', 1)
-    .should('not.exist');
+      .selectElement('partner', 1)
+      .should('contain', olya.partnerName);
   });
 
-  it(`second person's partner should be ${olya.partnerName}`, () => {
-    cy.getByDataCy('person')
-    .selectElement('partner', 1)
-    .should('contain', olya.partnerName);
-  });
-
-  it(`third person name should be ${alex.name}`, () => {
+  it(`should have third person with name ${alex.name}`, () => {
     cy.getByDataCy('person')
       .selectElement('name', 2)
       .should('contain', alex.name);
   });
 
-  it(`third person's age should be ${alex.age}`, () => {
+  it(`should have third person with age ${alex.age}`, () => {
     cy.getByDataCy('person')
-    .selectElement('age', 2)
-    .should('contain', alex.age);
+      .selectElement('age', 2)
+      .should('contain', alex.age);
   });
 
-  it(`third person should be not married}`, () => {
+  it(`should have third person with status 'not married'`, () => {
     cy.getByDataCy('person')
-    .selectElement('partner', 2)
-    .should('contain', 'not married');
+      .selectElement('status', 2)
+      .should('contain', 'not married');
+  });
+
+  it(`should have third person without partner`, () => {
+    cy.getByDataCy('person')
+      .selectElement('partner', 2)
+      .should('not.exist');
   });
 });
