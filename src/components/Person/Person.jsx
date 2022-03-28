@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,17 +6,13 @@ import './Person.scss';
 export const Person = ({ person }) => {
   const { name, sex, age, isMarried, partnerName } = person;
 
-  let spouse;
+  const spouse = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
-  sex === 'm'
-    ? spouse = 'wife'
-    : spouse = 'husband';
-
-  let married;
-
-  isMarried
-    ? married = `My ${spouse}'s name is ${partnerName}`
-    : married = `I'm not married`;
+  const married = isMarried
+    ? `My ${spouse}'s name is ${partnerName}`
+    : `I'm not married`;
 
   return (
     <section className="person">
@@ -25,7 +20,7 @@ export const Person = ({ person }) => {
       <p className="person__age">
         {age
           ? (`I am ${age}`)
-          : ('Age is not specified')
+          : <br />
         }
       </p>
 
