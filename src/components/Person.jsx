@@ -23,7 +23,13 @@ const Person = ({
     )}
     {isMarried === true ? (
       <p className="Person__partner">
-        My {sex === 'm' ? (`wife's`) : (`husband's`)} name is {partnerName}
+        My
+        {' '}
+        {sex === 'm' ? (`wife's`) : (`husband's`)}
+        {' '}
+        name is
+        {' '}
+        {partnerName}
       </p>
     ) : (
       <p className="Person__partner">I am not married</p>
