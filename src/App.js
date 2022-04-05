@@ -29,13 +29,13 @@ const App = () => {
   return (
     <div>
       {
-      personsArray.map(e => (
+      personsArray.map(person => (
         <Person
-          name={e.name}
-          age={e.age}
-          sex={e.sex}
-          isMarried={e.isMarried}
-          partnerName={e.partnerName}
+          name={person.name}
+          age={person.age}
+          sex={person.sex}
+          isMarried={person.isMarried}
+          partnerName={person.partnerName}
         />
       ))
     }
