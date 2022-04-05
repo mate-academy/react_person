@@ -15,7 +15,9 @@ const Person = (props) => {
   return (
     <div className="App">
       <section className="Person">
-        <h2 className="Person__name"> My name is {props.name}</h2>
+        <h2 className="Person__name">
+          {`My name is ${props.name}`}
+        </h2>
         <p className="Person__age">{props.age ? `I am ${props.age}` : null}</p>
         <p className="Person__partner">{married}</p>
       </section>
