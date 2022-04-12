@@ -24,13 +24,13 @@ const Person = ({
         I am not married
       </p>
     )}
-    {sex === 'f' && (
+    {isMarried && sex === 'f' && (
       <p className="Person__partner">
         My husband&apos;s name is
         {` ${partnerName}`}
       </p>
     )}
-    {sex === 'm' && (
+    {isMarried && sex === 'm' && (
       <p className="Person__partner">
         My wife&apos;s name is
         {` ${partnerName}`}
