@@ -12,13 +12,13 @@
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^2.1.8",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",
     "@mate-academy/eslint-config-react-typescript": "*",
-    "@mate-academy/scripts": "^0.9.0",
+    "@mate-academy/scripts": "^1.2.3",
     "@mate-academy/students-ts-config": "*",
     "@mate-academy/stylelint-config": "*",
     "cypress": "^5.6.0",
@@ -31,7 +31,7 @@
     "mochawesome": "^6.2.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "stylelint": "^13.13.1"
   },
   "scripts": {
