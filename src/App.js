@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { People } from './people/';
+import { People } from './people';
 
 const misha = {
   name: 'Misha',
