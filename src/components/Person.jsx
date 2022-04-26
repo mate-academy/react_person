@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-function married(sex, isMarried, partnerName) {
+function marriedStatus(sex, isMarried, partnerName) {
   if (!isMarried) {
     return 'I am not married';
   }
@@ -26,7 +26,11 @@ export const Person = ({
       {name ? `My name is ${name}` : 'Unknown person'}
     </h2>
     {age && <p className="Person__age">{`I am ${age}`}</p>}
-    <p className="Person__partner">{married(sex, isMarried, partnerName)}</p>
+    <p className="Person__partner">
+      {
+      marriedStatus(sex, isMarried, partnerName)
+    }
+    </p>
   </section>
 );
 
