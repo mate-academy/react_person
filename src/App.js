@@ -26,9 +26,9 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person props={misha} />
-    <Person props={olya} />
-    <Person props={alex} />
+    <Person who={misha} />
+    <Person who={olya} />
+    <Person who={alex} />
   </div>
 );
 
