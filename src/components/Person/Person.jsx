@@ -11,7 +11,9 @@ function Person({
   partnerName,
 }) {
   const messageAboutPersonName = `My name is ${name}`;
-  const checkMarriage = sex === 'm' ? 'wife' : 'husband';
+  const checkMarriage = sex === 'm'
+    ? 'wife'
+    : 'husband';
   const messageAboutPartnerName = `My ${checkMarriage}'s name is ${partnerName}`;
 
   return (
@@ -20,18 +22,11 @@ function Person({
         {messageAboutPersonName}
       </h2>
       <p className="Person__age">
-        { age ? `I am ${age}` : null}
+        { age || age === 0 ? `I am ${age}` : null}
       </p>
-      {isMarried ? (
-        <p className="Person__partner">
-          {messageAboutPartnerName}
-        </p>
-      ) : (
-        <p className="Person__partner">
-          I am not married
-        </p>
-      )}
-
+      <p className="Person__partner">
+        {isMarried ? messageAboutPartnerName : 'I am not married'}
+      </p>
     </section>
   );
 }

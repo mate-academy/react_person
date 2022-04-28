@@ -36,7 +36,6 @@ const App = () => (
 
     <Person
       name={olya.name}
-      age={olya.age}
       sex={olya.sex}
       isMarried={olya.isMarried}
       partnerName={olya.partnerName}
@@ -47,7 +46,6 @@ const App = () => (
       age={alex.age}
       sex={alex.sex}
       isMarried={alex.isMarried}
-      partnerName={alex.partnerName}
     />
   </div>
 );
