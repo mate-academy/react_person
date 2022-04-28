@@ -8,49 +8,51 @@ export const Person = ({
   sex,
   isMarried,
   partnerName,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {name}
-    </h2>
-    {age ? (
-      <p className="Person__age">
-        I am
-        {' '}
-        {age}
-      </p>
-    ) : (
-      <></>
-    )}
-    {isMarried ? (
-      <p className="Person__partner">
-        My
-        {' '}
-        {sex === 'f' ? 'husband' : 'wife'}
-        &apos;s name is
-        {' '}
-        {partnerName}
-      </p>
-    ) : (
-      <p className="Person__partner">I am not married</p>
-    )}
+}) => {
+  const partner = sex === 'f' ? 'hasband' : 'wife';
 
-  </section>
-);
+  if (age < 1) {
+    return (
+      <section className="Person">
+        <h2 className="Person__name">
+          {`My name is ${name}`}
+        </h2>
+        <p className="Person__age">
+          Age less than one year
+        </p>
+        <p className="Person__partner">
+          I can`t have wife or hasband
+        </p>
+      </section>
+    );
+  }
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      <p className="Person__age">
+        {age && `I am ${age}`}
+      </p>
+      <p className="Person__partner">
+        {isMarried
+          ? `My ${partner}'s name is ${partnerName}`
+          : 'I am not married'}
+      </p>
+    </section>
+  );
+};
 
 Person.defaultProps = {
-  name: '',
-  age: 0,
   sex: '',
   isMarried: false,
   partnerName: '',
 };
 
 Person.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
   sex: PropTypes.string,
   isMarried: PropTypes.bool,
   partnerName: PropTypes.string,
