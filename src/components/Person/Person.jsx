@@ -12,33 +12,27 @@ const Person = (props) => {
     partnerName,
   } = props;
 
+  const WhoIsPartner = (sex === 'm') ? 'wife' : 'husband';
+
   return (
     <section className="Person">
       <h2 className="Person__name">
-        My name is
-        {' '}
-        {name}
+        {`My name is ${name}`}
       </h2>
       {
-        age
-          && (
+        age && (
           <p className="Person__age">
-            I am {age}
+            {`I am ${age}`}
           </p>
-          )
+        )
       }
-      {
-        isMarried
-          ? (
-            <p className="Person__partner">
-              My
-              {' '}
-              {(sex === 'm') ? 'wife' : 'husband'}
-              &apos;s name is {partnerName}
-            </p>
-          )
-          : <p className="Person__partner">I am not married</p>
-      }
+      <p className="Person__partner">
+        {
+          isMarried
+            ? `My ${WhoIsPartner}'s name is ${partnerName}`
+            : 'I am not married'
+        }
+      </p>
     </section>
   );
 };
@@ -46,7 +40,7 @@ const Person = (props) => {
 Person.defaultProps = {
   age: '',
   isMarried: false,
-  partnerName: '',
+  partnerName: 'a secret',
 };
 
 Person.propTypes = {
