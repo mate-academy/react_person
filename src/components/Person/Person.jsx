@@ -22,7 +22,7 @@ export function Person({
       <p className="Person__partner">
         {
           isMarried
-            ? `My ${partner}&apos;s name is ${partnerName}`
+            ? `My ${partner}'s name is ${partnerName}`
             : 'I am not married'
         }
       </p>
@@ -32,6 +32,7 @@ export function Person({
 
 Person.defaultProps = {
   age: null,
+  partnerName: null,
 };
 
 Person.propTypes = {
@@ -39,5 +40,5 @@ Person.propTypes = {
   age: PropTypes.number,
   sex: PropTypes.oneOf(['m', 'f']).isRequired,
   isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string.isRequired,
+  partnerName: PropTypes.string,
 };
