@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Person } from './components/Person/Person';
 
 const misha = {
   name: 'Misha',
@@ -25,22 +26,27 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">My wife&apos;s name is Natasha</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">My husband&apos;s name is Maksym</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person
+      name={misha.name}
+      age={misha.age}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
+    <Person
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
+    />
+    <Person
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
   </div>
 );
 
