@@ -1,8 +1,8 @@
 import React from 'react';
-import './People.scss';
+import './Person.scss';
 import PropTypes from 'prop-types';
 
-const People = ({ reference }) => {
+const Person = ({ reference }) => {
   const {
     name,
     age,
@@ -16,7 +16,7 @@ const People = ({ reference }) => {
     : 'wife';
 
   return (
-    <article className="People">
+    <article>
       <section className="Person">
         <h2 className="Person__name">
           {`My name is ${name}`}
@@ -35,14 +35,14 @@ const People = ({ reference }) => {
   );
 };
 
-People.defaultProps = {
+Person.defaultProps = {
   age: 0,
   sex: '',
   isMarried: null,
   partnerName: PropTypes.string,
 };
 
-People.propTypes = {
+Person.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number,
   sex: PropTypes.string,
@@ -50,4 +50,4 @@ People.propTypes = {
   partnerName: PropTypes.string,
 };
 
-export default People;
+export default Person;
