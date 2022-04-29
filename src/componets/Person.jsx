@@ -19,14 +19,10 @@ const Person = ({ proops }) => {
     <article>
       <section className="Person">
         <h2 className="Person__name">
-          My name is
-          {' '}
-          {name}
+          {`My name is ${name}`}
         </h2>
         <p className="Person__age">
-          I am
-          {' '}
-          {age}
+          {`I am ${age}`}
         </p>
         <p className="Person__partner">
           {isMarried
