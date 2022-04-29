@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Person from './componets/Person';
+import  People  from './componets/People';
 
 const misha = {
   name: 'Misha',
@@ -26,9 +26,9 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person proops={misha} />
-    <Person proops={olya} />
-    <Person proops={alex} />
+    <People reference={misha} />
+    <People reference={olya} />
+    <People reference={alex} />
   </div>
 );
 
