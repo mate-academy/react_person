@@ -2,19 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-export const Person = ({ reference }) => {
+export const Person = ({ person }) => {
   const {
     name,
     age,
     sex,
     isMarried,
     partnerName,
-  } = reference;
+  } = person;
 
   const partner = sex === 'f' ? 'husband"s' : 'wife"s';
-  const maritalStatus = isMarried
-    ? `My ${partner} name is ${partnerName}`
-    : 'I am not married';
 
   return (
     <section className="Person">
@@ -29,14 +26,16 @@ export const Person = ({ reference }) => {
       )}
 
       <p className="Person__partner">
-        {maritalStatus}
+        {isMarried
+          ? `My ${partner} name is ${partnerName}`
+          : 'I am not married'}
       </p>
     </section>
   );
 };
 
 Person.propTypes = {
-  reference: PropTypes.shape({
+  person: PropTypes.shape({
     name: PropTypes.string.isRequired,
     age: PropTypes.number,
     sex: PropTypes.string.isRequired,
