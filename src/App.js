@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 
+// eslint-disable-next-line
 const misha = {
   name: 'Misha',
   age: 37,
@@ -9,6 +10,7 @@ const misha = {
   partnerName: 'Natasha',
 };
 
+// eslint-disable-next-line
 const olya = {
   name: 'Olya',
   sex: 'f',
@@ -16,6 +18,7 @@ const olya = {
   partnerName: 'Maksym',
 };
 
+// eslint-disable-next-line
 const alex = {
   name: 'Alex',
   age: 25,
