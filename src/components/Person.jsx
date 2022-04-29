@@ -29,15 +29,14 @@ export const Person = (props) => {
 };
 
 Person.defaultProps = {
-  name: '',
-  age: null,
+  age: 0,
   sex: '',
   isMarried: null,
   partnerName: '',
 };
 
 Person.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   age: PropTypes.number,
   sex: PropTypes.string,
   isMarried: PropTypes.bool,
