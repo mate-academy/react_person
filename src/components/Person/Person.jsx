@@ -16,12 +16,11 @@ export const Person = ({
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {age
-        && (
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        )}
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
       <p className="Person__partner">
         {isMarried
           ? `My ${partnerCheck}'s name is ${partnerName}`
@@ -32,8 +31,8 @@ export const Person = ({
 };
 
 Person.defaultProps = {
-  age: '',
-  partnerName: '',
+  age: null,
+  partnerName: null,
 };
 
 Person.propTypes = {
