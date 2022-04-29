@@ -11,29 +11,13 @@ export const Person = ({
 }) => {
   const partner = sex === 'f' ? 'hasband' : 'wife';
 
-  if (age < 1) {
-    return (
-      <section className="Person">
-        <h2 className="Person__name">
-          {`My name is ${name}`}
-        </h2>
-        <p className="Person__age">
-          Age less than one year
-        </p>
-        <p className="Person__partner">
-          I can`t have wife or hasband
-        </p>
-      </section>
-    );
-  }
-
   return (
     <section className="Person">
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
       <p className="Person__age">
-        {age && `I am ${age}`}
+        {age || age === 0 ? `I am ${age}` : null}
       </p>
       <p className="Person__partner">
         {isMarried

@@ -43,6 +43,7 @@ const App = () => (
       age={alex.age}
       sex={alex.sex}
       isMarried={alex.isMarried}
+
     />
   </div>
 );
