@@ -9,7 +9,7 @@ function Person({ person }) {
     sex,
     isMarried,
     partnerName,
-  } =  person;
+  } = person;
 
   const partner = sex === 'm'
     ? 'wife'
