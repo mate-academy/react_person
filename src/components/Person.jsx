@@ -17,17 +17,11 @@ export const Person = ({
       {age > 0 && (`I am ${age}`)}
     </p>
 
-    {isMarried ? (
-      <p className="Person__partner">
-        {`My ${sex === 'm' ? ('wife') : ('husband')}`}
-        &apos;
-        {`s name is ${partnerName}`}
-      </p>
-    ) : (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    )}
+    <p className="Person__partner">
+      {isMarried
+        ? (`My ${sex === 'm' ? ('wife') : ('husband')}'s name is ${partnerName}`)
+        : ('I am not married')}
+    </p>
   </section>
 );
 
