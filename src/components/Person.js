@@ -45,9 +45,10 @@ Person.defaultProps = {
 
 Person.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     sex: PropTypes.string,
     age: PropTypes.number,
+    isMarried: PropTypes.bool,
     partnerName: PropTypes.string,
   }),
 };
