@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+const Person = ({ props }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = props;
+
   const partnerSex = sex === 'm' ? 'wife' : 'husband';
 
   return (
@@ -31,7 +33,6 @@ const Person = ({
 };
 
 Person.defaultProps = {
-  name: null,
   age: null,
   sex: null,
   isMarried: null,
@@ -39,7 +40,7 @@ Person.defaultProps = {
 };
 
 Person.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   age: PropTypes.number,
   sex: PropTypes.string,
   isMarried: PropTypes.bool,
