@@ -1,17 +1,8 @@
-// style go here
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 900px;
 
-  &__name {
-    margin-top: 8px;
-  }
-
-  &__age {
-    color: #00f;
-    font-weight: bold;
-  }
+  margin: 40px;
 }
