@@ -16,7 +16,7 @@ module.exports = {
     }],
     'jsx-a11y/control-has-associated-label': 'off',
     'react/jsx-filename-extension': ['warn', {
-      extensions: ['.jsx'],
+      extensions: [".js", ".jsx"],
     }],
   },
 };
