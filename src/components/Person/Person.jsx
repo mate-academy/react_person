@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   const partnerCheck = sex === 'm' ? 'wife' : 'husband';
 
   return (
