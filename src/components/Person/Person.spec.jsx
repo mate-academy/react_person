@@ -3,7 +3,7 @@ import { mount } from '@cypress/react';
 import Person from './Person';
 
 describe('Person', () => {
-  it('should should show name, age and partner\'s name if existing', () => {
+  it('should show name, age and partner\'s name of the person', () => {
     const misha = {
       name: 'Misha',
       age: 37,
@@ -19,7 +19,7 @@ describe('Person', () => {
     cy.get('.Person__partner').should('contain.text', misha.partnerName);
   });
 
-  it('should show sex of partner', () => {
+  it('should show partner as a wife when the person is male', () => {
     const misha = {
       name: 'Misha',
       age: 37,
@@ -31,7 +31,9 @@ describe('Person', () => {
     mount(<Person {...misha} />);
 
     cy.get('.Person__partner').should('contain.text', 'wife');
+  });
 
+  it('should show partner as a husband when the person is female', () => {
     const olya = {
       name: 'Olya',
       sex: 'f',
@@ -44,7 +46,7 @@ describe('Person', () => {
     cy.get('.Person__partner').should('contain.text', 'husband');
   });
 
-  it('should not show age if is ommited', () => {
+  it('should not show age if age is omitted', () => {
     const sasha = {
       name: 'Sasha',
       sex: 'f',
