@@ -11,22 +11,18 @@ export const Person = ({ user }) => {
     partnerName,
   } = user;
 
-  let reply = '';
+  let textStatusMarried = '';
 
   if (isMarried === true && partnerName) {
-    if (sex === 'm') {
-      reply = `My wife's name is ${partnerName}`;
-    } else {
-      reply = `My husband's name is ${partnerName}`;
-    }
+    textStatusMarried = `My ${sex === 'm' ? 'wife' : 'husbend'}'s name is ${partnerName}`;
   }
 
   if (isMarried === true && !partnerName) {
-    reply = 'I am married';
+    textStatusMarried = 'I am married';
   }
 
   if (isMarried === false) {
-    reply = 'I am not married';
+    textStatusMarried = 'I am not married';
   }
 
   return (
@@ -38,7 +34,7 @@ export const Person = ({ user }) => {
         {age ? `I am ${age}` : 'no age information'}
       </p>
       <p className="Person__partner">
-        {reply}
+        {textStatusMarried}
       </p>
     </section>
   );
