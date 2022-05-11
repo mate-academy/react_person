@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import './Person.scss';
 
 const Person = ({
-  name, age, sex, isMarried, partnerName,
+                  name,
+                  age,
+                  sex,
+                  isMarried,
+                  partnerName
 }) => (
   <>
     <section className="Person">
