@@ -24,15 +24,13 @@ export const Person = ({ user }) => {
       )}
 
       <p className="Person__partner">
-        {(() => {
-          if (!isMarried) {
-            return 'I am not married';
-          }
-
-          return sex === 'm'
-            ? `My wife's name is ${partnerName}`
-            : `My husband's name is ${partnerName}`;
-        })()}
+        {!isMarried
+          ? ('I am not married')
+          : (`My ${
+            sex === 'm'
+              ? `wife's name is ${partnerName}`
+              : `husband's name is ${partnerName}`}`
+          )}
       </p>
     </section>
   );
