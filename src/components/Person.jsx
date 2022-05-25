@@ -30,4 +30,3 @@ export const Person = ({ person }) => {
     </section>
   );
 };
-
