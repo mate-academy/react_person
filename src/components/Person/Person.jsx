@@ -1,20 +1,16 @@
 import React from 'react';
 import './Person.scss';
-// import { prototype } from 'cypress/types/bluebird';
-// import PropTypes from 'prop-types';
+// eslint-disable-next-line
+import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const {
-    name, age, sex, isMarried, partnerName,
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
   } = person;
-
-  let part;
-
-  if (sex === 'f') {
-    part = 'husband';
-  } else {
-    part = 'wife';
-  }
 
   return (
     <section className="Person">
@@ -24,29 +20,29 @@ export const Person = ({ person }) => {
           {`I am ${age}`}
         </p>
       )}
-      <p className="Person__partner">
-        {
-        isMarried
-          ? `My ${part}'s name is ${partnerName}`
-          : 'I am not married'
-        };
-      </p>
+
+      { isMarried
+        ? (
+          <p className="Person__partner">
+            { sex === 'f'
+              ? `My husband's name is ${partnerName}`
+              : `My wife's name is ${partnerName}`}
+          </p>
+        )
+        : <p>`I am not married`</p>}
     </section>
   );
 };
 
-// Person.defaultProps = {
-//   name: 'Add name',
-//   age: 'Add age',
-//   sex: 'Add sex',
-//   isMarried: undefined,
-//   partnerName: undefined,
-// };
+Person.defaultProps = {
+  age: 0,
+  partnerName: null,
+};
 
-// Person.propTypes.shape = ({
-//   name: Prototypes.string,
-//   age: Prototypes.number,
-//   sex: Prototypes.string,
-//   isMarried: PropTypes.boolean,
-//   partnerName: PropTypes.string,
-// });
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
+};
