@@ -15,22 +15,20 @@ function marriage(props) {
 
 function Person(props) {
   return (
-    <>
-      <section className="Person">
-        <h2 className="Person__name">
-          My name is
-          {` ${props.props.name}`}
-        </h2>
-        <p className="Person__age">
-          {
-            props.props.age ? (`I am  ${props.props.age}`) : ''
-          }
-        </p>
-        <p className="Person__parthner">
-          {marriage(props)}
-        </p>
-      </section>
-    </>
+    <section className="Person">
+      <h2 className="Person__name">
+        My name is
+        {` ${props.props.name}`}
+      </h2>
+      <p className="Person__age">
+        {
+          props.props.age ? (`I am  ${props.props.age}`) : ''
+        }
+      </p>
+      <p className="Person__parthner">
+        {marriage(props)}
+      </p>
+    </section>
   );
 }
 
