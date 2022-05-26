@@ -33,8 +33,8 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {!isMarried
-          ? ('I am not married')
-          : (`My ${partner}'s name is ${partnerName}`)}
+          ? 'I am not married'
+          : `My ${partner}'s name is ${partnerName}`}
       </p>
     </section>
   );
