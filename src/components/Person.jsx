@@ -25,6 +25,7 @@ Person.propTypes = {
   partnerName: PropTypes.string,
   sex: PropTypes.string,
   name: PropTypes.string,
+  age: PropTypes.number,
 };
 
 Person.defaultProps = {
@@ -32,4 +33,5 @@ Person.defaultProps = {
   partnerName: 'Unknown partner',
   sex: 'sex',
   name: 'Person name',
+  age: 0,
 };
