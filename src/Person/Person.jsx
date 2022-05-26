@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Person.scss';
 
 export function Person({ person }) {
@@ -23,3 +24,13 @@ export function Person({ person }) {
     </section>
   );
 }
+
+Person.prototypes = {
+  personInfo: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }),
+};
