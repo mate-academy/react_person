@@ -1,5 +1,6 @@
 import React from 'react';
 import './Person.scss';
+import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const {
@@ -10,15 +11,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  let partner;
-
-  if (sex === 'f' && isMarried) {
-    partner = 'husband';
-  }
-
-  if (sex === 'm' && isMarried) {
-    partner = 'wife';
-  }
+  const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
     // eslint-disable-next-line
@@ -31,11 +24,21 @@ export const Person = ({ person }) => {
       </p>
       <p className="Person__partner">
         {
-          partner
+          isMarried
             ? `My ${partner}'s name is ${partnerName}`
             : 'I am not married'
         }
       </p>
     </section>
   );
+};
+
+Person.propTypes = {
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }).isRequired,
 };

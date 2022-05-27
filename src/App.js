@@ -27,7 +27,6 @@ const alex = {
 };
 
 const App = () => (
-  // eslint-disable-next-line
   <div className="App">
     <Person person={misha} />
     <Person person={olya} />
