@@ -30,28 +30,30 @@ export const Person = ({ person }) => {
     name, age, sex, isMarried, partnerName,
   } = person;
 
+  let partner = 'husband';
+
+  if (sex === 'm') {
+    partner = 'wife';
+  }
+
   return (
-    <>
-      <section className="Person">
-        <h2 className="Person__name">{`My name is ${name}`}</h2>
 
-        <p className="Person__age">
-          { age
-            ? `I am ${age}`
-            : null}
-        </p>
+    <section className="Person">
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
 
-        { isMarried
-          ? (
-            <p className="Person__partner">
-              { sex === 'm'
-                ? `My wife's name is ${partnerName}`
-                : `My husband's name is ${partnerName}`}
-            </p>
-          )
-          : <p>I am not married</p>}
-      </section>
-    </>
+      <p className="Person__age">
+        { age
+          ? `I am ${age}`
+          : null}
+      </p>
+
+      <p className="Person__partner">
+        {isMarried
+          ? (`My ${partner}'s name  is ${partnerName}`) : ('I am not married') }
+      </p>
+
+    </section>
+
   );
 };
 
@@ -66,5 +68,4 @@ Person.propTypes = {
   sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
   partnerName: PropTypes.string,
-
 };
