@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './person.scss';
 
-const Married = (isMarried, sex, partnerName) => {
+const getMarriedStatus = (isMarried, sex, partnerName) => {
   let message = '';
 
   if (isMarried === false) {
@@ -21,11 +21,13 @@ const Married = (isMarried, sex, partnerName) => {
 };
 
 export const Person = ({ person }) => {
+  const rezult = getMarriedStatus(person.isMarried, person.sex, person.partnerName);
+
   return (
-    <section className="Person">
-      <h2 className="Person__name">{`My name is ${person.name}`}</h2>
-      <p className="Person__age">{person.age ? `I am ${person.age}` : ''}</p>
-      <p className="Person__partner">{Married(person.isMarried, person.sex, person.partnerName)}</p>
+    <section className="person">
+      <h2 className="person__name">{`My name is ${person.name}`}</h2>
+      <p className="person__age">{person.age ? `I am ${person.age}` : ''}</p>
+      <p className="person__partner">{rezult}</p>
     </section>
   );
 };
