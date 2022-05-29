@@ -35,6 +35,14 @@ export const Person = ({ person }) => {
     </section>
   );
 };
+
+Person.defaultProps = {
+  person: {
+    name: '',
+    sex: '',
+    isMarried: undefined,
+  },
+};
 // eslint-disable-next-line
 Person.PropTypes = {
   person: PropTypes.shape({
