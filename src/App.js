@@ -1,8 +1,7 @@
 import React from 'react';
-import { Person } from './Person/Person';
+import { Person } from './Person';
 import './App.scss';
 
-// eslint-disable-next-line
 const misha = {
   name: 'Misha',
   age: 37,
@@ -11,7 +10,6 @@ const misha = {
   partnerName: 'Natasha',
 };
 
-// eslint-disable-next-line
 const olya = {
   name: 'Olya',
   sex: 'f',
@@ -19,7 +17,6 @@ const olya = {
   partnerName: 'Maksym',
 };
 
-// eslint-disable-next-line
 const alex = {
   name: 'Alex',
   age: 25,
@@ -28,7 +25,6 @@ const alex = {
 };
 
 const App = () => (
-  // eslint-disable-next-line react/jsx-filename-extension
   <div className="App">
     <Person person={misha} />
     <Person person={olya} />
