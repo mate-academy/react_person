@@ -38,10 +38,7 @@ export const Person = ({ person }) => {
 
 Person.defaultProps = {
   person: {
-    name: 'not provided',
     age: 0,
-    sex: 'not provided',
-    isMarried: false,
     partnerName: 'not provided',
   },
 };
