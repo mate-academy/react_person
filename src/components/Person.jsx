@@ -2,19 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Person = ({ people }) => {
-  return people.map(person => (
-    <>
-      <section className="Person">
-        <h2 className="Person__name">{`My name is ${person.name}`}</h2>
-        {person.age ? <p className="Person__age">{`I am ${person.age}`}</p> : undefined}
-        {person.isMarried && (person.sex === 'm' ? <p className="Person__partner">{ `My wife's name is ${person.partnerName}`}</p>
-          : <p className="Person__partner">{ `My husband's name is ${person.partnerName}`}</p>)}
-      </section>
-    </>
-  ));
+  return people.map(person => {
+    const {
+      name,
+      age,
+      isMarried,
+      partnerName,
+      sex,
+    } = person;
+
+    return (
+      <React.Fragment key={name}>
+        <section className="Person">
+          <h2 className="Person__name">{`My name is ${name}`}</h2>
+          {age
+            ? <p className="Person__age">{`I am ${age}`}</p>
+            : undefined}
+          {isMarried
+          && (sex === 'm'
+            ? <p className="Person__partner">{ `My wife's name is ${partnerName}`}</p>
+            : <p className="Person__partner">{ `My husband's name is ${partnerName}`}</p>
+          )}
+
+        </section>
+      </React.Fragment>
+    );
+  });
 };
 
-Person.PropTypes = {
+Person.propTypes = {
   person: PropTypes.shape({
     name: PropTypes.string,
     age: PropTypes.number,
