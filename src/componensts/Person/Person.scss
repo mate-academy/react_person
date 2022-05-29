@@ -1,0 +1,27 @@
+body {
+  background-color: antiquewhite;
+  margin: 20px;
+}
+
+.Person {
+  width: fit-content;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: burlywood;
+  transition: 0.3s linear;
+
+  &:hover {
+    transform: scale(110%);
+  }
+
+  &__name {
+    margin-top: 8px;
+  }
+
+  &__age {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+  }
+}
