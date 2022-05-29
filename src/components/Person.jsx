@@ -1,5 +1,6 @@
 import React from 'react';
 import './Person.scss';
+import PropTypes from 'prop-types';
 
 export const Person = ({ personInfo }) => {
   const {
@@ -30,4 +31,17 @@ export const Person = ({ personInfo }) => {
 
     </section>
   );
+};
+
+Person.defaultProps = {
+  age: 0,
+  partnerName: 'None',
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
 };
