@@ -10,37 +10,38 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
+  const personPartner = sex === 'm' ? 'wife' : 'husband';
+  const marriageStatus = isMarried
+    ? `My ${personPartner}'s name is ${partnerName}`
+    : 'I am not married';
+
   return (
     <section className="Person">
       <h2 className="Person__name">
-        { name ? `My name is ${name}` : 'Unknown'}
+        {`My name is ${name}`}
       </h2>
       <p className="Person__age">
         { age && `I am ${age}`}
       </p>
       <p className="Person__partner">
-        {(!isMarried && 'I am not married')
-        || (`My ${sex === 'm' ? 'wife' : 'husband'}'s name is ${partnerName}`)}
+        {marriageStatus}
       </p>
     </section>
   );
 };
 
 Person.defaultProps = {
-  name: '',
   age: 0,
-  sex: '',
-  isMarried: false,
   partnerName: '',
 };
 
 // eslint-disable-next-line react/no-typos
 Person.PropTypes = {
   person: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     age: PropTypes.number,
-    sex: PropTypes.string,
-    isMarried: PropTypes.bool,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
     partnerName: PropTypes.string,
   }),
 };
