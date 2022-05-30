@@ -17,7 +17,7 @@ const Person = ({
     : 'husband';
 
   const partner = isMarried
-    ? `My ${partnerType} name is ${partnerName}`
+    ? `My ${partnerType}'s name is ${partnerName}`
     : 'I am not married';
 
   return (
