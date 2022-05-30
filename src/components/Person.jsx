@@ -1,35 +1,57 @@
 import React from 'react';
 import './Person.scss';
+import PropTypes from 'prop-types';
 
-function marriage(props) {
-  if ((props.props.sex === 'm') && (props.props.isMarried)) {
-    return (`My wife's name is ${props.props.partnerName}`);
-  }
+function marriage(sex, isMarried, partnerName) {
+  const partnerSex = sex === 'm' ? 'wife' : 'husband';
 
-  if ((props.props.sex === 'f') && (props.props.isMarried)) {
-    return (`My husband's name is ${props.props.partnerName}`);
+  if (isMarried) {
+    return (`My ${partnerSex}'s name is ${partnerName}`);
   }
 
   return ('I am not married');
 }
 
-function Person(props) {
+function Person({
+  props: {
+    name, age, sex, isMarried, partnerName,
+  },
+}) {
+  const personPartner = marriage(sex, isMarried, partnerName);
+
   return (
     <section className="Person">
       <h2 className="Person__name">
         My name is
-        {` ${props.props.name}`}
+        {` ${name}`}
       </h2>
       <p className="Person__age">
         {
-          props.props.age ? (`I am  ${props.props.age}`) : ''
+          age ? (`I am  ${age}`) : ''
         }
       </p>
       <p className="Person__parthner">
-        {marriage(props)}
+        {personPartner}
       </p>
     </section>
   );
 }
+
+Person.defaultProps = {
+  name: '',
+  age: undefined,
+  sex: '',
+  isMarried: false,
+  partnerName: undefined,
+};
+
+Person.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  sex: PropTypes.string,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
+
+};
 
 export default Person;
