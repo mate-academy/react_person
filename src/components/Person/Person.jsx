@@ -17,9 +17,15 @@ function Person({
         {`My name is ${name}`}
       </h2>
 
-      <p className="Person__age">
-        {age ? `I am ${age}` : null}
-      </p>
+      {
+        age
+          ? (
+            <p className="Person__age">
+              {`I am ${age}`}
+            </p>
+          )
+          : null
+      }
 
       <p className="Person__partner">
         { isMarried
