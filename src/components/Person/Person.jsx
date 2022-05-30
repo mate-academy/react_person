@@ -34,9 +34,8 @@ export const Person = ({ person }) => {
 
 Person.defaultProps = {
   person: {
-    name: '',
-    sex: '',
-    isMarried: undefined,
+    age: 0,
+    partnerName: '',
   },
 };
 
