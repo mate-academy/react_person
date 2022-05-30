@@ -11,23 +11,23 @@ const Person = ({
   const partner = (sex === 'f') ? 'husband' : 'wife';
 
   return (
-    <>
-      <h2>
+    <section className="Person">
+      <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
 
       {age && (
-        <p>
+        <p className="Person__age">
           {`I am ${age}`}
         </p>
       )}
 
-      <p>
+      <p className="Person__partner">
         {
-          isMarried ? `My ${partner} name is ${partnerName}` : 'I am not married'
+          isMarried ? `My ${partner}'s name is ${partnerName}` : 'I am not married'
         }
       </p>
-    </>
+    </section>
   );
 };
 
