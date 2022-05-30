@@ -30,22 +30,11 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person
-      name={misha.name}
-      age={misha.age}
-      partnerName={misha.partnerName}
-    />
+    <Person {...misha} />
 
-    <Person
-      name={olya.name}
-      partnerName={olya.partnerName}
-    />
+    <Person {...olya} />
 
-    <Person
-      name={alex.name}
-      age={alex.age}
-      partnerName={alex.partnerName}
-    />
+    <Person {...alex} />
   </div>
 );
 
