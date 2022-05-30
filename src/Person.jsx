@@ -4,29 +4,29 @@ import PropTypes from 'prop-types';
 const Person = ({
   name,
   age,
-  partnerName,
   sex,
   isMarried,
+  partnerName,
 }) => {
   const partner = (sex === 'f') ? 'husband' : 'wife';
 
   return (
     <>
       <h2>
-        My name is
-        {' '}
-        {`${name}`}
+        {`My name is ${name}`}
       </h2>
 
       {age && (
-        <p>{`I am ${age}`}</p>
+        <p>
+          {`I am ${age}`}
+        </p>
       )}
 
-      {isMarried ? (
-        <p>
-          {`My ${partner} name is ${partnerName}`}
-        </p>
-      ) : (<p> I am not married </p>)}
+      <p>
+        {
+          isMarried ? `My ${partner} name is ${partnerName}` : 'I am not married'
+        }
+      </p>
     </>
   );
 };
