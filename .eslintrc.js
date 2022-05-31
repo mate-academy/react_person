@@ -15,5 +15,8 @@ module.exports = {
       assert: 'either',
     }],
     'jsx-a11y/control-has-associated-label': 'off',
+    'react/jsx-filename-extension': ['warn', {
+      extensions: ['.jsx'],
+    }],
   },
 };

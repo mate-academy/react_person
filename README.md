@@ -12,6 +12,3 @@ Create a `Person` component and use it instead of repeating markup in the `App`
 - `Person` must have `<h2>` with `className="Person__name"` containing person's name
 - If person has age, `Person` must have `<p>` with `className="Person__age"` containing person's age
 - `Person` must have `<p>` with `className="Person__partner"` containing person partner's name or `I am not married`
-
-***Extra task (optional):***
-Add props validation using `PropTypes` library and `defaultProps`
