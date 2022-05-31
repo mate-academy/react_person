@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+const Person = ({ person }) => {
+  const {
+    name, age, sex, isMarried, partnerName,
+  } = person;
   const partner = (sex === 'f') ? 'husband' : 'wife';
 
   return (
