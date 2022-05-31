@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-function Person({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) {
+export function Person({ person }) {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
@@ -18,13 +20,11 @@ function Person({
       </h2>
 
       {
-        age
-          ? (
-            <p className="Person__age">
-              {`I am ${age}`}
-            </p>
-          )
-          : null
+        age && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )
       }
 
       <p className="Person__partner">
@@ -38,19 +38,18 @@ function Person({
 }
 
 Person.defaultProps = {
-  name: '',
-  age: 0,
-  sex: 'm',
-  isMarried: false,
-  partnerName: 'not married',
+  person: {
+    age: 0,
+    partnerName: 'not married',
+  },
 };
 
 Person.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number,
-  sex: PropTypes.string,
-  isMarried: PropTypes.bool,
-  partnerName: PropTypes.string,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }),
 };
-
-export default Person;
