@@ -1,10 +1,6 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import './Person.scss';
 import PropTypes from 'prop-types';
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 const Person = ({
   name,
   age,
@@ -38,15 +34,11 @@ const Person = ({
   );
 };
 
-Person.defaultProps = {
-  partnerName: null,
-};
-
 Person.propTypes = {
   name: PropTypes.string.isRequired,
   sex: PropTypes.oneOf('m' || 'f').isRequired,
   isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string,
+  partnerName: PropTypes.string.isRequired,
 };
 
 export default Person;
