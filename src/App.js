@@ -28,11 +28,12 @@ const alex = {
   isMarried: false,
 };
 
-const people = [alex, olya, misha];
-
 const App = () => (
   <div className="App">
-    <Person people={people} />
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
+
   </div>
 );
 
