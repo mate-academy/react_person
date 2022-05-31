@@ -6,7 +6,7 @@ export const Person = ({ person }) => {
     name, age, sex, isMarried, partnerName,
   } = person;
 
-  const personPartner = sex === 'f' ? 'wife' : 'husband';
+  const personPartner = sex === 'm' ? 'wife' : 'husband';
 
   return (
 
