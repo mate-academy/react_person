@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
-import Person from './Person/Person';
+/* eslint-disable import/no-unresolved */
 
+import React from 'react';
+import Person from './components/Person';
 // eslint-disable-next-line
 const misha = {
   name: 'Misha',
@@ -29,23 +30,9 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person
-      name={misha.name}
-      age={misha.age}
-      partnerName={misha.partnerName}
-    />
-
-    <Person
-      name={olya.name}
-      age={olya.age}
-      partnerName={olya.partnerName}
-    />
-
-    <Person
-      name={alex.name}
-      age={alex.age}
-      partnerName={alex.partnerName}
-    />
+    <Person {...misha} />
+    <Person {...olya} />
+    <Person {...alex} />
   </div>
 );
 
