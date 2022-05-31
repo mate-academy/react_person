@@ -13,21 +13,29 @@ export function Person({
     ? 'wife'
     : 'husband';
   const partner = isMarried
-    ? `My ${partnerType} name is ${partnerName}`
+    ? `My ${partnerType}'s name is ${partnerName}`
     : 'I am not married';
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
-      {age && <p className="Person__age">{`I am ${age}`}</p>}
-      <p className="Person__partner">{partner}</p>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+      <p className="Person__partner">
+        {partner}
+      </p>
     </section>
   );
 }
 
 Person.defaultProps = {
-  age: null,
-  partnerName: null,
+  age: 0,
+  partnerName: '',
 };
 
 Person.propTypes = {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Person } from './Components/Person';
 
-// eslint-disable-next-line
 const misha = {
   name: 'Misha',
   age: 37,
