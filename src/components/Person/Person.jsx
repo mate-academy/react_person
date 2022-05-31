@@ -25,8 +25,8 @@ export const Person = ({ info }) => {
         </p>
         <p className="Person__partner">
           {isMarried
-            ? (`My ${partner}'s name is ${partnerName}`)
-            : ('I am not married') }
+            ? `My ${partner}'s name is ${partnerName}`
+            : 'I am not married' }
         </p>
       </section>
     </>
@@ -34,18 +34,14 @@ export const Person = ({ info }) => {
 };
 
 Person.defaultProps = {
-  info: {
-    age: 0,
-    partnerName: 'Not Married',
-  },
+  age: 0,
+  partnerName: 'Not Married',
 };
 
 Person.propTypes = {
-  info: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    age: PropTypes.number,
-    sex: PropTypes.string.isRequired,
-    isMarried: PropTypes.bool.isRequired,
-    partnerName: PropTypes.string,
-  }),
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
 };
