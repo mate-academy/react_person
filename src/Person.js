@@ -8,16 +8,14 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
-  const personeName = `My name is ${name}`;
+  const personName = `My name is ${name}`;
   const personeAge = () => ((age) ? `I am ${age}` : null);
 
   const havePartner = () => {
-    if (isMarried && sex === 'm') {
-      return `My wife's name is ${partnerName}`;
-    }
+    const partnerSex = sex === 'm' ? 'wife' : 'husband';
 
-    if (isMarried && sex === 'f') {
-      return `My husband's name is ${partnerName}`;
+    if (isMarried) {
+      return `My ${partnerSex}'s name is ${partnerName}`;
     }
 
     return 'I am not married';
@@ -26,10 +24,10 @@ export const Person = ({ person }) => {
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {personeName}
+        {personName}
       </h2>
       <p className="Person__age">
-        {personeAge()}
+        {age && personeAge()}
       </p>
       <p className="Person__partner">
         {havePartner(person)}
