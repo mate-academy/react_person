@@ -7,3 +7,8 @@ Create a `Person` component and use it instead of repeating markup in the `App`
 
 - Use conditional rendering
 - Move styles to correct file
+
+## Requirements
+- `Person` must have `<h2>` with `className="Person__name"` containing person's name
+- If person has age, `Person` must have `<p>` with `className="Person__age"` containing person's age
+- `Person` must have `<p>` with `className="Person__partner"` containing person partner's name or `I am not married`
