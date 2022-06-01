@@ -13,33 +13,26 @@ const Person = ({
     ? 'husband'
     : 'wife';
 
-  const hasPartner = partnerName
+  const partnerInfo = partnerName
     ? `My ${isWifeOrHusband}'s name is ${partnerName}`
     : <p>I am not married</p>;
 
   return (
     <section className="Person">
-      {
-        name && (
-          <h2 className="Person__name">
-            My name is&nbsp;
-            {name}
-          </h2>
-        )
-
-      }
+      <h2 className="Person__name">
+        { `My name is ${name}` }
+      </h2>
 
       {
         age && (
           <p className="Person__age">
-            I am&nbsp;
-            { age }
+            {`I am ${age}`}
           </p>
         )
       }
 
       {
-        hasPartner
+        partnerInfo
       }
     </section>
   );
