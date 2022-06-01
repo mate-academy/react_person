@@ -29,7 +29,7 @@ function Person({ personalInfo }) {
         {age && `I am ${age}`}
       </p>
       <p className="Person__partner">
-        {isMarried ? (personPartnerElement) : ('Is not married')}
+        {isMarried ? (personPartnerElement) : ('I am not married')}
       </p>
     </section>
   );
