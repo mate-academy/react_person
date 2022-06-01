@@ -12,6 +12,8 @@ export const Person = ({ personInfo }) => {
     partnerName,
   } = personInfo;
 
+  const partnerSex = sex === 'f' ? 'husband' : 'wife';
+
   return (
     // eslint-disable-next-line
     <section className="Person">
@@ -27,8 +29,8 @@ export const Person = ({ personInfo }) => {
 
       <p className="Person__partner">
         {isMarried
-          ? (`My ${sex === 'f' ? ('husband') : ('wife')}'s name is ${partnerName}`)
-          : ('I am not married')}
+          ? `My ${partnerSex}'s name is ${partnerName}`
+          : 'I am not married'}
       </p>
 
     </section>
