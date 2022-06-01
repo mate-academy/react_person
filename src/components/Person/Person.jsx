@@ -3,50 +3,51 @@ import PropTypes from 'prop-types';
 
 import './Person.scss';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partner,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${name}`}
-    </h2>
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
-    {age && (
-      <p className="Person__age">
-        {`I am ${age}`}
+  const partner = (sex === 'f')
+    ? 'husband'
+    : 'wife';
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+
+      <p className="Person__marriage">
+        {!isMarried
+          ? 'I am not married'
+          : (`My ${partner}'s name is ${partnerName}`)}
       </p>
-    )}
 
-    {!isMarried ? 'I am not married' : null}
-
-    {(isMarried && sex === 'f') && (
-      <p className="Person__partner">
-        {`My husband's name is ${partner}`}
-      </p>
-    )}
-
-    {(isMarried && sex === 'm') && (
-      <p className="Person__partner">
-        {`My wife's name is ${partner}`}
-      </p>
-    )}
-  </section>
-);
+    </section>
+  );
+};
 
 Person.defaultProps = {
-  age: null,
-  isMarried: null,
-  partner: null,
+  person: 'no person',
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool,
-  partner: PropTypes.string,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool,
+    partner: PropTypes.string,
+  }),
 };
