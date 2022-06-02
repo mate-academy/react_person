@@ -17,18 +17,26 @@ export const Person = ({ person }) => {
     : 'wife';
 
   return (
-    <section className="Person">
-      <h2 className="Person__name">
+    <section className="Person card">
+      <h2 className="
+        Person__name
+        title
+        is-4"
+      >
         {`My name is ${name}`}
       </h2>
 
       {age && (
-        <p className="Person__age">
+        <p className="
+          Person__age
+          subtitle
+          is-6"
+        >
           {`I am ${age}`}
         </p>
       )}
 
-      <p className="Person__marriage">
+      <p className="Person__marriage content">
         {!isMarried
           ? 'I am not married'
           : (`My ${partner}'s name is ${partnerName}`)}

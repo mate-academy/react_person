@@ -2,15 +2,22 @@
   width: fit-content;
   margin-bottom: 16px;
   padding: 8px;
-  border: 1px solid #000;
   border-radius: 8px;
 
   &__name {
     margin-top: 8px;
+    color: #03044b;
   }
 
   &__age {
-    color: #00f;
+    margin: 8px;
+    color: #00285c;
     font-weight: bold;
+    text-align: end;
+  }
+
+  &__marriage {
+    margin-top: -10px;
+    color: #00476d;
   }
 }
