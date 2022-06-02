@@ -30,9 +30,9 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person {...misha} />
-    <Person {...olya} />
-    <Person {...alex} />
+    <Person personInfo={misha} />
+    <Person personInfo={olya} />
+    <Person personInfo={alex} />
   </div>
 );
 
