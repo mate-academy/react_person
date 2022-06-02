@@ -21,7 +21,7 @@ export const Person = ({
         {
           isMarried
             ? `My ${partner}'s name is ${partnerName}`
-            : 'I am not married'
+            : 'not married'
         }
       </p>
     </section>
@@ -31,7 +31,7 @@ export const Person = ({
 Person.defaultProps = {
   name: '',
   age: null,
-  sex: 'm',
+  sex: '',
   isMarried: false,
   partnerName: 'not married',
 };
