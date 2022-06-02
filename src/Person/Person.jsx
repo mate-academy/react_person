@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Person.scss';
 
-export const Person = ({ person }) => {
-  const {
-    name,
-    age,
-    sex,
-    isMarried,
-    partnerName,
-  } = person;
-
+export const Person = ({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) => {
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
@@ -28,8 +26,8 @@ export const Person = ({ person }) => {
       <p className="Person__partner">
         {
           isMarried
-            ? (`My ${partner}'s name is ${partnerName}`)
-            : ('I am not married')
+            ? `My ${partner}'s name is ${partnerName}`
+            : 'I am not married'
         }
       </p>
     </section>
