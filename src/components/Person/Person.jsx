@@ -11,11 +11,9 @@ function Person({ personalInfo }) {
   } = personalInfo;
 
   const personPartnerElement = (
-    sex === 'm' ? (
-      `My wife's name is ${partnerName}`
-    ) : (
-      `My husband's name is ${partnerName}`
-    )
+    sex === 'm'
+      ? `My wife's name is ${partnerName}`
+      : `My husband's name is ${partnerName}`
   );
 
   return (
