@@ -11,13 +11,11 @@ function Person({ personalInfo }) {
   } = personalInfo;
 
   const personPartnerElement = (
-    <>
-      {sex === 'm' ? (
-        `My wife's name is ${partnerName}`
-      ) : (
-        `My husband's name is ${partnerName}`
-      )}
-    </>
+    sex === 'm' ? (
+      `My wife's name is ${partnerName}`
+    ) : (
+      `My husband's name is ${partnerName}`
+    )
   );
 
   return (
@@ -31,7 +29,7 @@ function Person({ personalInfo }) {
         </p>
       )}
       <p className="Person__partner">
-        {isMarried ? (personPartnerElement) : ('I am not married')}
+        {isMarried ? personPartnerElement : 'I am not married'}
       </p>
     </section>
   );
