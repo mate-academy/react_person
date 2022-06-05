@@ -3,13 +3,10 @@ import React from 'react';
 import '../../App.scss';
 
 export default function Person(props) {
-  let Partner = '';
-
-  if (props.partner && props.sex === 'm') {
-    Partner = `My wife's name is ${props.partner}`;
-  } else if (props.partner && props.sex === 'f') {
-    Partner = `My husband's name is ${props.partner}`;
-  }
+  const personPartner = props.sex === 'm' ? 'wife' : 'husband';
+  const marriageStatus = props.isMarried
+    ? `My ${personPartner}'s name is ${props.partnerName}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -27,8 +24,8 @@ export default function Person(props) {
       }
       <p className="Person__partner">
         {
-        Partner || 'I am not married'
-      }
+          marriageStatus
+        }
       </p>
     </section>
   );
