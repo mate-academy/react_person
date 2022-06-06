@@ -1,25 +1,27 @@
 /* eslint-disable */
 import React from 'react';
-import '../../App.scss';
+import './Person.scss';
 
-export default function Person(props) {
-  const personPartner = props.sex === 'm' ? 'wife' : 'husband';
-  const marriageStatus = props.isMarried
-    ? `My ${personPartner}'s name is ${props.partnerName}`
+export default function Person({
+  sex,
+  isMarried,
+  partnerName,
+  name,
+}) {
+  const personPartner = sex === 'm' ? 'wife' : 'husband';
+  const marriageStatus = isMarried
+    ? `My ${personPartner}'s name is ${partnerName}`
     : 'I am not married';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
-       { `My name is
-        ${props.name}`}
+       { `My name is ${name}`}
       </h2>
       {
-        props.age
-        &&
+        age &&
         <p className="Person__age">
-        {`I am
-        ${props.age}`}
+        {`I am ${age}`}
         </p>
       }
       <p className="Person__partner">

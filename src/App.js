@@ -39,6 +39,7 @@ const App = () => (
           married= {person.isMarried}
           sex= {person.sex}
           partner= {person.partnerName}
+          key= {person.name}
         />;
       })
     }
