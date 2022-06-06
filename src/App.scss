@@ -1,17 +1,24 @@
-// style go here
+body {
+  background-color: rgb(252, 255, 187);
+}
+
 .Person {
-  width: fit-content;
+  margin: 10px;
+  width: 250px;
   margin-bottom: 16px;
   padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid rgb(173, 152, 55);
   border-radius: 8px;
 
+  background-color: rgb(255, 253, 230);
+
   &__name {
+    color: rgb(202, 97, 41);
     margin-top: 8px;
   }
 
   &__age {
-    color: #00f;
+    color: rgb(164, 122, 63);
     font-weight: bold;
   }
 }
