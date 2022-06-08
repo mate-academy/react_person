@@ -27,7 +27,16 @@ function Person({
           : 'I am not married'}
       </p>
     </section>
+
   );
 }
+
+Person.defaultProps = {
+  name: '',
+  age: undefined,
+  sex: '',
+  isMarried: false,
+  partnerName: undefined,
+};
 
 export default Person;
