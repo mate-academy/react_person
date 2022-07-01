@@ -1,15 +1,5 @@
 import React from 'react';
 
-const Person = ({ name, age, sex, isMarried, partnerName }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${name}`}
-    </h2>
-    <Age age={age} />
-    <Marriage sex={sex} isMarried={isMarried} partnerName={partnerName} />
-  </section>
-);
-
 const Age = ({ age }) => {
   if (age) {
     return (
@@ -43,5 +33,15 @@ const Marriage = ({ sex, isMarried, partnerName }) => {
     <p className="Person__partner">I am not married</p>
   );
 };
+
+const Person = ({ name, age, sex, isMarried, partnerName }) => (
+  <section className="Person">
+    <h2 className="Person__name">
+      {`My name is ${name}`}
+    </h2>
+    <Age age={age} />
+    <Marriage sex={sex} isMarried={isMarried} partnerName={partnerName} />
+  </section>
+);
 
 export default Person;
