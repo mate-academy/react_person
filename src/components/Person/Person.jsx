@@ -1,6 +1,7 @@
 import React from 'react';
+import './Person.scss';
 
-const Person = ({ name, age = 0, sex, isMarried, partnerName }) => (
+const Person = ({ name, age, sex, isMarried, partnerName }) => (
   <section className="Person">
     <h2 className="Person__name">
       {`My name is ${name}`}
