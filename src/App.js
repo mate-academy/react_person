@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Person from './components/Person';
+import { Person } from './components/Person';
 
 // eslint-disable-next-line
 const misha = {

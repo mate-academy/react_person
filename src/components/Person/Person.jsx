@@ -2,7 +2,7 @@ import React from 'react';
 import './Person.scss';
 import propTypes from 'prop-types';
 
-const Person = ({
+export const Person = ({
   name,
   age,
   sex,
@@ -29,5 +29,3 @@ const Person = ({
 Person.propTypes = {
   name: propTypes.string.isRequired,
 };
-
-export default Person;
