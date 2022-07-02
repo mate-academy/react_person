@@ -1,5 +1,5 @@
 import React from 'react';
-import { Person } from './components/Person/Person'
+import { Person } from './components/Person/Person';
 import './App.scss';
 
 // eslint-disable-next-line
@@ -28,6 +28,7 @@ const alex = {
 };
 
 const App = () => (
+  // eslint-disable-next-line
   <div className="App">
     <Person {...misha} />
     <Person {...olya} />

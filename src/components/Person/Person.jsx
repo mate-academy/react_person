@@ -7,6 +7,7 @@ export const Person = ({
   isMarried,
   partnerName,
 }) => (
+  // eslint-disable-next-line
   <>
     <section className="Person">
       <h2 className="Person__name">
