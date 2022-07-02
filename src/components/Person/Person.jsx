@@ -12,7 +12,7 @@ const Person = ({
   <div className="Person">
     <h2 className="Person__name">
       My name is
-      {name}
+      {' ' + name}
     </h2>
     <p className="Person__age">
       {age ? `I am ${age}` : null}
@@ -25,8 +25,6 @@ const Person = ({
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  partnerName: PropTypes.string,
 };
 
 export default Person;
