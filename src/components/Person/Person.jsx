@@ -51,7 +51,7 @@ export function Person({
       <p className="Person__partner">
         {isMarried
           ? `My ${partner}'s name is ${partnerName}`
-          : "I'm not married!"}
+          : 'I am not married'}
       </p>
     </section>
   );
