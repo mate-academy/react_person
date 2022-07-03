@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import './App.scss';
 import { Person } from './components/Person/Person';
 
 // eslint-disable-next-line
