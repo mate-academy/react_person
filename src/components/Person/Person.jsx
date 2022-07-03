@@ -36,7 +36,7 @@ export function Person({
 }
 
 Person.defaultProps = {
-  age: 0,
+  age: null,
   partnerName: '',
 };
 
