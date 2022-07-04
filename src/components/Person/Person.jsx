@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export const Person = ({
   name,
@@ -21,11 +22,13 @@ export const Person = ({
     <section className="Person">
       <h2 className="Person__name">
         My name is
-        { name}
+        {' '}
+        {name}
       </h2>
       <p className="Person__age">
         I am
-        { age}
+        {' '}
+        {age}
       </p>
       <p className="Person__partner">
         {personPartner}
