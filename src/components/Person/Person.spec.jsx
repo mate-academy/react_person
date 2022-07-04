@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import { mount } from '@cypress/react';
-import Person from './Person';
+import { Person } from './Person';
 
 describe('Person', () => {
   it('should show name, age and partner\'s name of the person', () => {
