@@ -8,10 +8,10 @@ export function Person({
   isMarried,
   partnerName,
 }) {
-  let partnerSex = 'My husband`s name is ';
+  let partnerSex = 'husband`s';
 
   if (sex === 'm') {
-    partnerSex = 'My wife`s name is ';
+    partnerSex = 'wife`s';
   }
 
   return (
@@ -22,9 +22,9 @@ export function Person({
           {' '}
           {name}
         </h2>
-        <p className="Person__age">{age ? `I am ${age}` : null}</p>
+        <p className="Person__age">{age && `I am ${age}`}</p>
         <p className="Person__partner">
-          {isMarried ? partnerSex + partnerName : 'I am not married'}
+          {isMarried ? `My ${partnerSex} name is ${partnerName}` : 'I am not married'}
         </p>
       </section>
     </>
