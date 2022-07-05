@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import { Person } from './components/Person/Person';
 
 // eslint-disable-next-line
@@ -30,15 +29,33 @@ const alex = {
 const App = () => (
   <div className="App">
     <section className="Person">
-      <Person {...misha} />
+      <Person
+        name={misha.name}
+        age={misha.age}
+        sex={misha.sex}
+        isMarried={misha.isMarried}
+        partnerName={misha.partnerName}
+      />
     </section>
 
     <section className="Person">
-      <Person {...olya} />
+      <Person
+        name={olya.name}
+        age={olya.age}
+        sex={olya.sex}
+        isMarried={olya.isMarried}
+        partnerName={olya.partnerName}
+      />
     </section>
 
     <section className="Person">
-      <Person {...alex} />
+      <Person
+        name={alex.name}
+        age={alex.age}
+        sex={alex.sex}
+        isMarried={alex.isMarried}
+        partnerName={alex.partnerName}
+      />
     </section>
   </div>
 );
