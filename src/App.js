@@ -30,9 +30,24 @@ const alex = {
 const App = () => (
   // eslint-disable-next-line react/jsx-filename-extension
   <div className="App">
-    <Person {...misha} />
-    <Person {...olya} />
-    <Person {...alex} />
+    <Person
+      name={misha.name}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
+    <Person
+      name={olya.name}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
+    />
+    <Person
+      name={alex.name}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
   </div>
 );
 
