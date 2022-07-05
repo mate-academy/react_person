@@ -12,6 +12,7 @@ describe('Person', () => {
       partnerName: 'Natasha',
     };
 
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<Person {...misha} />);
 
     cy.get('.Person__name').should('contain.text', misha.name);
