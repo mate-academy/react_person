@@ -1,14 +1,18 @@
 import React from 'react';
 import './Person.scss';
 
-export function Person({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) {
-  const partner = sex === 'm' ? 'wife' : 'husband';
+export function Person({ person }) {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     // eslint-disable-next-line
