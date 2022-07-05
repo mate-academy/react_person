@@ -28,6 +28,7 @@ const alex = {
 };
 
 const App = () => (
+  // eslint-disable-next-line react/jsx-filename-extension
   <div className="App">
     <Person {...misha} />
     <Person {...olya} />
