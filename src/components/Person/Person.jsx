@@ -1,13 +1,15 @@
 import React from 'react';
 import './Person.scss';
 
-function Person({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) {
+function Person({ person }) {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <section className="Person">
