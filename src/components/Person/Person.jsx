@@ -29,8 +29,7 @@ export function Person({
       <p className="Person__partner">
         { isMarried
           ? createTextAboutPartner()
-          : 'I am not married'
-        }
+          : 'I am not married'}
       </p>
     </section>
   );
