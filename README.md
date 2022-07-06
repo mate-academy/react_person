@@ -1,5 +1,5 @@
 # React person
-- Replace `<your_account>` with your Github username in the [DEMO LINK](AntonYegorov.github.io/react_person/)
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://AntonYegorov.github.io/react_person/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
