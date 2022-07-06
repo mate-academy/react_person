@@ -9,17 +9,24 @@ export function Person({
   isMarried,
   partnerName,
 }) {
-  const partner = (sex === 'm')
-    ? (`My wife's name is ${partnerName}`)
-    : (`My husband's name is ${partnerName}`);
+  const partner = `My ${(sex === 'm')
+    ? 'wife'
+    : 'husband'}'s
+   name is ${partnerName}`;
 
   return (
     <div className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
-      {age ? (<p className="Person__age">{`I am ${age}`}</p>) : null}
-      {isMarried
-        ? (<p className="Person__partner">{partner}</p>)
-        : <p className="Person__partner">I am not married</p>}
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+
+      <p className="Person__age">
+        {age ? `I am ${age}` : null}
+      </p>
+
+      <p className="Person__partner">
+        {isMarried ? partner : 'I am not married'}
+      </p>
     </div>
   );
 }
