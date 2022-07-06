@@ -36,6 +36,7 @@ const App = () => (
       isMarried={misha.isMarried}
       partnerName={misha.partnerName}
     />
+
     <Person
       name={olya.name}
       age={olya.age}
@@ -43,6 +44,7 @@ const App = () => (
       isMarried={olya.isMarried}
       partnerName={olya.partnerName}
     />
+
     <Person
       name={alex.name}
       age={alex.age}
