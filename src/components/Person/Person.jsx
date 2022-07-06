@@ -8,20 +8,30 @@ const Person = ({
   isMarried,
   age,
   partnerName,
-}) => (
-  <div className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' ' + name}
-    </h2>
-    <p className="Person__age">
-      {age ? `I am ${age}` : null}
-    </p>
-    <p className="Person__partner">
-      {isMarried ? `My ${sex === 'f' ? 'husband`s' : 'wife`s'} name is ${partnerName}` : 'I am not married'}
-    </p>
-  </div>
-);
+}) => {
+  const partner = sex === 'f' ? 'husband`s' : 'wife`s';
+
+  return (
+    <div className="Person">
+      <h2 className="Person__name">
+        My name is
+        {` ${name}`}
+      </h2>
+
+      {age && (
+        <p className="Person__age">{`I am ${age}`}</p>
+      )}
+
+      <p className="Person__partner">
+
+        {isMarried
+          ? `My ${partner} name is ${partnerName}`
+          : 'I am not married'
+        }
+      </p>
+    </div>
+  );
+};
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
