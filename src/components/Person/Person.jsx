@@ -1,28 +1,28 @@
 import React from 'react';
 
-export function Person({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) {
-  const partnerSex = () => (sex === 'm' ? 'wife' : 'husband');
+import './Person.scss';
+
+export function Person({ person }) {
+  const partnerSex = () => (person.sex === 'm' ? 'wife' : 'husband');
 
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <section className="Person">
       <h2 className="Person__name">
-        My name is
-        {` ${name}`}
+        {`My name is ${person.name}`}
       </h2>
-      {age && (
+      {person.age && (
         <p className="Person__age">
-          I am
-          {` ${age}`}
+          {`I am ${person.age}`}
         </p>
       )}
-      <p>{isMarried ? `My ${partnerSex()} ${partnerName}` : 'I am not married'}</p>
+      <p>
+        {
+          person.isMarried
+            ? `My ${partnerSex()} ${person.partnerName}`
+            : 'I am not married'
+        }
+      </p>
     </section>
   );
 }
