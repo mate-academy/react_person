@@ -32,7 +32,13 @@ const people = [{ ...misha }, { ...olya }, { ...alex }];
 const App = () => (
   <div className="App">
     {people.map(person => (
-      <Person person={person} key={person.name} />
+      <Person
+        name={person.name}
+        age={person.age}
+        sex={person.sex}
+        partnerName={person.partnerName}
+        key={person.name}
+      />
     ))}
   </div>
 );
