@@ -6,6 +6,7 @@ const Person = ({
   name,
   age,
   sex,
+  isMarried,
   partnerName,
 }) => (
   <section className="Person">
@@ -19,15 +20,14 @@ const Person = ({
       </p>
     )}
 
-    {partnerName ? (
-      <p className="Person__partner">
-        {`My ${sex === 'm' ? 'wife\'s' : 'husband\'s'} name is ${partnerName}`}
-      </p>
-    ) : (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    )}
+    <p className="Person__partner">
+      {
+        isMarried
+          ? `My ${sex === 'm' ? 'wife\'s' : 'husband\'s'} name is ${partnerName}`
+          : 'I am not married'
+      }
+
+    </p>
 
   </section>
 );
@@ -36,7 +36,12 @@ Person.propTypes = {
   name: propTypes.string.isRequired,
   age: propTypes.number.isRequired,
   sex: propTypes.string.isRequired,
-  partnerName: propTypes.string.isRequired,
+  isMarried: propTypes.bool.isRequired,
+  partnerName: propTypes.string,
+};
+
+Person.defaultProps = {
+  partnerName: '',
 };
 
 export default Person;
