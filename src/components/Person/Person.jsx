@@ -26,9 +26,7 @@ const Person = ({
           ? `My ${sex === 'm' ? 'wife\'s' : 'husband\'s'} name is ${partnerName}`
           : 'I am not married'
       }
-
     </p>
-
   </section>
 );
 
