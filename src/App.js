@@ -1,6 +1,7 @@
+// eslint-disable-next-line react/jsx-filename-extension
 import React from 'react';
 import './components/Person.scss';
-import { Person } from './components/Person.jsx';
+import { Person } from './components/Person';
 
 // eslint-disable-next-line
 const misha = {
@@ -31,27 +32,18 @@ const App = () => (
   <div className="App">
     <section className="Person">
       <Person
-        namE={misha.name}
-        age={misha.age}
-        partner={misha.partnerName}
-        sex={misha.sex}
+        {...misha}
       />
     </section>
     <section className="Person">
       <Person
-        namE={olya.name}
-        age={olya.age}
-        partner={olya.partnerName}
-        sex={olya.sex}
+        {...olya}
       />
     </section>
 
     <section className="Person">
       <Person
-        namE={alex.name}
-        age={alex.age}
-        partner={alex.partnerName}
-        sex={alex.sex}
+        {...alex}
       />
     </section>
   </div>
