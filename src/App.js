@@ -17,7 +17,6 @@ const olya = {
   partnerName: 'Maksym',
 };
 
-// eslint-disable-next-line
 const alex = {
   name: 'Alex',
   age: 25,
@@ -26,11 +25,28 @@ const alex = {
 };
 
 const App = () => (
-  // eslint-disable-next-line react/jsx-filename-extension
   <>
-    <Person {...misha} />
-    <Person {...olya} />
-    <Person {...alex} />
+    <Person
+      name={misha.name}
+      age={misha.age}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
+    <Person
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
+    />
+    <Person
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
   </>
 );
 
