@@ -9,13 +9,7 @@ export function Person({
   isMarried,
   partnerName,
 }) {
-  let partnerSex = 'I am not married';
-
-  if (isMarried) {
-    partnerSex = sex === 'm'
-      ? `My wife's name is ${partnerName}`
-      : `My husband's name is ${partnerName}`;
-  }
+  const partnerType = (sex === 'm') ? 'wife' : 'husband';
 
   return (
     <>
@@ -24,10 +18,16 @@ export function Person({
           {`My name is ${name}`}
         </h2>
 
-        {age && <p className="Person__age">{`I am ${age}`}</p>}
+        {age && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )}
 
         <p className="Person__partner">
-          {partnerSex}
+          {(isMarried)
+            ? (`My ${partnerType}'s name is ${partnerName}`)
+            : ('I am not married')}
         </p>
       </div>
     </>
