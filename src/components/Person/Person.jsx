@@ -1,5 +1,11 @@
 import React from 'react';
 
+function whichPartner(objToCheck) {
+  return `My ${objToCheck.sex === 'm'
+    ? 'wife\'s'
+    : 'husband\'s'} name is ${objToCheck.partnerName}`;
+}
+
 export const Person = ({ personObj }) => (
   <section className="Person">
     <h2 className="Person__name">
@@ -16,7 +22,7 @@ export const Person = ({ personObj }) => (
 
     <p className="Person__partner">
       { personObj.isMarried
-        ? `My ${personObj.sex === 'm' ? 'wife\'s' : 'husband\'s'} name is ${personObj.partnerName}`
+        ? whichPartner(personObj)
         : 'I am not married' }
     </p>
   </section>

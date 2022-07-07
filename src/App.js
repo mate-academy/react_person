@@ -29,17 +29,11 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <Person
-      personObj={misha}
-    />
+    <Person personObj={misha} />
 
-    <Person
-      personObj={olya}
-    />
+    <Person personObj={olya} />
 
-    <Person
-      personObj={alex}
-    />
+    <Person personObj={alex} />
   </div>
 );
 
