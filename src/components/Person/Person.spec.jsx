@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from '@cypress/react';
-import Person from './Person';
+import { Person } from './Person';
 
 describe('Person', () => {
   it('should show name, age and partner\'s name of the person', () => {
@@ -12,7 +12,7 @@ describe('Person', () => {
       partnerName: 'Natasha',
     };
 
-    mount(<Person {...misha} />);
+    mount(<Person person={misha} />);
 
     cy.get('.Person__name').should('contain.text', misha.name);
     cy.get('.Person__age').should('contain.text', misha.age);
@@ -28,7 +28,7 @@ describe('Person', () => {
       partnerName: 'Natasha',
     };
 
-    mount(<Person {...misha} />);
+    mount(<Person person={misha} />);
 
     cy.get('.Person__partner').should('contain.text', 'wife');
   });
@@ -41,7 +41,7 @@ describe('Person', () => {
       partnerName: 'Maksym',
     };
 
-    mount(<Person {...olya} />);
+    mount(<Person person={olya} />);
 
     cy.get('.Person__partner').should('contain.text', 'husband');
   });
@@ -53,7 +53,7 @@ describe('Person', () => {
       isMarried: false,
     };
 
-    mount(<Person {...sasha} />);
+    mount(<Person person={sasha} />);
 
     cy.get('.Person__age').should('not.exist');
   });
@@ -65,7 +65,7 @@ describe('Person', () => {
       isMarried: false,
     };
 
-    mount(<Person {...tanya} />);
+    mount(<Person person={tanya} />);
 
     cy.get('.Person__partner').should('contain.text', 'not married');
   });

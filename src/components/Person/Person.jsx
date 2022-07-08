@@ -1,1 +1,1 @@
-// Write code here
+// export function Person({ person }) {}
