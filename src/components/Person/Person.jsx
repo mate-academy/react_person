@@ -2,19 +2,32 @@ import React from 'react';
 import './Person.scss';
 
 export function Person({ person }) {
+  let message = 'I am not married';
+
+  if (person.isMarried === true) {
+    if (person.sex === 'f') {
+      message = `My hasbands name is ${person.partnerName}`;
+    } else {
+      message = `My wife name is ${person.partnerName}`;
+    }
+  }
+
   return (
     <section className="Person">
       <h2 className="Person__name">
         {`My name is ${person.name}`}
       </h2>
 
-      <p className="Person__age">
-        {`I am ${person.age || null}`}
-      </p>
+      {person.age && (
+        <>
+          <p>{`I am ${person.age}`}</p>
+        </>
+      )}
 
       <p className="Person__partner">
-        {person.isMarried ? `My hasbands name is ${person.partnerName}` : `I am not married`}
+        {message}
       </p>
+
     </section>
   );
 }
