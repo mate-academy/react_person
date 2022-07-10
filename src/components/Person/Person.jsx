@@ -2,7 +2,7 @@ import React from 'react';
 import './Person.scss';
 
 export const Person = ({ person }) => (
-  <section className='Person'>
+  <section className="Person">
     <h2 className="Person__name">
       {`My name is ${person.name}`}
     </h2>
@@ -23,6 +23,4 @@ export const Person = ({ person }) => (
       }
     </p>
   </section>
-
-
 );
