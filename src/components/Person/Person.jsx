@@ -1,28 +1,28 @@
 import React from 'react';
 import './Person.scss';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => (
-  <section className="Person">
-
-    <h2 className="Person__name">{`My name is ${name}`}</h2>
+export const Person = ({ person }) => (
+  <section className='Person'>
+    <h2 className="Person__name">
+      {`My name is ${person.name}`}
+    </h2>
 
     {
-      age && <p className="Person__age">{`I am ${age}`}</p>
+      person.age && (
+        <p className="Person__age">
+          {`I am ${person.age}`}
+        </p>
+      )
     }
 
     <p className="Person__partner">
       {
-        isMarried
-          ? `My ${sex === 'f' ? 'husband' : 'wife'}'s name is ${partnerName}`
+        person.isMarried
+          ? `My ${person.sex === 'f' ? 'husband' : 'wife'}'s name is ${person.partnerName}`
           : 'I am not married'
       }
     </p>
-
   </section>
+
+
 );
