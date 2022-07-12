@@ -4,7 +4,7 @@ Implement the `Person` component and use it three times inside the `App` instead
 
 - pass the whole person as a prop `<Person person={misha} />` (**not** individual fields);
 - use the markup given in the `App` rendering some parts based on given data:
-  - omit `age` if it is not given;
+  - skip `age` if it is not given;
   - if a person `isMarried` print the name of the `wife` or `husband`, depending on the `person.sex`;
   - if not — print `I am not married` message.
 
