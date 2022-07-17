@@ -30,11 +30,27 @@ const alex = {
 const App = () => (
   // eslint-disable-next-line
   <div className="App">
-    <Person {...misha} />
+    <Person
+      name={misha.name}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
 
-    <Person {...olya} />
+    <Person
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+    />
 
-    <Person {...alex} />
+    <Person
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
   </div>
 );
 
