@@ -2,15 +2,15 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName: pN } = person;
+  const { name, age, sex, isMarried, partnerName } = person;
 
   const partnerHandler = () => {
     if (isMarried && sex === 'm') {
-      return `My wife\`s name is ${pN}`;
+      return `My wife\`s name is ${partnerName}`;
     }
 
-    if (isMarried && sex === 's') {
-      return `My husbands\`s name is ${pN}`;
+    if (isMarried && sex === 'f') {
+      return `My husbands\`s name is ${partnerName}`;
     }
 
     return `I am not married`;
