@@ -3,8 +3,8 @@ import React from 'react';
 export function Person({ person }) {
   const partnerData
     = person.sex === 'm'
-      ? `My wife& apos;s name is ${person.partnerName}`
-      : `My husband& apos;s name is ${person.partnerName}`;
+      ? `My wife's name is ${person.partnerName}`
+      : `My husband's name is ${person.partnerName}`;
 
   return (
     <section className="Person">
