@@ -1,5 +1,6 @@
 import React from 'react';
 import Person from './components/Person/Person';
+
 // import './App.scss';
 
 // eslint-disable-next-line

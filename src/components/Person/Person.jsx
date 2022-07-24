@@ -1,4 +1,5 @@
 import React from 'react';
+import Partner from './Partner';
 
 const Person = ({ person }) => (
   <>
@@ -12,11 +13,7 @@ const Person = ({ person }) => (
 
     {person.isMarried ? (
       <p className="Person__partner">
-        {`
-        My ${person.sex === 'm'
-          ? `wife's`
-          : `husband's`} name is ${person.partnerName}
-        `}
+        <Partner {...person} />
       </p>
     ) : 'I am not married'}
   </>
