@@ -11,10 +11,9 @@ export function Person({ person }) {
 
       <p className="Person__partner">
         {person.isMarried
-          ? `${person.sex === 'm'
-            ? `My wife's name  ${person.partnerName}`
-            : `My husband's name ${person.partnerName}`}`
-          : `I am not married`}
+          ? `My ${person.sex === 'm' ? `wife` : `husband`}'s name is  ${person.partnerName}`
+          : `I am not married`
+        }
       </p>
     </section>
   );
