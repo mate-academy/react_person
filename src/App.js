@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 
+import { Person } from './components/Person/Person';
+
 // eslint-disable-next-line no-unused-vars
 const misha = {
   name: 'Misha',
@@ -26,25 +28,10 @@ const alex = {
   isMarried: false,
 };
 
-const App = () => (
+export const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">My wife&apos;s name is Natasha</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">My husband&apos;s name is Maksym</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
   </div>
 );
-
-export default App;
