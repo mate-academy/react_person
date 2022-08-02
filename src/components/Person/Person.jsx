@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export function Person({ person }) {
   const { name, age, sex, isMarried, partnerName = '' } = person;
@@ -8,9 +9,7 @@ export function Person({ person }) {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      <p className="Person__age">
-        {age && `I am ${age}`}
-      </p>
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
       <p className="Person__partner">
         {isMarried
           ? `My ${sex === 'm'
