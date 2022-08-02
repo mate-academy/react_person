@@ -8,7 +8,7 @@ export function Person({ person }) {
 
       {person.age && (
         <p className="Person__age">
-          `I am ${person.age}`
+          {`I am ${person.age}`}
         </p>
       )}
 
