@@ -30,7 +30,10 @@ export function Person({
       )}
 
       <p className="Person__partner">
-        {partnerName ? partner : 'I am not married'}
+        {partnerName
+          ? partner
+          : 'I am not married'
+        }
       </p>
 
     </section>
