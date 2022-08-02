@@ -9,7 +9,7 @@ export function Person({ person }) {
       {person.age && (<p className="Person__age">{`I am ${person.age}`}</p>)}
       <p className="Person__partner">
         {person.isMarried
-          ? `My ${person.sex === 'm' ? 'wife' : 'husband'}`
+          ? `My ${person.sex === 'm' ? 'wife' : 'husband'} ${person.partnerName}`
           : 'I am not married'
         }
       </p>
