@@ -2,7 +2,13 @@ import React from 'react';
 import './Person.scss';
 
 export function Person({ person }) {
-  const { name, age, sex, isMarried, partnerName = '' } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName = '',
+  } = person;
 
   return (
     <section className="Person">
