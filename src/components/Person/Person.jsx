@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function Person({ person }) {
-  const status = person.sex === 'm' ? (
+  const partnerString = person.sex === 'm' ? (
     `My wife's name is ${person.partnerName}`
   ) : (
     `My husband's name is ${person.partnerName}`
@@ -20,7 +20,10 @@ export function Person({ person }) {
       )}
 
       <p>
-        {person.isMarried ? status : 'I am not married'}
+        {person.isMarried
+          ? partnerString
+          : 'I am not married'
+        }
       </p>
     </section>
   );
