@@ -20,9 +20,8 @@ export function Person({ person }) {
       <p className="Person__partner">
         {person.isMarried
           ? `My ${partner}'s name is ${person.partnerName}`
-          : `I am not married`
+          : 'I am not married'
         }
-        ;
       </p>
     </>
   );
