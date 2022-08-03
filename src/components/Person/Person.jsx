@@ -1,12 +1,8 @@
 import React from 'react';
 
-export function Person({
-  name,
-  age,
-  sex,
-  partnerName,
-  isMarried,
-}) {
+export function Person({ person }) {
+  const { name, age, sex, partnerName, isMarried } = person;
+
   const partner = sex === 'm'
     ? 'wife'
     : 'husband';
