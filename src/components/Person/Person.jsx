@@ -10,10 +10,11 @@ export function Person({ person }) {
       <h2 className="Person__name">
         {`My name is ${person.name}`}
       </h2>
-      {person.age ? (
-        <p className="Person__age">{`I am ${person.age}`}</p>
+      {person.age && (
+        <p className="Person__age">
+          {`I am ${person.age}`}
+        </p>
       )
-        : null
       }
       <p className="Person__partner">
         {person.isMarried ? (partner) : 'I am not married'}
