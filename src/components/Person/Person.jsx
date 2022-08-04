@@ -16,7 +16,9 @@ export const Person = ({ person: {
     {age && (<p className="Person__age">{`I am ${age}`}</p>)}
     <p className="Person__partner">
       {isMarried
-        ? `My ${sex === 'm' ? 'wife' : 'husband'}'s name is ${partnerName}`
+        ? `My ${sex === 'm'
+          ? 'wife'
+          : 'husband'}'s name is ${partnerName}`
         : 'I am not married'}
     </p>
   </section>
