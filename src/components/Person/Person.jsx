@@ -1,31 +1,25 @@
-// Write code here
 import React from 'react';
-import './Person.scss';
 
-const partnerSex = sex => (
-  sex === 'm'
+export function Person({ person }) {
+  const partner = person.sex === 'm'
     ? 'wife'
-    : 'husband'
-);
+    : 'husband';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${name}`}
-    </h2>
-    <p className="Person__age">
-      {`I am ${age}`}
-    </p>
-    <p className="Person__partner">
-      {isMarried
-        ? `My ${partnerSex(sex)}'s name is ${partnerName}`
-        : 'I am no t married'}
-    </p>
-  </section>
-);
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${person.name}`}
+      </h2>
+
+      <p className="Person__age">
+        {person.age && (`I am ${person.age}`)}
+      </p>
+
+      <p className="Person__partner">
+        {person.isMarried
+          ? `My ${partner}'s name is ${person.partnerName}`
+          : 'I am not married'}
+      </p>
+    </section>
+  );
+}
