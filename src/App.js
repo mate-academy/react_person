@@ -30,19 +30,13 @@ const alex = {
 const App = () => (
   <div className="App">
     <section className="Person">
-      <Person
-        person={misha}
-      />
+      <Person person={misha} />
     </section>
     <section className="Person">
-      <Person
-        person={olya}
-      />
+      <Person person={olya} />
     </section>
     <section className="Person">
-      <Person
-        person={alex}
-      />
+      <Person person={alex} />
     </section>
   </div>
 );
