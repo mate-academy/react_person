@@ -24,12 +24,10 @@ const alex = {
   isMarried: false,
 };
 
-const App = () => (
+export const App = () => (
   <div className="App">
     <Person person={misha} />
     <Person person={olya} />
     <Person person={alex} />
   </div>
 );
-
-export default App;
