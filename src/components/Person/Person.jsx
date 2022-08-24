@@ -6,7 +6,9 @@ export function Person({ person }) {
   let partner;
 
   if (isMarried) {
-    partner = sex === 'm' ? 'wife\'s' : 'husband\'s';
+    partner = sex === 'm'
+      ? 'wife\'s'
+      : 'husband\'s';
     partner = `My ${partner} name is ${partnerName}`;
   } else {
     partner = 'I am not married';
