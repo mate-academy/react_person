@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../App.scss';
 
 export function Person({ person }) {
   const { name, age, isMarried, sex, partnerName } = person;
