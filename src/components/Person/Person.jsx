@@ -1,1 +1,1 @@
-// export function Person({ person }) {}
+// export const Person = ({ person }) => ();
