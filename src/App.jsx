@@ -3,7 +3,7 @@ import { Person, misha, olya, alex } from './components/Person';
 
 export const App = () => (
   <div className="App">
-    <Person 
+    <Person
       person={misha}
     />
 
