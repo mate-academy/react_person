@@ -2,23 +2,25 @@ import React from 'react';
 
 // eslint-disable-next-line func-names
 export const Person = function({ person }) {
+  const { name, age, sex, isMarried, partnerName } = person;
+
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {`My name is ${person.name}`}
+        {`My name is ${name}`}
       </h2>
 
-      {person.age && (<p className="Person__age">{`I am ${person.age}`}</p>)}
+      {age && (<p className="Person__age">{`I am ${age}`}</p>)}
 
-      {!person.isMarried && (
+      {!isMarried && (
         <p className="Person__partner">I am not married</p>
       )}
 
       {person.isMarried && (
         <p className="Person__partner">
-          {person.sex === 'm'
-            ? `${person.partnerName} is my wife`
-            : `${person.partnerName} is my husband`
+          {sex === 'm'
+            ? `${partnerName} is my wife`
+            : `${partnerName} is my husband`
           }
         </p>
       )}
