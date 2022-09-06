@@ -30,15 +30,3 @@ export const Person = ({ person }) => (
   }
   </section>
 );
-
-// Person.defaultProps = {
-//   age: '',
-// };
-
-// Person.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   age: PropTypes.number,
-//   sex: PropTypes.string,
-//   isMarried: PropTypes.bool.isRequired,
-//   partnerName: PropTypes.string,
-// };
