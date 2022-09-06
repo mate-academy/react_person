@@ -9,22 +9,14 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  let partner = '';
+  const personAge = `I am ${age}`;
+
+  let partner = (sex === 'f')
+    ? `${partnerName} is my husband`
+    : `${partnerName} is my wife`;
 
   if (!isMarried) {
     partner = 'I am not married';
-  }
-
-  if (isMarried) {
-    partner = (sex === 'f')
-      ? `${partnerName} is my husband`
-      : `${partnerName} is my wife`;
-  }
-
-  let personAge;
-
-  if (age) {
-    personAge = `I am ${age}`;
   }
 
   return (
