@@ -2,11 +2,17 @@ iframe {
   display: none;
 }
 
+body {
+  margin: 10vh auto;
+  background-color: #000;
+  color: coral;
+}
+
 .Person {
   width: fit-content;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
   padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid coral;
   border-radius: 8px;
 
   &__name {
@@ -14,7 +20,7 @@ iframe {
   }
 
   &__age {
-    color: #00f;
+    color: cyan;
     font-weight: bold;
   }
 }
