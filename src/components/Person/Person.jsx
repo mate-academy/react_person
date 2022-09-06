@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Person = (
   { name,
@@ -6,22 +7,36 @@ export const Person = (
     sex,
     isMarried,
     partnerName },
-) => (
-  <section className="Person">
-    <h2 className="Person__name">{`My name is ${name}`}</h2>
-    {age && (
-      <p className="Person__age">{`I am ${age}`}</p>
-    )}
-    {isMarried && (
+) => {
+  const wifeOrHusband = sex === 'm'
+    ? ('wife')
+    : ('husband');
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
+      {age && (
+        <p className="Person__age">{`I am ${age}`}</p>
+      )}
       <p className="Person__partner">
-        {sex === 'm'
-          ? `${partnerName} is my wife`
-          : `${partnerName} is my husband`
+        {isMarried
+          ? (`${partnerName} is my ${wifeOrHusband}`)
+          : ('I am not married')
         }
       </p>
-    )}
-    {!isMarried && (
-      <p className="Person__partner">I am not married</p>
-    )}
-  </section>
-);
+    </section>
+  );
+};
+
+Person.defaultProps = {
+  age: null,
+  partnerName: '',
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
+};
