@@ -8,17 +8,10 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
-  let partnerRole = '';
 
-  switch (sex) {
-    case 'm':
-      partnerRole = 'wife';
-      break;
-    case 'f':
-      partnerRole = 'husband';
-      break;
-    default: throw new Error('Wrong sex value');
-  }
+  const partnerRole = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
@@ -26,13 +19,13 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      { age && (
+      {age && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
       )}
 
-      { isMarried ? (
+      {isMarried ? (
         <p className="Person__partner">
           {`${partnerName} is my ${partnerRole}`}
         </p>
