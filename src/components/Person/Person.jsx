@@ -25,7 +25,11 @@ export function Person({ person }) {
       {!age || (
         <p className="Person__age">{`I am ${age}`}</p>
       )}
-      <p className="Person__partner">{partner}</p>
+      <p className="Person__partner">
+        {isMarried
+          ? `${partner}`
+          : `I am not married`}
+      </p>
     </section>
   );
 }
