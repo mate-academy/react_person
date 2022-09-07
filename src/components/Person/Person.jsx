@@ -20,7 +20,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {person.age && (
+      {age && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
@@ -31,7 +31,6 @@ export const Person = ({ person }) => {
           ? `${partnerName} is my ${partnerType}`
           : 'I am not married'}
       </p>
-
     </section>
   );
 };
