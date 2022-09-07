@@ -17,7 +17,7 @@ export const Person = ({
     : `I am not married`;
 
   return (
-    <>
+    <section className="Person">
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
@@ -30,6 +30,6 @@ export const Person = ({
       <p className="Person__partner">
         {hasPartner}
       </p>
-    </>
+    </section>
   );
 };
