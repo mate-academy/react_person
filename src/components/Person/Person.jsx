@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Person = ({
   person: {
     name,
-    age = 0,
+    age,
     sex,
     isMarried,
     partnerName,
