@@ -1,17 +1,17 @@
 import React from 'react';
 
-export function Person({ name, age, sex, isMarried, partnerName }) {
-  const isPartner = sex === 'm' ? `${partnerName} is my wife` : `${partnerName} is my husband`;
-  const partner = isMarried ? isPartner : 'I am not married';
+export function Person({ person }) {
+  const isPartner = person.sex === 'm' ? `${person.partnerName} is my wife` : `${person.partnerName} is my husband`;
+  const partner = person.isMarried ? isPartner : 'I am not married';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {`My name is ${name}`}
+        {`My name is ${person.name}`}
       </h2>
-      {age && (
+      {person.age && (
       <p className="Person__age">
-        {`I am ${age}`}
+        {`I am ${person.age}`}
       </p>
       )}
       <p className="Person__partner">{partner}</p>
