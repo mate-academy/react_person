@@ -9,15 +9,9 @@ export function Person({ person }) {
     partnerName,
   } = person;
 
-  let partner;
-
-  if (isMarried) {
-    partner = sex === 'm'
-      ? `${partnerName} is my wife`
-      : `${partnerName} is my husband`;
-  } else {
-    partner = 'I am not married';
-  }
+  const partner = sex === 'm'
+    ? `${partnerName} is my wife`
+    : `${partnerName} is my husband`;
 
   return (
     <section className="Person">
