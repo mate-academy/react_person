@@ -9,8 +9,6 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const personName = `My name is ${name}`;
-
   const partner = sex === 'm'
     ? 'wife'
     : 'husband';
@@ -19,16 +17,12 @@ export const Person = ({ person }) => {
     ? `${partnerName} is my ${partner}`
     : 'I am not married';
 
-  const ageIsIndicated = age
-    ? `I am ${age}`
-    : null;
-
-  const ageContent = age && <p className="Person__age">{ageIsIndicated}</p>;
-
   return (
     <section className="Person">
-      <h2 className="Person__name">{personName}</h2>
-      {ageContent}
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
+
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
+
       <p className="Person__partner">{marriage}</p>
     </section>
   );
