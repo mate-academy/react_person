@@ -10,11 +10,15 @@ export function Person({
     partnerName,
   },
 }) {
-  const personPartner = (sex === 'm') ? `wife` : `husband`;
+  const personPartner = sex === 'm'
+    ? `wife`
+    : `husband`;
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
       {age && (
         <p className="Person__age">
           {`I am ${age}`}
