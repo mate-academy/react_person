@@ -5,8 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export const Person = ({ person }) => {
-  const partner = person.sex === 'f' ? 'husband' : 'wife';
+export const Person = ({
+  name,
+  age,
+  sex,
+  isMarried,
+  partnerName,
+}) => {
+  const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
     <section className="Person">
@@ -14,22 +20,17 @@ export const Person = ({ person }) => {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h4" component="div">
-              {`My name is ${person.name}`}
+              {`My name is ${name}`}
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+                <p className="Person__age">
+                  {age && `I am ${age}`}
+                </p>
             </Typography>
             <Typography variant="body1" color="text.secondary">
               {
-                person.age
-                && (
-                  <p className="Person__age">
-                    {`I am ${person.age}`}
-                  </p>
-                )
-              }
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              {
-                person.isMarried
-                  ? `${person.partnerName} is my ${partner}`
+                isMarried
+                  ? `${partnerName} is my ${partner}`
                   : 'I am not married'
               }
             </Typography>
