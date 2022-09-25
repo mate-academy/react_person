@@ -1,8 +1,9 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
-  const partner
-    = (person.isMarried && person.sex === 'm') ? 'wife' : 'husband';
+  const partner= (person.isMarried && person.sex === 'm') 
+    ? 'wife' 
+    : 'husband';
 
   return (
     <section className="Person">
