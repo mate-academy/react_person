@@ -19,6 +19,7 @@ export const Person = ({ name, age, sex, isMarried, partnerName }) => (
       {isMarried && (
         <p className="Person__partner">
           {partnerName}
+          <span> </span>
           is my
           <span> </span>
           {sex === 'm' ? 'wife' : 'husband'}
