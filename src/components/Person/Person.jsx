@@ -15,7 +15,8 @@ export const Person = (props) => {
       </p>
       )}
 
-      {isMarried && sex === 'm'
+      {isMarried
+      && (sex === 'm'
         ? (
           <p className="Person__partner">
             {`${partnerName} is my wife`}
@@ -25,7 +26,7 @@ export const Person = (props) => {
           <p className="Person__partner">
             {`${partnerName} is my husband`}
           </p>
-        )
+        ))
       }
 
       {!isMarried
