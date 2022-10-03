@@ -31,6 +31,7 @@ export const App = () => (
     {users.map(user => (
       <Person
         person={user}
+        key={user.name}
       />
     ))}
   </div>
