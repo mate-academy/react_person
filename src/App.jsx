@@ -28,15 +28,12 @@ export const App = () => (
   <div className="App">
     <Person
       person={misha}
-      key={misha.name}
     />
     <Person
       person={olya}
-      key={olya.name}
     />
     <Person
       person={alex}
-      key={alex.name}
     />
   </div>
 );
