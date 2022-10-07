@@ -7,12 +7,13 @@ export function Person({
     age,
     sex,
     isMarried,
-    partnerName,
-  },
+    partnerName
+  }
 }) {
-  const partnerSex = sex === 'f'
-    ? `${partnerName} is my husband`
-    : `${partnerName} is my wife`;
+  const partnerSex =
+    sex === 'f'
+      ? `${partnerName} is my husband`
+      : `${partnerName} is my wife`;
 
   const status = isMarried
     ? partnerSex
@@ -21,9 +22,17 @@ export function Person({
   return (
     <div className="App">
       <section className="Person">
-        <h2 className="Person__name">{`My name is ${name}`}</h2>
-        {age && <p className="Person__age">{`I am ${age}`}</p>}
-        <p className="Person__partner">{status}</p>
+        <h2 className="Person__name">
+          {`My name is ${name}`}
+        </h2>
+        {age && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )}
+        <p className="Person__partner">
+          {status}
+        </p>
       </section>
     </div>
   );
