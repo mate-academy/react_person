@@ -1,8 +1,14 @@
 import React from 'react';
 import './Person.scss';
 
-export function Person(person) {
-  const { name, age, sex, isMarried, partnerName } = person.person;
+export function Person({ person }) {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
   const partnerText = sex === 'm'
     ? `${partnerName} is my wife`
     : `${partnerName} is my husband`;
@@ -13,19 +19,16 @@ export function Person(person) {
         {`My name is ${name}`}
       </h2>
 
-      {
-        age && (
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        )
-      }
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
-        {
-          isMarried
-            ? partnerText
-            : `I am not married`
+        {isMarried
+          ? partnerText
+          : `I am not married`
         }
       </p>
     </section>
