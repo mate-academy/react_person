@@ -20,21 +20,21 @@ export const Person = ({ person }) => {
       </h2>
 
       {age && (
-      <p className="Person__age">
-        {`I am ${age}`}
-      </p>
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
       )}
 
       {isMarried && (
-      <p className="Person__partner">
-        {partnerInfo}
-      </p>
+        <p className="Person__partner">
+          {partnerInfo}
+        </p>
       )}
 
       {!isMarried && (
-      <p className="Person__partner">
-        I am not married
-      </p>
+        <p className="Person__partner">
+          I am not married
+        </p>
       )}
     </section>
   );
