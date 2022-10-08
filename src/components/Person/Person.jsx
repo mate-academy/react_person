@@ -1,7 +1,13 @@
 import React from 'react';
 
-export const Person = (props) => {
-  const { name, age, isMarried, sex, partnerName } = props.person;
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    isMarried,
+    sex,
+    partnerName,
+  } = person;
 
   return (
     <section className="Person">
