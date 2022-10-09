@@ -10,7 +10,7 @@ export const misha = {
   partnerName: 'Natasha',
 
   get partnerSex() {
-    if (misha.sex === 'm') {
+    if (this.sex === 'm') {
       return 'wife';
     }
 
@@ -25,7 +25,7 @@ export const olya = {
   partnerName: 'Maksym',
 
   get partnerSex() {
-    if (olya.sex === 'm') {
+    if (this.sex === 'm') {
       return 'wife';
     }
 
@@ -40,7 +40,7 @@ export const alex = {
   isMarried: false,
 
   get partnerSex() {
-    if (alex.sex === 'm') {
+    if (this.sex === 'm') {
       return 'wife';
     }
 
