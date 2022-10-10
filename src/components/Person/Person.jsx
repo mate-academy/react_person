@@ -1,26 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({ person }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${person.name}`}
-    </h2>
+export function Person({
+  person,
+}) {
+  const peopleSex = personSex => (person.sex === 'm' ? 'wife' : 'husband');
 
-    {person.age && (
-      <p className="Person__age">
-        {`I am ${person.age}`}
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${person.name}`}
+      </h2>
+
+      {person.age && (
+        <p className="Person__age">
+          {`I am ${person.age}`}
+        </p>
+      )}
+
+      <p className="Person__partner">
+        {person.isMarried
+          ? `${person.partnerName} is my ${peopleSex(person.sex)}`
+          : 'I am not married'
+        }
       </p>
-    )}
-
-    <p className="Person__partner">
-      {person.isMarried
-        ? `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`
-        : 'I am not married'
-      }
-    </p>
-  </section>
-);
+    </section>
+  );
+}
 
 Person.propTypes = {
   person: PropTypes.string.isRequired,
