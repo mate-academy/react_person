@@ -8,14 +8,6 @@ export const misha = {
   sex: 'm',
   isMarried: true,
   partnerName: 'Natasha',
-
-  get partnerSex() {
-    if (this.sex === 'm') {
-      return 'wife';
-    }
-
-    return 'husband';
-  },
 };
 
 export const olya = {
@@ -23,14 +15,6 @@ export const olya = {
   sex: 'f',
   isMarried: true,
   partnerName: 'Maksym',
-
-  get partnerSex() {
-    if (this.sex === 'm') {
-      return 'wife';
-    }
-
-    return 'husband';
-  },
 };
 
 export const alex = {
@@ -38,14 +22,6 @@ export const alex = {
   age: 25,
   sex: 'm',
   isMarried: false,
-
-  get partnerSex() {
-    if (this.sex === 'm') {
-      return 'wife';
-    }
-
-    return 'husband';
-  },
 };
 
 export const App = () => (
