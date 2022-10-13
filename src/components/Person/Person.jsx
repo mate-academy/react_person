@@ -16,14 +16,10 @@ export const Person = ({ person }) => {
           {`I am ${age}`}
         </p>
       )}
-      {!isMarried && (
-        <p className="Person__partner">I am not married</p>
-      )}
-      {isMarried && (
-        <p className="Person__partner">
-          {`${partnerName} is my ${partner}`}
-        </p>
-      )}
+      {isMarried
+        ? `${partnerName} is my ${partner}`
+        : ('I am not married')
+      }
     </section>
   );
 };
