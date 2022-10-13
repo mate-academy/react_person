@@ -1,22 +1,29 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
   let partner;
 
-  if (person.isMarried) {
-    if (person.sex === 'm') {
-      partner = `${person.partnerName} is my wife`;
+  if (isMarried) {
+    if (sex === 'm') {
+      partner = `${partnerName} is my wife`;
     } else {
-      partner = `${person.partnerName} is my husband`;
+      partner = `${partnerName} is my husband`;
     }
   } else {
     partner = `I am not married`;
   }
 
-  if (!person.age) {
+  if (!age) {
     return (
       <section className="Person">
-        <h2 className="Person__name">{`My name is ${person.name}`}</h2>
+        <h2 className="Person__name">{`My name is ${name}`}</h2>
         <p className="Person__partner">{partner}</p>
       </section>
     );
@@ -24,8 +31,8 @@ export const Person = ({ person }) => {
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${person.name}`}</h2>
-      <p className="Person__age">{`I am ${person.age}`}</p>
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
+      <p className="Person__age">{`I am ${age}`}</p>
       <p className="Person__partner">{partner}</p>
     </section>
   );
