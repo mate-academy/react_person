@@ -15,19 +15,9 @@ export const Person = ({ person }) => {
       </p>
       )}
 
-      {
-        (!isMarried)
-          ? (
-            <p className="Person__partner">
-              I am not married
-            </p>
-          )
-          : (
-            <p className="Person__partner">
-              {`${partnerName} is my ${partner}`}
-            </p>
-          )
-      }
+      <p className="Person__partner">
+        {!isMarried ? 'I am not married' : `${partnerName} is my ${partner}`}
+      </p>
     </section>
   );
 };
