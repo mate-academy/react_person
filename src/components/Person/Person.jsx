@@ -1,5 +1,9 @@
 import React from 'react';
 
+function getSpouse(sex) {
+  return sex === 'f' ? ('husband') : ('wife');
+}
+
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">
@@ -14,7 +18,7 @@ export const Person = ({ person }) => (
 
     <p className="Person__partner">
       {
-        person.isMarried ? (`${person.partnerName} is my ${person.sex === 'f' ? ('husband') : ('wife')}`)
+        person.isMarried ? (`${person.partnerName} is my ${getSpouse(person.sex)}`)
           : ('I am not married')
       }
     </p>
