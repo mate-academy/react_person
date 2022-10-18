@@ -14,13 +14,13 @@ export const Person = ({ person }) => (
     )}
     <p className="Person__partner">
       {person.partnerName
-        ? `${person.partnerName} is my ${getPartnerName(person)}`
+        ? `${person.partnerName} is my ${getPartnerGender(person)}`
         : 'I am not married'
       }
     </p>
   </section>
 );
 
-function getPartnerName(person) {
+function getPartnerGender(person) {
   return person.sex === 'm' ? 'wife' : 'husband';
 }
