@@ -14,9 +14,13 @@ export const Person = ({ person }) => (
     )}
     <p className="Person__partner">
       {person.partnerName
-        ? `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`
+        ? `${person.partnerName} is my ${getPartnerName(person)}`
         : 'I am not married'
       }
     </p>
   </section>
 );
+
+function getPartnerName(person) {
+  return person.sex === 'm' ? 'wife' : 'husband';
+}
