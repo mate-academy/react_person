@@ -1,5 +1,13 @@
 import React from 'react';
 
+function createPartnerString(sex, partnerName) {
+  if (sex === 'f') {
+    return `${partnerName} is my husband`;
+  }
+
+  return `${partnerName} is my wife`;
+}
+
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">{`My name is ${person.name}`}</h2>
@@ -10,11 +18,7 @@ export const Person = ({ person }) => (
 
     {person.isMarried ? (
       <p className="Person__partner">
-        {person.sex === 'f' ? (
-          `${person.partnerName} is my husband`
-        ) : (
-          `${person.partnerName} is my wife`
-        )}
+        {createPartnerString(person.sex, person.partnerName)}
       </p>
     ) : (
       <p className="Person__partner">
