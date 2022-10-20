@@ -1,7 +1,14 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
