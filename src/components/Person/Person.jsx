@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Person = ({ person }) => {
   const {
@@ -13,14 +13,24 @@ export const Person = ({ person }) => {
     ? 'wife'
     : 'husband';
 
-  return (<section className="Person">
-    <h2 className="Person__name">{`My name is ${name}`}</h2>
-    {age && (<p className="Person__age">{`I am ${age}`}</p>)}
-    <p className="Person__partner">
-      {isMarried
-        ? `${partnerName} is my ${partner}`
-        : 'I am not married'
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${partner}`
+          : 'I am not married'
       }
-    </p>
-  </section>)
+      </p>
+    </section>
+  );
 };
