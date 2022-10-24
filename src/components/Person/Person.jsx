@@ -2,7 +2,13 @@ import React from 'react';
 import './Person.scss';
 
 export const Person = ({
-  name, age, sex, isMarried, partnerName,
+  person: {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  },
 }) => (
   <section className="Person">
     <h2 className="Person__name">
