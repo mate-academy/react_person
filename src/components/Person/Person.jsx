@@ -12,9 +12,6 @@ export const Person = ({ person }) => (
       </p>
       )
     }
-    {/* <p className="Person__age">
-      {person.age && `I am ${person.age}`}
-    </p> */}
     <p className="Person__partner">
       {person.isMarried || `I am not married`}
       {person.isMarried && `${person.partnerName} is my `}
