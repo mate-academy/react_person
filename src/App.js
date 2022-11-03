@@ -29,23 +29,6 @@ const alex = {
 
 const App = () => (
   <div className="App">
-    <section className="person">
-      <h2 className="person__name">My name is Misha</h2>
-      <p className="person__age">I am 37</p>
-      <p className="person__partner">My wife&apos;s name is Natasha</p>
-    </section>
-
-    <section className="person">
-      <h2 className="person__name">My name is Olya</h2>
-      <p className="person__partner">My husband&apos;s name is Maksym</p>
-    </section>
-
-    <section className="person">
-      <h2 className="person__name">My name is Alex</h2>
-      <p className="person__age">I am 25</p>
-      <p className="person__partner">I am not married</p>
-    </section>
-
     <Person {...misha} />
     <Person {...olya} />
     <Person {...alex} />
