@@ -1,28 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
-  const status = person.sex === 'm'
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
+  const status = sex === 'm'
     ? 'is my wife'
     : 'is my husband';
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${person.name}`}</h2>
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
 
-      {
-      person.age && (
+      {age && (
         <p className="Person__age">
-          {`I am ${person.age}`}
+          {`I am ${age}`}
         </p>
-      )
-      }
+      )}
       <p className="Person__partner">
-        { !person.partnerName
-          || person.partnerName === 'Some Partner'
+        { !isMarried
           ? 'I am not married'
-          : `${person.partnerName} ${status}`
+          : `${partnerName} ${status}`
         }
       </p>
     </section>
   );
+};
+
+Person.propTypes = {
+  person: PropTypes.shape({
+    name: PropTypes.string,
+    age: PropTypes.number,
+    sex: PropTypes.string,
+    isMarried: PropTypes.bool,
+    partnerName: PropTypes.string,
+  }).isRequired,
 };
