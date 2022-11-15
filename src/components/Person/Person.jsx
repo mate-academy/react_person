@@ -40,7 +40,7 @@ export const Person = ({ person }) => {
 
 Person.propTypes = {
   person: PropTypes.shape({
-    name: PropTypes.string.isRequired.isRequired,
+    name: PropTypes.string.isRequired,
     age: PropTypes.number,
     sex: PropTypes.string.isRequired,
     isMarried: PropTypes.bool.isRequired,
