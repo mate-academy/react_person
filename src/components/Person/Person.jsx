@@ -1,42 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({
-  person: { name, age, sex, isMarried, partnerName },
-}) => (
-  <>
-    <section className="Person">
-      <h2 className="Person__name">
-        My name is
-        {` ${name}`}
-      </h2>
+export const Person = ({ person: { ...props } }) => {
+  const { name, age, sex, isMarried, partnerName } = props;
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
+  const married = isMarried
+    ? `${partnerName} is my ${partner}`
+    : 'I am not married';
+  const myName = `My name is ${name}`;
+  const myAge = `I am ${age}`;
 
-      {age && (
+  return (
+    <>
+      <section className="Person">
+        <h2 className="Person__name">
+          {myName}
+        </h2>
+
+        {age && (
         <p className="Person__age">
-          I am
-          {` ${age}`}
+          {myAge}
         </p>
-      )
+        )
       }
 
-      <p className="Person__partner">
-        {
-          isMarried
-            ? `${partnerName} is my ${(sex === 'm')
-              ? 'wife'
-              : 'husband'}`
-            : 'I am not married'
-        }
-      </p>
-    </section>
-  </>
-);
+        <p className="Person__partner">
+          {married}
+        </p>
+      </section>
+    </>
+  );
+};
 
 Person.propTypes = {
   person: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     age: PropTypes.number,
-    sex: PropTypes.string,
+    sex: PropTypes.string.isRequired,
     isMarried: PropTypes.bool,
     partnerName: PropTypes.string,
   }).isRequired,
