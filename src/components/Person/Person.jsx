@@ -37,11 +37,6 @@ export const Person = ({ person }) => {
   );
 };
 
-Person.defaultProps = {
-  age: undefined,
-  partnerName: undefined,
-};
-
 Person.propTypes = {
   person: PropTypes.shape({
     name: PropTypes.string.isRequired,
