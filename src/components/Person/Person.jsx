@@ -22,9 +22,11 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {age
-        ? <p className="Person__age">{`My age is ${age}`}</p>
-        : undefined}
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
         {isMarried
@@ -41,9 +43,11 @@ Person.defaultProps = {
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }).isRequired,
 };
