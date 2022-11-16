@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 export const Person = ({ person }) => {
   const { name, age, sex, partnerName, isMarried } = person;
 
-  const sexType = sex === 'm' ? 'wife' : 'husband';
+  const sexType = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <>
@@ -13,7 +15,9 @@ export const Person = ({ person }) => {
         {age && <p className="Person__age">{`I am ${age}`}</p>}
         <p className="Person__partner">
           {
-          isMarried ? `${partnerName} is my ${sexType}` : 'I am not married'
+          isMarried
+            ? `${partnerName} is my ${sexType}`
+            : 'I am not married'
           }
         </p>
       </section>
@@ -24,9 +28,9 @@ export const Person = ({ person }) => {
 Person.propTypes = {
   person: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
+    age: PropTypes.number,
     sex: PropTypes.string.isRequired,
-    partnerName: PropTypes.string.isRequired,
+    partnerName: PropTypes.string,
     isMarried: PropTypes.bool.isRequired,
   }).isRequired,
 };
