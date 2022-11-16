@@ -12,7 +12,9 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partner = sex === 'm' ? 'wife' : 'husband';
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
@@ -35,8 +37,15 @@ export const Person = ({ person }) => {
   );
 };
 
+Person.defaultProps = {
+  age: undefined,
+  partnerName: undefined,
+};
+
 Person.propTypes = {
   name: PropTypes.string.isRequired,
+  age: PropTypes.number,
   sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
 };
