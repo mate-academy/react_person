@@ -19,14 +19,12 @@ export const Person = ({ person }) => {
         </p>
       )}
 
-      (
       <p className="Person__partner">
         {(isMarried)
           ? partnerInfo
           : 'I am not married'
         }
       </p>
-      )
     </section>
   );
 };
