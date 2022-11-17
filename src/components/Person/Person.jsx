@@ -1,11 +1,13 @@
 import React from 'react';
 
 export function Person({ person }) {
-  const { name,
+  const {
+    name,
     age,
     sex,
     isMarried,
-    partnerName } = person;
+    partnerName,
+  } = person;
 
   const partner = (sex === 'm')
     ? 'wife'
