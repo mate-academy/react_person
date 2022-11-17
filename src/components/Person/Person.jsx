@@ -7,14 +7,16 @@ export const Person = ({ person }) => {
     age,
     sex,
     isMarried,
-    partnerName
+    partnerName,
   } = person;
 
-  let partner = 'wife';
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
-  if (sex === 'f') {
-    partner = 'husband';
-  }
+  const married = isMarried
+    ? `${partnerName} is my ${partner}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -29,13 +31,11 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">
-        {isMarried
-          ? `${partnerName} is my ${partner}`
-          : 'I am not married'}
+        {married}
       </p>
     </section>
   );
-}
+}; 
 
 Person.propTypes = {
   person: PropTypes.shape({
