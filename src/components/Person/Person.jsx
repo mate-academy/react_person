@@ -20,11 +20,11 @@ export const Person = ({ person }) => {
         <p className="Person__age">{`I am ${age}`}</p>
       )}
 
-      {isMarried ? (
-        <p className="Person__partner">{`${partnerName} ${partnerStatus}`}</p>
-      ) : (
-        <p className="Person__partner">I am not married</p>
-      )}
+      <p className="Person__partner">
+        {isMarried ? (
+          `${partnerName} ${partnerStatus}`
+        ) : (`I am not married`)}
+      </p>
     </section>
   );
 };
