@@ -27,3 +27,18 @@ export const Person = ({ person }) => {
     </section>
   );
 };
+
+Person.defaultProps = {
+  isMarried: false,
+  age: null,
+  sex: null,
+  partnerName: null,
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string,
+};
