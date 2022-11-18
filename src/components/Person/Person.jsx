@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const partner = (person.sex === 'm') ? 'wife' : 'husband';
+  const married = (!person.isMarried)
+    ? 'I am not married'
+    : `${person.partnerName} is my ${partner}`;
 
   return (
     <section className="Person">
@@ -12,10 +15,7 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">
-        {!person.isMarried
-          ? 'I am not married'
-          : `${person.partnerName} is my ${partner}`
-        }
+        {married}
       </p>
     </section>
   );
