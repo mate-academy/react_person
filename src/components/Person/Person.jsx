@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const {
@@ -42,6 +43,6 @@ Person.propTypes = {
     age: PropTypes.number,
     sex: PropTypes.string.isRequired,
     isMarried: PropTypes.bool.isRequired,
-    partnerName: PropTypes.string.isRequired,
+    partnerName: PropTypes.string,
   }).isRequired,
 };
