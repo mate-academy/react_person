@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Person.scss';
 
 export const Person = ({ person }) => {
@@ -15,8 +17,8 @@ export const Person = ({ person }) => {
     : 'husband';
 
   const marriedStatus = isMarried
-  ? `${partnerName} is my ${partner}`
-  : `I am not married`;
+    ? `${partnerName} is my ${partner}`
+    : `I am not married`;
 
   return (
     <section className="Person">
@@ -31,4 +33,17 @@ export const Person = ({ person }) => {
       </p>
     </section>
   );
+};
+
+Person.defaultProps = {
+  age: undefined,
+  partnerName: undefined,
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool.isRequired,
+  partnerName: PropTypes.string,
 };
