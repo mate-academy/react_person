@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  function secondHalf(gender) {
+  function getPatner(gender) {
     return (
       gender === 'f' ? 'husband' : 'wife'
     );
@@ -25,7 +25,7 @@ export const Person = ({ person }) => {
         )}
         {isMarried ? (
           <p className="Person__partner">
-            {`${partnerName} is my ${secondHalf(sex)}`}
+            {`${partnerName} is my ${getPatner(sex)}`}
           </p>
         ) : (
           <p className="Person__partner">
