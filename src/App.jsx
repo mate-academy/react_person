@@ -31,4 +31,3 @@ export const App = () => (
     <Person person={alex} />
   </div>
 );
-
