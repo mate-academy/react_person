@@ -10,7 +10,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const MarriedData = `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`;
+  const marriedData = `${sex === 'm' ? 'wife' : 'husband'}`;
 
   return (
     <section className="Person">
@@ -19,7 +19,7 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {isMarried
-          ? MarriedData
+          ? `${partnerName} is my ${marriedData}`
           : 'I am not married'}
       </p>
     </section>
@@ -29,9 +29,9 @@ export const Person = ({ person }) => {
 Person.propTypes = {
   person: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
+    age: PropTypes.number,
     sex: PropTypes.string.isRequired,
     isMarried: PropTypes.bool.isRequired,
-    partnerName: 'Natasha',
+    partnerName: PropTypes.string,
   }).isRequired,
 };
