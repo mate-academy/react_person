@@ -2,9 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
-  const partner = (sex === 'm') ? 'wife' : 'husband';
+  const partner = (sex === 'm')
+    ? 'wife'
+    : 'husband';
+
+  const relationStatus = isMarried
+    ? `${partnerName} is my ${partner}`
+    : 'I am not married';
 
   // I'm not sure about IF (name) but it seems right to check if name is defined
 
@@ -20,9 +32,7 @@ export const Person = ({ person }) => {
         )}
 
         <p className="Person__partner">
-          {isMarried
-            ? `${partnerName} is my ${partner}`
-            : 'I am not married'}
+          {relationStatus}
         </p>
       </section>
     );
