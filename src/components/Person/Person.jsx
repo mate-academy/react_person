@@ -16,9 +16,9 @@ export const Person = ({ person }) => {
       </h2>
 
       {age && (
-      <p className="Person__age">
-        {`I am ${age}`}
-      </p>
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
       )}
 
       {isMarried
