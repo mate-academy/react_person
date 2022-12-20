@@ -9,7 +9,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partner = (sex === 'm')
+  const partner = sex === 'm'
     ? 'wife'
     : 'husband';
 
