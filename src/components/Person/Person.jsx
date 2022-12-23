@@ -2,30 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Person = ({ personData }) => {
-  console.log(personData)
-
-  // const { name, age, sex, isMarried, partnerName } = personData;
+  const { name, age, sex, isMarried, partnerName } = personData;
 
   return (
     <section className="Person">
       <h2 className="Person__name">
         {
-          `My name is ${personData.name}`
+          `My name is ${name}`
         }
       </h2>
 
-      {personData.age && (
+      {age && (
         <p className="Person__age">
-          {`I am ${personData.age}`}
+          {`I am ${age}`}
         </p>
       )
       }
 
       <p className="Person__partner">
-        {(personData.isMarried && (
-          personData.sex === 'f'
-            ? `${personData.partnerName} is my husband`
-            : `${personData.partnerName} is my wife`
+        {(isMarried && (
+          sex === 'f'
+            ? `${partnerName} is my husband`
+            : `${partnerName} is my wife`
         ))
           || 'I am not married'
         }
