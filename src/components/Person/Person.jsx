@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Person = ({ person }) => {
+export const Person = ({ person }) => {
   const {
     name,
     age,
@@ -29,5 +29,3 @@ const Person = ({ person }) => {
     </section>
   );
 };
-
-export default Person;
