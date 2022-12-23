@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Person = ({ person }) => {
   const {
     name,
@@ -17,9 +19,13 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
+      {age
+      && (
       <p className="Person__age">
-        {age && `I am ${age}`}
+        {`I am ${age}`}
       </p>
+      )
+      }
 
       <p className="Person__partner">
         {isMarried
