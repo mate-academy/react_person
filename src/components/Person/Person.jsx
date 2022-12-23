@@ -9,11 +9,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  let notMarried;
-
-  if (!isMarried) {
-    notMarried = 'I am not married';
-  }
+  const notMarried = isMarried ? '' : 'I am not married';
 
   return (
     <section className="Person">
