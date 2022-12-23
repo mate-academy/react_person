@@ -1,23 +1,33 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
-  const sex = person.sex === 'm' ? 'wife' : 'husband';
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
+  const personPartner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {`My name is ${person.name}`}
+        {`My name is ${name}`}
       </h2>
 
-      {person.age && (
+      {age && (
         <p className="Person__age">
-          {`I am ${person.age}`}
+          {`I am ${age}`}
         </p>
       )}
 
       <p className="Person__partner">
-        {person.isMarried
-          ? `${person.partnerName} is my ${sex}`
+        {isMarried
+          ? `${partnerName} is my ${personPartner}`
           : 'I am not married'
         }
       </p>
