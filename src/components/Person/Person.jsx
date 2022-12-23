@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({ personData }) => {
-  const { name, age, sex, isMarried, partnerName } = personData;
+export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
 
   return (
     <section className="Person">
@@ -33,7 +33,7 @@ export const Person = ({ personData }) => {
 };
 
 Person.defaultProps = {
-  personData: {
+  person: {
     name: '',
     age: null,
     sex: '',
@@ -43,7 +43,7 @@ Person.defaultProps = {
 };
 
 Person.propTypes = {
-  personData: PropTypes.shape({
+  person: PropTypes.shape({
     name: PropTypes.string.isRequired,
     age: PropTypes.number,
     sex: PropTypes.string.isRequired,
