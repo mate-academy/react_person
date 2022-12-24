@@ -26,26 +26,8 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <Person
-      name={misha.name}
-      age={misha.age}
-      sex={misha.sex}
-      isMarried={misha.isMarried}
-      partnerName={misha.partnerName}
-    />
-    <Person
-      name={oyla.name}
-      age={oyla.age}
-      sex={oyla.sex}
-      isMarried={oyla.isMarried}
-      partnerName={oyla.partnerName}
-    />
-    <Person
-      name={alex.name}
-      age={alex.age}
-      sex={alex.sex}
-      isMarried={alex.isMarried}
-      partnerName={alex.partnerName}
-    />
+    <Person person={misha} />
+    <Person person={oyla} />
+    <Person person={alex} />
   </div>
 );
