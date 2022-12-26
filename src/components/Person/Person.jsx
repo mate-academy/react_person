@@ -3,7 +3,7 @@ import React from 'react';
 export const Person = ({ person }) => {
   const {
     name,
-    age = null,
+    age,
     sex,
     isMarried,
     partnerName,
