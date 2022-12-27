@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const {
@@ -34,22 +33,4 @@ export const Person = ({ person }) => {
       </p>
     </section>
   );
-};
-
-// I'm curious why the code below isn't reachable???
-
-Person.defaultProps = {
-  person: {
-    age: null,
-  },
-};
-
-Person.propTypes = {
-  person: propTypes.shape({
-    name: propTypes.string.isRequired,
-    age: propTypes.number,
-    sex: propTypes.string,
-    isMarried: propTypes.bool,
-    partnerName: propTypes.string,
-  }),
 };
