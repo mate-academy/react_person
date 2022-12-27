@@ -1,11 +1,14 @@
 import React from 'react';
+import './Person.scss';
 
 export function Person({ person }) {
-  const { name,
+  const {
+    name,
     age,
     sex,
     isMarried,
-    partnerName } = person;
+    partnerName,
+  } = person;
 
   const partner = (sex === 'm')
     ? 'wife'
@@ -17,11 +20,19 @@ export function Person({ person }) {
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+
       {age && (
-        <p className="Person__age">{`I am ${age}`}</p>
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
       )}
-      <p className="Person__partner">{status}</p>
+
+      <p className="Person__partner">
+        {status}
+      </p>
     </section>
   );
 }
