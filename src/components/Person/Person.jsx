@@ -9,7 +9,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const hasPartner = () => {
+  const getMarriedStatusMessage = () => {
     if (!isMarried) {
       return 'I am not married';
     }
@@ -19,22 +19,20 @@ export const Person = ({ person }) => {
       : `${partnerName} is my husband`;
   };
 
-  const renderAge = () => (
-    <p className="Person__age">
-      {`I am ${age}`}
-    </p>
-  );
-
   return (
     <section className="Person">
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
 
-      {person.age && renderAge()}
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
-        {hasPartner()}
+        {getMarriedStatusMessage()}
       </p>
     </section>
   );
