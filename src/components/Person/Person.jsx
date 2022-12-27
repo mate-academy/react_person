@@ -9,11 +9,9 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partnerSex = (
-    sex === 'f'
-      ? 'husband'
-      : 'wife'
-  );
+  const partnerSex = sex === 'f'
+    ? 'husband'
+    : 'wife';
 
   return (
     <>
