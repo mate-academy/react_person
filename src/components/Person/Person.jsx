@@ -1,50 +1,54 @@
-/* eslint-disable react/default-props-match-prop-types */
-/* eslint-disable react/require-default-props */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable no-constant-condition */
-/* eslint-disable indent */
-/* eslint-disable arrow-body-style */
+import { shape } from 'prop-types';
 import { bool, number, string } from 'prop-types';
 import React from 'react';
 
 export const Person = ({ person }) => {
-    return (
-      <section className="Person">
-        <h2 className="Person__name">
-          My name is {person.name}
-        </h2>
-        {person.age && (
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      {age && (
         <p className="Person__age">
-          I am {person.age}
+          {`I am ${age}`}
         </p>
-            )}
+      )}
 
-        <p className="Person__partner">
-          { person.isMarried
-          ? `${person.partnerName} is my ${
-            person.sex === 'm'
-              ? 'wife'
-              : 'husband'
-          }`
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${partner}`
           : 'I am not married'}
-        </p>
-
-      </section>
-    );
+      </p>
+    </section>
+  );
 };
 
 Person.propTypes = {
+  person: shape({
     name: string,
     age: number,
     sex: 'm' || 'f',
     isMarried: bool,
     partnerName: string,
+  }),
 };
 
 Person.defaultProps = {
-    person: {
-        name: '',
-        age: null,
-        partnerName: null,
-    },
+  person: {
+    name: '',
+    age: null,
+    partnerName: null,
+  },
 };
