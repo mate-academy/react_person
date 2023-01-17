@@ -29,8 +29,7 @@ export const Person = ({ person }) => (
     </h2>
     {getAge(person)}
     <p className="Person__partner">
-      { getMessedge(person)
-       }
+      {getMessedge(person)}
     </p>
   </section>
 
