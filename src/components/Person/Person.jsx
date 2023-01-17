@@ -10,9 +10,9 @@ function getAge(ageHuman) {
   if (ageHuman.age) {
     return (
       <p className="Person__age">
-        `I am $
+        I am
+        {' '}
         {ageHuman.age}
-        `
       </p>
     );
   }
