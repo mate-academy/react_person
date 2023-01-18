@@ -27,7 +27,7 @@ export const Person = ({ person }) => (
     </h2>
     {getAge(person)}
     <p className="Person__partner">
-      {getMessege(person) || 'I am not married'}
+      {person.isMarried ? getMessege(person) : 'I am not married'}
     </p>
   </section>
 
