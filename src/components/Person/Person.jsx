@@ -1,9 +1,7 @@
 import React from 'react';
 
-function getMessedge(human) {
-  return human.isMarried
-    ? `${human.partnerName} is my ${(human.sex === 'm')
-      ? 'wife' : 'husband'}` : 'I am not married';
+function getMessege(human) {
+  return `${human.partnerName} is my ${(human.sex === 'm') ? 'wife' : 'husband'}`;
 }
 
 function getAge(ageHuman) {
@@ -29,7 +27,7 @@ export const Person = ({ person }) => (
     </h2>
     {getAge(person)}
     <p className="Person__partner">
-      {getMessedge(person)}
+      {getMessege(person) || 'I am not married'}
     </p>
   </section>
 
