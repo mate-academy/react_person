@@ -1,31 +1,31 @@
 import React from 'react';
 
-export const Person = ({ person }) => {
-  const iff = (condition, then, otherwise) => (
-    condition ? then : otherwise
-  );
+export const Person = ({ person: {
+  name, age, sex, isMarried, partnerName,
+} }) => {
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
         My name is
         {' '}
-        {person.name}
+        {name}
       </h2>
-      {person.age && (
+      {age && (
         <p className="Person__age">
           I am
           {' '}
-          {person.age}
+          {age}
         </p>
       )}
       <p className="Person__partner">
-        {person.isMarried ? (
-          iff(person.sex === 'm',
-            `${person.partnerName} is my wife`,
-            `${person.partnerName} is my husband`)
+        {isMarried ? (
+          `${partnerName} is my ${partner}`
         ) : `I am not married`}
       </p>
     </section>
   );
-}
+};
