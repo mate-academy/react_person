@@ -2,15 +2,7 @@ import React from 'react';
 
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
-  let relationshipStatus = '';
-
-  if (!isMarried) {
-    relationshipStatus = 'I am not married';
-  } else {
-    const partnerRole = sex === 'f' ? 'husband' : 'wife';
-
-    relationshipStatus = `${partnerName} is my ${partnerRole}`;
-  }
+  const partnerRole = sex === 'f' ? 'husband' : 'wife';
 
   return (
     <section className="Person">
@@ -24,7 +16,12 @@ export const Person = ({ person }) => {
         </p>
       )}
 
-      <p className="Person__partner">{relationshipStatus}</p>
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${partnerRole}`
+          : 'I am not married'
+        }
+      </p>
     </section>
   );
 };
