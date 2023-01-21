@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Person(props) {
+export function Person(props) {
   const { name, age, sex, isMarried, partnerName } = props.person;
 
   return (
@@ -13,5 +13,3 @@ function Person(props) {
     </section>
   );
 }
-
-export default Person;
