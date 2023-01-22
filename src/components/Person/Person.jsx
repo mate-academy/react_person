@@ -10,7 +10,7 @@ export const Person = ({ person }) => {
   );
 
   const typeOfPartner = sex === 'm' ? 'wife' : 'husband';
-  const renderParnter = (
+  const renderPartner = (
     <p className="Person__partner">
       {isMarried
         ? `${partnerName} is my ${typeOfPartner}`
@@ -24,7 +24,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
       {renderAge}
-      {renderParnter}
+      {renderPartner}
     </section>
   );
 };
