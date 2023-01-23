@@ -1,27 +1,34 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+// { name, age, sex, isMarried, partnerName }
 
-export const Person = ({ name, age, sex, isMarried, partnerName }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {name}
-    </h2>
-    {age && (
-      <p className="Person__age">
-        I am
+export const Person = ({ person: {
+  name, age, sex, isMarried, partnerName,
+} }) => {
+  const gender = sex === 'm' ? 'wife' : 'husband';
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        My name is
         {' '}
-        {age}
-      </p>
-    )}
+        {name}
+      </h2>
+      {age && (
+        <p className="Person__age">
+          I am
+          {' '}
+          {age}
+        </p>
+      )}
 
-    <p className="Person__partner">
-      {isMarried ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}` : 'I am not married'}
-    </p>
-  </section>
-);
+      <p className="Person__partner">
+        {isMarried ? `${partnerName} is my ${gender}` : 'I am not married'}
+      </p>
+    </section>
+  );
+};
 
 Person.propTypes = {
   name: PropTypes.string.isRequired,
@@ -29,5 +36,4 @@ Person.propTypes = {
   sex: PropTypes.string.isRequired,
   isMarried: PropTypes.bool.isRequired,
   partnerName: PropTypes.string.isRequired,
-
 };
