@@ -5,11 +5,11 @@ export const Person = ({ person }) => {
   let partner = (<p className="Person__partner">I am not married</p>);
 
   if (isMarried && sex === 'f') {
-    partner = (<p className="Person__partner">{`${partnerName} is my wife`}</p>);
+    partner = (<p className="Person__partner">{`${partnerName} is my husband`}</p>);
   }
 
   if (isMarried && sex === 'm') {
-    partner = (<p className="Person__partner">{`${partnerName} is my husband`}</p>);
+    partner = (<p className="Person__partner">{`${partnerName} is my wife`}</p>);
   }
 
   return (
