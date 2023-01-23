@@ -20,11 +20,12 @@ export const Person = ({ person }) => {
 
         {age && <p className="Person__age">{`I am ${age}`}</p>}
 
-        {isMarried === false
-          ? 'I am not married'
-          : `${partnerName} is my ${partner}`
-        }
-
+        <p className="Person__partner">
+          {isMarried === false
+            ? 'I am not married'
+            : `${partnerName} is my ${partner}`
+          }
+        </p>
       </section>
     </div>
   );
