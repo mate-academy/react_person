@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Person = ({ person }) => {
   const {
     name,
-    age = null,
+    age,
     sex,
     isMarried,
     partnerName,
@@ -36,7 +36,6 @@ export const Person = ({ person }) => {
 Person.defaultProp = {
   name: null,
   partnerName: null,
-  age: undefined,
 };
 
 Person.propTypes = {
