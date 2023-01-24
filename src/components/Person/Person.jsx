@@ -41,7 +41,7 @@ Person.defaultProps = {
 Person.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number,
-  sex: PropTypes.string.isRequired,
+  sex: PropTypes.oneOf(['m', 'f']).isRequired,
   isMarried: PropTypes.bool.isRequired,
   partnerName: PropTypes.string,
 };
