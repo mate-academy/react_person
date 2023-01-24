@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = (props) => {
+export const Person = ({ person }) => {
   const {
     name,
     age,
     sex,
     isMarried,
     partnerName,
-  } = props.person;
+  } = person;
 
   const partner = sex === 'f'
     ? 'husband'
@@ -20,13 +20,7 @@ export const Person = (props) => {
         {`My name is ${name}`}
       </h2>
 
-      { age && (
-        <>
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        </>
-      )}
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
 
       <p className="Person__partner">
         { isMarried
