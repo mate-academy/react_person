@@ -47,7 +47,7 @@ Person.propTypes = {
   person: PropTypes.shape({
     name: PropTypes.string.isRequired,
     age: PropTypes.number,
-    sex: PropTypes.symbol.isRequired,
+    sex: PropTypes.oneOf(['f', 'm']).isRequired,
     isMarried: PropTypes.bool.isRequired,
     partnerName: PropTypes.string,
   }),
