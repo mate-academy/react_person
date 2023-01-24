@@ -38,14 +38,18 @@ export const Person = ({ person }) => {
 };
 
 Person.defaultProps = {
-  age: null,
-  partnerName: null,
+  person: {
+    age: null,
+    partnerName: null,
+  },
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool.isRequired,
-  partnerName: PropTypes.string,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }),
 };
