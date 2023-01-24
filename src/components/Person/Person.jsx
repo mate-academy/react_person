@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
   const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
@@ -15,9 +17,7 @@ export const Person = ({
         {`My name is ${name}`}
       </h2>
 
-      {age
-        ? <p className="Person__age">{`I am ${age}`}</p>
-        : null}
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
 
       <p className="Person__partner">
         { isMarried
@@ -26,4 +26,21 @@ export const Person = ({
       </p>
     </section>
   );
+};
+
+Person.defaultProps = {
+  person: {
+    age: null,
+    partnerName: null,
+  },
+};
+
+Person.propTypes = {
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  }),
 };
