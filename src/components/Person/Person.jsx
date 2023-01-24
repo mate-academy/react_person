@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const partner = person.sex === 'f'
@@ -19,4 +20,17 @@ export const Person = ({ person }) => {
       }
     </section>
   );
+};
+
+Person.defaultProps = {
+  age: null,
+  isMarried: null,
+};
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  sex: PropTypes.string.isRequired,
+  isMarried: PropTypes.bool,
+  partnerName: PropTypes.string.isRequired,
 };
