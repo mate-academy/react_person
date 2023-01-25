@@ -14,23 +14,30 @@ export const Person = ({ person }) => {
         <p className="Person__age">{`I am ${person.age}`}</p>
       )}
 
-      {person.isMarried
-        ? <p className="Person__partner">{`${person.partnerName} is my ${partner}`}</p>
-        : <p className="Person__partner">I am not married</p>
-      }
+      <p className="Person__partner">
+        {person.isMarried
+          ? `${person.partnerName} is my ${partner}`
+          : 'I am not married'
+        }
+      </p>
+
     </section>
   );
 };
 
 Person.defaultProps = {
-  age: null,
-  isMarried: null,
+  person: {
+    age: null,
+    isMarried: null,
+  },
 };
 
 Person.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number,
-  sex: PropTypes.string.isRequired,
-  isMarried: PropTypes.bool,
-  partnerName: PropTypes.string.isRequired,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number,
+    sex: PropTypes.oneOf(['m', 'f']).isRequired,
+    isMarried: PropTypes.bool,
+    partnerName: PropTypes.string.isRequired,
+  }),
 };
