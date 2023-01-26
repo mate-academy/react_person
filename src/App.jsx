@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 import { misha, olya, alex } from './components/ListOfPerson';
-// import { listOfPerson } from './components/ListOfPerson';
 import { Person } from './components/Person';
 
 export const App = () => (
