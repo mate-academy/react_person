@@ -7,9 +7,9 @@ import { olya } from './components/People/Olya';
 import { alex } from './components/People/Alex';
 
 export const App = () => (
-  <>
+  <div className="App">
     <Person person={misha} />
     <Person person={olya} />
     <Person person={alex} />
-  </>
+  </div>
 );

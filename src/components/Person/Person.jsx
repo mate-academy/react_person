@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
   const {
@@ -14,19 +15,35 @@ export const Person = ({ person }) => {
     : 'husband';
 
   return (
-    <div className="App">
-      <section className="Person">
-        <h2 className="Person__name">{`My name is ${name}`}</h2>
+    <section className="Person">
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
 
-        {age && <p className="Person__age">{`I am ${age}`}</p>}
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
 
-        <p className="Person__partner">
-          {isMarried === false
-            ? 'I am not married'
-            : `${partnerName} is my ${partner}`
-          }
-        </p>
-      </section>
-    </div>
+      <p className="Person__partner">
+        {isMarried === false
+          ? 'I am not married'
+          : `${partnerName} is my ${partner}`
+        }
+      </p>
+    </section>
+
   );
+};
+
+Person.defaultProps = {
+  person: {
+    age: null,
+    partnerName: null,
+  },
+};
+
+Person.propTypes = {
+  person: PropTypes.shape = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.string,
+    sex: PropTypes.string.isRequired,
+    isMarried: PropTypes.bool.isRequired,
+    partnerName: PropTypes.string,
+  },
 };
