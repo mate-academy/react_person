@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-import { misha, olya, alex } from './constants/constants';
+import { misha, olya, alex } from './constants/listOfPerson';
 
 import { Person } from './components/Person';
 
