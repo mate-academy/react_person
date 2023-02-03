@@ -65,5 +65,20 @@
       "_comment": "Add `cypress: true` to enable integration tests",
       "cypressComponents": true
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": [
+          "**/*.css",
+          "**/*.scss",
+          "**/*.html"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
   }
 }
