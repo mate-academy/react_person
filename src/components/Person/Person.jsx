@@ -2,12 +2,13 @@ import React from 'react';
 
 export const Person = ({ person }) => {
   const partner = person.sex === 'm' ? 'wife' : 'husband';
-  const personPartnerParagraph = person.isMarried ? (
+  const personPartnerParagraph = (
     <p className="Person__partner">
-      {`${person.partnerName} is my ${partner}`}
+      {person.isMarried
+        ? `${person.partnerName} is my ${partner}`
+        : 'I am not married'
+      }
     </p>
-  ) : (
-    <p className="Person__partner">I am not married</p>
   );
 
   return (
