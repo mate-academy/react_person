@@ -1,5 +1,13 @@
 import React from 'react';
 
+const gender = (sex) => {
+  if (sex === 'm') {
+    return 'wife';
+  }
+
+  return 'husband';
+};
+
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">{`My name is ${person.name}`}</h2>
@@ -9,7 +17,7 @@ export const Person = ({ person }) => (
     {person.isMarried ? (
       <p className="Person__partner">
         {`${person.partnerName} is my `}
-        {(person.sex === 'm') ? ('wife') : ('husband')}
+        {gender(person.sex)}
       </p>
     ) : (
       <p className="Person__partner">I am not married</p>
