@@ -24,6 +24,14 @@ export const alex = {
 };
 
 function Person({ name, age, sex, isMarried, partnerName }) {
+  let partner = '';
+
+  if (sex === 'm') {
+    partner = 'wife';
+  } else {
+    partner = 'husband';
+  }
+
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
@@ -36,10 +44,10 @@ function Person({ name, age, sex, isMarried, partnerName }) {
         }
       </p>
       <p>
-        {!olya.isMarried ? (
+        {!isMarried ? (
           `I am not married`
         ) : (
-          `I have a husband`
+          `I have a ${partner}`
         )}
       </p>
       <p>{partnerName}</p>
