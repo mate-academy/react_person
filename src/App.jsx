@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Person from './components/Person/Person';
 
 export const misha = {
   name: 'Misha',
@@ -22,38 +23,6 @@ export const alex = {
   sex: 'm',
   isMarried: false,
 };
-
-function Person({ name, age, sex, isMarried, partnerName }) {
-  let partner = '';
-
-  if (sex === 'm') {
-    partner = 'wife';
-  } else {
-    partner = 'husband';
-  }
-
-  return (
-    <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">
-        {!age ? (
-          ''
-        ) : (
-          `I am ${age}`
-        )
-        }
-      </p>
-      <p>
-        {!isMarried ? (
-          `I am not married`
-        ) : (
-          `I have a ${partner}`
-        )}
-      </p>
-      <p>{partnerName}</p>
-    </section>
-  );
-}
 
 export const App = () => (
   <div className="App">
