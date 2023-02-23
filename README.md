@@ -8,7 +8,15 @@ and use it 3 times inside the `App` instead of static markup.
 - if a man is married use `wife` for a partner and `husband` if a woman is married;
 - if a person is not marriend - print `I am not married` message.
 
+Реализовать компонент Person, отображающий сведения о человеке с использованием заданной разметки.
+и используйте его 3 раза внутри «Приложения» вместо статической разметки.
+
+- передать человека целиком как реквизит `<Person person={misha} />` (**не** отдельные поля);
+- опустить возраст, если он не указан;
+- если мужчина женат, используйте «жена» для партнера и «муж», если женщина замужем;
+- если человек не женат - вывести сообщение `Я не женат`.
+
 ## Instructions
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_person/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://yevhenii-stanchenko.github.io/react_person/) and add it to the PR description.
