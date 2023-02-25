@@ -17,7 +17,6 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': ['error', {
       assert: 'either',
     }],
-    'react/jsx-one-expression-per-line': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
   },
 };
