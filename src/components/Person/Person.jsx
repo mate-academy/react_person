@@ -3,10 +3,10 @@ import React from 'react';
 export function Person({ person }) {
   const {
     name,
-    age = null,
+    age,
     sex,
-    isMarried = null,
-    partnerName = null,
+    isMarried,
+    partnerName,
   } = person;
   const partner = sex === 'm'
     ? 'wife'
