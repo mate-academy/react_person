@@ -1,5 +1,15 @@
 import React from 'react';
 
+function identifyPartner(isMarried, sex, partnerName) {
+  if (isMarried) {
+    return sex === 'm'
+      ? `${partnerName} is my wife`
+      : `${partnerName} is my husband`;
+  }
+
+  return 'I am not married';
+}
+
 export const Person = ({ person }) => {
   const {
     name,
@@ -8,18 +18,6 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
-
-  function identifyPartner() {
-    if (isMarried) {
-      if (sex === 'm') {
-        return `${partnerName} is my wife`;
-      }
-
-      return `${partnerName} is my husband`;
-    }
-
-    return 'I am not married';
-  }
 
   return (
     <section className="Person">
@@ -34,7 +32,7 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">
-        {identifyPartner()}
+        {identifyPartner(isMarried, sex, partnerName)}
       </p>
     </section>
   );
