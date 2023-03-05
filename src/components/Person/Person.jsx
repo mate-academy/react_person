@@ -11,7 +11,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
       {age && (<p className="Person__age">{`I am ${age}`}</p>)}
-      <p className="Person__partner">{partnerName ? `${partnerName} is my ${partnerLabel}` : `I am ${partnerLabel}`}</p>
+      <p className="Person__partner">{partnerName ? `${partnerName} is my ${partnerLabel}` : `I am not married`}</p>
     </section>
   );
 };
