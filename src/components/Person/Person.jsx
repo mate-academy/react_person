@@ -3,13 +3,7 @@ import React from 'react';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  let partnerLabel;
-
-  if (isMarried) {
-    partnerLabel = sex === 'm' ? 'wife' : 'husband';
-  } else {
-    partnerLabel = 'not married';
-  }
+  const partnerLabel = sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="Person">
