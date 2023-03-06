@@ -17,12 +17,12 @@ export const Person = ({ person }) => (
           </>
         )}
       </p>
-      <p className="Person__Partner">
-        {person.partnerName}
-        {' '}
-        is my
-        {' '}
-        {person.sex === 'm' ? 'wife' : 'husband'}
+      <p className="Person__partner">
+        {person.isMarried === false
+          ? 'I am not married'
+          : `${person.partnerName} is my
+          ${person.sex === 'm' ? 'wife' : 'husband'}`
+        }
       </p>
     </section>
   </div>
