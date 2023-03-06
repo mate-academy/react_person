@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from '@cypress/react';
-import { Person } from './Person';
+import { Person } from './Person/Person';
 
 describe('Person', () => {
   describe('', () => {
