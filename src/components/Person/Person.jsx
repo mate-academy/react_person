@@ -14,8 +14,14 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
+      
       {age && (<p className="Person__age">{`I am ${age}`}</p>)}
-      <p className="Person__partner">{partnerName ? `${partnerName} is my ${partnerLabel}` : `I am not married`}</p>
+      
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${partnerLabel}` 
+          : `I am not married`}
+      </p>
     </section>
   );
 };
