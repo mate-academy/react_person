@@ -2,8 +2,14 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
-  const partner = sex === 'm' ? 'wife' : 'husband'
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+  const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="Person">
