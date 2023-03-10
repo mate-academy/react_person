@@ -11,7 +11,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partnerSex = sex === 'm'
+  const partnerStatus = sex === 'm'
     ? 'wife'
     : 'husband';
 
