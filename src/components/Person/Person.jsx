@@ -29,7 +29,7 @@ export const Person = ({ person }) => {
 
       {isMarried ? (
         <p className="Person__partner">
-          {`${partnerName} is my ${partnerSex}`}
+          {`${partnerName} is my ${partnerStatus}`}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
