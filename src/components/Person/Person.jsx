@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const {
@@ -19,14 +20,11 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {(age !== undefined)
-        ? (
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        )
-        : ('')
-      }
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
         {(isMarried)
