@@ -9,13 +9,13 @@ export function Person(props) {
     partnerName,
   } = props.person;
 
-  const isPartner = sex === 'm'
+  const partnerStatus = sex === 'm'
     ? 'wife'
     : 'husband';
 
   const partnerInfo = isMarried
-    ? `${partnerName} is my ${isPartner}`
-    : `I am not married`;
+    ? `${partnerName} is my ${partnerStatus}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -30,7 +30,7 @@ export function Person(props) {
       )}
 
       <p className="Person__partner">
-        {`${partnerInfo}`}
+        {partnerInfo}
       </p>
     </section>
   );
