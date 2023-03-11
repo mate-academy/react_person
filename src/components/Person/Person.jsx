@@ -3,7 +3,7 @@ import React from 'react';
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">
-      my name is
+      My name is
       {' '}
       {person.name}
     </h2>
