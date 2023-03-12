@@ -31,5 +31,5 @@ function hasPartner(isMaried, sex, partnerName) {
       : `${partnerName} is my husband`;
   }
 
-  return 'i am not married';
+  return 'I am not married';
 }
