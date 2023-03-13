@@ -13,7 +13,7 @@ export function Person({ person }) {
     ? 'wife'
     : 'husband';
 
-  const isPartner = isMarried
+  const infoOfPartner = isMarried
     ? `${partnerName} is my ${maried}`
     : `I am not married`;
 
@@ -23,14 +23,17 @@ export function Person({ person }) {
         {`My name is ${name}`}
       </h2>
 
-      {age && (
-        <p className="Person__age">
-          {`I am ${age}`}
-        </p>
-      )}
+      {age
+        ? (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )
+        : null
+      }
 
       <p className="Person__partner">
-        {isPartner}
+        {infoOfPartner}
       </p>
     </section>
   );
