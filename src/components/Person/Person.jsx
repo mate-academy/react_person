@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({ person:
-  { name, age, sex, isMarried, partnerName } }) => {
+export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
   const partner = sex === 'f'
     ? 'husband'
     : 'wife';
