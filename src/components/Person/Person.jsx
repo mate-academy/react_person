@@ -17,7 +17,7 @@ export const Person = ({ person }) => {
     : 'I am not married';
 
   const personAge = !age
-    ? null
+    ? undefined
     : <p className="Person__age">{`I am ${age}`}</p>;
 
   return (
