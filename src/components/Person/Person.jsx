@@ -2,11 +2,9 @@ import React from 'react';
 
 function isPersonWithPartner(isMarried, sex, partnerName) {
   if (isMarried) {
-    if (sex === 'f') {
-      return `${partnerName} is my husband`;
-    }
-
-    return `${partnerName} is my wife`;
+    return sex === 'f'
+      ? `${partnerName} is my husband`
+      : `${partnerName} is my wife`;
   }
 
   return `I am not married`;
@@ -27,7 +25,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {age && (
+      {age > 0 && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
