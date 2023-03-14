@@ -1,7 +1,7 @@
 import React from 'react';
 import './Person.scss';
 
-function findPartner(partnerName, sex, isMarried) {
+function identifyMarriage(partnerName, sex, isMarried) {
   if (!isMarried) {
     return 'I am not married';
   }
@@ -27,16 +27,14 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {age && (
-        <>
-          <p className="Person__age">
-            {`I am ${age}`}
-          </p>
-        </>
+      {age > 0 && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
       )}
 
       <p className="Person__partner">
-        {findPartner(partnerName, sex, isMarried)}
+        {identifyMarriage(partnerName, sex, isMarried)}
       </p>
     </section>
   );
