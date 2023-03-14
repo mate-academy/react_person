@@ -16,9 +16,9 @@ export const Person = ({ person }) => {
     ? `${partnerName} is my ${partner}`
     : 'I am not married';
 
-  const personAge = age === person.age
-    ? <p className="Person__age">{`I am ${age}`}</p>
-    : undefined;
+  const personAge = !age
+    ? null
+    : <p className="Person__age">{`I am ${age}`}</p>;
 
   return (
     <section className="Person">
