@@ -24,18 +24,10 @@ export const alex = {
   isMarried: false,
 };
 
-export const test = {
-  name: 'Alex',
-  age: 0,
-  sex: 'm',
-  isMarried: false,
-};
-
 export const App = () => (
   <div className="App">
     <Person person={misha} />
     <Person person={olya} />
     <Person person={alex} />
-    <Person person={test} />
   </div>
 );
