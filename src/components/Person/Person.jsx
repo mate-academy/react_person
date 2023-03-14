@@ -16,15 +16,17 @@ export const Person = ({ person }) => {
     ? `${partnerName} is my ${partner}`
     : 'I am not married';
 
-  const personAge = !age
-    ? undefined
-    : <p className="Person__age">{`I am ${age}`}</p>;
-
   return (
     <section className="Person">
-      <h2 className="Person__name">{`My name is ${name}`}</h2>
-      {personAge}
-      <p className="Person__partner">{married}</p>
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      {!age
+        ? undefined
+        : <p className="Person__age">{`I am ${age}`}</p>}
+      <p className="Person__partner">
+        {married}
+      </p>
     </section>
   );
 };
