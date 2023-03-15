@@ -2,12 +2,15 @@ import React from 'react';
 
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
-  let partnerFieldText = `I am not married`;
 
-  if (isMarried && partnerName) {
-    partnerFieldText = sex === 'm'
-      ? `${partnerName} is my wife`
-      : `${partnerName} is my husband`;
+  function getPartnerFieldText() {
+    if (isMarried && partnerName) {
+      return sex === 'm'
+        ? `${partnerName} is my wife`
+        : `${partnerName} is my husband`;
+    }
+
+    return `I am not married`;
   }
 
   return (
@@ -19,7 +22,7 @@ export const Person = ({ person }) => {
         {age && `I am ${age}`}
       </p>
       <p className="Person__partner">
-        {partnerFieldText}
+        {getPartnerFieldText()}
       </p>
     </section>
   );
