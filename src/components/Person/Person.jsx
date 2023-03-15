@@ -11,12 +11,8 @@ export function Person({ person }) {
   } = person;
   const partnerStatus = sex === 'f' ? 'husband' : 'wife';
   const relationshipStatus = isMarried
-    ? (<p className="Person__partner">
-        {`${partnerName} is my ${partnerStatus}`}
-      </p>)
-    : (<p className="Person__partner">
-        I am not married
-      </p);
+    ? (<p className="Person__partner">{`${partnerName} is my ${partnerStatus}`}</p>)
+    : (<p className="Person__partner">I am not married</p>);
 
   return (
     <section className="Person">
