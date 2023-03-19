@@ -23,7 +23,10 @@ export function Person({ person }) {
       {age && (
         <p className="Person__age">{`I am ${age}`}</p>
       )}
-      {isPersonMarried}
+
+      <p className="Person__partner">
+        {isPersonMarried}
+      </p>
     </section>
   );
 }
