@@ -5,7 +5,7 @@ import './Person.scss';
 export const Person = ({ person }) => {
   const { name, age, sex, partnerName, isMarried } = person;
 
-  const gender = (s) => {
+  const getSpouse = (partnerSex) => {
     if (s === 'm') {
       return 'wife';
     }
