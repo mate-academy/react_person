@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const {
@@ -9,28 +10,28 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  function getPartnerFieldText() {
-    const partner = sex === 'm'
-      ? 'wife'
-      : 'husband';
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
-    return (isMarried && partnerName)
-      ? `${partnerName} is my ${partner}`
-      : `I am not married`;
-  }
+  const partnerFieldText = (isMarried && partnerName)
+    ? `${partnerName} is my ${partner}`
+    : 'I am not married';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
+
       {(age > 0) && (
         <p className="Person__age">
-          {age && `I am ${age}`}
+          {`I am ${age}`}
         </p>
       )}
+
       <p className="Person__partner">
-        {getPartnerFieldText()}
+        {partnerFieldText}
       </p>
     </section>
   );
