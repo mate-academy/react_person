@@ -4,7 +4,7 @@ import { Person } from './components/Person/Person';
 
 export const misha = {
   name: 'Misha',
-  age: 0,
+  age: 37,
   sex: 'm',
   isMarried: true,
   partnerName: 'Natasha',
