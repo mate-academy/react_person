@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Person.scss';
 
 export function Person({ person }) {
   const {
@@ -9,20 +10,13 @@ export function Person({ person }) {
     isMarried,
     partnerName,
   } = person;
-  const partnerStatus = sex === 'f' 
-    ? 'husband' 
+  const partnerStatus = sex === 'f'
+    ? 'husband'
     : 'wife';
+
   const relationshipStatus = isMarried
-    ? (
-      <p className="Person__partner">
-        {`${partnerName} is my ${partnerStatus}`}
-      </p>
-    )
-    : (
-      <p className="Person__partner">
-        I am not married
-      </p>
-    );
+    ? `${partnerName} is my ${partnerStatus}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -30,13 +24,17 @@ export function Person({ person }) {
         {`My name is ${name}`}
       </h2>
 
-      {age > 0 && 
-        <p className="Person__age">
-          {`I am ${age}`}
-        </p>
+      {age > 0
+        && (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        )
       }
 
-      {relationshipStatus}
+      <p className="Person__partner">
+        {relationshipStatus}
+      </p>
     </section>
   );
 }
