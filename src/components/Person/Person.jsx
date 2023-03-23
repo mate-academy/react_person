@@ -9,6 +9,8 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
+  const isAge = age && age > 0;
+
   const married = sex === 'm'
     ? 'wife'
     : 'husband';
@@ -22,7 +24,16 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {age && (<p className="Person__age">{`I am ${age}`}</p>)}
+      {isAge
+        ? (
+          <p className="Person__age">
+            {`I am ${age}`}
+          </p>
+        ) : (
+          <p className="Person__age">
+            Age not found
+          </p>
+        )}
       <p className="Person__partner">
         {isPartner}
       </p>
