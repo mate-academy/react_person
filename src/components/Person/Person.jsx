@@ -1,5 +1,5 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+/* eslint-disable react/jsx-one-expression-per-line */
 // "react/jsx-one-expression-per-line": [<enabled>, { "allow": "none"|"literal"|"single-child" }];
 // eslint-disable-next-line react/jsx-one-expression-per-line
 
