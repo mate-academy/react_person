@@ -1,13 +1,12 @@
 import React from 'react';
 
-export const Person = (props) => {
-  const person1 = props.person;
-  const { name, age, sex, isMarried, partnerName } = person1;
+export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
 
   const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
-    <>
+    <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
       {age && (
         <p className="Person__age">
@@ -20,6 +19,6 @@ export const Person = (props) => {
           : `I am not married`
         }
       </p>
-    </>
+    </section>
   );
 };
