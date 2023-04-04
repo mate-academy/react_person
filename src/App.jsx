@@ -26,8 +26,14 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <Person person={misha} />
-    <Person person={olya} />
-    <Person person={alex} />
+    {[misha, olya, alex].map(({ name, age, sex, isMarried, partnerName }) => (
+      <Person
+        name={name}
+        age={age}
+        sex={sex}
+        isMarried={isMarried}
+        partnerName={partnerName}
+      />
+    ))}
   </div>
 );

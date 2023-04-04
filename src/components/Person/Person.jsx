@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function Person({ person: {
-  name, age, sex, isMarried, partnerName,
-} }) {
+export function Person({ name, age, sex, isMarried, partnerName }) {
+  const personSex = sex === 'm' ? 'wife' : 'husband';
+
   return (
     <section className="Person">
       <h2 className="Person__name">
@@ -12,7 +12,9 @@ export function Person({ person: {
         {age && `I am ${age}`}
       </p>
       <p className="Person__partner">
-        {isMarried ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}` : 'I am not married'}
+        {isMarried
+          ? `${partnerName} is my ${personSex}`
+          : 'I am not married'}
       </p>
     </section>
   );
