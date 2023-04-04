@@ -1,19 +1,15 @@
 import React from 'react';
 
-export const Person = ({ person: {
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-} }) => {
-  let role = '';
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
-  if (sex === 'm') {
-    role = 'wife';
-  } else {
-    role = 'husband';
-  }
+  const role = sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="Person">
