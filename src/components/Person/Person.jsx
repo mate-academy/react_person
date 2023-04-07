@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({
-  person: {
+export const Person = ({ person }) => {
+  const {
     name,
     age,
     sex,
     isMarried,
     partnerName,
-  },
-}) => {
+  } = person;
+
   const partnerGender = sex === 'm'
     ? 'wife'
     : 'husband';
