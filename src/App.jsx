@@ -1,11 +1,12 @@
 import React from 'react';
-import { Person, misha, olya, alex } from './components/Person';
+import { Person } from './components/Person';
+import Persons from './data/persons.json';
 import './App.scss';
 
 export const App = () => (
   <div className="App">
-    <Person person={misha} />
-    <Person person={olya} />
-    <Person person={alex} />
+    {Persons.map(person => (
+      <Person person={person} />
+    ))}
   </div>
 );
