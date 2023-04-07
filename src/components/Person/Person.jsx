@@ -24,7 +24,9 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
+
       {agePart}
+
       <p className="Person__partner">{partnerInfo}</p>
     </section>
   );
