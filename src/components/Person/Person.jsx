@@ -9,7 +9,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const isAge = age && `I am ${age}`;
+  const isAge = age && <p className="Person__age">{`I am ${age}`}</p>;
 
   const isSex = sex === 'm'
     ? 'wife'
@@ -22,7 +22,7 @@ export const Person = ({ person }) => {
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
-      <p className="Person__age">{isAge}</p>
+      {isAge}
       <p className="Person__partner">{isPartner}</p>
     </section>
   );
