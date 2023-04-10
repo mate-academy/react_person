@@ -1,3 +1,4 @@
+import { bool, number, string } from 'prop-types';
 import React from 'react';
 
 export const Person = ({ person }) => {
@@ -32,4 +33,12 @@ export const Person = ({ person }) => {
       </p>
     </section>
   );
+};
+
+Person.defaultProps = {
+  name: string,
+  age: number,
+  sex: string,
+  isMarried: bool,
+  partnerName: string,
 };
