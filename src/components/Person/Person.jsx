@@ -1,19 +1,25 @@
 import React from 'react';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, ifMarrid = false, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried = false,
+    partnerName,
+  } = person;
 
   const partnerSex = sex === 'm'
     ? 'wife'
     : 'husbend';
 
-  const personMarrid = ifMarrid
+  const personMarried = isMarried
     ? `${partnerName} is my ${partnerSex}`
     : 'I am not married';
 
   const personAge = age
     ? (
-      <p classNmae="Person__age">
+      <p className="Person__age">
         {`I am ${age}`}
       </p>
     )
@@ -28,7 +34,7 @@ export const Person = ({ person }) => {
       {personAge}
 
       <p className="Person__partner">
-        {personMarrid}
+        {personMarried}
       </p>
     </section>
   );
