@@ -24,10 +24,10 @@ export const alex = {
   isMarried: false,
 };
 
-export const peoples = [misha, olya, alex];
+export const people = [misha, olya, alex];
 
 export const App = () => (
   <div className="App">
-    {peoples.map(people => <Person person={people} />)}
+    {people.map(human => <Person person={human} />)}
   </div>
 );
