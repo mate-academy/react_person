@@ -28,6 +28,6 @@ export const people = [misha, olya, alex];
 
 export const App = () => (
   <div className="App">
-    {people.map(human => <Person person={human} />)}
+    {people.map(human => <Person person={human} key={human.name} />)}
   </div>
 );
