@@ -23,7 +23,7 @@ export const Person = ({ person }) => {
         <>
           <h2>{`My name is ${name}`}</h2>
           <p>{`I am ${age}`}</p>
-          <p>`I am not married`</p>
+          <p>I am not married</p>
         </>
       ));
   }
@@ -38,7 +38,7 @@ export const Person = ({ person }) => {
     : (
       <>
         <h2>{`My name is ${name}`}</h2>
-        <p>`I am not married`</p>
+        <p>I am not married</p>
       </>
     ));
 };
