@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Person.scss';
+
 export function Person({ person: {
   name,
   age,
