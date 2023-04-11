@@ -26,22 +26,10 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <section className="Person">
-      <Person
-        person={misha}
-      />
-    </section>
+    <Person person={misha} />
 
-    <section className="Person">
-      <Person
-        person={olya}
-      />
-    </section>
+    <Person person={olya} />
 
-    <section className="Person">
-      <Person
-        person={alex}
-      />
-    </section>
+    <Person person={alex} />
   </div>
 );
