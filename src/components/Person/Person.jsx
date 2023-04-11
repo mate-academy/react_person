@@ -26,8 +26,9 @@ export function Person({ person }) {
       )}
 
       <p className="Person__partner">
-        {(isMarried && `${partnerName} is my ${sexOfAPartner}`)
-        || ('I am not married')}
+        {isMarried
+          ? `${partnerName} is my ${sexOfAPartner}`
+          : 'I am not married'}
       </p>
     </section>
   );
