@@ -13,8 +13,6 @@ export const Person = ({ person }) => {
     ? 'husband'
     : 'wife';
 
-  const agePerson = age && <p className="Person__age">{`I am ${age}`}</p>;
-
   const partner = isMarried
     ? `${partnerName} is my ${gender}`
     : 'I am not married';
@@ -24,7 +22,9 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {agePerson}
+
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
+
       <p className="Person__partner">
         {partner}
       </p>
