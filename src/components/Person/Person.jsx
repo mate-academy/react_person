@@ -11,10 +11,12 @@ export function Person({ person: {
 } }) {
   let marriage;
 
+  const partner = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
   if (isMarried) {
-    marriage = sex === 'm'
-      ? `${partnerName} is my wife`
-      : `${partnerName} is my husband`;
+    marriage = `${partnerName} is my ${partner}`;
   } else {
     marriage = 'I am not married';
   }
