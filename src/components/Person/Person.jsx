@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Person = ({ person: { name, sex, age, partnerName } }) => {
+export const Person = ({ person: { name, sex, age, partnerName, isMarried } }) => {
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
@@ -10,7 +10,7 @@ export const Person = ({ person: { name, sex, age, partnerName } }) => {
       {age && <p className="Person__age">{`I am ${age}`}</p>}
 
       <p className="Person__partner">
-        {partnerName ? (
+        {isMarried ? (
           `${partnerName} is my ${partner}`
         ) : (
           `I am not married`
