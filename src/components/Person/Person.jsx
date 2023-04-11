@@ -1,4 +1,3 @@
-import { bool, number, string } from 'prop-types';
 import React from 'react';
 
 export const Person = ({ person }) => {
@@ -10,16 +9,14 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const isGender = sex === 'f'
+  const gender = sex === 'f'
     ? 'husband'
     : 'wife';
 
-  const isAge = age
-    ? <p className="Person__age">{`I am ${age}`}</p>
-    : null;
+  const agePerson = age && <p className="Person__age">{`I am ${age}`}</p>;
 
-  const isPartner = isMarried
-    ? `${partnerName} is my ${isGender}`
+  const partner = isMarried
+    ? `${partnerName} is my ${gender}`
     : 'I am not married';
 
   return (
@@ -27,18 +24,10 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {isAge}
+      {agePerson}
       <p className="Person__partner">
-        {isPartner}
+        {partner}
       </p>
     </section>
   );
-};
-
-Person.defaultProps = {
-  name: string,
-  age: number,
-  sex: string,
-  isMarried: bool,
-  partnerName: string,
 };
