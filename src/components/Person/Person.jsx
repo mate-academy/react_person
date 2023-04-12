@@ -4,15 +4,14 @@ export const Person = ({ person }) => {
   const {
     name,
     age,
+    sex,
     isMarried,
     partnerName,
   } = person;
 
-  function correctSex({ pers }) {
-    return person.sex === 'f'
-      ? 'husband'
-      : 'wife';
-  }
+  const partnerSex = sex === 'f'
+    ? 'husband'
+    : 'wife';
 
   return (
     <section className="Person">
@@ -24,7 +23,7 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {isMarried
-          ? `${partnerName} is my ${correctSex(person)}`
+          ? `${partnerName} is my ${partnerSex}`
           : 'I am not married'
         }
       </p>
