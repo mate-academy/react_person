@@ -1,18 +1,18 @@
 import React from 'react';
 // export const Person = ({ person }) => ();
 export function Person({ person }) {
-  let marriedText;
+  function Text() {
+    if (person.sex === 'm' && person.isMarried) {
+      return `${person.partnerName} is my wife`;
+    }
 
-  if (person.sex === 'm' && person.isMarried) {
-    marriedText = `${person.partnerName} is my wife`;
-  }
+    if (!person.isMarried) {
+      return `Im not married`;
+    }
 
-  if (person.isMarried === false) {
-    marriedText = `Im not married`;
-  }
-
-  if (person.sex === 'f' && person.isMarried) {
-    marriedText = `${person.partnerName} is my husband`;
+    if (person.sex === 'f' && person.isMarried) {
+      return `${person.partnerName} is my husband`;
+    }
   }
 
   return (
@@ -29,7 +29,7 @@ export function Person({ person }) {
         </p>
       ) : ''}
       <p className="Person__partner">
-        {marriedText}
+        {Text()}
       </p>
     </>
   );
