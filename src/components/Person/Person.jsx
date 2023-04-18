@@ -7,7 +7,7 @@ export function Person({ person }) {
     }
 
     return `Im not married`;
-  }s
+  }
 
   return (
     <>
