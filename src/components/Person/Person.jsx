@@ -1,35 +1,26 @@
 import React from 'react';
 // export const Person = ({ person }) => ();
 export function Person({ person }) {
-  function Text() {
-    if (person.sex === 'm' && person.isMarried) {
-      return `${person.partnerName} is my wife`;
+  function PersonText() {
+    if (person.isMarried) {
+      return `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`;
     }
 
-    if (!person.isMarried) {
-      return `Im not married`;
-    }
-
-    if (person.sex === 'f' && person.isMarried) {
-      return `${person.partnerName} is my husband`;
-    }
+    return `Im not married`;
   }
 
   return (
     <>
       <h2 className="Person__name">
-        {`My name is `}
-        {person.name}
+        {`My name is ${person.name}`}
       </h2>
-      {person.age ? (
+      {!!person.age && (
         <p className="Person__age">
-          I am
-          {' '}
-          {person.age}
+          {`I am ${person.age}`}
         </p>
-      ) : ''}
+      )}
       <p className="Person__partner">
-        {Text()}
+        {PersonText()}
       </p>
     </>
   );
