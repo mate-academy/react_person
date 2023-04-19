@@ -1,42 +1,41 @@
-import React from "react";
+import React from 'react';
 
 export const Person = ({ person }) => {
-    const { 
-        name,
-        age,
-        sex,
-        isMarried = false,
-        partnerName,
-    } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
-    const partnerGender = sex === 'm'
-        ? 'wife'
-        : 'husband';
-    
-    const personPartner = isMarried
-        ? `${partnerName} is my ${partnerGender}`
-        : 'I am not married';
+  const partnerGender = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
-    const personAge = age 
-        ? (
-          <p className = "Person__age">
-            {`I am ${age}`}
-          </p>
-        )
-        : null;
+  const personPartner = isMarried
+    ? `${partnerName} is my ${partnerGender}`
+    : 'I am not married';
 
-    return (
-        <section className="Person">
-            <h2 className="Person__name">
-                {`My name is ${name}`}
-            </h2>
+  const personAge = age
+    ? (
+      <p className="Person__age">
+        {`I am ${age}`}
+      </p>
+    )
+    : null;
 
-            {personAge}
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
 
-            <p className="Person__partner">
-                {personPartner}
-            </p>
+      {personAge}
 
-        </section>
-    );
+      <p className="Person__partner">
+        {personPartner}
+      </p>
+    </section>
+  );
 };
