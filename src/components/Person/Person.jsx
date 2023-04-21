@@ -10,11 +10,11 @@ export const Person = ({ person }) => {
   } = person;
 
   const partner = sex === 'm'
-    ? `${partnerName} is my wife`
-    : `${partnerName} is my husband`;
+    ? `wife`
+    : `husband`;
 
   const married = isMarried
-    ? partner
+    ? `${partnerName} is my ${partner}`
     : 'I am not married';
 
   return (
@@ -22,11 +22,13 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
+
       {age && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
       )}
+
       <p className="Person__partner">
         {married}
       </p>
