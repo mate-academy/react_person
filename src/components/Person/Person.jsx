@@ -6,11 +6,11 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
 
-    {person.age ? (
+    {person.age && (
       <p className="Person__age">
         {`I am ${person.age}`}
       </p>
-    ) : null}
+    )}
 
     {person.isMarried ? (
       <p className="Person__partner">
