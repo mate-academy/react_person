@@ -3,7 +3,7 @@ import React from 'react';
 export function Person({ person }) {
   const { name, age = null, sex, isMarried, partnerName } = person;
   const married = sex === 'f' ? 'husband' : 'wife';
-  const merriedText = `${partnerName} is my ${merried}`;
+  const marriedText = `${partnerName} is my ${married}`;
 
   return (
     <section className="Person">
@@ -18,7 +18,7 @@ export function Person({ person }) {
       }
       {isMarried ? (
         <p className="Person__partner">
-          {merriedText}
+          {marriedText}
         </p>
       )
         : (<p className="Person__partner">I am not married</p>)}
