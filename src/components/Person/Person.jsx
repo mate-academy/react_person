@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Person({person}) {
+export function Person({ person }) {
   const { name, age = null, sex, isMarried, partnerName } = person;
   const merried = sex === 'f' ? 'husband' : 'wife';
   const merriedText = `${partnerName} is my ${merried}`;
@@ -8,15 +8,11 @@ export function Person({person}) {
   return (
     <section className="Person">
       <h2 className="Person__name">
-        My name is
-        {' '}
-        {name}
+        {`My name is ${name}`}
       </h2>
       {age && (
         <p className="Person__age">
-          I am
-          {' '}
-          {age}
+          {`I am ${age}`}
         </p>
       )
       }
