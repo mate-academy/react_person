@@ -28,7 +28,7 @@ const Person = ({ name,
               <p className="Person__partner">
 
                 { partnerName }
-
+                {' '}
                 { sex === 'f'
                   ? <span>is my husband</span>
                   : <span>is my wife</span>}
