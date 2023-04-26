@@ -1,7 +1,7 @@
 import React from 'react';
 
-export function Person(person) {
-  const { name, age = null, sex, isMarried, partnerName } = person.person;
+export function Person({person}) {
+  const { name, age = null, sex, isMarried, partnerName } = person;
   const merried = sex === 'f' ? 'husband' : 'wife';
   const merriedText = `${partnerName} is my ${merried}`;
 
