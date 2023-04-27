@@ -14,14 +14,10 @@ export function Person({ person }) {
         <p className="Person__age">
           {`I am ${age}`}
         </p>
-      )
-      }
-      {isMarried ? (
-        <p className="Person__partner">
-          {marriedText}
-        </p>
-      )
-        : (<p className="Person__partner">I am not married</p>)}
+      )}
+      <p className="Person__partner">
+        {isMarried ? marriedText : 'I am not married'}
+      </p>
     </section>
   );
 }
