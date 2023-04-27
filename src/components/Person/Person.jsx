@@ -1,52 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Person = ({ person }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {person.name}
-    </h2>
+export const Person = ({ person }) => {
+  const partnerSex = person.sex === 'm' ? 'wife' : 'husband';
 
-    {person.age > 0
-      && (
-        <p className="Person__age">
-          I am
-          {' '}
-          {person.age}
-        </p>
-      )
-    }
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        My name is
+        {' '}
+        {person.name}
+      </h2>
 
-    {person.isMarried === true && person.sex === 'm'
+      {person.age > 0
         && (
-          <p className="Person__partner">
-            {person.partnerName}
+          <p className="Person__age">
+            I am
             {' '}
-            is my wife
+            {person.age}
           </p>
         )
-    }
+      }
 
-    {person.isMarried === true && person.sex === 'f'
-        && (
-          <p className="Person__partner">
-            {person.partnerName}
-            {' '}
-            is my husband
-          </p>
-        )
-    }
+      <p className="Person__partner">
+        {person.isMarried
+          ? `${person.partnerName} is my ${partnerSex}`
+          : 'I am not married'}
+      </p>
 
-    {person.isMarried === false
-      && (
-        <p className="Person__partner">
-          I am not married
-        </p>
-      )}
-  </section>
-);
+    </section>
+  );
+};
 
 Person.defaultProps = {
   age: 0,
