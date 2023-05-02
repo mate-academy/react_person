@@ -3,8 +3,12 @@ import React from 'react';
 export const Person = ({ person }) => {
   const { name, age, isMarried, partnerName, sex } = person;
 
-  const partnerType = sex === 'm' ? 'wife' : 'husband';
-  const maritalStatus = !isMarried ? 'I am not married'
+  const partnerType = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
+  const maritalStatus = !isMarried
+    ? 'I am not married'
     : `${partnerName} is my ${partnerType}`;
 
   return (
