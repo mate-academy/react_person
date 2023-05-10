@@ -30,6 +30,7 @@ export const Person = ({ person }) => {
           {person.partnerName}
           {' '}
           is my
+          {' '}
           {partner}
         </p>
       ) : (
