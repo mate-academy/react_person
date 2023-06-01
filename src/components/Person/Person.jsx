@@ -1,13 +1,15 @@
 import React from 'react';
 
-export const Person = (props) => {
+export const Person = ({ person }) => {
   const {
     name,
     age,
     sex,
     isMarried,
     partnerName,
-  } = props.person;
+  } = person;
+
+  const spouseSex = gender => (gender === 'm' ? 'wife' : 'husband');
 
   return (
     <section className="Person">
@@ -20,9 +22,9 @@ export const Person = (props) => {
         </p>
       )}
       <p className="Person__partner">
-        {!isMarried && ('I am not married')}
-        {(isMarried && sex === 'f') && (`${partnerName} is my husband`)}
-        {(isMarried && sex === 'm') && (`${partnerName} is my wife`)}
+        {isMarried
+          ? `${partnerName} is my ${spouseSex(sex)}`
+          : 'I am not married'}
       </p>
     </section>
   );
