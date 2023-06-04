@@ -12,8 +12,13 @@ export const Person = ({ person }) => {
 
   const theme = useTheme().palette;
 
-  const partnerSex = sex === 'm' ? 'wife' : 'husband';
-  const marriedInfoCollor = isMarried ? theme.info.main : theme.error.main;
+  const partnerSex = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
+  const marriedInfoCollor = isMarried
+    ? theme.info.main
+    : theme.error.main;
 
   return (
     <Box
