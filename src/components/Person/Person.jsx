@@ -12,6 +12,8 @@ export const Person = ({ person }) => {
 
   const theme = useTheme().palette;
 
+  const partnerSex = sex === 'm' ? 'wife' : 'husband';
+
   return (
     <Box
       className="Person"
@@ -34,23 +36,15 @@ export const Person = ({ person }) => {
         <Typography mb={2} className="Person__age">{`I am ${age}`}</Typography>
       )}
 
-      {isMarried ? (
-        <Typography
-          className="Person__partner"
-          backgroundColor={theme.info.main}
-          borderRadius={1}
-        >
-          {`${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`}
-        </Typography>
-      ) : (
-        <Typography
-          className="Person__partner"
-          backgroundColor={theme.error.main}
-          borderRadius={1}
-        >
-          I am not married
-        </Typography>
-      )}
+      <Typography
+        className="Person__partner"
+        backgroundColor={theme.info.main}
+        borderRadius={1}
+      >
+        {isMarried
+          ? `${partnerName} is my ${partnerSex}`
+          : 'I am not married'}
+      </Typography>
     </Box>
   );
 };
