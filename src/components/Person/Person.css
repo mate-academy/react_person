@@ -1,0 +1,29 @@
+h2,
+p {
+  margin: 0;
+}
+
+.Person {
+  display: flex;
+  flex-direction: column;
+
+  width: 220px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #11c8a1;
+  border: 3px solid #0a7b63;
+  border-radius: 15px;
+
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+}
+
+.Person__name {
+  margin-bottom: 10px;
+}
+
+.Person__age {
+  color: #053f33;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
