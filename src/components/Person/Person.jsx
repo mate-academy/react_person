@@ -9,11 +9,11 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
+  const partnerSex = sex === 'm'
+    ? 'wife'
+    : 'husband';
   const maritalStatus = isMarried
-    ? `${partnerName} is my ${sex === 'm'
-      ? 'wife'
-      : 'husband'
-    }`
+    ? `${partnerName} is my ${partnerSex}`
     : 'I am not married';
 
   return (
