@@ -2,6 +2,9 @@ import React from 'react';
 
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
+  const partnerStatus = sex === 'f'
+    ? 'husband'
+    : 'wife';
 
   return (
     <section className="Person">
@@ -9,9 +12,9 @@ export const Person = ({ person }) => {
       {age && <p className="Person__age">{`I am ${age}`}</p>}
       <p className="Person__partner">
         {
-          (!isMarried && 'I am not married')
-          || (sex === 'f' && `${partnerName} is my husband`)
-          || (sex === 'm' && `${partnerName} is my wife`)
+          isMarried
+            ? `${partnerName} is my ${partnerStatus}`
+            : 'I am not married'
         }
       </p>
     </section>
