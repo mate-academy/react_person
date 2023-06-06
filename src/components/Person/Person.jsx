@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Person.module.scss';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const {
@@ -11,26 +11,29 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partnerStatus = sex === 'm' ? 'wife' : 'husband';
+  const partnerStatus = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
-    <section className={styles.Person}>
-      <h2 className={styles.Person__name}>
+    <section className="Person">
+      <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
 
-      <p className={styles.Person__age}>
-        {age && (
-          `I am ${age}`
-        )}
-      </p>
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
 
-      <p className={styles.Person__partner}>
-        {isMarried ? (
-          `${partnerName} is my ${partnerStatus}`
-        ) : (
-          'I am not married'
-        )}
+      <p className="Person__partner">
+        {isMarried
+          ? (
+            `${partnerName} is my ${partnerStatus}`
+          ) : (
+            'I am not married'
+          )}
       </p>
     </section>
   );
