@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried = null, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried = null,
+    partnerName,
+  } = person;
 
   const partner = sex === 'm'
     ? `${partnerName} is my wife`
@@ -17,7 +23,10 @@ export const Person = ({ person }) => {
       {age && <p className="Person__age">{`I am ${age}`}</p>}
 
       <p className="Person__partner">
-        {isMarried ? partner : 'I am not married'}
+        {isMarried
+          ? partner
+          : 'I am not married'
+        }
       </p>
 
     </section>
