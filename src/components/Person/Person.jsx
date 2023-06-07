@@ -11,7 +11,7 @@ export const Person = ({ person }) => {
       </h2>
 
       <p className="Person__age">
-        {person.age && (
+        {age && (
           `I am ${age}`
         )}
       </p>
