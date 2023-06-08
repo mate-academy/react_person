@@ -3,9 +3,7 @@ import React from 'react';
 export const Person = ({ person }) => {
   const personAge = (
     <p className="Person__age">
-      {' '}
       {`I am ${person.age}`}
-      {' '}
     </p>
   );
   const notMarried = <p className="Person__partner">I am not married</p>;
