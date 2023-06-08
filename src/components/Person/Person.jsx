@@ -1,11 +1,28 @@
-import React from "react";
+import React from 'react';
 
 export const Person = ({ person }) => {
-
-  const personAge = <p className="Person__age"> {`I am ${person.age}`} </p>
-  const notMarried = <p className="Person__partner">I am not married</p>
-  const myWife = <p className="Person__partner">{person.partnerName} is my wife</p>
-  const myHusband = <p className="Person__partner">{person.partnerName} is my husband</p>
+  const personAge = (
+    <p className="Person__age">
+      {' '}
+      {`I am ${person.age}`}
+      {' '}
+    </p>
+  );
+  const notMarried = <p className="Person__partner">I am not married</p>;
+  const myWife = (
+    <p className="Person__partner">
+      {person.partnerName}
+      {' '}
+      is my wife
+    </p>
+  );
+  const myHusband = (
+    <p className="Person__partner">
+      {person.partnerName}
+      {' '}
+      is my husband
+    </p>
+  );
 
   return (
     <section className="Person">
@@ -17,7 +34,7 @@ export const Person = ({ person }) => {
 
       {!person.isMarried && notMarried}
 
-      {person.isMarried && (person.sex === "m" ? myWife : myHusband)}
+      {person.isMarried && (person.sex === 'm' ? myWife : myHusband)}
 
     </section>
   );
