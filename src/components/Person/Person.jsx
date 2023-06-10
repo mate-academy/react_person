@@ -1,11 +1,13 @@
 import React from 'react';
 
+function getPurtnerSex(personSex) {
+  return personSex === 'f' ? 'husband' : 'wife';
+}
+
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partner = sex === 'm'
-    ? `${partnerName} is my wife`
-    : `${partnerName} is my husband`;
+  const partner = `${partnerName} is my ${getPurtnerSex(sex)}`;
 
   return (
     <section className="Person">
