@@ -10,5 +10,5 @@ and use it 3 times inside the `App` instead of static markup.
 
 ## Instructions
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Open one more terminal and run tests with `npm test` to ensure your solution is correct.
+- Open one more terminal and run tests NPM with `npm test` to ensure your solution is correct.
 - Replace `<your_account>` with your Github username in the [DEMO LINK](https://AndriiYelieva.github.io/react_person/) and add it to the PR description.

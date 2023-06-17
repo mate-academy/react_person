@@ -3,15 +3,9 @@ import React from 'react';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const getPartnerLabel = () => {
-    if (isMarried) {
-      return sex === 'm'
-        ? `${partnerName} is my wife`
-        : `${partnerName} is my husband`;
-    }
-
-    return 'I am not married';
-  };
+  const partnerLabel = sex === 'm'
+    ? `${partnerName} is my wife`
+    : `${partnerName} is my husband`;
 
   return (
     <section className="Person">
@@ -24,7 +18,9 @@ export const Person = ({ person }) => {
         </p>
       )}
       <p className="Person__partner">
-        {getPartnerLabel()}
+        {isMarried
+          ? partnerLabel
+          : 'I am not married'}
       </p>
     </section>
   );
