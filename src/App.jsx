@@ -26,7 +26,7 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-     <Person
+    <Person
       person={misha}
     />
     <Person
