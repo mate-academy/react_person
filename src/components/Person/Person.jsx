@@ -9,12 +9,12 @@ export const Person = ({ person }) => (
       {person.age && `I am ${person.age}`}
     </p>
     <p className="Person__partner">
-      {person.isMarried && (
+      {person.isMarried ? (
         `${person.partnerName} is my ${
           person.sex === 'm'
             ? 'wife'
             : 'husband'}`
-      )}
+      ) : 'I am not married'}
     </p>
   </section>
 );
