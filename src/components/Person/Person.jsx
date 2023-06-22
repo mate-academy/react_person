@@ -5,7 +5,7 @@ export const Person = ({ person }) => (
     <h2 className="Person__name">
       {`My name is ${person.name}`}
     </h2>
-    {Object.prototype.hasOwnProperty.call(person, 'age') && (
+    {person.age && (
       <p className="Person__age">
         {`I am ${person.age}`}
       </p>
