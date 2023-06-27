@@ -2,7 +2,7 @@ import React from 'react';
 import './Person.scss';
 
 export const Person = ({ person }) => {
-  const partner = person.partner === 'm'
+  const partner = person.partnerName === 'm'
     ? 'wife'
     : 'husband';
 
@@ -20,7 +20,7 @@ export const Person = ({ person }) => {
 
       {person.isMarried ? (
         <p className="Person__partner">
-          {`${person.partner} is my ${partner}`}
+          {`${person.partnerName} is my ${partner}`}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
