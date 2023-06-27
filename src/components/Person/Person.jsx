@@ -3,10 +3,10 @@ import React from 'react';
 export const Person = ({ person }) => {
   const {
     name,
-    age = 0,
+    age,
     sex,
     isMarried,
-    partnerName = '',
+    partnerName,
   } = person;
 
   const ageElement = age
