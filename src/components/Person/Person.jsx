@@ -32,7 +32,7 @@ export const Person = ({ person }) => {
         {name}
       </h2>
 
-      {age !== undefined && (
+      {age && (
         <p className="Person__age">
           {'I am '}
           {age}
