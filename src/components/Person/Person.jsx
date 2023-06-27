@@ -2,7 +2,7 @@ import React from 'react';
 import './Person.scss';
 
 export const Person = ({ person }) => {
-  const partner = person.partnerName === 'm'
+  const partner = person.sex === 'm'
     ? 'wife'
     : 'husband';
 
