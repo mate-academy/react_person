@@ -1,3 +1,5 @@
+import './Person.scss';
+
 export const Person = ({
   person: { name, age, sex, isMarried, partnerName },
 }) => (
