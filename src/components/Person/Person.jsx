@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const {
@@ -8,6 +9,11 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
+
+  const partner = (sex === 'm'
+    ? 'wife'
+    : 'husband'
+  );
 
   return (
     <section className="Person">
@@ -20,13 +26,9 @@ export const Person = ({ person }) => {
         </p>
       )}
       <p className="Person__partner">
-        {isMarried ? (
-          `${partnerName} is my ${sex === 'm'
-            ? 'wife'
-            : 'husband'}`
-        ) : (
-          'I am not married'
-        )
+        {isMarried
+          ? `${partnerName} is my ${partner}`
+          : 'I am not married'
               }
       </p>
     </section>
