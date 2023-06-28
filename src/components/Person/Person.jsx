@@ -1,4 +1,3 @@
-import React from 'react';
 import './Person.scss';
 
 export const Person = ({ person }) => {
@@ -31,4 +30,5 @@ export const Person = ({ person }) => {
           : ('I am not married')}
       </p>
     </section>
-  );}
+  );
+};
