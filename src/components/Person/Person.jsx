@@ -9,21 +9,9 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const ifHavePartnerBlock = (
-    <p className="Person__partner">
-      {partnerName}
-      {' is my '}
-      {sex === 'm'
-        ? 'wife'
-        : 'husband'}
-    </p>
-  );
-
-  const ifNotHavePartnerBlock = (
-    <p className="Person__partner">
-      I am not married
-    </p>
-  );
+  const partnerStatus = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
@@ -39,9 +27,11 @@ export const Person = ({ person }) => {
         </p>
       )}
 
-      {isMarried
-        ? ifHavePartnerBlock
-        : ifNotHavePartnerBlock}
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${partnerStatus}`
+          : 'I am not married'}
+      </p>
     </section>
   );
 };
