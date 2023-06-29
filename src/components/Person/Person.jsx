@@ -1,7 +1,8 @@
 import './Person.scss';
 
 export const Person = ({
-  person: { name,
+  person: {
+    name,
     age,
     sex,
     isMarried,
