@@ -17,7 +17,7 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">{`My name is ${name}`}</h2>
 
       {
-        !age && (
+        age && (
           <p className="Person__age">
             {`I am ${age}`}
           </p>
