@@ -1,9 +1,10 @@
 import React from 'react';
-import './Person.scss';
 
-const Person = ({ person }) => {
+export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
-  const partnerStatus = sex === 'm' ? 'wife' : 'husband';
+  const partnerStatus = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
@@ -22,5 +23,3 @@ const Person = ({ person }) => {
     </section>
   );
 };
-
-export default Person;
