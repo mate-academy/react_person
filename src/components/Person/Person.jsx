@@ -5,17 +5,17 @@ export const Person = ({ person }) => (
     </h2>
 
     <p className="Person__age">
-      {person.age !== undefined && (
+      {!person.age && (
         `I am ${person.age}`
       )}
     </p>
 
     <p className="Person__partner">
-      {person.isMarried !== true && (
+      {!person.isMarried && (
         `I am not married`
       )}
 
-      {person.isMarried === true && (
+      {person.isMarried && (
         person.sex === 'm'
           ? `${person.partnerName} is my wife`
           : `${person.partnerName} is my husband`)
