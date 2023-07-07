@@ -2,7 +2,11 @@ export const Person = ({ person }) => {
   let married;
 
   if (person.isMarried) {
-    married = `${person.partnerName} is my ${person.sex === 'f' ? 'husband' : 'wife'}`;
+    married = `${person.partnerName} is my `
+    + `${person.sex === 'f'
+      ? 'husband'
+      : 'wife'
+    }`;
   } else {
     married = `I am not married`;
   }
@@ -13,7 +17,7 @@ export const Person = ({ person }) => {
         {`My name is ${person.name}`}
       </h2>
 
-      {'age' in person && (
+      {person.age && (
         <p className="Person__age">
           {`I am ${person.age}`}
         </p>
