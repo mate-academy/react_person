@@ -24,7 +24,7 @@ export const alex = {
   isMarried: false,
 };
 
-export const App = () => (
+export const App = ({ person }) => (
   <div className="App">
     <Person
       name={misha.name}

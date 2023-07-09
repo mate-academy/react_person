@@ -1,11 +1,13 @@
 // export const Person = ({ person }) => ();
-export const Person = ({
-  name,
-  age,
-  sex,
-  isMarried,
-  partnerName,
-}) => {
+export const Person = ({ person }) => {
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
+
   const partner = sex === 'f' ? 'husband' : 'wife';
 
   return (
