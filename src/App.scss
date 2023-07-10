@@ -2,7 +2,12 @@ iframe {
   display: none;
 }
 
+.App {
+  background-color: whitesmoke;
+}
+
 .Person {
+  background-color: blueviolet;
   width: fit-content;
   margin-bottom: 16px;
   padding: 8px;
@@ -14,7 +19,11 @@ iframe {
   }
 
   &__age {
-    color: #00f;
+    color: rgb(245, 18, 48);
     font-weight: bold;
+  }
+
+  &:hover {
+    background-color: yellowgreen;
   }
 }
