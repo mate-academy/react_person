@@ -11,12 +11,12 @@ export const Person = ({ person }) => (
       </p>
     )}
     <p className="Person__partner">
-      {isMarried(person)}
+      {getMarriedLabel(person)}
     </p>
   </section>
 );
 
-function isMarried(person) {
+function getMarriedLabel(person) {
   if (person.isMarried && person.sex === 'm') {
     return `${person.partnerName} is my wife`;
   }
