@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Person } from './components/Person/Person'
+import { Person } from './components/Person/Person';
 
 export const misha = {
   name: 'Misha',
@@ -24,30 +24,28 @@ export const alex = {
   isMarried: false,
 };
 
-export const App = () => {
-  return (
-    <div className="App">
-      <Person
-        name = {`${misha.name}`}
-        age={misha.age}
-        sex={misha.sex}
-        isMarried={misha.isMarried}
-        partnerName={misha.partnerName}
-      />
-      <Person
-        name = {`${olya.name}`}
-        age={olya.age}
-        sex={olya.sex}
-        isMarried={olya.isMarried}
-        partnerName={olya.partnerName}
-      />
-      <Person
-        name = {`${alex.name}`}
-        age={alex.age}
-        sex={alex.sex}
-        isMarried={alex.isMarried}
-        partnerName={alex.partnerName}
-      />
-    </div>
-  )
-};
+export const App = () => (
+  <div className="App">
+    <Person
+      name={misha.name}
+      age={misha.age}
+      sex={misha.sex}
+      isMarried={misha.isMarried}
+      partnerName={misha.partnerName}
+    />
+    <Person
+      name={olya.name}
+      age={olya.age}
+      sex={olya.sex}
+      isMarried={olya.isMarried}
+      partnerName={olya.partnerName}
+    />
+    <Person
+      name={alex.name}
+      age={alex.age}
+      sex={alex.sex}
+      isMarried={alex.isMarried}
+      partnerName={alex.partnerName}
+    />
+  </div>
+);
