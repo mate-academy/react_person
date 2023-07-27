@@ -1,5 +1,9 @@
 import './Person.scss';
 
+function getPartnerRelationship(person) {
+  return person.sex === 'm' ? 'wife' : 'husband';
+}
+
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">
@@ -15,10 +19,7 @@ export const Person = ({ person }) => (
         <p>I am not married</p>
       ) : (
         <p>
-          {`${person.partnerName} is my ${person.sex === 'm'
-            ? 'wife'
-            : 'husband'
-          }`}
+          {`${person.partnerName} is my ${getPartnerRelationship(person)}`}
         </p>
       )}
     </p>
