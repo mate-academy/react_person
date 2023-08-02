@@ -8,10 +8,16 @@ export const Person = ({ person }) => (
       <p className="Person__age">{`I am ${person.age}`}</p>
     )}
 
-    <p className="Person__partner">
-      {(person.sex === 'm' && person.isMarried === true) && `${person.partnerName} is my wife`}
-      {(person.sex === 'f' && person.isMarried === true) && `${person.partnerName} is my husband`}
-      {person.isMarried === false && `I am not married`}
-    </p>
+    <p className="Person__partner">{Partner(person)}</p>
   </section>
 );
+
+function Partner(person) {
+  const sex = person.sex === 'f' ? 'husband' : 'wife';
+
+  if (person.isMarried) {
+    return `${person.partnerName} is my ${sex}`;
+  }
+
+  return 'I am not married';
+}
