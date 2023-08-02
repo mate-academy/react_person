@@ -3,8 +3,7 @@ export const Person = ({ person }) => (
 
   <div className="Person">
     <h2 className="Person__name">
-      My name is
-      {person.name}
+      {`My name is ${person.name}`}
     </h2>
     <div className="Person__age">
       {person.age > 0 && (
