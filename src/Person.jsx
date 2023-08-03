@@ -1,10 +1,10 @@
 import './App.scss';
 
 export const Person = ({ person }) => {
-  const { 
-    name, 
-    age, 
-    sex, 
+  const {
+    name,
+    age,
+    sex,
     isMarried,
   } = person;
 
