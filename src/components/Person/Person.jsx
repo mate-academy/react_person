@@ -9,26 +9,20 @@ export const Person = ({ person }) => {
     return 'I am not married';
   };
 
+  const partner = getPartnerLabel();
+
   return (
     <section className="Person">
       <h2 className="Person__name">
-        My name is
-        {' '}
-        {name}
+        {`My name is ${name}`}
       </h2>
       {age && (
         <p className="Person__age">
-          I am
-          {' '}
-          {age}
+          {`I am ${age}`}
         </p>
       )}
       <p className="Person__partner">
-        {partnerName}
-        {' '}
-        is my
-        {' '}
-        {getPartnerLabel()}
+        {isMarried ? `${partnerName} is my ${partner}` : partner}
       </p>
     </section>
   );
