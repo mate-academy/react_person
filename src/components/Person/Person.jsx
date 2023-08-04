@@ -1,5 +1,11 @@
 export const Person = ({
-  person: { name, age, sex, isMarried, partnerName },
+  person: {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  },
 }) => {
   const genderCheck = sex === 'f' ? 'husband' : 'wife';
 
