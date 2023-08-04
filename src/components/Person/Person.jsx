@@ -7,7 +7,7 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName } = person;
 
-    const partnerText = `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
+  const partnerText = `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`;
 
   return (
     <section className="Person">
