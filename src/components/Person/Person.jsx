@@ -1,3 +1,14 @@
+function getPartner(person) {
+  if (person.isMarried) {
+    return `${person.partnerName} is my ${person.sex === 'm'
+      ? 'wife'
+      : 'husband'
+    }`;
+  }
+
+  return 'I am not married';
+}
+
 export const Person = ({ person }) => (
   <>
     <section className="Person">
@@ -13,14 +24,3 @@ export const Person = ({ person }) => (
     </section>
   </>
 );
-
-function getPartner(person) {
-  if (person.isMarried) {
-    return `${person.partnerName} is my ${person.sex === 'm'
-      ? 'wife'
-      : 'husband'
-    }`;
-  }
-
-  return 'I am not married';
-}
