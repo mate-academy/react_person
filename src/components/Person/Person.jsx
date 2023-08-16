@@ -8,7 +8,12 @@ export const Person = ({ person }) => (
         {`I am ${person.age}`}
       </p>
     ) : ''}
-    {!person.isMarried ? (
+    <p className="Person__partner">
+      {person.isMarried
+        ? `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`
+        : 'I am not married'}
+    </p>
+    {/* {!person.isMarried ? (
       <p className="Person__partner">
         I am not married
       </p>
@@ -16,6 +21,6 @@ export const Person = ({ person }) => (
       <p className="Person__partner">
         {`${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`}
       </p>
-    )}
+    )} */}
   </section>
 );
