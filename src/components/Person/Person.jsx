@@ -13,22 +13,17 @@ export function Person({ person }) {
         {person.name}
       </h2>
 
-      { person.age && (
+      {person.age && (
         <p className="Person__age">
           I am
           {' '}
           {person.age}
         </p>
-      )
-      }
+      )}
 
-      { !person.isMarried ? (
-        <p className="Person__partner">I am not married</p>
-      )
-        : (
-          <p className="Person__partner">{namePartner}</p>
-        )
-  }
+      <p className="Person__partner">
+        {!person.isMarried ? 'I am not married' : namePartner}
+      </p>
     </section>
   );
 }
