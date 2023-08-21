@@ -26,7 +26,9 @@ export const Person = (props) => {
           {`${partnerName} is my ${partner}`}
         </p>
       ) : (
-        <>I am not married</>
+        <p className="Person__partner">
+          I am not married
+        </p>
       )}
     </section>
 
