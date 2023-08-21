@@ -1,6 +1,6 @@
 // export const Person = ({ person }) => ();
 export const Person = ({ person }) => {
-  const newVariable = person.sex === 'm' ? (
+  const partnersInfo = person.sex === 'm' ? (
     `${person.partnerName} is my wife`
   ) : (`${person.partnerName} is my husband`);
 
@@ -11,9 +11,10 @@ export const Person = ({ person }) => {
       </h2>
       {person.age && (<p className="Person__age">{`I am ${person.age}`}</p>)}
       <p className="Person__partner">
-        {person.isMarried === true ? (
-          newVariable
-        ) : (`I am not married`)}
+        {person.isMarried
+          ? partnersInfo
+          : `I am not married`
+        }
       </p>
     </section>
   );
