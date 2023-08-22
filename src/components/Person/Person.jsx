@@ -6,7 +6,8 @@ export const Person = ({ person }) => {
     age,
     sex,
     isMarried,
-    partnerName } = person;
+    partnerName,
+  } = person;
   const partner = sex === 'm'
     ? 'wife'
     : 'husband';
