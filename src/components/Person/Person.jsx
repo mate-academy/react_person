@@ -5,8 +5,7 @@ export const Person = ({ person }) => (
     </h2>
     {person.age && (
     <p className="Person__age">
-      {`I am
-      ${person.age}`}
+      {`I am ${person.age}`}
     </p>
     )}
     {person.isMarried ? (
