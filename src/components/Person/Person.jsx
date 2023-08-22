@@ -1,6 +1,7 @@
 const MALE = 'm';
 const WIFE = 'wife';
 const HUSBAND = 'husband';
+const NOT_MARRIED_PERSON = 'I am not married';
 
 export const Person = ({ person }) => {
   const {
@@ -18,7 +19,7 @@ export const Person = ({ person }) => {
         : HUSBAND;
     }
 
-    return 'I am not married';
+    return NOT_MARRIED_PERSON;
   };
 
   return (
@@ -34,7 +35,7 @@ export const Person = ({ person }) => {
       <p className="Person__partner">
         {partnerName
           ? `${partnerName} is my ${getPartner()}`
-          : 'I am not married'
+          : NOT_MARRIED_PERSON
         }
       </p>
     </section>
