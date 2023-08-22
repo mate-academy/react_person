@@ -3,9 +3,9 @@ export const Person = ({ person }) => {
   const { isMarried } = person;
   let marriedAnswer;
 
-  if ((isMarried === true) && (person.sex === 'm')) {
+  if ((isMarried) && (person.sex === 'm')) {
     marriedAnswer = <p className="Person__partner">{`${person.partnerName} is my wife`}</p>;
-  } else if ((isMarried === true) && (person.sex === 'f')) {
+  } else if ((isMarried) && (person.sex === 'f')) {
     marriedAnswer = <p className="Person__partner">{`${person.partnerName} is my husband`}</p>;
   } else {
     marriedAnswer = <p className="Person__partner">I am not married</p>;
