@@ -19,7 +19,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {age && (
+      {Boolean(age) && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
