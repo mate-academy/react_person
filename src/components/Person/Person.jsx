@@ -4,7 +4,7 @@ export const Person = ({ person }) => {
   const partnerSex = person.sex === 'f'
     ? 'husband'
     : 'wife';
-  const personIsMarried = person.isMarried
+  const personsPartner = person.isMarried
     ? `${person.partnerName} is my ${partnerSex}`
     : 'I am not married';
 
@@ -21,7 +21,7 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">
-        {personIsMarried}
+        {personsPartner}
       </p>
     </section>
   );
