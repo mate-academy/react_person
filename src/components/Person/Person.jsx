@@ -9,7 +9,7 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  const partner = sex === 'm'
+  const partnerSex = sex === 'm'
     ? 'wife'
     : 'husband';
 
@@ -27,7 +27,7 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         { isMarried
-          ? `${partnerName} is my ${partner}`
+          ? `${partnerName} is my ${partnerSex}`
           : 'I am not married'
         }
       </p>
