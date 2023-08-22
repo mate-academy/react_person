@@ -2,11 +2,7 @@ import './Person.scss';
 
 const SEX_FEMALE = 'f';
 
-function getPartnerStatus(sex) {
-  return sex === SEX_FEMALE
-    ? 'husband'
-    : 'wife';
-}
+const getPartnerStatus = sex => (sex === SEX_FEMALE ? 'husband' : 'wife');
 
 export const Person = ({ person }) => {
   const {
