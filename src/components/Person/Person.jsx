@@ -4,16 +4,14 @@ export function Person({ person }) {
   if (person.isMarried && person.sex === 'm') {
     marriedContent = (
       <p className="Person__partner">
-        {person.partnerName}
-        {' '}
+        {`${person.partnerName} `}
         is my wife
       </p>
     );
   } else if (person.isMarried && person.sex === 'f') {
     marriedContent = (
       <p className="Person__partner">
-        {person.partnerName}
-        {' '}
+        {`${person.partnerName} `}
         is my husband
       </p>
     );
@@ -27,14 +25,12 @@ export function Person({ person }) {
     <section className="Person">
       <h2 className="Person__name">
         My name is
-        {' '}
-        {person.name}
+        {` ${person.name}`}
       </h2>
       {person.age ? (
         <p className="Person__age">
           I am
-          {' '}
-          {person.age}
+          {` ${person.age}`}
         </p>
       ) : null}
       {marriedContent}
