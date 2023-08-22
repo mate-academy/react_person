@@ -4,12 +4,12 @@ export const Person = ({ person }) => {
   const {
     name,
     age,
-    gender,
+    sex,
     isMarried,
     partnerName,
   } = person;
 
-  const partnerRole = (gender === 'm')
+  const partnerRole = (sex === 'm')
     ? 'wife'
     : 'husband';
 
