@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as getRandomKey } from 'uuid';
 import { Person } from './components/Person/Person';
 
 import './App.scss';
@@ -33,6 +34,6 @@ const people = [
 
 export const App = () => (
   <div className="App">
-    {people.map(person => <Person person={person} />)}
+    {people.map(person => <Person key={getRandomKey()} person={person} />)}
   </div>
 );
