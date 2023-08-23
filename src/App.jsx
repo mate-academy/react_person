@@ -27,17 +27,12 @@ export const alex = {
 export const App = () => (
   <div className="App">
     <Person
-      className="Person__name"
       person={misha}
     />
-
     <Person
-      className="Person__name"
       person={olya}
     />
-
     <Person
-      className="Person__name"
       person={alex}
     />
   </div>
