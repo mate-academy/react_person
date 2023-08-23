@@ -2,11 +2,11 @@ import './Person.scss';
 
 const MAN_GENDER = 'm';
 
-function getMarriedInfo(status, gender, companion) {
-  if (status) {
+function getMarriedInfo(isMarried, gender, partnerName) {
+  if (isMarried) {
     return gender === MAN_GENDER
-      ? `${companion} is my wife`
-      : `${companion} is my husband`;
+      ? `${partnerName} is my wife`
+      : `${partnerName} is my husband`;
   }
 
   return 'I am not married';
