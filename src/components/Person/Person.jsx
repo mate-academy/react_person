@@ -12,6 +12,8 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
+  const TYPE_OF_PARTNER = `${sex === FEMALE ? HUSBAND : WIFE}`;
+
   return (
     <section className="Person">
       <h2 className="Person__name">
@@ -26,9 +28,7 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {isMarried
-          ? `${partnerName} is my ${sex === FEMALE
-            ? HUSBAND
-            : WIFE}`
+          ? `${partnerName} is my ${TYPE_OF_PARTNER}`
           : NOT_MARRIED_STATUS_MESSAGE}
       </p>
     </section>
