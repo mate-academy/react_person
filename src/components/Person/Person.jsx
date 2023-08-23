@@ -1,7 +1,6 @@
 import './Person.scss';
 
 export const Person = ({ person }) => {
-  const WOMAN_GENDER = 'f';
   const MAN_GENDER = 'm';
 
   const {
@@ -13,12 +12,10 @@ export const Person = ({ person }) => {
   } = person;
 
   function getMarriedInfo() {
-    if (sex === MAN_GENDER && isMarried) {
-      return <>{`${partnerName} is my wife`}</>;
-    }
-
-    if (sex === WOMAN_GENDER && isMarried) {
-      return <>{`${partnerName} is my husband`}</>;
+    if (isMarried) {
+      return sex === MAN_GENDER
+        ? <>{`${partnerName} is my wife`}</>
+        : <>{`${partnerName} is my husband`}</>;
     }
 
     return <>I am not married</>;
