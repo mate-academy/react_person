@@ -3,9 +3,15 @@ import './Person.css';
 const MALE = 'm';
 
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
-  const partner = sex === MALE
+  const partnerStatus = sex === MALE
     ? 'wife'
     : 'husband';
 
@@ -15,7 +21,7 @@ export const Person = ({ person }) => {
         {`My name is ${name}`}
       </h2>
 
-      {age && (
+      {Boolean(age) && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
@@ -23,7 +29,7 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {isMarried
-          ? `${partnerName} is my ${partner}`
+          ? `${partnerName} is my ${partnerStatus}`
           : `I am not married`
         }
       </p>
