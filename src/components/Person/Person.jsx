@@ -1,6 +1,8 @@
 import './Person.scss';
 
 const MALE = 'm';
+const WIFE = 'wife';
+const HUSBAND = 'husband';
 
 export const Person = ({ person }) => {
   const {
@@ -12,8 +14,8 @@ export const Person = ({ person }) => {
   } = person;
 
   const statusPartner = sex === MALE
-    ? 'wife'
-    : 'husband';
+    ? WIFE
+    : HUSBAND;
 
   const marriageStatusInfo = isMarried
     ? `${partnerName} is my ${statusPartner}`
