@@ -1,13 +1,14 @@
 // export const Person = ({ person }) => ();
 import './Person.scss';
 
+const MAN = 'm';
+const WIFE = 'wife';
+const HUSBANT = 'husband';
+const getStatus = sex => (sex === MAN
+  ? WIFE
+  : HUSBANT);
+
 export const Person = ({ person }) => {
-  const MAN = 'm';
-
-  const getStatus = sex => (sex === MAN
-    ? 'wife'
-    : 'husband');
-
   const {
     name,
     age,
@@ -19,19 +20,18 @@ export const Person = ({ person }) => {
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${name}`}</h2>
+
       {age > 0
         && (
           <p className="Person__age">{`I am ${age}`}</p>
         )
       }
-      {isMarried
-        ? (
-          <p className="Person__partner">{`${partnerName} is my ${getStatus(sex)}`}</p>
-        ) : (
-          <p className="Person__partner"> I am not married</p>
-        )
 
-      }
+      <p className="Person__partner">
+        {isMarried
+          ? `${partnerName} is my ${getStatus(sex)}`
+          : 'I am not married'}
+      </p>
     </section>
   );
 };
