@@ -4,10 +4,10 @@ const MALE_GENDER = 'm';
 
 export const Person = (props) => {
   const { name, age, sex, isMarried, partnerName } = props.person;
-  let partner = `I am not married`;
+  let marriageStatusInfo = `I am not married`;
 
   if (isMarried) {
-    partner = sex === MALE_GENDER
+    marriageStatusInfo = sex === MALE_GENDER
       ? `${partnerName} is my wife`
       : `${partnerName} is my husband`;
   }
@@ -17,11 +17,9 @@ export const Person = (props) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
-      {age
-        ? <p className="Person__age">{`I am ${age}`}</p>
-        : null }
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
       <p className="Person__partner">
-        {partner}
+        {marriageStatusInfo}
       </p>
     </section>
   );
