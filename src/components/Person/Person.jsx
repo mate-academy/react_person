@@ -1,3 +1,15 @@
+const whoIsPartner = (sex, isMarried, partnerName) => {
+  if (isMarried && sex === 'm') {
+    return `${partnerName} is my wife`;
+  }
+
+  if (isMarried && sex === 'f') {
+    return `${partnerName} is my husband`;
+  }
+
+  return 'I am not married';
+};
+
 export const Person = ({ person }) => {
   const {
     name,
@@ -6,15 +18,6 @@ export const Person = ({ person }) => {
     isMarried,
     partnerName,
   } = person;
-  let whoIsPartner = '';
-
-  if (isMarried && sex === 'm') {
-    whoIsPartner = `${partnerName} is my wife`;
-  } else if (isMarried && sex === 'f') {
-    whoIsPartner = `${partnerName} is my husband`;
-  } else {
-    whoIsPartner = 'I am not married';
-  }
 
   return (
     <section className="Person">
@@ -28,7 +31,7 @@ export const Person = ({ person }) => {
          )
       }
       <p className="Person__partner">
-        {whoIsPartner}
+        {whoIsPartner(sex, isMarried, partnerName)}
       </p>
     </section>
   );
