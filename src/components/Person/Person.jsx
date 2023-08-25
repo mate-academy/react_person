@@ -8,7 +8,7 @@ export const Person = ({ person }) => {
     age,
     sex,
     isMarried,
-    partnerName
+    partnerName,
   } = person;
   let marriageStatusInfo = `I am not married`;
 
@@ -23,6 +23,7 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">
         {`My name is ${name}`}
       </h2>
+
       {!!age && (
         <p className="Person__age">
           {`I am ${age}`}
