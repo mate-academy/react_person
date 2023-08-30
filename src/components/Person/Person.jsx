@@ -1,3 +1,9 @@
+const printPartner = person => (
+  `${person.partnerName} is my ${person.sex === 'f' ? (
+    'husband') : (
+    'wife')}`
+);
+
 export const Person = ({ person }) => (
   <section className="Person">
     <h2 className="Person__name">
@@ -11,11 +17,9 @@ export const Person = ({ person }) => (
     )}
 
     <p className="Person__partner">
-      {person.isMarried === false ? (
+      {!person.isMarried ? (
         'I am not married') : (
-        `${person.partnerName} is my ${person.sex === 'f' ? (
-          'husband') : (
-          'wife')}`
+        printPartner(person)
       )}
     </p>
   </section>
