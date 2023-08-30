@@ -5,13 +5,11 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
 
-    <p className="Person__age">
-      {person.hasOwnProperty('age') ? (
-        `I am ${person.age}`
-      ) : (
-        null
-      )}
-    </p>
+    {person.age && (
+      <p className="Person__age">
+        {`I am ${person.age}`}
+      </p>
+    )}
 
     <p className="Person__partner">
       {!person.isMarried ? (
