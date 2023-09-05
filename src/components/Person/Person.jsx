@@ -1,6 +1,8 @@
 import './Person.scss';
 
 const FEMALE_SIGN = 'f';
+const MALE_PARTNER = 'husband';
+const FEMALE_PARTNER = 'wife';
 
 const NOT_MARRIED_TEXT = 'I am not married';
 
@@ -8,8 +10,8 @@ export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
   const partnerStatus = sex === FEMALE_SIGN
-    ? 'husband'
-    : 'wife';
+    ? MALE_PARTNER
+    : FEMALE_PARTNER;
   const marriedStatusContent = isMarried
     ? `${partnerName} is my ${partnerStatus}`
     : NOT_MARRIED_TEXT;
@@ -21,7 +23,7 @@ export const Person = ({ person }) => {
       </h2>
 
       {
-        age && (
+        Boolean(age) && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
