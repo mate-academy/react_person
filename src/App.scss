@@ -2,7 +2,7 @@ iframe {
   display: none;
 }
 
-.person {
+.Person {
   width: fit-content;
   margin-bottom: 16px;
   padding: 8px;
@@ -13,9 +13,6 @@ iframe {
     margin-top: 8px;
   }
 
-  &__space {
-    margin-left: 5px;
-  }
   &__age {
     color: #00f;
     font-weight: bold;
