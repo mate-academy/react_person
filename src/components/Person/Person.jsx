@@ -4,24 +4,26 @@ export const Person = ({ person: {
   sex,
   isMarried,
   partnerName,
-} }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      My name is
-      {' '}
-      {name}
-    </h2>
-    {age && (
-      <p className="Person__age">
-        I am
-        {' '}
-        {age}
+} }) => {
+  const notMarried = !isMarried && 'I am not married';
+  const myPartner = 
+    ((sex === 'f' && partnerName) && `${partnerName} is my husband`)
+    || ((sex === 'm' && partnerName) && `${partnerName} is my wife`);
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
+      {age && (
+        <p className="Person__age">
+          {`I am ${age}`}
+        </p>
+      )}
+      <p className="Person__partner">
+        {notMarried}
+        {myPartner}
       </p>
-    )}
-    <p className="Person__partner">
-      {!isMarried && 'I am not married'}
-      {(sex === 'f' && partnerName) && `${partnerName} is my husband`}
-      {(sex === 'm' && partnerName) && `${partnerName} is my wife`}
-    </p>
-  </section>
-);
+    </section>
+  )
+};
