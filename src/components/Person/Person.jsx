@@ -13,9 +13,9 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
     <div className="Person__age">
-      {person.age > 0 && (
+      {person.age > 0 ? (
         `I am ${person.age}`
-      )}
+      ): undefined}
     </div>
     <p className="Person__partner">
       {person.isMarried === true ? (
