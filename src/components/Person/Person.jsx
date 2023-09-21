@@ -1,11 +1,11 @@
 
 const sortSex = (gender) => {
   if (gender === 'm') {
-    return 'wife'
-  } else {
-    return 'husband'
+    return 'wife';
   }
-}
+
+  return 'husband';
+};
 
 export const Person = ({ person }) => (
   <div className="Person">
