@@ -13,16 +13,16 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
     <div className="Person__age">
-      {person.age > 0 ? (
-        `I am ${person.age}`
-      ): undefined}
+      {person.age > 0 
+      
+      ? (`I am ${person.age}`) 
+      
+      : undefined}
     </div>
     <p className="Person__partner">
-      {person.isMarried === true ? (
-        `${person.partnerName} is my ${sortSex(person.sex)}`
-      ) : (
-        'I am a not married'
-      )}
+      {person.isMarried === true
+      ? (`${person.partnerName} is my ${sortSex(person.sex)}`)
+      : ('I am a not married')}
     </p>
   </div>
 );
