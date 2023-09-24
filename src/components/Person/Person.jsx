@@ -12,20 +12,15 @@ export const Person = ({ person }) => (
     <h2 className="Person__name">
       {`My name is ${person.name}`}
     </h2>
-    <div
-      className="Person__age"
-      style={{
-        display: person.age <= 0 ? 'none' : undefined,
-      }}
-    >
-      {person.age > 0
 
-        ? (`I am ${person.age}`)
+    {person.age && (
+      <p className="Person__age">
+        {`I am ${person.age}`}
+      </p>
+    )}
 
-        : undefined}
-    </div>
     <p className="Person__partner">
-      {person.isMarried === true
+      {person.isMarried
         ? (`${person.partnerName} is my ${sortSex(person.sex)}`)
         : ('I am a not married')}
     </p>
