@@ -9,17 +9,13 @@ export const Person = ({ person }) => {
       {age && (
         <p className="Person__age">{`I am ${age}`}</p>
       )}
-      {isMarried && sex === 'm' ? (
-        <p className="Person__partner">
-          {`${partnerName} is my wife`}
-        </p>
+    <p className="Person__partner">
+      {isMarried ? (
+        `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
       ) : (
-        ''
+        'I am not married'
       )}
-      {sex === 'f' && (
-        <p className="Person__partner">{`${partnerName} is my husband`}</p>
-      )}
-      {!isMarried && <p className="Person__partner">I am not married</p>}
+    </p>
     </section>
   );
 };
