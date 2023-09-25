@@ -15,7 +15,7 @@ export function Person({ person }) {
         {`My name is ${name}`}
       </h2>
 
-      {person.age && (
+      {age && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
