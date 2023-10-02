@@ -1,9 +1,15 @@
 export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
+  const {
+    name,
+    age,
+    sex,
+    isMarried,
+    partnerName,
+  } = person;
 
   let marriedMessage = 'I am not married';
 
-  if (isMarried === true) {
+  if (isMarried) {
     marriedMessage = sex === 'f'
       ? `${partnerName} is my husband`
       : `${partnerName} is my wife`;
