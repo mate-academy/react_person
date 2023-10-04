@@ -7,12 +7,8 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
-  function getPartnerSex(personSex) {
-    return personSex === 'f' ? 'husband' : 'wife';
-  }
-
   const marriedStatus = isMarried
-    ? `${partnerName} is my ${getPartnerSex(sex)}`
+    ? `${partnerName} is my ${getPersonSex(sex)}`
     : 'I am not married';
 
   return (
@@ -25,15 +21,13 @@ export const Person = ({ person }) => {
           {`I am ${age}`}
         </p>
       )}
-      {isMarried ? (
-        <p className="Person__partner">
-          {marriedStatus}
-        </p>
-      ) : (
-        <p className="Person__partner">
-          {marriedStatus}
-        </p>
-      )}
+      <p className="Person__partner">
+        {marriedStatus}
+      </p>
     </section>
   );
 };
+
+function getPersonSex(personSex) {
+  return personSex === 'f' ? 'husband' : 'wife';
+}
