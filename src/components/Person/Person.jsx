@@ -1,23 +1,17 @@
 export const Person = ({ person }) => {
-  const { name,
+  const {
+    name,
     age,
     sex,
     isMarried,
-    partnerName } = person;
+    partnerName,
+  } = person;
 
-  const maritalStatus = () => {
-    let status = '';
-
-    if (!isMarried) {
-      status = 'I am not married';
-    } else if (sex === 'f') {
-      status = `${partnerName} is my husband`;
-    } else {
-      status = `${partnerName} is my wife`;
-    }
-
-    return status;
-  };
+  const maritalStatus = () => (
+    sex === 'f'
+      ? `husband`
+      : `wife`
+  );
 
   return (
     <section className="Person">
@@ -30,7 +24,9 @@ export const Person = ({ person }) => {
       </p>
       )}
       <p className="Person__partner">
-        {maritalStatus()}
+        {!isMarried
+          ? 'I am not married'
+          : `${partnerName} is my ${maritalStatus()}`}
       </p>
     </section>
   );
