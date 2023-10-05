@@ -4,15 +4,14 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
     <p>
-      {person.age ? (
+      {person.age && (
         <p className="Person__age">
           {`I am ${person.age}`}
         </p>
-      ) : null}
+      )}
     </p>
     <p className="Person__partner">
-      {person.sex === 'f' ? `${person.partnerName} is my husband` : ''}
-      {person.sex === 'm' ? `${person.partnerName} is my wife` : ''}
+      {`${person.partnerName} is my ${person.sex === 'f' ? 'husband' : 'wife'}`}
       {person.isMarried ? '' : 'I am not married'}
     </p>
   </section>
