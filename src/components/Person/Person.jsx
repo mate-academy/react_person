@@ -1,13 +1,18 @@
-export const Person = (props) => {
+export const Person = ({ person }) => {
   const {
+    partnerName,
+    sex,
     name,
     age,
     isMarried,
-    partnerName,
-    sex,
-  } = props.person;
+  } = person;
 
-  const definePartner = `${partnerName} is my ${sex === 'f' ? 'husband' : 'wife'}`;
+  const definePartner = `
+  ${partnerName} is my
+  ${sex === 'f'
+    ? 'husband'
+    : 'wife'}
+  `;
 
   return (
     <section className="Person">
@@ -15,10 +20,18 @@ export const Person = (props) => {
         {`My name is ${name}`}
       </h2>
 
-      {age && <p className="Person__age">{`I am ${age}`}</p>}
+      {age
+      && (
+      <p className="Person__age">
+        {`I am ${age}`}
+      </p>
+      )}
 
       <p className="Person__partner">
-        {!isMarried ? 'I am not married' : definePartner}
+        {!isMarried
+          ? 'I am not married'
+          : definePartner
+        }
       </p>
     </section>
   );
