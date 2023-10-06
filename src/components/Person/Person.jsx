@@ -1,5 +1,5 @@
 export const Person = ({ person }) => {
-  const textName = `My name ${person.name}`;
+  const textName = `My name is ${person.name}`;
   const textAge = person.age ? `I am ${person.age}` : '';
   let partnerText = '';
 
