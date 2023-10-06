@@ -1,6 +1,4 @@
 export const Person = ({ person }) => {
-  const nameText = `My name is ${person.name}`;
-  const ageText = person.age ? `I am ${person.age}` : null;
   let partnerText = '';
 
   if (person.isMarried === false) {
@@ -13,8 +11,8 @@ export const Person = ({ person }) => {
 
   return (
     <section className="Person">
-      <h2 className="Person__name">{nameText}</h2>
-      <p className="Person__age">{ageText}</p>
+      <h2 className="Person__name">{`My name ${person.name}`}</h2>
+      <p className="Person__age">{person.age ? `I am ${person.age}` : null}</p>
       <p className="Person__partner">{partnerText}</p>
     </section>
   );
