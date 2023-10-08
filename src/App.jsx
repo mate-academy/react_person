@@ -25,7 +25,7 @@ export const alex = {
 };
 
 export const App = () => (
-  <div>
+  <div className="App">
     <Person person={misha} />
     <Person person={olya} />
     <Person person={alex} />
