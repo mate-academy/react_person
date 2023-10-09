@@ -9,6 +9,12 @@ export const Person = ({ person }) => {
     partnerName,
   } = person;
 
+  const partnerSex = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
+  const NOT_MARRIED_MESSAGE = 'I am not married';
+
   return (
     <section className="Person">
       <h2 className="Person__name">
@@ -24,10 +30,8 @@ export const Person = ({ person }) => {
 
       <p className="Person__partner">
         {!isMarried
-          ? 'I am not married'
-          : `${partnerName} is my ${sex === 'm'
-            ? 'wife'
-            : 'husband'}`
+          ? `${NOT_MARRIED_MESSAGE}`
+          : `${partnerName} is my ${partnerSex}`
         }
       </p>
     </section>
