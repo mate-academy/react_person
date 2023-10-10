@@ -9,11 +9,11 @@ export const Person = ({ person }) => (
     )}
 
     <p className="Person__partner">
-      {person.isMarried === false && (
+      {!person.isMarried && (
         'I am not married'
       )}
 
-      {person.isMarried === true && (
+      {person.isMarried && (
         `${person.partnerName} is my ${
           person.sex === 'f' ? 'husband' : 'wife'
         }`
