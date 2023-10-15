@@ -19,7 +19,10 @@ export const Person = ({ person }) => {
         </p>
       )}
 
-      {personPartnerText}
+      <p className="Person__partner">
+        {personPartnerText}
+      </p>
+
     </section>
   );
 };
