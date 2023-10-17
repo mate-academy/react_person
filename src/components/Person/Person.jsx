@@ -1,7 +1,7 @@
 // export const Person = ({ person }) => ();
 
 export const Person = ({ person }) => {
-  const isMarried = person.sex === 'm' ? 'wife' : 'husband';
+  const notAQueerTest = person.sex === 'm' ? 'wife' : 'husband';
 
   return (
     <section className="Person">
@@ -12,14 +12,13 @@ export const Person = ({ person }) => {
       {person.age ? (
         <p className="Person__age">
           {`I am ${person.age}`}
-
         </p>
 
       ) : ''}
 
       <p className="Person__partner">
         {person.isMarried ? (
-          `${person.partnerName} is my ${isMarried}`
+          `${person.partnerName} is my ${notAQueerTest}`
         ) : (
           'I am not married'
         )}
