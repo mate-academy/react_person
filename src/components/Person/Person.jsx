@@ -6,27 +6,31 @@ function getMarriageStatus(person) {
     : `${person.partnerName} is my husband`;
 }
 
-export const Person = ({ person }) => (
-  <>
+export const Person = ({ person }) => {
+  const { name, age, isMarried } = person;
+
+  return (
     <section className="Person">
       <h2 className="Person__name">
-        {`My name is `}
-        {person.name}
+        My name is
+        {' '}
+        {name}
       </h2>
 
-      {person.age && (
+      {age && (
         <p className="Person__age">
-          {`I am `}
-          {person.age}
+          I am
+          {' '}
+          {age}
         </p>
       )}
 
       <p className="Person__partner">
-        {person.isMarried
+        {isMarried
           ? getMarriageStatus(person)
           : 'I am not married'
         }
       </p>
     </section>
-  </>
-);
+  );
+};
