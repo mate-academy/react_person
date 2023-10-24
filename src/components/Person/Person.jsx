@@ -1,17 +1,13 @@
+import React from 'react';
+
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person || {};
 
-  let partnerStatus = '';
+  const isMarriedMessage = isMarried
+    ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
+    : 'I am not married';
 
-  if (isMarried) {
-    if (sex === 'm') {
-      partnerStatus = `${partnerName} is my wife`;
-    } else {
-      partnerStatus = `${partnerName} is my husband`;
-    }
-  } else {
-    partnerStatus = 'I am not married';
-  }
+  const partnerStatus = isMarriedMessage;
 
   return (
     <section className="Person">
