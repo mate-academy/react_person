@@ -10,13 +10,14 @@ export const Person = ({ person }) => {
       </h2>
       {person.age && (
       <p className="Person__age">
-        I am
-        {' '}
-        {person.age}
+        {`I am ${person.age}`}
       </p>
       )}
       <p className="Person__partner">
-        {person.isMarried ? `${person.partnerName} is my ${personsPartner}` : 'I am not married'}
+        {person.isMarried
+          ? `${person.partnerName} is my ${personsPartner}`
+          : 'I am not married'
+        }
       </p>
     </section>
   );
