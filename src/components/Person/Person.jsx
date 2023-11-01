@@ -1,8 +1,7 @@
 export const Person = ({ person }) => {
-  const { isMarried } = person;
+  const { isMarried, partnerName } = person;
   const isFemale = person.sex === 'f';
   const isMale = person.sex === 'm';
-  const { partnerName } = person;
 
   let message;
 
