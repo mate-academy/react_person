@@ -10,15 +10,12 @@ export const Person = ({ person }) => (
     {person.age && <p className="Person__age">{`I am ${person.age}`}</p>}
 
     <p className="Person__partner">
-      {person.sex === 'm' && person.isMarried === true && (
-        `${person.partnerName} is my wife`
+      {person.isMarried && (
+        person.sex === 'm' ? `${person.partnerName} is my wife`
+          : person.sex === 'f' && `${person.partnerName} is my husband`
       )}
 
-      {person.sex === 'f' && person.isMarried === true && (
-        `${person.partnerName} is my husband`
-      )}
-
-      {person.isMarried === false && (
+      {!person.isMarried && (
         'I am not married'
       )}
     </p>
