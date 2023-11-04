@@ -1,8 +1,12 @@
+const PersonIsMarryed = ({ person }) => (
+  person.isMarried ? (`${person.partnerName} is my ${person.sex === 'm' ? 'wife'
+    : 'husband'}`
+  ) : 'I am not married'
+);
+
 const PersonPartner = ({ person }) => (
   <p className="Person__partner">
-    {person.isMarried ? (`${person.partnerName} is my ${person.sex === 'm' ? 'wife'
-      : 'husband'}`
-    ) : 'I am not married'}
+    <PersonIsMarryed person={person} />
   </p>
 );
 
