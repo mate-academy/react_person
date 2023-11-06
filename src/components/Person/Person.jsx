@@ -1,12 +1,18 @@
 export const Person = ({ person }) => {
   let partnerMessage = '';
 
-  if (person.isMarried === false) {
-    partnerMessage = 'I am not married';
-  } else if (person.sex === 'm') {
-    partnerMessage = `${person.partnerName} is my wife`;
-  } else if (person.sex === 'f') {
-    partnerMessage = `${person.partnerName} is my husband`;
+  switch (person.isMarried) {
+    case true:
+      if (person.sex === 'm') {
+        partnerMessage = `${person.partnerName} is my wife`;
+      } else if (person.sex === 'f') {
+        partnerMessage = `${person.partnerName} is my husband`;
+      }
+
+      break;
+
+    default:
+      partnerMessage = 'I am not married';
   }
 
   return (
