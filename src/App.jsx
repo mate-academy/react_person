@@ -3,6 +3,10 @@ import './App.scss';
 import { people } from './components/People/People';
 import { Person } from './components/Person/Person';
 
+export const misha = {
+  name: 'Misha',
+};
+
 export const App = () => (
   <div className="App">
     <Person person={people.misha} />
