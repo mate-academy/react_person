@@ -6,6 +6,7 @@ export const misha = {
   age: 37,
   sex: 'm',
   isMarried: true,
+  
   partnerName: 'Natasha',
 };
 
