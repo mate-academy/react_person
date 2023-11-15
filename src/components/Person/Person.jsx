@@ -5,9 +5,12 @@ export const Person = ({ person: {
   partnerName,
   sex,
 } }) => {
-  const partnerStatusName = sex === 'f'
-    ? 'husband'
-    : 'wife';
+  const FEMALE = 'f';
+  const HUSBAND = 'husband';
+  const WIFE = 'wife';
+  const partnerStatusName = sex === FEMALE
+    ? HUSBAND
+    : WIFE;
 
   return (
     <section className="Person">
