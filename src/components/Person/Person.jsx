@@ -5,11 +5,7 @@ const getPartnerText = (person) => {
     return 'I am not married';
   }
 
-  if (person.sex === 'm') {
-    return `${person.partnerName} is my wife`;
-  }
-
-  return `${person.partnerName} is my husband`;
+  return `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`;
 };
 
 export const Person = ({ person }) => (
@@ -18,11 +14,11 @@ export const Person = ({ person }) => (
       {`My name is ${person.name}`}
     </h2>
 
-    {person.age ? (
+    {person.age && (
       <p className="Person__age">
         {`I am ${person.age}`}
       </p>
-    ) : ''}
+    )}
 
     <p className="Person__partner">
       {getPartnerText(person)}
