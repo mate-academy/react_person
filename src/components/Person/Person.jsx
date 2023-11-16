@@ -1,23 +1,24 @@
 export const GENDER_MALE = 'm';
+export const WIFE = 'wife';
+export const HUSBAND = 'husband';
 
-export const Person = ({ person }) => (
-  <section className="Person">
-    <h2 className="Person__name">{`My name is ${person.name}`}</h2>
+export const Person = ({ person:
+  { name, age, sex, isMarried, partnerName } }) => {
+  let getStatus;
 
-    {person.age && (
-    <p className="Person__age">
-      {`I am ${person.age}`}
-    </p>
-    )}
+  if (isMarried) {
+    getStatus = `${partnerName} is my ${sex === GENDER_MALE ? WIFE : HUSBAND}`;
+  } else {
+    getStatus = 'I am not married';
+  }
 
-    <p className="Person__partner">
-      {person.isMarried
-        ? `${person.partnerName} is my ${person.sex === GENDER_MALE ? (
-          'wife'
-        ) : (
-          'husband'
-        )}`
-        : `I am not married`}
-    </p>
-  </section>
-);
+  return (
+    <section className="Person">
+      <h2 className="Person__name">{`My name is ${name}`}</h2>
+
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
+
+      <p className="Person__partner">{getStatus}</p>
+    </section>
+  );
+};
