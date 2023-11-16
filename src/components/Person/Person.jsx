@@ -1,11 +1,12 @@
 import React from 'react';
 
 const getPartnerText = (person) => {
+  const maleSex = 'm';
   if (!person.isMarried) {
     return 'I am not married';
   }
 
-  return `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`;
+  return `${person.partnerName} is my ${person.sex === maleSex ? 'wife' : 'husband'}`;
 };
 
 export const Person = ({ person }) => (
