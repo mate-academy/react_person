@@ -1,32 +1,27 @@
-export const Person = ({
-  name,
-  age = 0,
-  sex,
-  isMarried,
-  partnerName,
-}) => (
+export const Person = ({ person }) => (
   <>
     <section className="Person">
 
       <h2 className="Person__name">
-        {`My name is ${name}`}
+        {`My name is ${person.name}`}
       </h2>
 
-      <p className="Person__age">
-        {age > 0 && (`I am ${age}`)
-        }
-      </p>
+      { person.age && (
+        <p className="Person__age">
+          {`I am ${person.age}`}
+        </p>
+      )}
 
       <p className="Person__partner">
-        {isMarried && sex === 'm' && (
-          `${partnerName} is my wife`
+        {person.isMarried && person.sex === 'm' && (
+          `${person.partnerName} is my wife`
         )}
 
-        {isMarried && sex === 'f' && (
-          `${partnerName} is my husband`
+        {person.isMarried && person.sex === 'f' && (
+          `${person.partnerName} is my husband`
         )}
 
-        {!isMarried && (
+        {!person.isMarried && (
           `I am not married`
         )}
       </p>
