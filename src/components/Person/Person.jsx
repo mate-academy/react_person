@@ -22,7 +22,7 @@ export const alex = {
 };
 
 function partner(isMarried, sex, partnerName = undefined) {
-  if (isMarried === true) {
+  if (isMarried) {
     const personPartner = sex === 'm' ? 'wife' : 'husband';
 
     return `${partnerName} is my ${personPartner}`;
@@ -32,7 +32,7 @@ function partner(isMarried, sex, partnerName = undefined) {
 }
 
 function years(personAge) {
-  if (personAge !== undefined) {
+  if (personAge) {
     return `I am ${personAge}`;
   }
 
