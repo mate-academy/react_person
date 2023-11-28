@@ -1,4 +1,3 @@
-
 export const Person = ({ person }) => {
   const {
     name,
