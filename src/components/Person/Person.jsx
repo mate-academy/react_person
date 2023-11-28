@@ -7,9 +7,9 @@ export const Person = (props) => {
   if (isMarried) {
     const spouse = sex === 'm' ? 'wife' : 'husband';
 
-    relationship = <p className="Person__partner">{`${partnerName} is my ${spouse}`}</p>;
+    relationship = `${partnerName} is my ${spouse}`;
   } else {
-    relationship = <p className="Person__partner">I am not married</p>;
+    relationship = 'I am not married';
   }
 
   return (
@@ -23,7 +23,7 @@ export const Person = (props) => {
       )
       }
 
-      {relationship}
+      <p className="Person__partner">{relationship}</p>
     </section>
   );
 };
