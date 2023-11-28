@@ -8,6 +8,7 @@ export const Person = ({ person }) => {
     name,
     age,
     partnerName,
+    isMarried,
   } = person;
 
   return (
@@ -23,7 +24,7 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">
-        {person.isMarried
+        {isMarried
           ? `${partnerName} is my ${spouse}`
           : 'I am not married'}
       </p>
