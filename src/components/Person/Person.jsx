@@ -1,20 +1,3 @@
-// export const Person = ({ person }) => ();
-// export const Component = (props) => {
-//   const {
-//    firstProperty,
-//    secondProperty,
-//    thirdProperty
-//  } = props;
-
-//   return (
-//    <>
-//      <h1>{firstProperty}</h1>
-//      <span>{secondPropery}</span>
-//      <p>{thirdProperty}</p>
-//    </>
-//   )
-//  };
-
 export const Person = ({ person }) => {
   const {
     name,
