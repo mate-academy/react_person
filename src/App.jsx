@@ -1,4 +1,5 @@
 import React from 'react';
+import { Person } from './components/Person/Person';
 import './App.scss';
 
 export const misha = {
@@ -41,5 +42,8 @@ export const App = () => (
       <p className="Person__age">I am 25</p>
       <p className="Person__partner">I am not married</p>
     </section>
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
   </div>
 );
