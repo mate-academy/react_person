@@ -10,14 +10,14 @@ export const Person = ({ person }) => {
       <p className="Person__name">
         {`My name is ${name}`}
       </p>
-      {age && (
+      {age !== undefined && (
         <p className="Person__age">
           {`I am ${age}`}
         </p>
       )}
       {isMarried ? (
         <p className="Person__partner">
-          {partner ? `${partnerName} is my ${partner}` : 'I am not married'}
+          {`${partnerName} is my ${partner}`}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
