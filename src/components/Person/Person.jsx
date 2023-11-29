@@ -1,4 +1,4 @@
-export const Person = ({ person }) => (
+const Person = ({ person }) => (
   <>
     <section className="Person">
       <h2 className="Person__name">
@@ -14,3 +14,5 @@ export const Person = ({ person }) => (
     </section>
   </>
 );
+
+export default Person;
