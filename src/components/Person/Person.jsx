@@ -7,7 +7,7 @@ export const Person = ({ person }) => (
       {` `}
       {person.name}
     </h1>
-    {person.age && (
+    {person.age !== undefined && (
     <p className="Person__age">
       I am
       {` `}
