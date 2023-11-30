@@ -1,4 +1,3 @@
-// export const Person = ({ person }) => ();
 import './Person.scss';
 
 export const Person = ({ person }) => {
