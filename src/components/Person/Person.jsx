@@ -1,19 +1,22 @@
-export const Person = ({ person }) => (
+export const Person = function all({ name, age, sex, isMarried, partnerName }) {
   let isMaried = '<p className="Person__partner">I am not married</p>';
 
-  if (person.sex === 'm' && person.isMarried) {
-    isMaried = <p className="Person__partner">{person.partnerName} is my wife</p>
-  }
-  if (person.sex === 'f' && person.isMarried) {
-    isMaried = <p className="Person__partner">{person.partnerName} is my husband</p>
-
+  if (sex === 'm' && isMarried) {
+    isMaried = '<p className="Person__partner">{partnerName} is my wife</p>';
   }
 
-  <>
-    <h2 className="Person__name">My name is {person.name}</h2>
+  if (sex === 'f' && isMarried) {
+    isMaried = '<p className="Person__partner">{partnerName} is my husband</p>';
+  }
 
-    {person.age && <p className="Person__age">I am {person.age}</p>}
-
-    {isMaried}
-  </>
-);
+  return (
+    <>
+      <h2 className="Person__name">
+        My name is
+        {name}
+      </h2>
+      {age && `<p className="Person__age">I am ${age}</p>`}
+      {isMaried}
+    </>
+  );
+};

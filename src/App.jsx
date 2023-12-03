@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Person } from './components/Person/Person';
 
-export const misha = {
+const misha = {
   name: 'Misha',
   age: 37,
   sex: 'm',
@@ -29,5 +29,5 @@ export const App = () => (
     <Person person={misha} />
     <Person person={olya} />
     <Person person={alex} />
-  </div>
+  </div >
 );
