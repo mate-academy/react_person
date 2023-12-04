@@ -4,7 +4,7 @@ export const Person = ({ person }) => {
   return (
     <section className="Person">
       <h2 className="Person__name">{`My name is ${person.name}`}</h2>
-      <p className={`${person.age !== undefined ? 'Person__age' : 'person__age--omit'}`}>
+      <p className={`${person.age !== undefined ? 'Person__age' : 'Person__age--omit'}`}>
         {`I am ${person.age}`}
       </p>
       <p className="Person__partner">
