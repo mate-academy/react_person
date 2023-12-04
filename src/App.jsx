@@ -27,13 +27,13 @@ export const alex = {
 export const App = () => (
   <div className="App">
     <Person
-      person={{ ...misha }}
+      person={misha}
     />
     <Person
-      person={{ ...olya }}
+      person={olya}
     />
     <Person
-      person={{ ...alex }}
+      person={alex}
     />
   </div>
 );
