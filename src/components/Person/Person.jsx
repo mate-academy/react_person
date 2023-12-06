@@ -9,14 +9,6 @@ export function Person({ person }) {
       : marriage = `${person.partnerName} is my husband`;
   }
 
-  if (person.isMarried && person.sex === 'm') {
-    marriage = `${person.partnerName} is my wife`;
-  }
-
-  if (person.isMarried && person.sex === 'f') {
-    marriage = `${person.partnerName} is my husband`;
-  }
-
   return (
     <section className="Person">
       <h2 className="Person__name">My name is {person.name}</h2>
