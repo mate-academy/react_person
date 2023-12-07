@@ -1,4 +1,4 @@
-import './Person.css';
+import './Person.scss';
 
 export const Person = ({ person }) => (
   <>
