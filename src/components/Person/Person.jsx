@@ -2,12 +2,12 @@ import './Person.scss';
 
 export const Person = ({ person }) => {
   let line = '';
-  const wifeOrHusband = person.sex === 'm' ? 'wife' : 'husband';
+  const partner = person.sex === 'm' ? 'wife' : 'husband';
 
   if (!person.isMarried) {
     line = 'I am not married';
   } else {
-    line = `${person.partnerName} is my ${wifeOrHusband}`;
+    line = `${person.partnerName} is my ${partner}`;
   }
 
   return (
