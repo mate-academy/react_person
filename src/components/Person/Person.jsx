@@ -1,9 +1,5 @@
 export const Person = ({ person }) => {
-  let partner = 'wife';
-
-  if (person.sex === 'f') {
-    partner = 'husband';
-  }
+  const partner = (person.sex === 'f') ? 'husband' : 'wife';
 
   return (
     <>
