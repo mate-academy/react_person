@@ -1,37 +1,34 @@
-export const Person = ({ person }) => (
-  <section className="Person">
+export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
+
+  return (
+    <section className="Person">
     <h2 className="Person__name">
-      {`My name is ${person.name}`}
+      My name is {name}
     </h2>
     {person.age && (
     <p className="Person__age">
-      I am
-      {' '}
-      {person.age}
+      I am {age}
     </p>
     )}
 
-    {person.isMarried && person.sex === 'm'
+    {isMarried && sex === 'm'
       && (
       <p className="Person__partner">
-        {person.partnerName}
-        {' '}
-        is my wife
+        {partnerName} is my wife
       </p>
       )
     }
 
-    {person.isMarried && person.sex === 'f'
+    {isMarried && sex === 'f'
       && (
       <p className="Person__partner">
-        {person.partnerName}
-        {' '}
-        is my husband
+        {partnerName} is my husband
       </p>
       )
     }
 
-    {!person.isMarried
+    {!isMarried
       && (
       <p className="Person__partner">
         I am not married
@@ -39,4 +36,5 @@ export const Person = ({ person }) => (
       )
     }
   </section>
-);
+  )
+}
