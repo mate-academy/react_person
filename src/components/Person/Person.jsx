@@ -5,7 +5,7 @@ export const Person = ({ person }) => (
     </h2>
     {person.age && (
       <p className="Person__age">
-        {`My age is ${person.age}`}
+        {`I am ${person.age}`}
       </p>
     )}
 
