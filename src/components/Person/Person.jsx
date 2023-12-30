@@ -16,7 +16,6 @@ export const Person = ({ person }) => {
       )}
 
       <p className="Person__partner">{RELATIONSHIP_STATUS}</p>
-
     </section>
   );
 };
