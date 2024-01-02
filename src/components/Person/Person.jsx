@@ -1,27 +1,32 @@
 import './Person.css';
 
-export const Person = ({ person }) => (
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${person.name}`}
-    </h2>
+export function Person({ person }) {
+  const { name, age, sex, isMarried, partnerName } = person;
+  const isMan = sex === 'm';
 
-    {
-      person.age
-        ? (
-          <p className="Person__age">
-            {person.age && `I am ${person.age}`}
-          </p>
-        )
-        : null
-    }
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${name}`}
+      </h2>
 
-    <p className="Person__partner">
       {
-        person.isMarried
-          ? `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`
-          : 'I am not married'
+        age
+          ? (
+            <p className="Person__age">
+              {age && `I am ${age}`}
+            </p>
+          )
+          : null
       }
-    </p>
-  </section>
-);
+
+      <p className="Person__partner">
+        {
+          isMarried
+            ? `${partnerName} is my ${isMan ? 'wife' : 'husband'}`
+            : 'I am not married'
+        }
+      </p>
+    </section>
+  );
+}
