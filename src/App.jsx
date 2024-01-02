@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.scss';
+import { Person } from './components/Person/Person';
+// import { Misha } from './components/Person/Person';
+// import { Olya } from './components/Person/Person';
+// import { Alex } from './components/Person/Person';
 
 export const misha = {
   name: 'Misha',
@@ -25,21 +29,25 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">Natasha is my wife</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">Maksym is my husband</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person
+      name="Misha"
+      age={37}
+      sex="m"
+      isMarried={true}
+      partnerName="Natasha"
+    />
+    <Person
+      name="Olya"
+      sex="f"
+      isMarried={true}
+      partnerName="Maksym"
+    />
+    <Person
+      name="Alex"
+      age={25}
+      sex="m"
+      isMarried={false}
+    />
+    {/* <Person{ (misha) } /> */}
   </div>
 );
