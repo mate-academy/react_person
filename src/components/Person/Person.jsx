@@ -10,8 +10,7 @@ export const Person = ({ person }) => {
   } = person;
 
   const ageInfo = age && <p className="Person__age">{`I am ${age}`}</p>;
-  const Male = sex === 'm';
-  const partnerSex = Male ? 'wife' : 'husband';
+  const partnerSex = sex === 'm' ? 'wife' : 'husband';
   const marriedStatus = isMarried ? `${partnerName} is my ${partnerSex}` : 'I am not married';
 
   return (
