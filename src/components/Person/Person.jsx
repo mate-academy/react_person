@@ -12,6 +12,5 @@ export const Person = ({ person }) => (
         {person.isMarried ? `${person.sex === 'm' ? `${person.partnerName} is my wife` : `${person.partnerName} is my husband`}` : 'I am not married'}
       </p>
     </section>
-
   </div>
 );
