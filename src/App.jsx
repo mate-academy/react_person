@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Person } from './components/Person/Person';
 
 export const misha = {
   name: 'Misha',
@@ -25,6 +26,10 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
+
     <section className="Person">
       <h2 className="Person__name">My name is Misha</h2>
       <p className="Person__age">I am 37</p>
