@@ -8,8 +8,7 @@ export function Person({ person }) {
   const name = `My name is ${person.name}`;
   const age = person.age && (
     <p className="Person__age">
-      I am
-      {person.age}
+      I am {person.age}
     </p>
   );
 
