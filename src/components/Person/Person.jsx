@@ -1,35 +1,24 @@
 import './Person.scss';
 
-export const Person = ({ person }) => (
+export const Person = ({ person }) => {
+  const personPartnerType = person.sex === 'm' ? 'wife' : 'husband';
+  const personPartner = person.isMarried
+    ? `${person.partnerName} is my ${personPartnerType}`
+    : 'I am not married';
 
-  <section className="Person">
-    <h2 className="Person__name">
-      {`My name is ${person.name}`}
-    </h2>
-    {person.age && (
-      <p className="Person__age">
+  return (
+    <section className="Person">
+      <h2 className="Person__name">
+        {`My name is ${person.name}`}
+      </h2>
+      {person.age && (
+        <p className="Person__age">
           {`I am ${person.age}`}
-      </p>
-    )}
-    <p className="Person__partner">
-      {person.isMarried === true ? (
-        <>
-          {person.sex === 'm' ? (
-            <>
-              {`${person.partnerName} is my wife`}
-            </>
-          ) : (
-            <>
-              {`${person.partnerName} is my husband`}
-            </>
-          )
-          }
-        </>
-      ) : (
-        <>
-          I`m not married
-        </>
+        </p>
       )}
-    </p>
-  </section>
-);
+      <p className="Person__partner">
+        {personPartner}
+      </p>
+    </section>
+  );
+};
