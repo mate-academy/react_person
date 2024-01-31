@@ -21,8 +21,7 @@ export const Person = ({ person }) => {
           {' '}
           is my
           {' '}
-          {sex === 'm' ? 'Wife'.charAt(0).toUpperCase() + 'Wife'.slice(1)
-            : 'Husband'.charAt(0).toUpperCase() + 'Husband'.slice(1)}
+          {sex === 'm' ? 'wife' : 'husband'}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
