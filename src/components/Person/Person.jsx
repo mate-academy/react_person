@@ -1,17 +1,18 @@
 import '../../App.scss';
 
 export const Person = ({ person }) => {
-  const typePartner = person.sex === 'm' ? 'wife' : 'husband';
-  const personPartner = person.isMarried ? `${person.partnerName} is my ${typePartner}` : 'I am not married';
+  const { name, age, sex, isMarried, partnerName } = person;
+  const typePartner = sex === 'm' ? 'wife' : 'husband';
+  const personPartner = isMarried ? `${partnerName} is my ${typePartner}` : 'I am not married';
 
   return (
     <section className="Person">
       <h2 className="Person__name">
-        {`My name is ${person.name}`}
+        {`My name is ${name}`}
       </h2>
 
       {person.age && (
-        <p className="Person__age">{`I am ${person.age}`}</p>
+        <p className="Person__age">{`I am ${age}`}</p>
       )}
 
       <p className="Person__partner">
@@ -20,5 +21,3 @@ export const Person = ({ person }) => {
     </section>
   );
 };
-
-export default Person;
