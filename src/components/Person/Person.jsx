@@ -1,14 +1,20 @@
-export const Person = ({person}) => (
-  <section className="Person">
-    <h2 className="Person__name">{`My name is ${person.name}`}</h2>
-    <p className="Person__age">{person.name ? `I am ${person.age}` : null}</p>
-    <p className="Person__partner">
-      {person.isMarried ? (
-        `${person.partnerName} is my
+import React from 'react';
 
-        ${person.sex === 'f' ? 'husband' : 'wife'}`)
+export const Person = ({ person }) => {
+  const personPartnerType = person.sex === 'm' ? 'wife' : 'husband';
+  const personPartner = person.isMarried
+    ? `${person.partnerName} is my ${personPartnerType}`
+    : 'I am not married';
 
-        : 'I am not married'}
-    </p>
-  </section>
-);
+  return (
+    <section className="Person">
+      <h2 className="Person__name">{`My name is ${person.name}`}</h2>
+      {person.age
+        ? <p className="Person__age">{`I am ${person.age}`}</p>
+        : null}
+      <p className="Person__partner">
+        {personPartner}
+      </p>
+    </section>
+  );
+};
