@@ -8,8 +8,6 @@ export function Person({ person }) {
 
       {age && <p className="Person__age">I am {age}</p>}
 
-      {/* <p className="Person__age">{age && `I am ${age}`}</p> */}
-
       <p className="Person__partner">
         {isMarried ? `${partnerName} is my ${partner}` : `I am not married`}
       </p>
