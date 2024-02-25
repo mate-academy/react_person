@@ -1,16 +1,7 @@
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
   const isMale = sex === 'm';
-  const isMarriedMale = isMale && isMarried;
-  const isMarriedFemale = !isMale && isMarried;
-
-  let partnerTitle;
-
-  if (isMarriedMale || isMarriedFemale) {
-    partnerTitle = isMale ? 'wife' : 'husband';
-  } else {
-    partnerTitle = 'not married';
-  }
+  const partnerTitle = isMale ? 'wife' : 'husband';
 
   return (
     <section className="Person">
