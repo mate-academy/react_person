@@ -5,8 +5,7 @@ export const Person = ({ person }) => (
       {
         person.isMarried &&
         <p className="Person__partner">
-          {person.partnerName}
-            is my {person.sex === 'f' ? 'husband' : 'wife'}
+          {person.partnerName} is my {person.sex === 'f' ? 'husband' : 'wife'}
           </p>}
     </section>
 );
