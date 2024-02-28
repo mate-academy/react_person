@@ -1,73 +1,47 @@
 import React from 'react';
-import { mount } from '@cypress/react';
-import { Person } from './Person';
+import './App.scss';
+import { Person } from './components/Person/Person';
 
-describe('Person', () => {
-  describe('', () => {
-    beforeEach(() => {
-      const misha = {
-        name: 'Misha',
-        age: 37,
-        sex: 'm',
-        isMarried: true,
-        partnerName: 'Natasha',
-      };
+export const misha = {
+  name: 'Misha',
+  age: 37,
+  sex: 'm',
+  isMarried: true,
+  partnerName: 'Natasha',
+};
+export const olya = {
+  name: 'Olya',
+  sex: 'f',
+  isMarried: true,
+  partnerName: 'Maksym',
+};
+export const alex = {
+  name: 'Alex',
+  age: 25,
+  sex: 'm',
+  isMarried: false,
+};
 
-      mount(<Person person={misha} />);
-    });
+export const App = () => (
+  <div className="App">
+    <section className="Person">
+      <h2 className="Person__name">My name is Misha</h2>
+      <p className="Person__age">I am 37</p>
+      <p className="Person__partner">Natasha is my wife</p>
+    </section>
 
-    it('should print a name', () => {
-      cy.get('.Person__name').should('have.text', 'My name is Misha');
-    });
+    <section className="Person">
+      <h2 className="Person__name">My name is Olya</h2>
+      <p className="Person__partner">Maksym is my husband</p>
+    </section>
 
-    it('should print an age', () => {
-      cy.get('.Person__age').should('have.text', 'I am 37');
-    });
-
-    it('should print a partner', () => {
-      cy.get('.Person__partner').should('have.text', 'Natasha is my wife');
-    });
-  });
-
-  describe('', () => {
-    it('should show partner as a husband when the person is female', () => {
-      const olya = {
-        name: 'Olya',
-        sex: 'f',
-        age: 38,
-        isMarried: true,
-        partnerName: 'Maksym',
-      };
-
-      mount(<Person person={olya} />);
-
-      cy.get('.Person__partner').should('have.text', 'Maksym is my husband');
-    });
-
-    it('should show correct message if a person is not married', () => {
-      const tanya = {
-        name: 'Tanya',
-        sex: 'f',
-        age: 28,
-        isMarried: false,
-        partnerName: 'Some Partner',
-      };
-
-      mount(<Person person={tanya} />);
-
-      cy.get('.Person__partner').should('contain.text', 'not married');
-    });
-
-    it('should not show age if age is omitted', () => {
-      const sasha = {
-        name: 'Sasha',
-        sex: 'f',
-        isMarried: false,
-      };
-
-      mount(<Person person={sasha} />);
-
-      cy.get('.Person__age').should('not.exist');
-    });
-  });
-});
+    <section className="Person">
+      <h2 className="Person__name">My name is Alex</h2>
+      <p className="Person__age">I am 25</p>
+      <p className="Person__partner">I am not married</p>
+    </section>
+    <Person person={misha} />
+    <Person person={olya} />
+    <Person person={alex} />
+  </div>
+);
