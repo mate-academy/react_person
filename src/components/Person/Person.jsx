@@ -7,7 +7,7 @@ export const Person = ({ person }) => {
     } else {
       partnerInfo = `${person.partnerName} is my husband`;
     }
-
+  } else {
     partnerInfo = 'I am not married';
   }
 
