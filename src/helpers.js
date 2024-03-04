@@ -1,4 +1,4 @@
-export const people = {
+export const People = {
   misha: {
     name: 'Misha',
     age: 37,

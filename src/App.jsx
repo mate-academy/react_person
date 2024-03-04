@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.scss';
-import { Person, people } from './components/Person';
+import { Person } from './components/Person';
+import { People } from './helpers';
 
 export const App = () => (
   <div className="App">
-    <Person person={people.misha} />
-    <Person person={people.olya} />
-    <Person person={people.alex} />
+    <Person person={People.misha} />
+    <Person person={People.olya} />
+    <Person person={People.alex} />
   </div>
 );
