@@ -2,10 +2,10 @@
 import './Person.scss';
 
 export const Person = ({ person }) => (
-  <section className="person">
-    <h2 className="person__name">My name is {person.name}</h2>
-    {person.age && <p className="person__age">I am {person.age}</p>}
-    <p className="person__partner">
+  <section className="Person">
+    <h2 className="Person__name">My name is {person.name}</h2>
+    {person.age && <p className="Person__age">I am {person.age}</p>}
+    <p className="Person__partner">
       {person.isMarried
         ? person.sex === 'f'
           ? `${person.partnerName} is my husband`
