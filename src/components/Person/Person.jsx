@@ -1,3 +1,5 @@
+import './Person.scss';
+
 export const Person = ({ person }) => {
   let partnerMessage;
 
