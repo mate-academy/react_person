@@ -1,4 +1,4 @@
-const people = {
+export const people = {
   misha: {
     name: 'Misha',
     age: 37,
@@ -19,5 +19,3 @@ const people = {
     isMarried: false,
   },
 };
-
-export { people };

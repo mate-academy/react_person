@@ -1,20 +1,8 @@
+import { getPartnerInfo } from './helperFunctions';
+
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
-  let partner;
-
-  if (isMarried) {
-    if (sex === 'm') {
-      const partnerType = 'wife';
-
-      partner = `${partnerName} is my ${partnerType}`;
-    } else {
-      const partnerType = 'husband';
-
-      partner = `${partnerName} is my ${partnerType}`;
-    }
-  } else {
-    partner = 'I am not married';
-  }
+  const partner = getPartnerInfo(isMarried, sex, partnerName);
 
   return (
     <section className="Person">

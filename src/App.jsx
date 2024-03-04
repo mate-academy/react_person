@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Person } from './components/Person/Person';
-import { people } from './components/People/People';
+import { Person, people } from './components/Person';
 
 export const App = () => (
   <div className="App">
