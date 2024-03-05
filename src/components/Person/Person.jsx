@@ -1,9 +1,7 @@
 import './Person.scss';
 
-const IsMarriedParagraph = (sex, partnerName) => {
-  return sex === 'f'
-    ? `${partnerName} is my husband`
-    : `${partnerName} is my wife`;
+const getMarriedInfo = (sex, partnerName) => {
+  return `${partnerName} is my ${sex === 'f' ? 'husband' : 'wife'}`;
 };
 
 export const Person = ({ person }) => {
@@ -14,7 +12,7 @@ export const Person = ({ person }) => {
       <h2 className="Person__name">My name is {name}</h2>
       {age && <p className="Person__age">I am {age}</p>}
       <p className="Person__partner">
-        {isMarried ? IsMarriedParagraph(sex, partnerName) : 'I am not married'}
+        {isMarried ? getMarriedInfo(sex, partnerName) : 'I am not married'}
       </p>
     </section>
   );

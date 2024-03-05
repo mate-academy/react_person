@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.scss';
+
 import { Person } from './components/Person/Person';
+
+import './App.scss';
 
 export const misha = {
   name: 'Misha',
