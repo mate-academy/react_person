@@ -4,10 +4,7 @@ export const Person = ({ person }) => {
   if (person.isMarried) {
     const relationship = person.sex === 'm' ? 'wife' : 'husband';
 
-    partnerMessage =
-      person.sex === 'm'
-        ? `${person.partnerName} is my ${relationship}`
-        : `${person.partnerName} is my ${relationship}`;
+    partnerMessage = `${person.partnerName} is my ${relationship}`;
   }
 
   return (

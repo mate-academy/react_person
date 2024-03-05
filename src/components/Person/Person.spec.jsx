@@ -70,5 +70,4 @@ describe('Person', () => {
       cy.get('.Person__age').should('not.exist');
     });
   });
-  // eslint-disable-next-line prettier/prettier
 });
