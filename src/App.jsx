@@ -30,5 +30,4 @@ export const App = () => (
     <Person person={olya} />
     <Person person={alex} />
   </div>
-  // eslint-disable-next-line prettier/prettier
 );
