@@ -1,5 +1,9 @@
 export const Person = ({ person }) => {
   const partner = person.sex === 'm' ? 'wife' : 'husband';
+  const married =
+    person.isMarried === true
+      ? `${person.partnerName} is my ${partner}`
+      : 'I am not married';
 
   return (
     <section className="Person">
@@ -9,11 +13,7 @@ export const Person = ({ person }) => {
       ) : (
         ''
       )}
-      {person.isMarried === true ? (
-        <p className="Person__partner">{`${person.partnerName} is my ${partner}`}</p>
-      ) : (
-        'I am not married'
-      )}
+      <p className="Person__partner">{married}</p>
     </section>
   );
 };
