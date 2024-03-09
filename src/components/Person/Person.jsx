@@ -10,7 +10,7 @@ export const Person = ({ person }) => {
         <h2 className="Person__name">{`My name is ${person.name}`}</h2>
 
         {person.age && person.age !== 0 && (
-          <p className="Person__Age">{`I am ${person.age}`}</p>
+          <p className="Person__age">{`I am ${person.age}`}</p>
         )}
 
         <p className="Person__partner">
