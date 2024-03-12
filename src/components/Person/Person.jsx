@@ -1,7 +1,7 @@
 export const Person = ({ person }) => {
   const personPartnerType = person.sex === 'm' ? 'wife' : 'husband';
   const personPartner = person.isMarried
-    ? `${person.name} is my ${personPartnerType}`
+    ? `${person.partnerName} is my ${personPartnerType}`
     : 'I am not married';
 
   return (
