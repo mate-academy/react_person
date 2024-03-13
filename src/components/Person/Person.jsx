@@ -5,7 +5,12 @@ export const Person = ({ person }) => (
     {person.sex === 'm' && person.isMarried === true ? (
       <p className="Person__patner">{person.partnerName} is my wife</p>
     ) : (
+      ''
+    )}
+    {person.sex === 'f' && person.isMarried === true ? (
       <p className="Person__patner">{person.partnerName} is my husband</p>
+    ) : (
+      ''
     )}
     {person.isMarried === false ? (
       <p className="Person__patner">I am not married</p>
