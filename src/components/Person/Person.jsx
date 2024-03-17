@@ -3,12 +3,10 @@ export const Person = ({ person }) => {
   const marriedText = isMarried
     ? `${partnerName} is my ${sex === 'f' ? 'husband' : 'wife'}`
     : 'I am not married';
-
-  const ageText = age && `I am ${age}`;
   return (
     <section className="Person">
       <h2 className="Person__name">My name is {name}</h2>
-      <p className="Person__age">{ageText}</p>
+      {age && <p className="Person__age">I am {age}</p>}
       <p className="Person__partner">{marriedText}</p>
     </section>
   );
