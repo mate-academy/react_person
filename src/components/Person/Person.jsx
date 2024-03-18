@@ -3,10 +3,10 @@ export const Person = ({ person }) => {
   let textMarried;
 
   if (isMarried) {
-    if (sex === 'f') {
-      textMarried = `My husband is ${partnerName}`;
-    } else if (sex === 'm') {
+    if (sex === 'm') {
       textMarried = `My wife is ${partnerName}`;
+    } else if (sex === 'm') {
+      textMarried = `My husband is ${partnerName}`;
     } else {
       textMarried = `My partner is ${partnerName}`;
     }
