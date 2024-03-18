@@ -7,6 +7,8 @@ export const Person = ({ person }) => {
       textMarried = `My husband is ${partnerName}`;
     } else if (sex === 'm') {
       textMarried = `My wife is ${partnerName}`;
+    } else {
+      textMarried = `My partner is ${partnerName}`;
     }
   } else {
     textMarried = `I am not married`;
