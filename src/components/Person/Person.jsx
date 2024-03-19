@@ -1,4 +1,5 @@
 import React from 'react';
+import './Person.scss';
 
 export function Person({ person }) {
   const gender = person.sex === 'f' ? 'husband' : 'wife';
