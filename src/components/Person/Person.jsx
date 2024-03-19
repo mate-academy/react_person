@@ -9,11 +9,9 @@ const partnerStatus = sex === 'm' ? 'wife' : 'husband';
 
       {isMarried ? (
         <p className="Person__partner">
-          {partnerName} is my {sex === 'm' ? 'wife' : 'husband'}
+          {isMarried ? `${partnerName} is my ${partnerStatus}` : 'I am not married'} 
         </p>
-      ) : (
-        <p className="Person__partner">I am not married</p>
-      )}
+      }
     </section>
   );
 };
