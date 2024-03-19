@@ -1,0 +1,18 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1710860368034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1710860368034,
+            "name": "Commit-0",
+            "content": "# React person\n\nImplement a `Person` component rendering a person details using the given markup\nand use it 3 times inside the `App` instead of static markup.\n\n- pass the whole person as a prop `<Person person={misha} />` (**not** individual fields);\n- omit `age` if it is not given;\n- if a man is married use `wife` for a partner and `husband` if a woman is married;\n- if a person is not marriend - print `I am not married` message;\n- keep the same classNames in `Person.jsx` as in `App.jsx` (`Person`, `Person__name`, `Person__age`, `Person__partner`).\n\n## Instructions\n- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.\n- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).\n- Open one more terminal and run tests with `npm test` to ensure your solution is correct.\n- Replace `<your_account>` with your Github username in the [DEMO LINK](https://weswojciech.github.io/react_person/) and add it to the PR description.\n"
+        }
+    ]
+}
