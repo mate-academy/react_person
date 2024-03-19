@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1710781933026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710781949207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,13 +24,7 @@\n };\n \n export const App = () => (\n   <div className=\"App\">\n-    <section className=\"Person\">\n-      <h2 className=\"Person__name\">My name is Misha</h2>\n-      <p className=\"Person__age\">I am 37</p>\n-      <p className=\"Person__partner\">Natasha is my wife</p>\n-    </section>\n-\n-  \n+    \n   </div>\n );\n"
+                },
+                {
+                    "date": 1710781956934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710781976842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710781983118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person = {misha};\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710781988901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person = {misha} />>\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710781998090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person={misha} />\n+    <Person person={misha} />\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710782005630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React from 'react';\n+import './App.scss';\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person={misha} />\n+    <Person person={olya} />\n+    <Person person={misha} />\n+  </div>\n+);\n"
+                },
+                {
+                    "date": 1710783387503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\n import './App.scss';\n \n+\n export const misha = {\n   name: 'Misha',\n   age: 37,\n   sex: 'm',\n@@ -26,188 +27,7 @@\n export const App = () => (\n   <div className=\"App\">\n     <Person person={misha} />\n     <Person person={olya} />\n-    <Person person={misha} />\n+    <Person person={alex} />\n   </div>\n );\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    <Person person={misha} />\n-    <Person person={misha} />\n-  </div>\n-);\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    <Person person = {misha} />>\n-  </div>\n-);\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    <Person person = {misha};\n-  </div>\n-);\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    <Person person\n-  </div>\n-);\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    <Person\n-  </div>\n-);\n-import React from 'react';\n-import './App.scss';\n-\n-export const misha = {\n-  name: 'Misha',\n-  age: 37,\n-  sex: 'm',\n-  isMarried: true,\n-  partnerName: 'Natasha',\n-};\n-\n-export const olya = {\n-  name: 'Olya',\n-  sex: 'f',\n-  isMarried: true,\n-  partnerName: 'Maksym',\n-};\n-\n-export const alex = {\n-  name: 'Alex',\n-  age: 25,\n-  sex: 'm',\n-  isMarried: false,\n-};\n-\n-export const App = () => (\n-  <div className=\"App\">\n-    \n-  </div>\n-);\n"
+                },
+                {
+                    "date": 1710783394522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import React from 'react';\n+import './App.scss';\n+import { Perso}\n+\n+export const misha = {\n+  name: 'Misha',\n+  age: 37,\n+  sex: 'm',\n+  isMarried: true,\n+  partnerName: 'Natasha',\n+};\n+\n+export const olya = {\n+  name: 'Olya',\n+  sex: 'f',\n+  isMarried: true,\n+  partnerName: 'Maksym',\n+};\n+\n+export const alex = {\n+  name: 'Alex',\n+  age: 25,\n+  sex: 'm',\n+  isMarried: false,\n+};\n+\n+export const App = () => (\n+  <div className=\"App\">\n+    <Person person={misha} />\n+    <Person person={olya} />\n+    <Person person={alex} />\n+  </div>\n+);\n"
+                }
+            ],
+            "date": 1710781933026,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport './App.scss';\n\nexport const misha = {\n  name: 'Misha',\n  age: 37,\n  sex: 'm',\n  isMarried: true,\n  partnerName: 'Natasha',\n};\n\nexport const olya = {\n  name: 'Olya',\n  sex: 'f',\n  isMarried: true,\n  partnerName: 'Maksym',\n};\n\nexport const alex = {\n  name: 'Alex',\n  age: 25,\n  sex: 'm',\n  isMarried: false,\n};\n\nexport const App = () => (\n  <div className=\"App\">\n    <section className=\"Person\">\n      <h2 className=\"Person__name\">My name is Misha</h2>\n      <p className=\"Person__age\">I am 37</p>\n      <p className=\"Person__partner\">Natasha is my wife</p>\n    </section>\n\n  \n  </div>\n);\n"
+        }
+    ]
+}
