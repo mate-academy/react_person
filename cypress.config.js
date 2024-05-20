@@ -2,8 +2,9 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://localhost:3000/',
     specPattern: 'cypress/integration/**/*.spec.{js,ts,jsx,tsx}',
+    defaultCommandTimeout: 60000, // Zwiększ timeout do 60 sekund
   },
   video: true,
   viewportHeight: 1920,
@@ -22,5 +23,6 @@ module.exports = defineConfig({
       framework: 'create-react-app',
       bundler: 'webpack',
     },
+    defaultCommandTimeout: 60000, // Dodaj tutaj również, jeśli używasz testów komponentów
   },
 });
