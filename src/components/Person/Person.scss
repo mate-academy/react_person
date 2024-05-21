@@ -1,0 +1,15 @@
+.Person {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .Person__name {
+    font-weight: bold;
+  }
+  
+  .Person__age,
+  .Person__partner {
+    margin: 5px 0;
+  }
+  
