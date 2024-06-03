@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Person = ({ person }) => {
   const partnerMessage = person.isMarried
     ? `${person.partnerName} is my ${person.sex === 'f' ? 'husband' : 'wife'}`
