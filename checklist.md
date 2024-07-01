@@ -26,15 +26,15 @@ export const Component = ({
 );
 ```
 
-ALSO GOOD EXAMPLE: 
+ALSO GOOD EXAMPLE:
 
 ```jsx
 export const Component = (props) => {
  const {
-  firstProperty,
+  name,
   secondProperty,
   thirdProperty
-} = props; 
+} = props;
 
  return (
   <>
@@ -54,8 +54,8 @@ const value = condition ? firstValue : secondValue;
 
 GOOD EXAMPLE:
 ```jsx
-const value = condition 
-  ? firstValue 
+const value = condition
+  ? firstValue
   : secondValue;
 ```
 
@@ -64,7 +64,7 @@ const value = condition
 
 BAD EXAMPLE:
 ```jsx
-{listEnabled && list.length && smthElse > 0 
+{listEnabled && list.length && smthElse > 0
   ? <ComponentOne />
   : <ComponentTwo />}
 ```

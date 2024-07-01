@@ -4,7 +4,7 @@ describe('Page', () => {
   beforeEach(() => {
     cy.visit('/');
   });
-
+  
   it('should have 3 people', () => {
     cy.get('.Person').should('have.length', 3);
   });
