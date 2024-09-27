@@ -10,7 +10,7 @@ export const misha = {
 };
 
 export const olya = {
-  name: 'Olya',
+  name: 'Olyas',
   sex: 'f',
   isMarried: true,
   partnerName: 'Maksym',
