@@ -1,16 +1,30 @@
-# React person
+# Person
 
-Implement a `Person` component rendering a person details using the given markup
-and use it 3 times inside the `App` instead of static markup.
+## 🎮 About the Project
+A React component called `Person` that dynamically renders a person's details using the provided markup.  
+The component displays key information such as name, age, and other details passed as props.
 
-- pass the whole person as a prop `<Person person={misha} />` (**not** individual fields);
-- omit `age` if it is not given;
-- if a man is married use `wife` for a partner and `husband` if a woman is married;
-- if a person is not marriend - print `I am not married` message;
-- keep the same classNames in `Person.jsx` as in `App.jsx` (`Person`, `Person__name`, `Person__age`, `Person__partner`).
+## 🚀 Tech Stack
+- **HTML** (BEM methodology for structured markup)
+- **CSS** (Bulma for styling)
+- **JavaScript** (Dynamic logic)
+- **React** (Component-based architecture)
+- **ReactDOM** (Efficient rendering)
 
-## Instructions
-- Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_person/) and add it to the PR description.
+## 🛠️ Tools & Dependencies
+- **ESLint** – Ensuring code quality  
+- **Prettier** – Code formatting for readability  
+- **Cypress** – End-to-end testing  
+- **Mochawesome** – Test reporting  
+- **Babel** – JavaScript compiler for modern syntax  
+
+## 📌 Features
+✅ Displays a person's details dynamically using props  
+✅ Clean and modular React component  
+✅ Follows best practices for JSX and component-based development  
+
+## 🌐 Demo
+🔗 [Live Demo](https://AndriiZakharenko.github.io/person/)
+
+## 📜 License
+This project is forked from 💻 [Mate Academy](https://github.com/mate-academy/react_person)
