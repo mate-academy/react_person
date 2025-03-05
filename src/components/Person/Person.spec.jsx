@@ -1,13 +1,13 @@
 import { mount } from '@cypress/react18';
-import { Person } from './Person';
+import Person from './Person';
 
 describe('Person', () => {
-  describe('', () => {
+  describe('when person is male', () => {
     beforeEach(() => {
       const misha = {
         name: 'Misha',
         age: 37,
-        sex: 'm',
+        gender: 'male',
         isMarried: true,
         partnerName: 'Natasha',
       };
@@ -16,23 +16,23 @@ describe('Person', () => {
     });
 
     it('should print a name', () => {
-      cy.get('.Person__name').should('have.text', 'My name is Misha');
+      cy.get('.Person__name').should('have.text', 'Misha');
     });
 
     it('should print an age', () => {
-      cy.get('.Person__age').should('have.text', 'I am 37');
+      cy.get('.Person__age').should('have.text', 'Age: 37');
     });
 
     it('should print a partner', () => {
-      cy.get('.Person__partner').should('have.text', 'Natasha is my wife');
+      cy.get('.Person__partner').should('have.text', 'Wife: Natasha');
     });
   });
 
-  describe('', () => {
+  describe('when person is female', () => {
     it('should show partner as a husband when the person is female', () => {
       const olya = {
         name: 'Olya',
-        sex: 'f',
+        gender: 'female',
         age: 38,
         isMarried: true,
         partnerName: 'Maksym',
@@ -40,27 +40,26 @@ describe('Person', () => {
 
       mount(<Person person={olya} />);
 
-      cy.get('.Person__partner').should('have.text', 'Maksym is my husband');
+      cy.get('.Person__partner').should('have.text', 'Husband: Maksym');
     });
 
     it('should show correct message if a person is not married', () => {
       const tanya = {
         name: 'Tanya',
-        sex: 'f',
+        gender: 'female',
         age: 28,
         isMarried: false,
-        partnerName: 'Some Partner',
       };
 
       mount(<Person person={tanya} />);
 
-      cy.get('.Person__partner').should('contain.text', 'not married');
+      cy.get('.Person__partner').should('have.text', 'I am not married');
     });
 
     it('should not show age if age is omitted', () => {
       const sasha = {
         name: 'Sasha',
-        sex: 'f',
+        gender: 'female',
         isMarried: false,
       };
 
