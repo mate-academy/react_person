@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 
 export const Person = ({ person }) => (
-  <div className="App">
+  <div>
     <section className="Person">
       <h2 className="Person__name">My name is {person.name}</h2>
       {person.age !== undefined && (
