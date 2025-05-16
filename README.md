@@ -9,10 +9,10 @@ and use it 3 times inside the `App` instead of static markup.
 - If a person is not married, display the message "I am not married";
 - Ensure that the class names in `Person.jsx` match those used in `App.jsx` (`Person`, `Person__name`, `Person__age`, `Person__partner`).
 
-**Important:** The constants `misha`, `olya`, and `alex` are valid and should not be modified. Property `age` is optional.
+**Important:** The constants `misha`, `olya`, and `alex` are valid and should not (!) be modified. Property `age` is optional.
 
 ## Instructions
 - Install Prettier Extension and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_person/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://yuliia-fil.github.io/react_person/) and add it to the PR description.
