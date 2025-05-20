@@ -1,5 +1,5 @@
 import { mount } from '@cypress/react18';
-import { Person } from './Person';
+import Person from './Person';
 
 describe('Person', () => {
   describe('', () => {
@@ -7,7 +7,7 @@ describe('Person', () => {
       const misha = {
         name: 'Misha',
         age: 37,
-        sex: 'm',
+        sex: 'M',
         isMarried: true,
         partnerName: 'Natasha',
       };
@@ -32,7 +32,7 @@ describe('Person', () => {
     it('should show partner as a husband when the person is female', () => {
       const olya = {
         name: 'Olya',
-        sex: 'f',
+        sex: 'F',
         age: 38,
         isMarried: true,
         partnerName: 'Maksym',
@@ -46,7 +46,7 @@ describe('Person', () => {
     it('should show correct message if a person is not married', () => {
       const tanya = {
         name: 'Tanya',
-        sex: 'f',
+        sex: 'F',
         age: 28,
         isMarried: false,
         partnerName: 'Some Partner',
@@ -60,7 +60,7 @@ describe('Person', () => {
     it('should not show age if age is omitted', () => {
       const sasha = {
         name: 'Sasha',
-        sex: 'f',
+        sex: 'F',
         isMarried: false,
       };
 
