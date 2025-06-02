@@ -33,19 +33,7 @@ export const App = () => (
       sex="m"
       partnerName="Natasha"
     />
-    <Person
-      person={olya}
-      name="Olya"
-      age={null}
-      sex="f"
-      partnerName="Maksym"
-    />
-    <Person
-      person={alex}
-      name="Alex"
-      age={25}
-      sex="m"
-      partnerName=""
-    />
+    <Person person={olya} name="Olya" age={null} sex="f" partnerName="Maksym" />
+    <Person person={alex} name="Alex" age={25} sex="m" partnerName="" />
   </div>
 );
