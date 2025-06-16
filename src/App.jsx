@@ -1,45 +1,35 @@
 import React from 'react';
 import './App.scss';
+import { Person } from './components/Person/Person';
 
-export const misha = {
+const misha = {
   name: 'Misha',
-  age: 37,
-  sex: 'm',
-  isMarried: true,
-  partnerName: 'Natasha',
-};
-
-export const olya = {
-  name: 'Olya',
-  sex: 'f',
-  isMarried: true,
-  partnerName: 'Maksym',
-};
-
-export const alex = {
-  name: 'Alex',
   age: 25,
-  sex: 'm',
-  isMarried: false,
+  sex: 'male',
+  married: true,
+  partner: 'Anna',
 };
 
-export const App = () => (
-  <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">Natasha is my wife</p>
-    </section>
+const anna = {
+  name: 'Anna',
+  sex: 'female',
+  married: true,
+  partner: 'Misha',
+};
 
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">Maksym is my husband</p>
-    </section>
+const kate = {
+  name: 'Kate',
+  age: 30,
+  sex: 'female',
+  married: false,
+};
 
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
-  </div>
-);
+export function App() {
+  return (
+    <div>
+      <Person person={misha} />
+      <Person person={anna} />
+      <Person person={kate} />
+    </div>
+  );
+}
