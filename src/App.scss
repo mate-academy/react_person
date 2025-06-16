@@ -1,20 +1,17 @@
-iframe {
-  display: none;
-}
-
 .Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
   border-radius: 8px;
+  background-color: #f9f9f9;
 
   &__name {
-    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
-  &__age {
-    color: #00f;
-    font-weight: bold;
+  &__age,
+  &__partner {
+    margin: 0.5rem 0;
   }
 }
