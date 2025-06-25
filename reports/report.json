@@ -1,0 +1,316 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-14T14:06:23.363Z",
+    "end": "2023-07-14T14:06:42.092Z",
+    "duration": 1129,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ec73fd4d-cd1d-466b-b6c9-db5c0f86bc48",
+      "title": "",
+      "fullFile": "src/components/Person/Person.spec.jsx",
+      "file": "src/components/Person/Person.spec.jsx",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f009d65-66e7-47dd-afbe-47bee303536c",
+          "title": "Person",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5b56ffdd-2b63-4c5f-a114-5a84f286cb23",
+              "title": "",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should print a name",
+                  "fullTitle": "Person  should print a name",
+                  "timedOut": null,
+                  "duration": 121,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Person__name').should('have.text', 'My name is Misha');",
+                  "err": {},
+                  "uuid": "2c8b66c5-5cd8-42ab-ac9d-3c67eb2cb693",
+                  "parentUUID": "5b56ffdd-2b63-4c5f-a114-5a84f286cb23",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should print an age",
+                  "fullTitle": "Person  should print an age",
+                  "timedOut": null,
+                  "duration": 96,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Person__age').should('have.text', 'I am 37');",
+                  "err": {},
+                  "uuid": "0cc2ecfc-4a4b-46b5-a406-25803ecee63f",
+                  "parentUUID": "5b56ffdd-2b63-4c5f-a114-5a84f286cb23",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should print a partner",
+                  "fullTitle": "Person  should print a partner",
+                  "timedOut": null,
+                  "duration": 60,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Person__partner').should('have.text', 'Natasha is my wife');",
+                  "err": {},
+                  "uuid": "8bf1a671-6c54-4303-938b-35c1a5f05139",
+                  "parentUUID": "5b56ffdd-2b63-4c5f-a114-5a84f286cb23",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2c8b66c5-5cd8-42ab-ac9d-3c67eb2cb693",
+                "0cc2ecfc-4a4b-46b5-a406-25803ecee63f",
+                "8bf1a671-6c54-4303-938b-35c1a5f05139"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 277,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "4c119aa4-128a-4db3-bc2e-a4d9afd662b8",
+              "title": "",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should show partner as a husband when the person is female",
+                  "fullTitle": "Person  should show partner as a husband when the person is female",
+                  "timedOut": null,
+                  "duration": 40,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const olya = {\n  name: 'Olya',\n  sex: 'f',\n  age: 38,\n  isMarried: true,\n  partnerName: 'Maksym'\n};\nObject(_cypress_react__WEBPACK_IMPORTED_MODULE_1__[\"mount\"])( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__[\"jsxDEV\"])(_Person__WEBPACK_IMPORTED_MODULE_2__[\"Person\"], {\n  person: olya\n}, void 0, false, {\n  fileName: _jsxFileName,\n  lineNumber: 42,\n  columnNumber: 13\n}, undefined));\ncy.get('.Person__partner').should('have.text', 'Maksym is my husband');",
+                  "err": {},
+                  "uuid": "9c33012b-16af-453a-af09-6cda72fe7ed2",
+                  "parentUUID": "4c119aa4-128a-4db3-bc2e-a4d9afd662b8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should show correct message if a person is not married",
+                  "fullTitle": "Person  should show correct message if a person is not married",
+                  "timedOut": null,
+                  "duration": 67,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tanya = {\n  name: 'Tanya',\n  sex: 'f',\n  age: 28,\n  isMarried: false,\n  partnerName: 'Some Partner'\n};\nObject(_cypress_react__WEBPACK_IMPORTED_MODULE_1__[\"mount\"])( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__[\"jsxDEV\"])(_Person__WEBPACK_IMPORTED_MODULE_2__[\"Person\"], {\n  person: tanya\n}, void 0, false, {\n  fileName: _jsxFileName,\n  lineNumber: 56,\n  columnNumber: 13\n}, undefined));\ncy.get('.Person__partner').should('contain.text', 'not married');",
+                  "err": {},
+                  "uuid": "76b8e24f-7888-4be8-8c06-07012e1af14d",
+                  "parentUUID": "4c119aa4-128a-4db3-bc2e-a4d9afd662b8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should not show age if age is omitted",
+                  "fullTitle": "Person  should not show age if age is omitted",
+                  "timedOut": null,
+                  "duration": 33,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const sasha = {\n  name: 'Sasha',\n  sex: 'f',\n  isMarried: false\n};\nObject(_cypress_react__WEBPACK_IMPORTED_MODULE_1__[\"mount\"])( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__[\"jsxDEV\"])(_Person__WEBPACK_IMPORTED_MODULE_2__[\"Person\"], {\n  person: sasha\n}, void 0, false, {\n  fileName: _jsxFileName,\n  lineNumber: 68,\n  columnNumber: 13\n}, undefined));\ncy.get('.Person__age').should('not.exist');",
+                  "err": {},
+                  "uuid": "70b5e250-0999-4785-a6fe-b8281fe5ae44",
+                  "parentUUID": "4c119aa4-128a-4db3-bc2e-a4d9afd662b8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "9c33012b-16af-453a-af09-6cda72fe7ed2",
+                "76b8e24f-7888-4be8-8c06-07012e1af14d",
+                "70b5e250-0999-4785-a6fe-b8281fe5ae44"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 140,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "18c69e5d-f3db-47a9-8b17-fd73a17e5ec3",
+      "title": "",
+      "fullFile": "cypress/integration/page.spec.js",
+      "file": "cypress/integration/page.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5cee7ff-b103-427d-b8bc-be5b93317e7b",
+          "title": "Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should have 3 people",
+              "fullTitle": "Page should have 3 people",
+              "timedOut": null,
+              "duration": 560,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.Person').should('have.length', 3);",
+              "err": {},
+              "uuid": "09a33039-5450-421a-bb70-3dad39400f1c",
+              "parentUUID": "d5cee7ff-b103-427d-b8bc-be5b93317e7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have people in the correct order",
+              "fullTitle": "Page should have people in the correct order",
+              "timedOut": null,
+              "duration": 152,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.Person__name').eq(0).should('have.text', 'My name is Misha');\ncy.get('.Person__name').eq(1).should('have.text', 'My name is Olya');\ncy.get('.Person__name').eq(2).should('have.text', 'My name is Alex');",
+              "err": {},
+              "uuid": "100ff07a-42e5-402e-a65c-9826ec2cfd8b",
+              "parentUUID": "d5cee7ff-b103-427d-b8bc-be5b93317e7b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09a33039-5450-421a-bb70-3dad39400f1c",
+            "100ff07a-42e5-402e-a65c-9826ec2cfd8b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 712,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "raw_reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
