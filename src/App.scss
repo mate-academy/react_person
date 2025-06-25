@@ -16,5 +16,9 @@ iframe {
   &__age {
     color: #00f;
     font-weight: bold;
+
+    &--hidden {
+      display: none;
+    }
   }
 }
