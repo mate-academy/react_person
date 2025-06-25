@@ -1,45 +1,19 @@
 import React from 'react';
-import './App.scss';
+import { Person } from './Person';
+import './App.css';
 
-export const misha = {
-  name: 'Misha',
-  age: 37,
-  sex: 'm',
-  isMarried: true,
-  partnerName: 'Natasha',
-};
+const misha = { name: 'Misha', age: 29, gender: 'male', isMarried: true, partnerName: 'Anna' };
+const jane = { name: 'Jane', gender: 'female', isMarried: false };
+const john = { name: 'John', age: 40, gender: 'male', isMarried: true, partnerName: 'Emily' };
 
-export const olya = {
-  name: 'Olya',
-  sex: 'f',
-  isMarried: true,
-  partnerName: 'Maksym',
-};
+function App() {
+    return (
+        <div className="App">
+            <Person person={misha} />
+            <Person person={jane} />
+            <Person person={john} />
+        </div>
+    );
+}
 
-export const alex = {
-  name: 'Alex',
-  age: 25,
-  sex: 'm',
-  isMarried: false,
-};
-
-export const App = () => (
-  <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">Natasha is my wife</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">Maksym is my husband</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
-  </div>
-);
+export default App;
