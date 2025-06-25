@@ -2,19 +2,16 @@ iframe {
   display: none;
 }
 
-.Person {
-  width: fit-content;
-  margin-bottom: 16px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 8px;
+:root {
+  background-color: #ffd95a;
+  color: #4c3d3d;
 
-  &__name {
-    margin-top: 8px;
-  }
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
-  &__age {
-    color: #00f;
-    font-weight: bold;
-  }
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
