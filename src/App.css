@@ -8,13 +8,13 @@ iframe {
   padding: 8px;
   border: 1px solid #000;
   border-radius: 8px;
+}
 
-  &__name {
-    margin-top: 8px;
-  }
+.name {
+  margin-top: 8px;
+}
 
-  &__age {
-    color: #00f;
-    font-weight: bold;
-  }
+.age {
+  color: #00f;
+  font-weight: bold;
 }
