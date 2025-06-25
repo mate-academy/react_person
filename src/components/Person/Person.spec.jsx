@@ -1,5 +1,5 @@
 import { mount } from '@cypress/react18';
-import { Person } from './Person';
+import PersonBlock from './Person';
 
 describe('Person', () => {
   describe('', () => {
@@ -12,7 +12,7 @@ describe('Person', () => {
         partnerName: 'Natasha',
       };
 
-      mount(<Person person={misha} />);
+      mount(<PersonBlock person={misha} />);
     });
 
     it('should print a name', () => {
@@ -38,7 +38,7 @@ describe('Person', () => {
         partnerName: 'Maksym',
       };
 
-      mount(<Person person={olya} />);
+      mount(<PersonBlock person={olya} />);
 
       cy.get('.Person__partner').should('have.text', 'Maksym is my husband');
     });
@@ -52,7 +52,7 @@ describe('Person', () => {
         partnerName: 'Some Partner',
       };
 
-      mount(<Person person={tanya} />);
+      mount(<PersonBlock person={tanya} />);
 
       cy.get('.Person__partner').should('contain.text', 'not married');
     });
@@ -64,7 +64,7 @@ describe('Person', () => {
         isMarried: false,
       };
 
-      mount(<Person person={sasha} />);
+      mount(<PersonBlock person={sasha} />);
 
       cy.get('.Person__age').should('not.exist');
     });
