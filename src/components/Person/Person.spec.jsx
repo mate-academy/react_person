@@ -1,5 +1,5 @@
 import { mount } from '@cypress/react18';
-import { Person } from './Person';
+import { Person } from './index';
 
 describe('Person', () => {
   describe('', () => {
