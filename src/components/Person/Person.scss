@@ -1,7 +1,3 @@
-iframe {
-  display: none;
-}
-
 .Person {
   width: fit-content;
   margin-bottom: 16px;
@@ -14,7 +10,7 @@ iframe {
   }
 
   &__age {
-    color: #00f;
     font-weight: bold;
+    color: #00f;
   }
 }
