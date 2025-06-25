@@ -58,11 +58,7 @@ describe('Person', () => {
     });
 
     it('should not show age if age is omitted', () => {
-      const sasha = {
-        name: 'Sasha',
-        sex: 'f',
-        isMarried: false,
-      };
+      const sasha = { name: 'Sasha', sex: 'f', isMarried: false };
 
       mount(<Person person={sasha} />);
 
