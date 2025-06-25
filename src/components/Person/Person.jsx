@@ -1,20 +1,20 @@
-import classNames from 'classnames';
-
 export const Person = ({ person }) => {
-  let {name, age, married} = person
+  const { name, age, sex, isMarried, partnerName } = person;
 
-  let isfemale = name === 'olya';
-  let partner = isfemale ? 'husband' : 'wife';
+  let partnerText = 'I am not married';
+  if (isMarried) {
+    partnerText =
+      sex === 'f'
+        ? `${partnerName} is my husband`
+        : `${partnerName} is my wife`;
+  }
+  
   return (
-    <React.Fragment>
-    <div> name: { name }</div>
-    <div> age: { age }</div>
-    <div> married: { married }</div>
-    { married ? (
-      <div>{ partner }</div>
-    ): <div>I'm not married</div>}
-    </React.Fragment>
-  )
+    <section className="Person">
+      <h2 className="Person__name">My name is {name}</h2>
+      {age !== undefined && <p className="Person__age">I am {age}</p>}
+      <p className="Person__partner">{partnerText}</p>
+    </section>
+  );
 };
-
 

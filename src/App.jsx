@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.scss';
 import { Person } from './components/Person/Person';
 
@@ -26,28 +25,22 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    {
-    /* <section className="Person">
+    {/* <section className="Person">
       <h2 className="Person__name">My name is Misha</h2>
       <p className="Person__age">I am 37</p>
       <p className="Person__partner">Natasha is my wife</p>
     </section> */}
-    <Person person={misha}/>
-
+    <Person person={misha} />
     {/* <section className="Person">
       <h2 className="Person__name">My name is Olya</h2>
       <p className="Person__partner">Maksym is my husband</p>
     </section> */}
-
-    <Person person={olya}/>
-
-
+    <Person person={olya} />
     {/* <section className="Person">
       <h2 className="Person__name">My name is Alex</h2>
       <p className="Person__age">I am 25</p>
       <p className="Person__partner">I am not married</p>
     </section> */}
-
-    <Person person={alex}/>
+    <Person person={alex} />
   </div>
 );
