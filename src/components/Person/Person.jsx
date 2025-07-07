@@ -5,9 +5,17 @@ export const Person = ({ person }) => {
     ) : (
       ''
     );
-  const partnerSex =
-    person.isMarried && person.sex === 'f' ? 'husband' : 'wife';
+
+  let partnerSex = '';
   let partnerLabel = '';
+
+  if (person.isMarried) {
+    if (person.sex === 'f') {
+      partnerSex = 'husband';
+    } else {
+      partnerSex = 'wife';
+    }
+  }
 
   if (!person.isMarried) {
     partnerLabel = 'I am not married';
