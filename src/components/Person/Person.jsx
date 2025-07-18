@@ -3,7 +3,7 @@ import React from 'react';
 export const Person = ({ person }) => {
   const status = person.isMarried ? (
     <p className="Person__partner">
-      {person.partnerName} is my {person.sex === 'f' ? 'husband' : 'wife'}
+      {person.partnerName} is my {person.sex === 'f' ? 'wife' : 'husband'}
     </p>
   ) : (
     <p className="Person__partner">I am not married</p>
