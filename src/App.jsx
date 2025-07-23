@@ -28,6 +28,6 @@ export const App = () => (
   <div className="App">
     <Person person={misha} />
     <Person person={olya} />
-    <Person dapersonta={alex} />
+    <Person person={alex} />
   </div>
 );
