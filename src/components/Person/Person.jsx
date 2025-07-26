@@ -1,6 +1,6 @@
 const partnerInfo = person => {
   let partnerText = '';
-
+  
   if (person.isMarried) {
     if (person.sex === 'm') {
       partnerText = `${person.partnerName} is my wife`;
