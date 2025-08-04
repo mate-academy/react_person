@@ -1,10 +1,10 @@
-export const Person = prop => (
+export const Person = ({ name, age, sex, isMarried = false, partnerName }) => (
   <section className="Person">
-    <h2 className="Person__name">My name is {prop.name}</h2>
-    {prop.age ? <p className="Person__age">I am {prop.age}</p> : ''}
+    <h2 className="Person__name">My name is {name}</h2>
+    {age ? <p className="Person__age">I am {age}</p> : ''}
     <p className="Person__partner">{`${
-      prop.isMarried
-        ? `${prop.partnerName} is my ${prop.sex === 'm' ? `wife` : `husband`}`
+      isMarried
+        ? `${partnerName} is my ${sex === 'm' ? `wife` : `husband`}`
         : 'I am not married'
     }`}</p>
   </section>
