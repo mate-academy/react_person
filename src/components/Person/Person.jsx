@@ -1,4 +1,3 @@
-// export const Person = ({ person }) => ();
 export const Person = ({
   person: { name, age = 0, sex, isMarried, partnerName },
 }) => (
