@@ -4,13 +4,17 @@ export const Person = ({ person }) => {
 
   const status = sex === 'm' ? 'wife' : 'husband';
 
-  const partnerInfo = isMarried ? (
-    <p className="Person__partner">
-      {partnerName} is my {status}
-    </p>
-  ) : (
-    <p className="Person__partner">I am not married</p>
-  );
+  let partnerInfo;
+
+  if (isMarried) {
+    partnerInfo = (
+      <p className="Person__partner">
+        {partnerName} is my {status}
+      </p>
+    );
+  } else {
+    partnerInfo = <p className="Person__partner">I am not married</p>;
+  }
 
   return (
     <section className="Person">
