@@ -34,7 +34,7 @@ export const App = () => (
       <p className="Person__age">I am 37</p>
       <p className="Person__partner">Natasha is my wife</p>
     </section> */}
-{/*
+    {/*
     <section className="Person">
       <h2 className="Person__name">My name is Olya</h2>
       <p className="Person__partner">Maksym is my husband</p>
