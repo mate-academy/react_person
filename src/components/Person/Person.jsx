@@ -2,10 +2,11 @@ export const Person = ({ person }) => {
   const age = person.age ? (
     <p className="Person__age">I am {person.age}</p>
   ) : null;
+  const partnerLabel = person.sex === 'm' ? ' wife' : ' husband';
   const marige = person.isMarried ? (
     <p className="Person__partner">
       {person.partnerName} is my
-      {person.sex === 'm' ? ' wife' : ' husband'}
+      {partnerLabel}
     </p>
   ) : (
     <p className="Person__partner">I am not married</p>
