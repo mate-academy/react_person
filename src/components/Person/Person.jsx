@@ -1,6 +1,6 @@
 export const Person = ({ person }) => {
   const hasAge = person.age !== undefined;
-  const partnerLabel = person.gender === 'male' ? 'wife' : 'husband';
+  const partnerLabel = person.sex === 'm' ? 'wife' : 'husband';
 
   const maritalBlock = person.isMarried ? (
     <p className="Person__partner">
