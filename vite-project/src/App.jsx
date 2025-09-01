@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.scss';
 import { Person } from './components/Person/Person';
+import './App.css';
 
 export const misha = {
   name: 'Misha',
@@ -31,3 +31,5 @@ export const App = () => (
     <Person person={alex} />
   </div>
 );
+
+export default App;
