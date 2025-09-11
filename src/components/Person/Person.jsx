@@ -10,7 +10,7 @@ export const Person = ({ person }) => {
       {age != null && <p className="Person__age">{`I am ${age}`}</p>}
       {isMarried ? (
         <p className="Person__partner">
-          My {partnerLabel} is {partnerName}
+          {partnerName} is my {partnerLabel}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
