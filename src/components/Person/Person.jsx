@@ -3,7 +3,9 @@ export const Person = ({ person }) => {
   if (!person) return null;
 
   const hasAge = person.age !== undefined;
-  const partnerLabel = person.sex === 'm' ? 'wife' : 'husband';
+  const partnerLabel = person.sex === 'm'
+  ? 'wife'
+  : 'husband';
 
   return (
     <section className="Person">
@@ -14,9 +16,7 @@ export const Person = ({ person }) => {
           {`${person.partnerName} is my ${partnerLabel}`}
         </p>
       )}
-      {!person.isMarried && (
-        <p className="Person__partner">`I am not married`</p>
-      )}
+      {!person.isMarried && <p className="Person__partner">I am not married</p>}
     </section>
   );
 };
