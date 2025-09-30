@@ -10,13 +10,3 @@ export const Person = ({ person }) => (
     </p>
   </section>
 );
-
-/*
-export const misha = {
-  name: 'Misha',
-  age: 37,
-  sex: 'm',
-  isMarried: true,
-  partnerName: 'Natasha',
-};
-*/
