@@ -1,14 +1,14 @@
 function Person({ person }) {
-  const { name, age, sex, married, partner } = person;
+  const { name, age, sex, isMarried, partnerName } = person;
 
   let partnerInfo;
 
-  if (!married) {
+  if (!isMarried) {
     partnerInfo = 'I am not married';
   } else if (sex === 'male') {
-    partnerInfo = `My wife’s name is ${partner}`;
+    partnerInfo = `My wife’s name is ${partnerName}`;
   } else {
-    partnerInfo = `My husband’s name is ${partner}`;
+    partnerInfo = `My husband’s name is ${partnerName}`;
   }
 
   return (
