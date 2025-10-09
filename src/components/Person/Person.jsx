@@ -2,10 +2,15 @@
 export const Person = ({
   person: { name, age, isMarried, partnerName, sex },
 }) => {
-  const partnerLabel = sex === 'm' ? 'wife' : 'husband';
-
+  // prettier-ignore
+  const partnerLabel = sex === 'm'
+    ? 'wife'
+    : 'husband';
+  // prettier-ignore
   const ageElement =
-    age !== undefined ? <p className="Person__age">I am {age}</p> : null;
+    age !== undefined ?
+      <p className="Person__age">I am {age}</p>
+      : null;
 
   const partnerElement = isMarried ? (
     <p className="Person__partner">
