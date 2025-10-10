@@ -1,15 +1,30 @@
-export const Person = ({ person }) => (
-  <section className="Person">
-    <h2 className="Person__name">My name is {person.name}</h2>
+export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
+  let personStatus;
 
-    {person.age ? <p className="Person__age">I am {person.age}</p> : null}
+  if (isMarried) {
+    switch (sex) {
+      case 'm':
+        personStatus = `${partnerName} is my wife`;
+        break;
 
-    {person.isMarried && person.sex.toLowerCase() === 'm' ? (
-      <p className="Person__partner">{person.partnerName} is my wife</p>
-    ) : null}
+      case 'f':
+        personStatus = `${partnerName} is my husband`;
+        break;
+    }
+  } else {
+    personStatus = 'I am not married';
+  }
 
-    {person.isMarried && person.sex.toLowerCase() === 'f' ? (
-      <p className="Person__partner">{person.partnerName} is my husband</p>
-    ) : null}
-  </section>
-);
+  personStatus = <p className="Person__partner">{personStatus}</p>;
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">My name is {name}</h2>
+
+      {age ? <p className="Person__age">I am {age}</p> : null}
+
+      {personStatus}
+    </section>
+  );
+};
