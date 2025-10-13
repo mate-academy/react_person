@@ -2,7 +2,15 @@ export const Person = ({ person }) => {
   if (!person) return null;
 
   const { name, age, sex, isMarried, partnerName } = person;
-  const spouseLabel = sex === 'm' ? 'wife' : 'husband';
+
+  // prettier-ignore
+  const spouseLabel = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
+  const partnerText = isMarried
+    ? `${partnerName} is my ${spouseLabel}`
+    : 'I am not married';
 
   return (
     <section className="Person">
@@ -10,9 +18,7 @@ export const Person = ({ person }) => {
 
       {age != null && <p className="Person__age">I am {age}</p>}
 
-      <p className="Person__partner">
-        {isMarried ? `${partnerName} is my ${spouseLabel}` : 'I am not married'}
-      </p>
+      <p className="Person__partner">{partnerText}</p>
     </section>
   );
 };
