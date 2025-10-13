@@ -1,13 +1,18 @@
 import React from 'react';
+import './Person.scss';
 
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerInfo = isMarried
-    ? sex === 'm'
-      ? `${partnerName} is my wife`
-      : `${partnerName} is my husband`
-    : 'I am not married';
+  let partnerInfo;
+
+  if (!isMarried) {
+    partnerInfo = 'I am not married';
+  } else if (sex === 'm') {
+    partnerInfo = `${partnerName} is my wife`;
+  } else {
+    partnerInfo = `${partnerName} is my husband`;
+  }
 
   return (
     <section className="Person">
@@ -19,4 +24,3 @@ export const Person = ({ person }) => {
     </section>
   );
 };
-
