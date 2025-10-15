@@ -1,7 +1,11 @@
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerLabel = sex === 'm' ? 'wife' : 'husband';
+  // eslint-disable-next-line prettier/prettier
+  const partnerLabel = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
   const partnerInfo = isMarried
     ? `${partnerName} is my ${partnerLabel}`
     : 'I am not married';
