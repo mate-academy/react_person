@@ -6,11 +6,10 @@ export const Person = ({ person }) => {
   let partnerText = 'I am not married';
 
   if (isMarried) {
-    partnerText =
-      sex === 'm'
-        ? `${partnerName} is my wife`
-        : `${partnerName} is my husband`;
-  }
+    partnerText = sex === 'm'
+    ? `${partnerName} is my wife`
+    : `${partnerName} is my husband`;
+}
 
   return (
     <div className="Person">
