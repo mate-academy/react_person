@@ -3,7 +3,9 @@ function PartnerStatus({ sex, isMarried, partnerName }) {
     return <p className="Person__partner">I am not married</p>;
   }
 
-  const partnerLabel = sex === 'm' ? 'wife' : 'husband';
+  const partnerLabel = sex === 'm' 
+  ? 'wife' 
+  : 'husband';
 
   return (
     <p className="Person__partner">
