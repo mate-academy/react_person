@@ -1,4 +1,6 @@
-export const Person = ({ name, age, isMarried, sex, partnerName }) => (
+export const Person = ({
+  person: { name, age, isMarried, sex, partnerName },
+}) => (
   <section className="Person">
     <h2 className="Person__name">My name is {name}</h2>
 
