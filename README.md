@@ -1,13 +1,13 @@
 # React person
 
-Implement a `Person` component rendering a person's details using the given markup
-and use it 3 times inside the `App` instead of static markup.
+Implement a Person component rendering a person's details using the given markup and use it 3 times inside the App instead of static markup.
 
-- Pass the entire person object as a prop using `<Person person={misha} />` (**do not** use individual fields);
-- Omit the `age` if it is not present in the person object;
-- If a man is married, refer to his partner as `wife`; if a woman is married, refer to her partner as `husband`;
-- If a person is not married, display the message "I am not married";
-- Ensure that the class names in `Person.jsx` match those used in `App.jsx` (`Person`, `Person__name`, `Person__age`, `Person__partner`).
+Pass the entire person object as a prop using <Person person={misha} /> (do not use individual fields);
+        
+If a man is married, refer to his partner as wife; if a woman is married, refer to her partner as husband;
+If a person is not married, display the message "I am not married";
+Ensure that the class names in Person.jsx match those used in App.jsx (Person, Person__name, Person__age, Person__partner).
+ 
 
 **Important:** The constants `misha`, `olya`, and `alex` are valid and should not be modified. Property `age` is optional.
 
