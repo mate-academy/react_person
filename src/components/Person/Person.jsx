@@ -1,6 +1,3 @@
-/* eslint-disable prettier/prettier */
-// prettier-ignore-file
-
 import './Person.scss';
 
 export const Person = ({ person }) => {
