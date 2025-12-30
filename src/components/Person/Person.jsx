@@ -16,7 +16,9 @@ const strategy = {
       false: () => <p className="Person__partner">I am not married</p>,
 
       true: () => {
-        const label = p.sex === 'm' ? 'wife' : 'husband';
+        const label = p.sex === 'm'
+          ? 'wife'
+          : 'husband';
 
         return (
           <p className="Person__partner">{`${p.partnerName} is my ${label}`}</p>
