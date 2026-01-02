@@ -1,7 +1,11 @@
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerRole = sex === "m" ? "wife" : "husband";
+  // prettier-ignore
+  const partnerRole =
+    sex === 'm'
+      ? 'wife'
+      : 'husband';
 
   return (
     <section className="Person">
