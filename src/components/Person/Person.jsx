@@ -11,6 +11,7 @@ export const Person = ({ person }) => {
     let result = <p className="Person__partner">I am not married</p>;
 
     if (isMarried === true) {
+      // prettier-ignore
       const partnerTitle = sex === 'm'
         ? 'wife'
         : 'husband';
