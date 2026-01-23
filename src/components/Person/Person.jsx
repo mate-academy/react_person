@@ -1,27 +1,29 @@
 import cn from 'classnames';
 
 export const Person = ({ person }) => {
+  const { name, age, sex, isMarried, partnerName } = person;
+
+  const partnerStatus = isMarried
+    ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
+    : 'I am not married';
+
   return (
     <section
       className={cn('Person', {
-        'Person--married': person.isMarried,
-        'Person--male': person.sex === 'm',
-        'Person--female': person.sex === 'f',
+        'Person--married': isMarried,
+        'Person--male': sex === 'm',
+        'Person--female': sex === 'f',
       })}
     >
-      <h2 className="Person__name">My name is {person.name}</h2>
-      {person.age !== undefined && (
-        <p className="Person__age">I am {person.age}</p>
-      )}
+      <h2 className="Person__name">My name is {name}</h2>
+      {age !== undefined && <p className="Person__age">I am {age}</p>}
       <p
         className={cn('Person__partner', {
-          'Person__partner--married': person.isMarried,
-          'Person__partner--single': !person.isMarried,
+          'Person__partner--married': isMarried,
+          'Person__partner--single': !isMarried,
         })}
       >
-        {person.isMarried
-          ? `${person.partnerName} is my ${person.sex === 'm' ? 'wife' : 'husband'}`
-          : 'I am not married'}
+        {partnerStatus}
       </p>
     </section>
   );
