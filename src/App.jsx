@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { misha } from './components/Person/Person';
-import { olya } from './components/Person/Person';
-import { alex } from './components/Person/Person';
+import { misha, olya, alex } from './components/Person/Person';
 
 export const App = () => (
   <div className="App">
