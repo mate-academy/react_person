@@ -19,3 +19,17 @@ export const alex = {
   sex: 'm',
   isMarried: false,
 };
+
+
+function Person({ person }) {
+
+  return (
+    <div className="App">
+      <section className="Person">
+        <h2 className="Person__name">My name is {person.name}</h2>
+        <p className="Person__age">I am {person.age}</p>
+        <p className="Person__partner">{person.partnerName} is my partner</p>
+      </section>
+    </div>
+  );
+}

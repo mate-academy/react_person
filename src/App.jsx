@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.scss';
-import { misha, olya, alex } from './components/Person/Person';
+import Person from './components/Person/Person';
 
 export const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is {misha.name}</h2>
-      <p className="Person__age">I am {misha.age}</p>
-      <p className="Person__partner"> I am married to {misha.partnerName}</p>
-    </section>
+    <Person
+      name="Misha"
+      age={37}
+      partnerName="Natasha"
+    />
 
-    <section className="Person">
-      <h2 className="Person__name">My name is {olya.name}</h2>
-      <p className="Person__partner">{olya.partnerName} is my husband</p>
-    </section>
+    <Person
+      name="Olya"
+      partnerName="Maksym"
+    />
 
-    <section className="Person">
-      <h2 className="Person__name">My name is {alex.name}</h2>
-      <p className="Person__age">I am {alex.age}</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person
+      name="Alex"
+      age={25}
+    />
   </div>
 );
