@@ -25,21 +25,11 @@ function App() {
 
   return (
     <div className="App">
-      <Person
-        name="Misha"
-        age={25}
-        partnerName="Natasha"
-      />
+      <Person person={misha} />
 
-      <Person
-      name="Olya"
-      partnerName="Maksym"
-      />
+      <Person person={olya} />
 
-      <Person
-      name="Alex"
-      age={25}
-      />
+      <Person person={alex} />
     </div>
   );
 }
