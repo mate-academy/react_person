@@ -1,19 +1,23 @@
-import React from 'react';
-const Person = ({ person }) => {
+// export const Person = ({ person }) => ();
+// testes para github
 
+function getPartnerLabel(gender, partnerName) {
+  return gender === 'male' ? `Wife: ${partnerName}` : `Husband: ${partnerName}`;
+}
+
+const Person = ({ person }) => {
   const { name, age, partnerName, gender } = person;
 
   return (
-    <div className="person-card">
-      <h2>Name: {name}</h2>
+    <div className="Person">
+      <h2 className="Person__name">My name is {name}</h2>
 
-      {age && <p>Age: {age}</p>}
+      {age && <p className="Person__age">I am {age}</p>}
 
       <p>
         {partnerName
-          ? (gender === 'male' ? `Wife: ${partnerName}` : `Husband: ${partnerName}`)
-          : 'I am not married'
-        }
+          ? getPartnerLabel(gender, partnerName)
+          : 'I am not married'}
       </p>
     </div>
   );
