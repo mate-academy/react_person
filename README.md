@@ -12,6 +12,7 @@ and use it 3 times inside the `App` instead of static markup.
 **Important:** The constants `misha`, `olya`, and `alex` are valid and should not be modified. Property `age` is optional.
 
 ## Instructions
+
 - Install Prettier Extension and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
