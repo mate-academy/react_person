@@ -1,8 +1,9 @@
+import React from 'react';
 import { mount } from '@cypress/react18';
 import { Person } from './Person';
 
 describe('Person', () => {
-  describe('', () => {
+  describe('Basic rendering', () => {
     beforeEach(() => {
       const misha = {
         name: 'Misha',
@@ -28,7 +29,7 @@ describe('Person', () => {
     });
   });
 
-  describe('', () => {
+  describe('Conditional rendering', () => {
     it('should show partner as a husband when the person is female', () => {
       const olya = {
         name: 'Olya',
@@ -39,7 +40,6 @@ describe('Person', () => {
       };
 
       mount(<Person person={olya} />);
-
       cy.get('.Person__partner').should('have.text', 'Maksym is my husband');
     });
 
@@ -53,7 +53,6 @@ describe('Person', () => {
       };
 
       mount(<Person person={tanya} />);
-
       cy.get('.Person__partner').should('contain.text', 'not married');
     });
 
@@ -65,7 +64,6 @@ describe('Person', () => {
       };
 
       mount(<Person person={sasha} />);
-
       cy.get('.Person__age').should('not.exist');
     });
   });
