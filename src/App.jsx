@@ -21,7 +21,7 @@ const olya = {
 const alex = {
   name: 'Alex',
   sex: 'm',
-  isMarried: false
+  isMarried: false,
 };
 
 export const App = () => (
