@@ -5,7 +5,10 @@ export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
   // визначаємо як називати партнера
-  const partnerWord = sex === 'm' ? 'wife' : 'husband';
+  // prettier-ignore
+  const partnerWord = sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
