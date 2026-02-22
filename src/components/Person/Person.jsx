@@ -3,11 +3,11 @@ export const Person = ({ person }) => {
   let personpartnerName;
 
   if (!isMarried || !partnerName) {
-    personpartnerName = 'I am not isMarried';
-  } else if (sex === 'male') {
-    personpartnerName = `wife: ${partnerName}`;
-  } else if (sex === 'female') {
-    personpartnerName = `husband: ${partnerName}`;
+    personpartnerName = 'I am not married';
+  } else if (sex === 'm') {
+    personpartnerName = `${partnerName} is my wife`;
+  } else if (sex === 'f') {
+    personpartnerName = `${partnerName} is my husband`;
   } else {
     personpartnerName = partnerName;
   }
