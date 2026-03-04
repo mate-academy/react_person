@@ -3,11 +3,7 @@ export const Person = ({ person }) => {
     <section className="Person">
       <h2 className="Person__name">My name is {person.name}</h2>
       <AgeData age={person.age} />
-      <MariageData
-        partner={person.partnerName}
-        sex={person.sex}
-        isMarried={person.isMarried}
-      />
+      <MariageData person={person} />
     </section>
   );
 };
@@ -20,14 +16,16 @@ const AgeData = ({ age }) => {
   return <p className="Person__age">{`I am ${age}`}</p>;
 };
 
-const MariageData = ({ partner, sex, isMarried }) => {
+const MariageData = ({ person: { sex, isMarried, partnerName } }) => {
   if (!isMarried) {
     return <p className="Person__partner">I am not married</p>;
   }
 
-  const partnerStatus = sex === 'm' ? 'wife' : 'husband';
+  const partnerStatus = sex === 'm' ?
+    'wife' :
+    'husband';
 
   return (
-    <p className="Person__partner">{`${partner} is my ${partnerStatus}`}</p>
+    <p className="Person__partner">{`${partnerName} is my ${partnerStatus}`}</p>
   );
 };
