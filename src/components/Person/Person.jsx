@@ -1,5 +1,5 @@
 export const Person = ({ person }) => {
-  const renderPartner = () => {
+  const renderPartn = () => {
     if (person.isMarried) {
       if (person.sex === 'm') {
         return <p>{person.partnerName} is my wife</p>;
@@ -21,7 +21,7 @@ export const Person = ({ person }) => {
           <p>I am {person.age}</p>
         </div>
       )}
-      <p className="Person__partner">{renderPartner()}</p>
+      <p className="Person__partner">{renderPartn()}</p>
     </section>
   );
 };
