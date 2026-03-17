@@ -8,13 +8,14 @@ iframe {
   padding: 8px;
   border: 1px solid #000;
   border-radius: 8px;
-
-  &__name {
-    margin-top: 8px;
-  }
-
-  &__age {
-    font-weight: bold;
-    color: #00f;
-  }
 }
+
+.Person__name {
+  margin-top: 8px;
+
+}
+
+.Person__age {
+  font-weight: bold;
+  color: #00f;
+}/*# sourceMappingURL=App.css.map */
