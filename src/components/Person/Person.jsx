@@ -1,7 +1,7 @@
 import './Person.scss';
 
 export const Person = ({ person }) => {
-  const relation = person.sex === 'm' ? 'husband' : 'wife';
+  const relation = person.sex === 'f' ? 'husband' : 'wife';
 
   return (
     <section className="Person">
