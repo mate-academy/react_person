@@ -1,7 +1,9 @@
 import './Person.scss';
 
 export const Person = ({ person }) => {
-  const relation = person.sex === 'f' ? 'husband' : 'wife';
+  const relation = person.sex === 'f' 
+  ? 'husband' 
+  : 'wife';
 
   const partnerText = person.isMarried
     ? `${person.partnerName} is my ${relation}`
