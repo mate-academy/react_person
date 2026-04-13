@@ -3,7 +3,11 @@ import './Person.scss';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
   const showAge = age != null;
-  const partnerRole = sex === 'm' ? 'wife' : 'husband';
+  // prettier-ignore
+  const partnerRole = sex === 'm'
+    ? 'wife'
+    : 'husband';
+
   const hasPartner = isMarried === true && Boolean(partnerName);
 
   return (
