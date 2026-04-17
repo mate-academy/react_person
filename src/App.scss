@@ -3,7 +3,7 @@ iframe {
 }
 
 .Person {
-  width: fit-content;
+  width: 250px;
   margin-bottom: 16px;
   padding: 8px;
   border: 1px solid #000;
@@ -14,7 +14,11 @@ iframe {
   }
 
   &__age {
-    color: #00f;
     font-weight: bold;
+    color: #00f;
+  }
+
+  &__partner {
+    color: #435;
   }
 }
