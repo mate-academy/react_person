@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'standard',
+    "eslint:recommended",
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
@@ -20,6 +21,7 @@ module.exports = {
   plugins: ['jsx-a11y', 'import', 'react', 'prettier'],
   rules: {
     'function-paren-newline': ['error', 'consistent'],
+    'no-template-curly-in-string': 'error',
     'comma-dangle': [
       'error',
       {
