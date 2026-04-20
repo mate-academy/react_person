@@ -1,5 +1,8 @@
 export const Person = ({ person }) => {
-  const partnerLabel = person.sex === 'm' ? 'wife' : 'husband';
+  // prettier-ignore
+  const partnerLabel = person.sex === 'm'
+    ? 'wife'
+    : 'husband';
 
   return (
     <section className="Person">
