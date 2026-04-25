@@ -16,15 +16,24 @@ describe('Person', () => {
     });
 
     it('should print a name', () => {
-      cy.get('.Person__name').should('have.text', 'My name is Misha');
+      cy.get('.Person__name').should(
+        'have.text',
+        'My name is Misha',
+      );
     });
 
     it('should print an age', () => {
-      cy.get('.Person__age').should('have.text', 'I am 37');
+      cy.get('.Person__age').should(
+        'have.text',
+        'I am 37',
+      );
     });
 
     it('should print a partner', () => {
-      cy.get('.Person__partner').should('have.text', 'Natasha is my wife');
+      cy.get('.Person__partner').should(
+        'have.text',
+        'Natasha is my wife',
+      );
     });
   });
 
@@ -40,7 +49,10 @@ describe('Person', () => {
 
       mount(<Person person={olya} />);
 
-      cy.get('.Person__partner').should('have.text', 'Maksym is my husband');
+      cy.get('.Person__partner').should(
+        'have.text',
+        'Maksym is my husband',
+      );
     });
 
     it('should show correct message if a person is not married', () => {
@@ -54,7 +66,10 @@ describe('Person', () => {
 
       mount(<Person person={tanya} />);
 
-      cy.get('.Person__partner').should('contain.text', 'not married');
+      cy.get('.Person__partner').should(
+        'contain.text',
+        'not married',
+      );
     });
 
     it('should not show age if age is omitted', () => {
