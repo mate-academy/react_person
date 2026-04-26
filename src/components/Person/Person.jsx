@@ -1,1 +1,23 @@
-// export const Person = ({ person }) => ();
+/* eslint-disable prettier/prettier */
+export const Person = (
+  { person: { name, age, sex, isMarried, partnerName }},
+) => {
+  const isMarriedStatus = isMarried;
+
+  return (
+    <section className="Person">
+      <h2 className="Person__name">My name is {name}</h2>
+      {age && <p className="Person__age">I am {age}</p>}
+      {isMarriedStatus ? (
+        <p className="Person__partner">
+          {partnerName} is my {sex === 'm'
+            ? 'wife'
+            : 'husband'
+          }
+        </p>
+      ) : (
+        <p className="Person__partner">I am not married</p>
+      )}
+    </section>
+  );
+};
