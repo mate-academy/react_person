@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Деструктуризуємо проп person прямо в аргументах функції
+// Деструктуризуємо проп person прям в аргументах функції
 export const Person = ({ person }) => {
   // Витягуємо конкретні властивості з об'єкта для зручного використання
   const { name, age, partnerName, sex, isMarried } = person;
