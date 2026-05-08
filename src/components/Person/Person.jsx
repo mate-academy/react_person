@@ -11,7 +11,7 @@ export const Person = ({ person }) => {
       {name && <h1 className="Person__name">{`My name is ${name}`}</h1>}
 
       {/* Рендеримо вік лише якщо він переданий в об'єкті */}
-      {age && <p className="Person__age">{`age: ${age}`}</p>}
+      {age && <p className="Person__age">{`I am ${age}`}</p>}
 
       <p className="Person__partner">
         {/* Тернарний оператор: якщо одружений — показуємо партнера, інакше — статус */}
