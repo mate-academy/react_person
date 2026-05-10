@@ -26,10 +26,10 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <Person person={misha} age={37} partner="Natasha" />
+    <Person person={misha} />
 
-    <Person person={olya} partner="Maksym" />
+    <Person person={olya} />
 
-    <Person person={alex} age={25} />
+    <Person person={alex} />
   </div>
 );
