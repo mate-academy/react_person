@@ -12,7 +12,7 @@ export const Person = ({ person }) => {
           {person.partnerName} is my {partnerLabel}
         </p>
       ) : (
-        <p className="Person__partner">not married</p>
+        <p className="Person__partner">I am not married</p>
       )}
     </section>
   );
