@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 import { mount } from '@cypress/react18';
 import { Person } from './Person';
 
