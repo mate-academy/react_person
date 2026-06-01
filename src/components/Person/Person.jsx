@@ -1,5 +1,5 @@
 export const Person = ({ person }) => {
-  let personInfo =
+  const personInfo =
     person.sex === 'm'
       ? `${person.partnerName} is my wife`
       : `${person.partnerName} is my husband`;
