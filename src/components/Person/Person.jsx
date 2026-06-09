@@ -1,4 +1,3 @@
-// export const Person = ({ person }) => ();
 import React from 'react';
 
 export const Person = ({ person }) => {
