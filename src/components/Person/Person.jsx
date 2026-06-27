@@ -4,6 +4,7 @@ export const Person = ({ person }) => {
 
   // Determine partner relationship text
   let partnerText = '';
+
   if (isMarried) {
     if (sex === 'm') {
       partnerText = `${partnerName} is my wife`;
