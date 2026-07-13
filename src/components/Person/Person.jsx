@@ -2,7 +2,9 @@ export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
   // Determine partner reference based on gender
-  const partnerRelation = sex === 'f' ? 'husband' : 'wife';
+  const partnerRelation = sex === 'f'
+    ? 'husband'
+    : 'wife';
 
   return (
     <div className="Person">
