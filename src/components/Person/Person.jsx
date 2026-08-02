@@ -17,3 +17,5 @@ export const Person = ({ person }) => {
     </section>
   );
 };
+
+export default Person;
