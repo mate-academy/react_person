@@ -1,4 +1,4 @@
-export const Person = ({ person }) => {
+const Person = ({ person }) => {
   const { name, age, isMarried, partnerName, sex } = person;
 
   return (
