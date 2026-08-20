@@ -1,6 +1,6 @@
-export const Person = ({ person }) => {
-  const { name, age, sex, isMarried, partnerName } = person;
-
+export const Person = ({
+  person: { name, age, sex, isMarried, partnerName },
+}) => {
   let partnerRole = 'husband';
 
   if (sex === 'm') {
