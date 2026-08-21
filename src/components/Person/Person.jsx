@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Person({ person }) {
+export function Person({ person }) {
   const { name, age, isMarried, sex, partnerName } = person;
 
   const partnerLabel = sex === 'm' ? 'wife' : 'husband';
