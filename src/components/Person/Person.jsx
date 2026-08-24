@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
