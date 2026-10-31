@@ -1,9 +1,13 @@
+const PARTNER_ROLES = {
+  m: 'wife',
+  f: 'husband',
+};
+
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
   const hasAge = age !== undefined;
-  const partnerRole = sex === 'm' ? 'wife' : 'husband';
   const partnerText = isMarried
-    ? `${partnerName} is my ${partnerRole}`
+    ? `${partnerName} is my ${PARTNER_ROLES[sex]}`
     : 'I am not married';
 
   return (
