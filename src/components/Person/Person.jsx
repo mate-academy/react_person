@@ -3,11 +3,11 @@ export const Person = ({ person }) => {
 
   return (
     <div className="Person">
-      <h2 className="Person__name">{person.name}</h2>
-      {person.age && <p className="Person__age">{person.age}</p>}
+      <h2 className="Person__name">{`My name is ${person.name}`}</h2>
+      {person.age && <p className="Person__age">{`I am {person.age}`}</p>}
       <p className="Person__partner">
         {person.isMarried
-          ? `${partner} is ${person.partnerName}`
+          ? `${person.partnerName} is my ${partner}`
           : 'I am not married'}
       </p>
     </div>
