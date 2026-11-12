@@ -8,9 +8,11 @@ export const Person = ({ person }) => {
       return 'I am not married';
     }
 
-    const partnerType = sex === 'm' ? 'wife' : 'husband';
+    if (sex === 'm') {
+      return `${partnerName} is my wife`;
+    }
 
-    return `${partnerName} is my ${partnerType}`;
+    return `${partnerName} is my husband`;
   };
 
   return (
