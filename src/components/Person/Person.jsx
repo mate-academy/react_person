@@ -6,7 +6,9 @@ export const Person = ({ person }) => (
     {person.partnerName ? (
       <p className="Person__partner">
         {`${person.partnerName} is my ${
-          person.sex === 'm' ? 'wife' : 'husband'
+          person.sex === 'm'
+            ? 'wife'
+            : 'husband'
         }`}
       </p>
     ) : (
