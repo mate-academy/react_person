@@ -1,7 +1,10 @@
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerRole = sex === 'm' ? 'wife' : 'husband';
+   // prettier-ignore
+  const partnerRole = sex === 'm'
+    ? 'wife'
+    : 'husband';
   const partnerText = isMarried
     ? `${partnerName} is my ${partnerRole}`
     : 'I am not married';
